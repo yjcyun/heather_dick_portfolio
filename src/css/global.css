@@ -4,14 +4,14 @@
 /*=============== 
 Variables
 ===============*/
-:root{
+:root {
   --mainPurple: #5f2870;
-  --mainGold:#c4882d;
-  --clr2:#5a5a5a;
+  --mainGold: #c4882d;
+  --clr2: #5a5a5a;
   /* --clr3:#656565; */
   --mainWhite: #fff;
-  --mainFont: 'Montserrat', sans-serif;
-  --cursiveFont: 'Dancing Script', cursive;
+  --mainFont: "Montserrat", sans-serif;
+  --cursiveFont: "Dancing Script", cursive;
   --transition: all 0.3s linear;
 }
 
@@ -24,7 +24,7 @@ Global Styles
   padding: 0;
 }
 
-body{
+body {
   font-family: var(--mainFont);
 }
 
@@ -40,6 +40,45 @@ a {
   text-decoration: none;
 }
 
+/*=============== 
+Navbar
+===============*/
+/* menu button */
+.menu-btn {
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items:center;
+  width: 60px;
+  height: 60px;
+}
 
+.menu-btn-burger {
+  width: 35px;
+  height: 2px;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(255, 101, 47, 0.2);
+  transition: var(--transition);
+}
 
+.menu-btn-burger::before,
+.menu-btn-burger::after {
+  content: "";
+  position: absolute;
+  width: 35px;
+  height: 2px;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(255, 101, 47, 0.2);
+  transition: var(--transition);
+}
 
+.menu-btn-burger::before {
+  transform: translateY(-10px);
+}
+
+.menu-btn-burger::after {
+  transform: translateY(10px);
+}

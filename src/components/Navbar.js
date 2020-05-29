@@ -16,7 +16,9 @@ const Navbar = () => {
             <span className="banner-name">Heather Dick & </span>
             <span className="banner-company">Sirius Theatrical Company</span>
           </h3>
-          
+          <div className="menu-btn">
+            <div className="menu-btn-burger"></div>
+          </div>
         </div>
       </div>
       <div className="nav-center-links">
@@ -37,6 +39,7 @@ const NavbarWrapper = styled.nav`
   h3{
     font-family: var(--cursiveFont);
     letter-spacing: 0.1rem;
+    display:none;
   }
   /* .banner-name {
     font-size: 40px;
@@ -89,7 +92,13 @@ const NavbarWrapper = styled.nav`
       display: flex;
       width: 100%;
       justify-content:space-around;
-    }   
+    }  
+    .menu-btn {
+      display: none;
+    } 
+    h3{
+      display: flex;
+    }
   }
 `;
 
