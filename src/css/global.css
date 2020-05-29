@@ -6,6 +6,7 @@ Variables
 ===============*/
 :root {
   --mainPurple: #5f2870;
+  --lightPurple: #863ca8;
   --mainGold: #c4882d;
   --clr2: #5a5a5a;
   /* --clr3:#656565; */
@@ -38,6 +39,11 @@ ul {
 
 a {
   text-decoration: none;
+}
+/* btn */
+.btn{
+  padding: 1rem 3rem;
+  letter-spacing: 0.1rem;
 }
 
 /*=============== 
