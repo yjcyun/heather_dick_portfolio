@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import NavLinks from '../constants/links';
 import logo from '../images/logo.png';
 
-const Navbar = () => {
+const Navbar = ({ toggleNavbar }) => {
   return (
     <NavbarWrapper>
       <div className="nav-center-banner">
@@ -16,7 +16,7 @@ const Navbar = () => {
             <span className="banner-name">Heather Dick & </span>
             <span className="banner-company">Sirius Theatrical Company</span>
           </h3>
-          <div className="menu-btn">
+          <div className="menu-btn" role="button" tabIndex={0} onClick={toggleNavbar} onKeyDown={toggleNavbar}>
             <div className="menu-btn-burger"></div>
           </div>
         </div>
