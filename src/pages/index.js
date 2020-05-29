@@ -1,13 +1,10 @@
-import React from "react";
-import Layout from '../components/Layout';
-import Hero from "../components/Hero";
+import React from 'react';
+import StyledHero from '../components/Home/StyledHero';
 
 export default function Home() {
   return (
-    <Layout>
-      <Hero />
-    </Layout>
+    <StyledHero/>
+     
+    
   )
 }
-
-// ...GatsbyImageSharpFluid
