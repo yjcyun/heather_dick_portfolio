@@ -17,6 +17,7 @@ const getImage = graphql`
 
 const StyledHero = ({img, className,children}) => {
   const data = useStaticQuery(getImage);
+  
   return (
     <>
       <BackgroundImage

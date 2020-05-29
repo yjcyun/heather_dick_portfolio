@@ -1,12 +1,12 @@
 import React from 'react';
 import Layout from '../components/Layout';
 
-const coaching = () => {
+const contact = () => {
   return (
     <Layout>
-      coaching
+      contact
     </Layout>
   )
 }
 
-export default coaching
+export default contact

@@ -1,12 +1,12 @@
 import React from 'react';
 import Layout from '../components/Layout';
 
-const coaching = () => {
+const productionsReels = () => {
   return (
     <Layout>
-      coaching
+      productions-reels
     </Layout>
   )
 }
 
-export default coaching
+export default productionsReels
