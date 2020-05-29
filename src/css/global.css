@@ -1,8 +1,45 @@
+/* font */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&family=Dancing+Script:wght@700&display=swap");
+
+/*=============== 
+Variables
+===============*/
+:root{
+  --mainPurple: #5f2870;
+  --mainGold:#c4882d;
+  --clr2:#5a5a5a;
+  /* --clr3:#656565; */
+  --mainWhite: #fff;
+  --mainFont: 'Montserrat', sans-serif;
+  --cursiveFont: 'Dancing Script', cursive;
+  --transition: all 0.3s linear;
+}
+
 /*=============== 
 Global Styles
 ===============*/
-*{
+* {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
+
+body{
+  font-family: var(--mainFont);
+}
+
+img {
+  width: 100%;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+
+
+

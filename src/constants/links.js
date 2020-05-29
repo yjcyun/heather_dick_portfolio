@@ -9,23 +9,33 @@ const data = [
   },
   {
     id: 2,
-    text: 'about',
-    url: '/about'
+    text: 'coaching',
+    url: '/coaching'
   },
   {
     id: 3,
-    text: 'resume',
-    url: '/resume'
+    text: 'productions/reels',
+    url: '/productions-reels'
   },
   {
     id: 4,
+    text: 'testimonies',
+    url: '/testimonies'
+  },
+  {
+    id: 5,
     text: 'blog',
     url: '/blog'
+  },
+  {
+    id: 6,
+    text: 'contact us',
+    url: '/contact'
   },
 ];
 
 const tempNavLinks = data.map(link => (
-  <li key={key.id}>
+  <li key={link.id}>
     <Link to={link.url}>{link.text}</Link>
   </li>
 ));
