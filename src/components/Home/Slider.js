@@ -20,7 +20,7 @@ const Slider = () => {
   };
 
   return (
-    <SliderWrapper style={{ marginTop: '129.59px' }}>
+    <SliderWrapper>
       {sliderArr.map((item, index) => {
         return (
           <div key={index} className="slide" style={{ transform: `translateX(${x}%)` }}>

@@ -45,16 +45,16 @@ const NavbarWrapper = styled.nav`
     padding: 1rem 1.25rem;
   }
 
+  .nav-center{
+    background: #542C85;
+    color: var(--mainWhite);
+  }
+
   .logo-text{
     font-family: 'Montaga', serif;
     letter-spacing: 0.1rem;
     display:none;
     font-weight: normal;
-  }
-
-  .nav-center{
-    background: #542C85;
-    color: var(--mainWhite);
   }
 
   .nav-header img{
@@ -74,6 +74,7 @@ const NavbarWrapper = styled.nav`
     font-size: 1rem;
     text-transform: capitalize;
     font-weight: bold;
+    letter-spacing: 0.1rem;
   }
 
   @media (min-width: 768px) {
@@ -82,13 +83,15 @@ const NavbarWrapper = styled.nav`
       grid-template-columns: 1fr 1.5fr;
       align-items: center;
     }
+
     .nav-links{
       display: flex;
       width: 100%;
       justify-content:space-around;
-    }  
+    } 
+
     .nav-links a:hover{
-      box-shadow:0 2px var(--mainGold);
+      box-shadow:0 4px var(--mainGold);
     }
 
     .menu-btn {

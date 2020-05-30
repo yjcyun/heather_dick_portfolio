@@ -89,11 +89,7 @@ Navbar
   transform: translateY(10px);
 }
 
-
 .page-margin{
-  min-height: 100vh;
-  margin-top: 130px;
+  margin-top: 82px;
 }
 
-.carousel-img{
-}
