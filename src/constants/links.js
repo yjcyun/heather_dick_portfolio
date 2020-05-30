@@ -5,7 +5,7 @@ const data = [
   {
     id: 1,
     text: 'home',
-    url: '/'
+    url: '/landing'
   },
   {
     id: 2,
