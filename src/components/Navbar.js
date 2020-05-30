@@ -7,23 +7,26 @@ import logo from '../images/logo.png';
 const Navbar = ({ toggleNavbar }) => {
   return (
     <NavbarWrapper>
-      <div className="nav-center-banner">
-        <div className="nav-header banner">
+      <div className="nav-center">
+
+        <div className="nav-header">
           <Link to="/">
             <img src={logo} alt="Heather Dick Logo" />
           </Link>
-          <h3>
-            <span className="banner-name">Heather Dick & </span>
-            <span className="banner-company">Sirius Theatrical Company</span>
+          <h3 className="logo-text">
+            <span className="logo-name">Heather Dick & </span>
+            <span className="logo-company">Sirius Theatrical Company</span>
           </h3>
+
           <div className="menu-btn" role="button" tabIndex={0} onClick={toggleNavbar} onKeyDown={toggleNavbar}>
             <div className="menu-btn-burger"></div>
           </div>
         </div>
-      </div>
-      <div className="nav-center-links">
-        <div className="nav-header">
-          <NavLinks styleClass="nav-links" />
+
+        <div className="nav-center-links">
+          <div className="nav-header">
+            <NavLinks styleClass="nav-links" />
+          </div>
         </div>
       </div>
     </NavbarWrapper>
@@ -36,43 +39,29 @@ const NavbarWrapper = styled.nav`
   left: 0;
   width: 100%;
 
-  h3{
-    font-family: var(--cursiveFont);
+  .nav-header{
+    display: flex;
+    align-items: center;
+    padding: 1rem 1.25rem;
+  }
+
+  .logo-text{
+    font-family: 'Montaga', serif;
     letter-spacing: 0.1rem;
     display:none;
+    font-weight: normal;
   }
-  /* .banner-name {
-    font-size: 40px;
-  }
-  .banner-company{
-    font-size: 30px;
-  } */
 
-  .nav-center-banner{
-    background:var(--mainPurple);
+  .nav-center{
+    background: #542C85;
     color: var(--mainWhite);
-  }
-  
-  .nav-header{
-    width: 90vw;
-    max-width: 1170px;
-    margin: 0 auto;
-  }
-
-  .nav-header.banner{
-    display: flex;
-    justify-content:space-between;
-    align-items: center;
-    padding: 0.3rem 0;
   }
 
   .nav-header img{
     width: 50px;
-  }
-
-  .nav-center-links{
-    padding: 1rem 0; 
-    background: var(--mainWhite);
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   .nav-links {
@@ -80,24 +69,36 @@ const NavbarWrapper = styled.nav`
   }
 
   .nav-links a {
-    color: var(--mainGold);
+    color: var(--mainWhite);
     transition: var(--transition);
-    font-size: 1.3rem;
+    font-size: 1rem;
     text-transform: capitalize;
     font-weight: bold;
   }
 
   @media (min-width: 768px) {
+    .nav-center {
+      display: grid;
+      grid-template-columns: 1fr 1.5fr;
+      align-items: center;
+    }
     .nav-links{
       display: flex;
       width: 100%;
       justify-content:space-around;
     }  
+    .nav-links a:hover{
+      box-shadow:0 2px var(--mainGold);
+    }
+
     .menu-btn {
       display: none;
     } 
-    h3{
+    
+    .logo-text{
       display: flex;
+      flex-direction: column;
+      margin-left: 0.5rem;
     }
   }
 `;

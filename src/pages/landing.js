@@ -1,15 +1,15 @@
 import React from "react";
 import Layout from '../components/Layout';
-import Hero from "../components/Hero";
+import Slider from '../components/Home/Slider';
 
 const landing = () => {
   return (
     <Layout>
-      <Hero />
+    <div className="page-margin">
+      <Slider />
+    </div>
     </Layout>
   )
 }
-
 export default landing;
 
-// ...GatsbyImageSharpFluid

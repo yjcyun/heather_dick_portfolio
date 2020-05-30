@@ -1,5 +1,5 @@
 /* font */
-@import url("https://fonts.googleapis.com/css2?family=Montserrat&family=Dancing+Script:wght@700&family=Great+Vibes&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&family=Dancing+Script:wght@700&family=Great+Vibes&family=Montaga&family=Poppins:wght@300&display=swap");
 
 /*=============== 
 Variables
@@ -11,9 +11,9 @@ Variables
   --clr2: #5a5a5a;
   /* --clr3:#656565; */
   --mainWhite: #fff;
-  --mainFont: "Montserrat", sans-serif;
+  --mainFont: 'Poppins', sans-serif; 
   --cursiveFont: "Dancing Script", cursive;
-  --transition: all 0.3s linear;
+  --transition: all 0.2s linear;
 }
 
 /*=============== 
@@ -87,4 +87,13 @@ Navbar
 
 .menu-btn-burger::after {
   transform: translateY(10px);
+}
+
+
+.page-margin{
+  min-height: 100vh;
+  margin-top: 130px;
+}
+
+.carousel-img{
 }

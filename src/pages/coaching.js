@@ -4,7 +4,7 @@ import Layout from '../components/Layout';
 const coaching = () => {
   return (
     <Layout>
-      coaching
+     
     </Layout>
   )
 }
