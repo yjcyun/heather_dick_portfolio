@@ -5,12 +5,11 @@ import About from "../components/Home/About";
 
 const landing = () => {
   return (
-    <Layout>
+  
       <div className="page-margin">
         <Slider />
         <About />
       </div>
-    </Layout>
   )
 }
 export default landing;

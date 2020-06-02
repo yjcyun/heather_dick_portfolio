@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import NavLinks from '../constants/links';
 import logo from '../images/logo.png';
 
-const Navbar = ({ toggleNavbar }) => {
+const Navbar = ({ toggleNavbar}) => {
   return (
     <NavbarWrapper>
       <div className="nav-center">
@@ -21,7 +21,7 @@ const Navbar = ({ toggleNavbar }) => {
           </div>
         </div>
 
-        <NavLinks styleClass="nav-links" />
+        <NavLinks styleClass="nav-links" home/>
       </div>
     </NavbarWrapper>
   )
@@ -40,7 +40,6 @@ const NavbarWrapper = styled.nav`
     align-items: center;
     justify-content:space-between;
     padding: 0.5rem 0.8rem;
-
   }
 
   .logo-link{
@@ -54,8 +53,6 @@ const NavbarWrapper = styled.nav`
     line-height: 1;
     margin-bottom: 0;
     margin-left: 0.5rem;
-    display: inline-block;
-    
   }
 
   .logo-company{
@@ -77,7 +74,7 @@ const NavbarWrapper = styled.nav`
     color: var(--mainPurple);
     transition: var(--transition);
     font-size: 1rem;
-    text-transform: capitalize;
+    text-transform: lowercase;
     font-weight: bold;
     letter-spacing: 0.1rem;
     text-decoration: none;
@@ -111,7 +108,8 @@ const NavbarWrapper = styled.nav`
     }
 
     .nav-links{
-      display: flex;
+      /* display: none; */
+      display: ${props=>props.home? 'none':'flex'};
       width: 100%;
       justify-content:space-around;
     } 
