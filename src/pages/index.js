@@ -9,9 +9,10 @@ import NavbarHome from '../components/NavbarHome';
 
 export default function Home() {
   return (
-    <HomeWrapper>
+    <div className="page-margin">
       <NavbarHome />
-    </HomeWrapper>
+      <StyledHero />
+    </div>
   )
 }
 

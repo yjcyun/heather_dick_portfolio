@@ -1,7 +1,7 @@
 import React from 'react';
 import Layout from '../components/Layout';
 
-const productionsReels = () => {
+const Productions = () => {
   return (
     <Layout>
       productions-reels
@@ -9,4 +9,4 @@ const productionsReels = () => {
   )
 }
 
-export default productionsReels
+export default Productions

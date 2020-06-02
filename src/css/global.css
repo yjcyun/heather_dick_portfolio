@@ -46,6 +46,8 @@ a {
 .btn{
   padding: 1rem 3rem;
   letter-spacing: 0.1rem;
+  outline: none;
+  border: none;
 }
 
 /*=============== 
@@ -92,11 +94,11 @@ Navbar
 }
 
 .page-margin{
-  margin-top: 72px;
+  margin-top: 56px;
 }
 
 @media (max-width: 1200px) {
   .page-margin{
-    margin-top:80px;
+    margin-top:56px;
   }
 }
