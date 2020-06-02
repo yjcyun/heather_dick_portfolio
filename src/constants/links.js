@@ -4,8 +4,8 @@ import { Link } from 'gatsby';
 const data = [
   {
     id: 1,
-    text: 'home',
-    url: '/landing'
+    text: 'about',
+    url: '/about'
   },
   {
     id: 2,
@@ -14,13 +14,13 @@ const data = [
   },
   {
     id: 3,
-    text: 'productions/reels',
-    url: '/productions-reels'
+    text: 'productions',
+    url: '/productions'
   },
   {
     id: 4,
-    text: 'testimonies',
-    url: '/testimonies'
+    text: 'reviews',
+    url: '/reviews'
   },
   {
     id: 5,
@@ -29,7 +29,7 @@ const data = [
   },
   {
     id: 6,
-    text: 'contact us',
+    text: 'contact',
     url: '/contact'
   },
 ];

@@ -1,103 +1,80 @@
-import React, { useState } from 'react';
-import { FaChevronRight, FaChevronLeft } from 'react-icons/fa';
+import React from 'react';
+import { graphql, useStaticQuery } from 'gatsby';
+// import 'bootstrap/dist/css/bootstrap.min.css';
 import styled from 'styled-components';
-import ImgComp from '../Home/ImgComp';
-import img1 from '../../images/carousel-1.jpg';
-import img2 from '../../images/carousel-2.jpg';
-import img3 from '../../images/carousel-3.jpg';
+import Image from 'gatsby-image';
+import Carousel from 'react-bootstrap/Carousel';
+import img from '../../images/carousel-1.jpg';
 
-const Slider = () => {
-  let sliderArr = [<ImgComp src={img1} id={1} />, <ImgComp src={img2} id={2} />, <ImgComp src={img3} id={3} />];
+const getImage = graphql`
+ query {
+    img1:file(relativePath: {eq: "carousel-1.jpg"}) {
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    },
+    img2:file(relativePath: {eq: "carousel-2.jpg"}) {
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    },
+    img3:file(relativePath: {eq: "carousel-3.jpg"}) {
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+  }
+`;
 
-  const [x, setX] = useState(0);
-
-  const goToSlide = (id) => {
-    console.log(id);
-    setX(x + 100);
-    (x === 0) ? setX(-100 * (sliderArr.length - 1)) : setX(x + 100);
-  };
+const Slider = (props) => {
+  const data = useStaticQuery(getImage);
+  const img = data.img1.childImageSharp.fluid;
+  const img2 = data.img2.childImageSharp.fluid;
+  const img3 = data.img3.childImageSharp.fluid;
 
   return (
     <SliderWrapper>
-      {sliderArr.map((item, index) => {
-        return (
-          <div className="slider" key={index}>
-            <div
-              key={index}
-              className="slide"
-              style={{ transform: `translateX(${x}%)` }}>
-              {item}
-            </div>
-            <button
-              className="prevBtn ctrlBtn"
-              onClick={(id) => goToSlide(id)}>
-              {item}
-            </button>
-          </div>
-        )
-      })}
-
-      {/* {sliderArr.map((item, index) => {
-        return (
-          <button key={index} className="prevBtn ctrlBtn" onClick={prevSlide}>
-            {item}
-          </button>
-        )
-      })} */}
+      <Carousel>
+        <Carousel.Item className="carousel-item">
+          <Image fluid={img} className="carousel-img" />
+        </Carousel.Item>
+        <Carousel.Item>
+          <Image fluid={img2} className="carousel-img" />
+        </Carousel.Item>
+        <Carousel.Item>
+          <Image fluid={img3} className="carousel-img" />
+        </Carousel.Item>
+      </Carousel>
     </SliderWrapper>
-  )
+  );
 }
+
 
 const SliderWrapper = styled.div`
-.slider{
-  display:flex;
-  width: 100%;
-  height: 90vh;
-  align-items: center;
-  overflow: hidden;
+.carousel-img{
+  height: 80vh;
 }
+ .carousel-img img{
+   max-height:80vh !important;
+ }
+ .carousel-control-prev,
+ .carousel-control-next{
+   display: none;
+ }
 
-.slide{
-  min-width: 100%;
-  height: 90vh;
-  transition: var(--transition);
-  overflow:hidden;
-  position:relative;
-}
+ .carousel-indicators li{
+   background-color: black;
+   height: 10px;
+   width: 30px;
 
-.ctrlBtn {
-  background:none;
-  border:none;
-  position:absolute;
-  top: 40%;
-  transform: translateY(-50%);
-  width: 7%;
-  height: 7%;
-  cursor: pointer;
-  outline: none;
-}
-.ctrlBtn img {
-  border-radius: 50%;
-  height: 60px !important;
-  width: 60px!important;
-}
-.ctrlBtn:nth-of-type(2) {
-  top: 50%;
-}
-.ctrlBtn:nth-of-type(3) {
-  top: 60%;
-}
-.prevBtn{
-  left: 0;
- 
-}
-.nextBtn{
-right:0;
-}
-.ctrl-icon {
-  font-size: 2rem;
-  color: var(--mainWhite);
-}
-
+ }
 `;
+
 export default Slider
+

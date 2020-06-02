@@ -9,13 +9,13 @@ const Navbar = ({ toggleNavbar }) => {
     <NavbarWrapper>
       <div className="nav-center">
         <div className="nav-header">
-          <Link to="/">
+          <Link to="/" className="logo-link">
             <img src={logo} alt="Heather Dick Logo" />
+            <h3 className="logo-text">
+              <span className="logo-name">Heather Dick &</span><br />
+              <span className="logo-company">Sirius Theatrical Company</span>
+            </h3>
           </Link>
-          <h3 className="logo-text">
-            <span className="logo-name">Heather Dick &</span><br />
-            <span className="logo-company">Sirius Theatrical Company</span>
-          </h3>
           <div className="menu-btn" role="button" tabIndex={0} onClick={toggleNavbar} onKeyDown={toggleNavbar}>
             <div className="menu-btn-burger"></div>
           </div>
@@ -32,26 +32,34 @@ const NavbarWrapper = styled.nav`
   top: 0;
   left: 0;
   width: 100%;
-   background: #542C85;
-    color: var(--mainWhite);
+  background: var(--mainWhite);
+  color: var(--mainPurple);
 
   .nav-header{
     display: flex;
     align-items: center;
     justify-content:space-between;
     padding: 0.5rem 0.8rem;
+
+  }
+
+  .logo-link{
+    display:flex;
+    align-items: center;
   }
 
   .logo-text{
-    /* font-family: 'Montaga', serif; */
     letter-spacing: 0.1rem;
     font-weight: normal;
-    text-align:center;
     line-height: 1;
+    margin-bottom: 0;
+    margin-left: 0.5rem;
+    display: inline-block;
+    
   }
 
   .logo-company{
-    font-size: 80%;
+    font-size: 70%;
   }
 
   .nav-header img{
@@ -66,16 +74,17 @@ const NavbarWrapper = styled.nav`
   }
 
   .nav-links a {
-    color: var(--mainWhite);
+    color: var(--mainPurple);
     transition: var(--transition);
     font-size: 1rem;
     text-transform: capitalize;
     font-weight: bold;
     letter-spacing: 0.1rem;
+    text-decoration: none;
   }
 
   @media (max-width: 400px) {
-    .logo-text{
+    h3.logo-text{
       font-size: 0.9rem;
     }
   }
@@ -91,7 +100,9 @@ const NavbarWrapper = styled.nav`
     .nav-center {
       display: grid;
       grid-template-columns: 1fr 1.5fr;
-      align-items: center;
+      align-items: center !important;
+      max-width: 1170px;
+      margin: 0 auto;
     }
 
     .nav-header{
