@@ -1,6 +1,4 @@
 import React from 'react';
-import { Link } from 'gatsby';
-import styled from 'styled-components';
 import StyledHero from '../components/Home/StyledHero';
 
 import quoteIcon from '../images/quote.png';
@@ -15,7 +13,3 @@ export default function Home() {
     </div>
   )
 }
-
-const HomeWrapper = styled.div`
-
-`;

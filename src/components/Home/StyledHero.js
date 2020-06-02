@@ -28,9 +28,10 @@ const StyledHero = ({ img, children }) => {
         <div className="hero-subtitle">
           <h5>actor. writer. producer.</h5>
         </div>
-        <button className="btn hero-btn">
-          <Link to="/about">learn more</Link>
-          </button>
+
+        <Link to="/about">
+          <button className="btn hero-btn">learn more</button>
+        </Link>
       </div>
       <div className="hero-image">
         <Image
