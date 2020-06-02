@@ -4,7 +4,9 @@ import Layout from '../components/Layout';
 const blog = () => {
   return (
     <Layout>
-      blog
+      <div className="page-height">
+
+      </div>
     </Layout>
   )
 }

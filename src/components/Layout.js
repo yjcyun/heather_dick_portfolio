@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Navbar from './Navbar';
+import Footer from './Footer';
 
 const Layout = ({ children }) => {
   const [isOpen, setIsOpen] = useState(true);
@@ -11,6 +12,7 @@ const Layout = ({ children }) => {
     <>
       <Navbar toggleNavbar={toggleNavbar} />
       {children}
+      <Footer />
     </>
   )
 }

@@ -3,25 +3,20 @@ import { Link } from 'gatsby';
 import styled from 'styled-components';
 import NavLinks from '../constants/links';
 import logo from '../images/logo.png';
+import Logo from './Logo';
 
-const Navbar = ({ toggleNavbar}) => {
+const Navbar = ({ toggleNavbar }) => {
   return (
     <NavbarWrapper>
       <div className="nav-center">
         <div className="nav-header">
-          <Link to="/" className="logo-link">
-            <img src={logo} alt="Heather Dick Logo" />
-            <h3 className="logo-text">
-              <span className="logo-name">Heather Dick &</span><br />
-              <span className="logo-company">Sirius Theatrical Company</span>
-            </h3>
-          </Link>
+          <Logo />
           <div className="menu-btn" role="button" tabIndex={0} onClick={toggleNavbar} onKeyDown={toggleNavbar}>
             <div className="menu-btn-burger"></div>
           </div>
         </div>
 
-        <NavLinks styleClass="nav-links" home/>
+        <NavLinks styleClass="nav-links" home />
       </div>
     </NavbarWrapper>
   )
@@ -40,30 +35,6 @@ const NavbarWrapper = styled.nav`
     align-items: center;
     justify-content:space-between;
     padding: 0.5rem 0.8rem;
-  }
-
-  .logo-link{
-    display:flex;
-    align-items: center;
-  }
-
-  .logo-text{
-    letter-spacing: 0.1rem;
-    font-weight: normal;
-    line-height: 1;
-    margin-bottom: 0;
-    margin-left: 0.5rem;
-  }
-
-  .logo-company{
-    font-size: 70%;
-  }
-
-  .nav-header img{
-    width: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
   }
 
   .nav-links {
@@ -103,13 +74,13 @@ const NavbarWrapper = styled.nav`
     }
 
     .nav-header{
-      padding: 1rem 1.25rem;
+      padding: 1rem 0;
       justify-content: flex-start;
     }
 
     .nav-links{
       /* display: none; */
-      display: ${props=>props.home? 'none':'flex'};
+      display: ${props => props.home ? 'none' : 'flex'};
       width: 100%;
       justify-content:space-around;
     } 

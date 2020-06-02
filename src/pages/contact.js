@@ -4,7 +4,9 @@ import Layout from '../components/Layout';
 const contact = () => {
   return (
     <Layout>
-      contact
+      <div className="page-height">
+
+      </div>
     </Layout>
   )
 }

@@ -55,7 +55,7 @@ const NavbarWrapper = styled.nav`
     }
 
     .nav-header{
-      padding: 1rem 1.25rem;
+      padding: 1rem 0;
       justify-content: flex-start;
     }  
   }

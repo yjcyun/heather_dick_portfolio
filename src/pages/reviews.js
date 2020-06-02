@@ -1,12 +1,14 @@
 import React from 'react';
 import Layout from '../components/Layout';
 
-const testimonies = () => {
+const Reviews = () => {
   return (
     <Layout>
-      testimonies
+      <div className="page-height">
+
+      </div>
     </Layout>
   )
 }
 
-export default testimonies
+export default Reviews
