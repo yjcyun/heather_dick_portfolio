@@ -45,13 +45,6 @@ const NavbarWrapper = styled.nav`
     align-items: center;
   }
 
-  @media (max-width: 1199px) {
-    .nav-center{
-      max-width: 900px;
-      margin: 0 auto;
-    }
-  }
-
   @media (min-width: 1200px) {
     .nav-center {
       display: grid;

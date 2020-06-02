@@ -40,7 +40,6 @@ const StyledHero = ({ img, children }) => {
         </Image>
         <div className="background-frame"></div>
       </div>
-
     </HeroWrapper>
   )
 }
@@ -101,27 +100,79 @@ grid-auto-flow: dense;
   width: 100%;
   height: 20rem;
 }
+
 .background-frame{
  display: none;
 }
 
 @media (min-width: 768px) {
+  .hero-text{
+    margin-top:3rem;
+  }
+  
   .hero-title h1{
-  font-size: 7rem;
+  font-size: 5rem;
+  }
+
+  .hero-title h3 {
+    font-size: 2rem;
+    margin-bottom:2rem;
+  }
+  .hero-subtitle h5{
+    font-size: 1.5rem;
+  }
 }
 
-.hero-title h3 {
-  font-size: 2rem;
+@media (min-width: 996px) {
+  flex-direction: row;
+   .hero-text{
+    order:0;
+    text-align:left;
+    padding: 0 3rem 0 1.5rem;
+  }
+  .hero-image{
+    width: 25rem;
+    margin-left: 3rem;
+  }
+  .background-img{
+    width: 25rem;
+    height: 30rem;
+  }
+  .hero-title h1{
+  font-size: 4rem;
+  }
+  .hero-title h3 {
+    font-size: 1.7rem;
+  }
+  .hero-subtitle h5{
+    font-size: 1.2rem;
+  }
+   .background-frame{
+    display:flex;
+    background-color: var(--mainPurple);
+    width: 25rem;
+    height: 30rem;
+    position: absolute;
+    left: 2rem;
+    top: -2rem;
+    z-index:-1;
+  }
 }
-.background-frame{
-  background-color: var(--mainPurple);
-  width: 25rem;
-  height: 40rem;
-  position: absolute;
-  left: 7rem;
-  top: -2rem;
-  z-index:1;
-}
+
+@media (min-width: 1110px) {
+  .hero-image{
+    width: 30rem;
+  }
+
+  .background-img{
+    width: 30rem;
+    height: 35rem;
+  }
+
+  .background-frame{
+    width: 30rem;
+    height: 35rem;
+  }
 }
 `;
 
