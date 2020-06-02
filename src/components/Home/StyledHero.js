@@ -1,5 +1,5 @@
 import React from 'react';
-import { graphql, useStaticQuery } from 'gatsby';
+import { graphql, useStaticQuery, Link } from 'gatsby';
 import styled from 'styled-components';
 import Image from 'gatsby-image';
 
@@ -29,7 +29,7 @@ const StyledHero = ({ img, children }) => {
           <h5>actor. writer. producer.</h5>
         </div>
         <button className="btn hero-btn">
-          learn more
+          <Link to="/about">learn more</Link>
           </button>
       </div>
       <div className="hero-image">
@@ -85,6 +85,15 @@ grid-auto-flow: dense;
   text-transform: uppercase;
   background: var(--mainPurple);
   color: white;
+  transition: var(--transition);
+}
+
+.hero-btn a {
+  color: white;
+}
+
+.hero-btn:hover {
+  background: var(--mainGold);
 }
 
 .hero-image{

@@ -5,7 +5,7 @@
 Variables
 ===============*/
 :root {
-  --mainPurple: #5f2870;
+  --mainPurple: #542C85;
   --lightPurple: #863ca8;
   --mainGold: #c4882d;
   --clr2: #5a5a5a;
@@ -48,6 +48,7 @@ a {
   letter-spacing: 0.1rem;
   outline: none;
   border: none;
+  cursor: pointer;
 }
 
 /*=============== 
