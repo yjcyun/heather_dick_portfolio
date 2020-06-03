@@ -9,7 +9,7 @@ const contact = () => {
       <div className="page-height page-margin" >
         <Info>
           <Title 
-          title="contact us" 
+          title="contact me" 
           subtitle="Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, reprehenderit."/>
           <div className="info-contact">
             <h3 className="info-author">Heather Dick</h3>
@@ -26,4 +26,4 @@ const contact = () => {
   )
 }
 
-export default contact
+export default contact;

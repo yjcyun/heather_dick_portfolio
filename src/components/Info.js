@@ -15,11 +15,11 @@ const getImage = graphql`
   }
 `;
 
-const Info = ({ img, children }) => {
+const Info = ({ img, children, reverse}) => {
   const data = useStaticQuery(getImage);
 
   return (
-    <InfoWrapper>
+    <InfoWrapper reverse={reverse}>
       <div className="info-text">
         {children}
       </div>
@@ -35,8 +35,8 @@ const Info = ({ img, children }) => {
 }
 
 const InfoWrapper = styled.section`
-display:grid;
-grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+display:flex;
+flex-direction: ${props => props.reverse ? 'row-reverse' : ''};
 justify-content:center;
 align-items: center;
 min-height: var(--minHeight);
@@ -47,8 +47,8 @@ margin: 0 auto;
   display:flex;
   flex-direction:column;
   text-align: left;
-  width: 300px;
-  margin: 2rem auto 0;
+  padding-left: 2rem;
+  flex:3;
 }
 
 .info-contact{
@@ -58,27 +58,26 @@ margin: 0 auto;
 .info-image{
   display:flex;
   justify-content: center;
-  align-items:center;
-  width: 320px;
-  height: 370px;
+  align-items:flex-start;
+  flex:2;
   margin: 3rem auto 2rem;
+  height: 30rem;
 }
 
 .background-img{
-  height: 100%;
-  width:  100%;
+   width: 100%;
+  height:100%;
 }
 
 @media (min-width: 996px) {
   .info-text {
     width: 100%;
-    margin: 2rem auto 3rem 4rem;
+    margin: 0 auto;
   }
 
   .info-image{
-    width: 500px;
-    height: 330px;
-    margin: 2rem auto 2rem;
+   
+    margin: 0 auto;
   }
 }
 `;
