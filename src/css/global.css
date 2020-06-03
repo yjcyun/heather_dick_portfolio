@@ -1,20 +1,28 @@
 /* font */
-@import url("https://fonts.googleapis.com/css2?&family=Poppins:wght@300&family=Playfair+Display:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?&family=Poppins:wght@300&family=Playfair+Display:wght@700&family=Montserrat&display=swap");
+
+@font-face{
+  font-family:'Brusher';
+  src: local('Brusher'), url(../fonts/brusher/Brusher.ttf) format('truetype');
+}
+
 
 /*=============== 
 Variables
 ===============*/
 :root {
-  --mainPurple: #542C85;
+  --mainPurple: #542c85;
   --lightPurple: #863ca8;
   --mainGold: #c4882d;
-  --beige: #ECE7DF;
+  --lightGold: #ccb764;
+  --beige: #ece7df;
   --clr2: #5a5a5a;
   /* --clr3:#656565; */
-  /* --lightGold:#CCB764 */
+
   --mainWhite: #fff;
-  --mainFont: 'Poppins', sans-serif; 
-  --titleFont:  'Playfair Display', serif;
+  --mainFont: "Poppins", sans-serif;
+  --titleFont: "Montserrat", sans-serif;
+  --cursiveFont: 'Brusher';
   --transition: all 0.2s linear;
   --minHeight: calc(100vh - 213px);
 }
@@ -46,7 +54,7 @@ a {
 }
 
 /* btn */
-.btn{
+.btn {
   padding: 1rem 3rem;
   letter-spacing: 0.1rem;
   outline: none;
@@ -70,7 +78,7 @@ Navbar
   cursor: pointer;
   display: flex;
   justify-content: center;
-  align-items:center;
+  align-items: center;
   width: 60px;
   height: 60px;
 }
@@ -104,14 +112,12 @@ Navbar
   transform: translateY(8px);
 }
 
-.page-margin{
+.page-margin {
   margin-top: 72px;
 }
 
 @media (max-width: 1200px) {
-  .page-margin{
-    margin-top:76px;
+  .page-margin {
+    margin-top: 76px;
   }
 }
-
-

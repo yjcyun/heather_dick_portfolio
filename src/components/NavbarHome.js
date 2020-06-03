@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'gatsby';
 import styled from 'styled-components';
-import NavLinks from '../constants/links';
 import logo from '../images/logo.png';
 
 const Navbar = ({ toggleNavbar }) => {

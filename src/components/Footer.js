@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'gatsby';
 import styled from 'styled-components';
 import NavLinks from '../constants/links';
 import Logo from './Logo';

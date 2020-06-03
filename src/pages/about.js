@@ -2,11 +2,16 @@ import React from 'react';
 import Layout from '../components/Layout';
 import Info from '../components/Info';
 import Title from '../components/Title';
+import Banner from '../components/Banner';
 
 const about = () => {
   return (
     <Layout>
       <div className="page-height page-margin">
+        <Banner
+         heading="Be ri-DICK-ulous!"
+         subHeading="learn about heather and her work"
+        ></Banner>
         <Info reverse>
           <Title
             title="WHO IS"
