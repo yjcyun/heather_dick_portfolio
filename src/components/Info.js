@@ -42,11 +42,13 @@ align-items: center;
 min-height: var(--minHeight);
 max-width: 1170px;
 margin: 0 auto 3rem;
+padding: 0 2rem;
 
 .info-text {
   display:flex;
   flex-direction:column;
   text-align: left;
+  align-items:flex-start;
   padding: 2rem;
 }
 
@@ -54,16 +56,14 @@ margin: 0 auto 3rem;
   margin: 2rem 0 1rem;
 }
 
-.info-author{
-
-}
-
 .info-image{
   display:flex;
   justify-content: center;
   align-items:flex-start;
-  height: 25rem;
-  width: 20rem;
+  max-height: 35rem;
+  min-height: 30rem;
+  min-width: 20rem;
+  max-width: 30rem;
 }
 
 .background-img{
@@ -73,7 +73,6 @@ margin: 0 auto 3rem;
 
 @media (min-width: 768px) {
 flex-direction: ${props => props.reverse ? 'row-reverse' : 'row'};
-padding:0 4rem;
 
 .info-image{
   margin: 0 auto;

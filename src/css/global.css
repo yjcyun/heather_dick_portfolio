@@ -21,7 +21,7 @@ Variables
 
   --mainWhite: #fff;
   --mainFont: "Poppins", sans-serif;
-  --titleFont: "Montserrat", sans-serif;
+  --titleFont: 'Playfair Display', serif;
   --cursiveFont: 'Brusher';
   --transition: all 0.2s linear;
   --minHeight: calc(100vh - 213px);
@@ -51,15 +51,6 @@ ul {
 
 a {
   text-decoration: none;
-}
-
-/* btn */
-.btn {
-  padding: 1rem 3rem;
-  letter-spacing: 0.1rem;
-  outline: none;
-  border: none;
-  cursor: pointer;
 }
 
 /*=============== 
@@ -115,6 +106,13 @@ Navbar
 .page-margin {
   margin-top: 72px;
 }
+.extra-margin{
+  margin: 20vh auto 0;
+}
+
+ .max-width{
+    max-width: 1170px;
+  }
 
 @media (max-width: 1200px) {
   .page-margin {

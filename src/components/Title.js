@@ -19,6 +19,7 @@ const TitleWrapper = styled.section`
   display: inline-block;
   margin-bottom:2rem;
   font-size:1.5rem;
+  text-transform: uppercase;
 }
 
 .title-two {

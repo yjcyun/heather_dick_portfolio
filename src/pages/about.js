@@ -2,22 +2,19 @@ import React from 'react';
 import Layout from '../components/Layout';
 import Info from '../components/Info';
 import Title from '../components/Title';
-import Banner from '../components/Banner';
+import Button from '../components/Button';
 
 const about = () => {
   return (
     <Layout>
-      <div className="page-height page-margin">
-        <Banner
-         heading="Be ri-DICK-ulous!"
-         subHeading="learn about heather and her work"
-        ></Banner>
+      <div className="page-height extra-margin">
         <Info reverse>
           <Title
-            title="WHO IS"
-            title2="Heather?"
+            title="WHO IS HEATHER?"
             subtitle="Heather Dick is dolor sit amet consectetur adipisicing elit. Alias, reprehenderit.Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, reprehenderit. Aadipisicing elit. Alias, reprehenderit.Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, reprehenderit.Heather Dick is dolor sit amet consectetur adipisicing elit. Alias, reprehenderit.Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, reprehenderit. Aadipisicing elit. Alias, reprehenderit.Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, reprehenderit. Heather Dick is dolor sit amet consectetur adipisicing elit. Alias, reprehenderit.Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, reprehenderit. Aadipisicing elit. Alias, reprehenderit.Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, reprehenderit.Heather Dick is dolor sit amet consectetur " />
+          <Button text="contact for full resume" />
         </Info>
+        
       </div>
     </Layout>
   )
