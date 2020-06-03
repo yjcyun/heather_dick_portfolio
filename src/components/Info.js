@@ -15,7 +15,7 @@ const getImage = graphql`
   }
 `;
 
-const Info = ({ img, children, reverse}) => {
+const Info = ({ img, children, reverse }) => {
   const data = useStaticQuery(getImage);
 
   return (
@@ -36,49 +36,56 @@ const Info = ({ img, children, reverse}) => {
 
 const InfoWrapper = styled.section`
 display:flex;
-flex-direction: ${props => props.reverse ? 'row-reverse' : ''};
+flex-direction: column;
 justify-content:center;
 align-items: center;
 min-height: var(--minHeight);
 max-width: 1170px;
-margin: 0 auto;
+margin: 0 auto 3rem;
 
 .info-text {
   display:flex;
   flex-direction:column;
   text-align: left;
-  padding-left: 2rem;
-  flex:3;
+  padding: 2rem;
 }
 
 .info-contact{
-  margin: 0.7rem 0;
+  margin: 2rem 0 1rem;
+}
+
+.info-author{
+
 }
 
 .info-image{
   display:flex;
   justify-content: center;
   align-items:flex-start;
-  flex:2;
-  margin: 3rem auto 2rem;
-  height: 30rem;
+  height: 25rem;
+  width: 20rem;
 }
 
 .background-img{
    width: 100%;
-  height:100%;
+   height:100%;
 }
 
-@media (min-width: 996px) {
+@media (min-width: 768px) {
+flex-direction: ${props => props.reverse ? 'row-reverse' : 'row'};
+padding:0 4rem;
+
+.info-image{
+  margin: 0 auto;
+  height: 30rem;
+  flex:2;
+}
   .info-text {
     width: 100%;
     margin: 0 auto;
+    flex:3
   }
 
-  .info-image{
-   
-    margin: 0 auto;
-  }
 }
 `;
 

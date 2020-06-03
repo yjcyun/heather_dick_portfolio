@@ -16,31 +16,23 @@ const TitleWrapper = styled.section`
 .info-title{
   font-family: var(--titleFont);
   color: #190d27;
-  display: inline;
-}
-
-.title-one{
-font-size:1.5rem;
+  display: inline-block;
+  margin-bottom:2rem;
+  font-size:1.5rem;
 }
 
 .title-two {
   color: var(--mainPurple);
-  font-size: 2rem;
 }
 
 @media (min-width: 996px) {
   .info-title{
     letter-spacing: 0.15rem;
-  }
-
-  .title-one{
     font-size:3rem;
   }
-  .title-two{
-    font-size: 3.8rem;
-  }
+  
   .info-subtitle {
-    width: 75%;
+    width: 100%;
     font-size: 1rem;
   }
 }
