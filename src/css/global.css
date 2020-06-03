@@ -1,5 +1,5 @@
 /* font */
-@import url("https://fonts.googleapis.com/css2?family=Montserrat&family=Dancing+Script:wght@700&family=Great+Vibes&family=Montaga&family=Poppins:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?&family=Poppins:wght@300&family=Playfair+Display:wght@700&display=swap");
 
 /*=============== 
 Variables
@@ -8,12 +8,14 @@ Variables
   --mainPurple: #542C85;
   --lightPurple: #863ca8;
   --mainGold: #c4882d;
+  --beige: #ECE7DF;
   --clr2: #5a5a5a;
   /* --clr3:#656565; */
   --mainWhite: #fff;
   --mainFont: 'Poppins', sans-serif; 
-  --cursiveFont: "Dancing Script", cursive;
+  --titleFont:  'Playfair Display', serif;
   --transition: all 0.2s linear;
+  --minHeight: calc(100vh - 213px);
 }
 
 /*=============== 
@@ -55,7 +57,7 @@ a {
 Pages 
 ===============*/
 .page-height {
-  min-height: calc(100vh - 213px);
+  min-height: var(--minHeight);
 }
 
 /*=============== 
@@ -107,7 +109,7 @@ Navbar
 
 @media (max-width: 1200px) {
   .page-margin{
-    margin-top:56px;
+    margin-top:76px;
   }
 }
 

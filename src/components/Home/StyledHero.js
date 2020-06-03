@@ -15,7 +15,7 @@ const getImage = graphql`
   }
 `;
 
-const StyledHero = ({ img, children }) => {
+const StyledHero = () => {
   const data = useStaticQuery(getImage);
 
   return (
@@ -36,7 +36,7 @@ const StyledHero = ({ img, children }) => {
       <div className="hero-image">
         <Image
           className="background-img"
-          fluid={img || data.defaultBcg.childImageSharp.fluid}
+          fluid={data.defaultBcg.childImageSharp.fluid}
         >
         </Image>
         <div className="background-frame"></div>
