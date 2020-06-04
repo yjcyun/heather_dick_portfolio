@@ -41,6 +41,13 @@ hr{
   border-top: 0.6px solid var(--lightGold);
 }
 
+@media screen and (max-width: 768px) {
+  hr {
+    width: 90%;
+    margin: auto;
+  }
+}
+
 body {
   font-family: var(--mainFont);
 }

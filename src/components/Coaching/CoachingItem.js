@@ -21,6 +21,7 @@ padding: 3rem 0;
   .coaching-img {
     height: 15rem;
     flex:1;
+    margin-bottom: 2rem;
   }
 
   .coaching-text{
@@ -36,6 +37,11 @@ padding: 3rem 0;
   
   @media (max-width: 768px){
     flex-direction:column;
+    padding: 3rem 1rem;
+
+    .coaching-text{
+      padding: 0 0.8rem;
+    }
   }
 `;
 

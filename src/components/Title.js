@@ -14,19 +14,21 @@ const Title = ({ title, subtitle }) => {
 }
 
 const TitleWrapper = styled.section`
-margin-bottom:5rem;
+margin: 0 1rem 5rem;
 
 .info-title{
   font-family: var(--titleFont);
   color: #190d27;
   margin-bottom:1rem;
-  font-size:1.5rem;
+  font-size:2.5rem;
+  letter-spacing:0.1rem;
   text-transform: uppercase;
   display: inline-block;
 }
 
-
 @media (min-width: 996px) {
+  margin:0 0 5rem;
+
   .info-title{
     letter-spacing: 0.15rem;
     font-size:3rem;

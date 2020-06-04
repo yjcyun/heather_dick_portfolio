@@ -29,13 +29,13 @@ const CoachingList = () => {
 
   return (
     <CoachingListWrapper>
-      {/* <hr /> */}
+      <hr />
       <CoachingItem
         image={image1}
         title="Acting Coaching"
         desc="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Pariatur, officiis debitis. Veritatis ipsam dolor, molestias quasi earum cum nostrum incidunt harum soluta quo, hic expedita aspernatur nam accusantium nobis ad laudantium molestiae, sequi beatae! Cumque quos minima quod officiis consequatur nulla, molestiae voluptate voluptas mollitia provident, molestias dicta asperiores blanditiis."
       />
-      <hr/>
+
       <CoachingItem
         image={image2}
         title="Voice Coaching"
@@ -63,6 +63,12 @@ const CoachingListWrapper = styled.section`
 
 .coaching-link:hover {
   box-shadow:0 4px var(--mainGold);
+}
+@media (max-width: 768px) {
+  .coaching-contact{
+    padding: 0 1rem;
+    font-size: 90%;
+  }
 }
 `;
 
