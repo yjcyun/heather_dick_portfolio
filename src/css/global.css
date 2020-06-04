@@ -36,6 +36,11 @@ Global Styles
   padding: 0;
 }
 
+hr{
+  border: none;
+  border-top: 0.6px solid var(--lightGold);
+}
+
 body {
   font-family: var(--mainFont);
 }
@@ -49,9 +54,15 @@ ul {
   margin-bottom: 0 !important;
 }
 
+/* link */
 a {
   text-decoration: none;
+  color: black;
 }
+a:hover{
+  color: black;
+}
+
 
 /*=============== 
 Pages 
@@ -107,7 +118,7 @@ Navbar
   margin-top: 72px;
 }
 .extra-margin{
-  margin: 20vh auto 0;
+  margin: 20vh auto;
 }
 
  .max-width{
