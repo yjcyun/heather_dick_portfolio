@@ -35,21 +35,31 @@ const Info = ({ img, children, reverse }) => {
 }
 
 const InfoWrapper = styled.section`
-display:flex;
-flex-direction: column;
+/* display:flex;
+flex-direction:  ${props => props.reverse ? 'column-reverse' : 'column'}; */
+display: grid;
+grid-template-columns:${props => props.reverse ? '1fr 2fr' : '2fr 1fr'};
+grid-gap:2rem;
 justify-content:center;
-align-items: center;
+align-items: start;
 min-height: var(--minHeight);
 max-width: 1170px;
 margin: 0 auto 3rem;
-padding: 0 2rem;
 
 .info-text {
-  display:flex;
-  flex-direction:column;
   text-align: left;
-  align-items:flex-start;
-  padding: 2rem;
+  padding: 0 2rem;
+  order: ${props => props.reverse ? '2' : ''};
+}
+
+.info-text h1{
+  font-size: 2rem;
+  letter-spacing:0.1rem;
+  margin-bottom:0.4rem;
+}
+
+.info-text p{
+  line-height: 1.7;
 }
 
 .info-contact{
@@ -57,35 +67,13 @@ padding: 0 2rem;
 }
 
 .info-image{
-  display:flex;
-  justify-content: center;
-  align-items:flex-start;
-  max-height: 35rem;
-  min-height: 30rem;
-  min-width: 20rem;
-  max-width: 30rem;
+order: ${props => props.reverse ? '1' : ''};
 }
 
-.background-img{
-   width: 100%;
-   height:100%;
+@media (max-width: 768px) {
+  grid-template-columns: 1fr;
 }
 
-@media (min-width: 768px) {
-flex-direction: ${props => props.reverse ? 'row-reverse' : 'row'};
-
-.info-image{
-  margin: 0 auto;
-  height: 30rem;
-  flex:2;
-}
-  .info-text {
-    width: 100%;
-    margin: 0 auto;
-    flex:3
-  }
-
-}
 `;
 
 export default Info

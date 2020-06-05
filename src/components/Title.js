@@ -2,13 +2,11 @@ import React from 'react';
 import styled from 'styled-components';
 
 
-const Title = ({ title, subtitle }) => {
+const Title = ({ title, subtitle}) => {
   return (
     <TitleWrapper>
-      <h1 className="info-title">{title}</h1>
-
-      <h3 className="info-subtitle">{subtitle}</h3>
-
+      <h1 className="title">{title}</h1>
+      <h3 className="subtitle">{subtitle}</h3>
     </TitleWrapper>
   )
 }
@@ -16,7 +14,7 @@ const Title = ({ title, subtitle }) => {
 const TitleWrapper = styled.section`
 margin: 0 1rem 5rem;
 
-.info-title{
+.title{
   font-family: var(--titleFont);
   color: #190d27;
   margin-bottom:1rem;
@@ -29,12 +27,12 @@ margin: 0 1rem 5rem;
 @media (min-width: 996px) {
   margin:0 0 5rem;
 
-  .info-title{
+  .title{
     letter-spacing: 0.15rem;
     font-size:3rem;
   }
   
-  .info-subtitle {
+  .subtitle {
     width: 100%;
     font-size: 1rem;
     width: 80%;

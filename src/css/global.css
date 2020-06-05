@@ -1,10 +1,6 @@
 /* font */
-@import url("https://fonts.googleapis.com/css2?&family=Poppins:wght@300&family=Playfair+Display:wght@700&family=Montserrat&display=swap");
+@import url("https://fonts.googleapis.com/css2?&family=Poppins:wght@300&family=Playfair+Display:wght@700&family=Montserrat&family=Playball&display=swap");
 
-@font-face{
-  font-family:'Brusher';
-  src: local('Brusher'), url(../fonts/brusher/Brusher.ttf) format('truetype');
-}
 
 
 /*=============== 
@@ -12,7 +8,7 @@ Variables
 ===============*/
 :root {
   --mainPurple: #542c85;
-  --lightPurple: #863ca8;
+  --lightPurple: #783fbe;
   --mainGold: #c4882d;
   --lightGold: #ccb764;
   --beige: #ece7df;
@@ -22,7 +18,7 @@ Variables
   --mainWhite: #fff;
   --mainFont: "Poppins", sans-serif;
   --titleFont: 'Playfair Display', serif;
-  --cursiveFont: 'Brusher';
+  --cursiveFont: 'Playball', cursive;
   --transition: all 0.2s linear;
   --minHeight: calc(100vh - 213px);
 }
@@ -127,7 +123,14 @@ Navbar
 .extra-margin{
   margin: 20vh auto;
 }
-
+.ipad-padding{
+  padding: 0 2rem;
+}
+@media (max-width: 768px) {
+  .ipad-padding{
+    padding:0;
+  };
+}
  .max-width{
     max-width: 1170px;
   }
@@ -137,3 +140,7 @@ Navbar
     margin-top: 76px;
   }
 }
+
+/*=============== 
+Button
+===============*/

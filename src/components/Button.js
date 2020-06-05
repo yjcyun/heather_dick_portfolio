@@ -1,9 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const Button = ({text}) => {
+const Button = ({ text, styled }) => {
   return (
-    <ButtonWrapper>
+    <ButtonWrapper styled={styled}>
       {text}
     </ButtonWrapper>
   )
@@ -17,7 +17,12 @@ const ButtonWrapper = styled.button`
   cursor: pointer;
   text-transform: uppercase;
   font-family: var(--mainFont);
-
+  background: ${props=>props.styled? 'var(--mainPurple)':''};
+  color: ${props => props.styled ? '#fff' : ''};
+  
+  @media(max-width:768px) {
+    margin: 0 auto;
+  }
 `;
 
 export default Button
