@@ -4,7 +4,8 @@ import Layout from '../components/Layout';
 import Title from '../components/Title';
 import Button from '../components/Button';
 import Info from '../components/Info';
-import Reels from '../components/About/Reels';
+import Reels from '../components/About/Reels/Reels';
+import ResumeList from '../components/About/Resume/ResumeList';
 
 export const query = graphql`
   query {
@@ -31,8 +32,8 @@ const about = ({ data }) => {
           <p>Heather graduated from Queen’s University (BA Hons. with majors in both Drama and French), and between performing commitments, followed up her formal studies by attending the Master Drama Program (acting) in Banff, Alberta and training under several master coaches in Toronto. She has studied with the world renowned Shakespeare & Company (Lenox, Mass.) where she was also Teacher Trainee in Voice for their Month-long January professional actor intensives (2012 - 2014) and at the Kristin Linklater Voice Centre in Orkney, Scotland where she certified as a Designated Linklater Voice Teacher. In recent years, she has also branched out into writing plays and short stories.</p><br />
           <Button styled className="about-btn" text="contact for full resume" />
         </Info>
-
         <Reels />
+        <ResumeList />
       </div>
     </Layout>
   )

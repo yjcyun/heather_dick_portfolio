@@ -3,10 +3,13 @@ import VideoItem from './VideoItem'
 import styled from 'styled-components';
 
 const VideoList = ({ videos, onVideoSelect }) => {
-  const renderedList = videos.map((item, index) => (
+  console.log(videos);
+  const renderedList = videos.map(item => 
+    (
     <VideoItem
-      key={index}
-      video={item}
+      key={item.id}
+      video={item.url}
+      thumbnail={item.thumbnail}
       onVideoSelect={onVideoSelect}
     />
   ))
@@ -19,8 +22,10 @@ const VideoList = ({ videos, onVideoSelect }) => {
 
 const VideoListWrapper = styled.div`
 display:flex;
+flex-direction:column;
 justify-content:center;
-align-items: center;
+align-items: flex-start;
+flex:1
 `;
 
 export default VideoList
