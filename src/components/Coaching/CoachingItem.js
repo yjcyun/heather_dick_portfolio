@@ -16,7 +16,7 @@ const CoachingItem = ({ image, desc, title }) => {
 
 const CoachingItemWrapper = styled.section`
 display: flex;
-padding: 3rem 0;
+padding: 3rem 0 0;
 
   .coaching-img {
     height: 15rem;
@@ -37,10 +37,10 @@ padding: 3rem 0;
   
   @media (max-width: 768px){
     flex-direction:column;
-    padding: 3rem 1rem;
+    padding: 3rem 1rem 0;
 
     .coaching-text{
-      padding: 0 0.8rem;
+      padding: 0;
     }
   }
 `;

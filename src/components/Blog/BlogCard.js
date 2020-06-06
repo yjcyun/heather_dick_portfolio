@@ -71,9 +71,14 @@ const BlogCardWrapper = styled.div`
   display: flex;
   justify-content:center;
   align-items:center;
+  font-size:0.9rem;
+  color: grey;
 }
 .dot-icon{
   display: ${props => props.hide ? 'none' : ''}
+}
+.blog-text h3{
+  margin: 0.5rem auto;
 }
 `;
 

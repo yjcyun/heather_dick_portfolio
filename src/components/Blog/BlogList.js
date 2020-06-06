@@ -16,8 +16,8 @@ const BlogList = ({ blogs }) => {
 }
 
 const BlogListWrapper = styled.section`
-@media(max-width:401px){
-  padding: 0 2rem;
+@media(max-width:415px){
+  padding: 0 1rem;
 }
 @media(min-width: 768px){
   padding: 0;

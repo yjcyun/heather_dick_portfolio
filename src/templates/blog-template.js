@@ -1,9 +1,11 @@
 import React from 'react';
 import { graphql, Link } from 'gatsby';
+import { FaLongArrowAltLeft } from 'react-icons/fa';
 import ReactMarkdown from 'react-markdown';
 import styled from 'styled-components';
 import Layout from '../components/Layout';
 import BlogFeatured from '../components/Blog/BlogFeatured';
+import Button from '../components/Button';
 
 export const query = graphql`
   query GetSingleBlog($slug: String){
@@ -45,11 +47,15 @@ const BlogTemplate = ({ data }) => {
         <div className="main-blog">
           <article className="blog-content">
             <ReactMarkdown source={blog} className="blog-markdown" />
+            <Link to="/blog" className="blog-btn">
+              <Button styled text="back to blog" />
+            </Link>
           </article>
           <article className="blog-sidebar">
             <BlogFeatured blogs={blogs} />
           </article>
         </div>
+        
       </BlogTemplateWrapper>
     </Layout>
   )
@@ -65,6 +71,14 @@ padding: 0 1rem;
 
 .blog-content{
   flex:1;
+  display:flex;
+  flex-direction: column;
+  min-height: 1065px;
+  justify-content: space-between;
+}
+
+.blog-markdown{
+  margin-bottom: 5rem;
 }
 
 .blog-title{
@@ -76,6 +90,25 @@ padding: 0 1rem;
   font-size: 1rem;
   color: grey;
 }
+
+/* .blog-btn {
+    color: black;
+    text-transform:uppercase;
+    letter-spacing:0.1rem;
+    font-size: 1.3rem;
+    margin-top: 2rem;
+    box-shadow: 0 2px black;
+    text-decoration:none;
+  }
+
+  .blog-btn:hover {
+    color: var(--lightPurple);
+    box-shadow: 0 2px var(--lightPurple);
+  }
+
+  .blog-btn span{
+    margin-left: 1rem;
+  } */
 
 ul, ol{
   padding-left: 2rem;

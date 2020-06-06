@@ -5,7 +5,7 @@ import { graphql, useStaticQuery,Link } from 'gatsby';
 
 const getImage = graphql`
   query {
-    defaultBcg:file(relativePath: {eq: "defaultImg.jpg"}) {
+    defaultBcg:file(relativePath: {eq: "carousel-3.jpg"}) {
       childImageSharp {
         fluid {
           ...GatsbyImageSharpFluid
@@ -41,7 +41,7 @@ const CoachingList = () => {
         title="Voice Coaching"
         desc="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Pariatur, officiis debitis. Veritatis ipsam dolor, molestias quasi earum cum nostrum incidunt harum soluta quo, hic expedita aspernatur nam accusantium nobis ad laudantium molestiae, sequi beatae! Cumque quos minima quod officiis consequatur nulla, molestiae voluptate voluptas mollitia provident, molestias dicta asperiores blanditiis."
       />
-      <hr />
+      <hr style={{marginTop:'2rem'}}/>
       <h2 className="coaching-contact">If you would like to work with me, do not hesitate to 
       <Link to="/contact" className="coaching-link">contact me</Link>.
       </h2>
@@ -64,6 +64,7 @@ const CoachingListWrapper = styled.section`
 .coaching-link:hover {
   box-shadow:0 4px var(--mainGold);
 }
+
 @media (max-width: 768px) {
   .coaching-contact{
     padding: 0 1rem;

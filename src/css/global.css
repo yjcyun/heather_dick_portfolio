@@ -145,10 +145,12 @@ Pages
 @media (max-width: 1200px) {
   .page {
     padding: 0 2rem;
+    margin: 13vh auto;
   }
 }
 @media (max-width: 400px) {
   .page {
     padding: 0;
+    margin: 20vh auto;
   }
 }
