@@ -2,7 +2,7 @@ import React from 'react';
 import { graphql } from 'gatsby';
 import Layout from '../components/Layout';
 import Title from '../components/Title';
-import Blog from '../components/Blog/Blog';
+import BlogList from '../components/Blog/BlogList';
 
 export const query = graphql`
   {
@@ -34,7 +34,7 @@ const blog = ({
         <Title title="Heather's word of wisdom"
           subtitle="short introduction about this page or leave it blank"
         />
-        <Blog blogs={blogs} />
+        <BlogList blogs={blogs} />
       </div>
     </Layout>
   )

@@ -9,6 +9,7 @@ Variables
   --lightPurple: #783fbe;
   --mainGold: #c4882d;
   --lightGold: #ccb764;
+  --lighterGold:#dfd29e;
   --beige: #ece7df;
   --clr2: #5a5a5a;
   /* --clr3:#656565; */
@@ -139,6 +140,7 @@ Pages
 .page {
   margin: 20vh auto;
   max-width: 1170px;
+  min-height: calc(100vh - 72px - 213px);
 }
 @media (max-width: 1200px) {
   .page {

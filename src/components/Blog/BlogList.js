@@ -16,8 +16,11 @@ const BlogList = ({ blogs }) => {
 }
 
 const BlogListWrapper = styled.section`
-
+@media(max-width:401px){
+  padding: 0 2rem;
+}
 @media(min-width: 768px){
+  padding: 0;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
   grid-gap: 1.5rem;

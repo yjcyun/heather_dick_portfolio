@@ -4,9 +4,11 @@ import { BsDot } from 'react-icons/bs';
 import Image from 'gatsby-image';
 import styled from 'styled-components';
 
-const BlogCard = ({ id, title, thumbnail, date, slug, author, description }) => {
+const BlogCard = ({
+  id, title, thumbnail, date, slug, author, description, hide, featured
+}) => {
   return (
-    <BlogCardWrapper>
+    <BlogCardWrapper hide={hide} featured={featured}>
       <Link to={`/blog/${slug}`}
         key={id}
         className="blog"
@@ -16,7 +18,7 @@ const BlogCard = ({ id, title, thumbnail, date, slug, author, description }) => 
           <div className="blog-card">
             <div className="blog-header">
               <div className="blog-author">{author}</div>
-              <BsDot />
+              <BsDot className="dot-icon" />
               <p>{date}</p>
             </div>
             <div className="blog-text">
@@ -35,7 +37,7 @@ const BlogCardWrapper = styled.div`
   height: auto;
   display:grid;
   transition: var(--transition);
-  margin-bottom: 2rem;
+  margin-bottom: ${props => props.featured ? '0' : '2rem'};
   text-align:center;
   box-shadow:0px 1px 2px rgba(46,41,51,0.08), 0px 2px 4px rgba(71,63,79,0.08)
 }
@@ -58,6 +60,11 @@ const BlogCardWrapper = styled.div`
 
 .blog-header {
   display: flex;
+  justify-content:center;
+  align-items:center;
+}
+.dot-icon{
+  display: ${props => props.hide ? 'none' : ''}
 }
 `;
 

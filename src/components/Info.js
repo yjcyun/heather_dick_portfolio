@@ -35,8 +35,6 @@ const Info = ({ img, children, reverse }) => {
 }
 
 const InfoWrapper = styled.section`
-/* display:flex;
-flex-direction:  ${props => props.reverse ? 'column-reverse' : 'column'}; */
 display: grid;
 grid-template-columns:${props => props.reverse ? '1fr 2fr' : '2fr 1fr'};
 grid-gap:2rem;
