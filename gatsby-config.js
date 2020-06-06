@@ -20,7 +20,7 @@ module.exports = {
       options: {
         apiURL: `http://localhost:1337`,
         queryLimit: 1000, // Default to 100
-        contentTypes: [`resumes`],
+        contentTypes: [`resumes`, `blogs`],
         // singleTypes: [`home-page`, `contact`],
    
       },

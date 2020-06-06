@@ -6,7 +6,7 @@ import Title from '../components/Title';
 const contact = () => {
   return (
     <Layout>
-      <div className="page-height page-margin" >
+      <div className="page" >
         <Info>
           <Title 
           title="CONTACT ME" 

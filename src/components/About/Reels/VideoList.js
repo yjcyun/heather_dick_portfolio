@@ -3,7 +3,7 @@ import VideoItem from './VideoItem'
 import styled from 'styled-components';
 
 const VideoList = ({ videos, onVideoSelect }) => {
-  console.log(videos);
+  // console.log(videos);
   const renderedList = videos.map(item => 
     (
     <VideoItem

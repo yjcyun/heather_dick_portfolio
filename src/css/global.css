@@ -1,8 +1,6 @@
 /* font */
 @import url("https://fonts.googleapis.com/css2?&family=Poppins:wght@300&family=Playfair+Display:wght@700&family=Montserrat&family=Playball&display=swap");
 
-
-
 /*=============== 
 Variables
 ===============*/
@@ -17,8 +15,8 @@ Variables
 
   --mainWhite: #fff;
   --mainFont: "Poppins", sans-serif;
-  --titleFont: 'Playfair Display', serif;
-  --cursiveFont: 'Playball', cursive;
+  --titleFont: "Playfair Display", serif;
+  --cursiveFont: "Playball", cursive;
   --transition: all 0.2s linear;
   --minHeight: calc(100vh - 213px);
 }
@@ -32,7 +30,7 @@ Global Styles
   padding: 0;
 }
 
-hr{
+hr {
   border: none;
   border-top: 0.6px solid var(--lightGold);
 }
@@ -62,10 +60,9 @@ a {
   text-decoration: none;
   color: black;
 }
-a:hover{
+a:hover {
   color: black;
 }
-
 
 /*=============== 
 Pages 
@@ -117,30 +114,39 @@ Navbar
   transform: translateY(8px);
 }
 
-.page-margin {
+/* .page-margin {
   margin-top: 72px;
 }
 .extra-margin{
   margin: 20vh auto;
-}
-.ipad-padding{
+} */
+/* .ipad-padding{
   padding: 0 2rem;
 }
 @media (max-width: 768px) {
   .ipad-padding{
     padding:0;
   };
-}
- .max-width{
-    max-width: 1170px;
-  }
-
-@media (max-width: 1200px) {
-  .page-margin {
-    margin-top: 76px;
-  }
-}
+} */
 
 /*=============== 
 Button
 ===============*/
+
+/*=============== 
+Pages
+===============*/
+.page {
+  margin: 20vh auto;
+  max-width: 1170px;
+}
+@media (max-width: 1200px) {
+  .page {
+    padding: 0 2rem;
+  }
+}
+@media (max-width: 400px) {
+  .page {
+    padding: 0;
+  }
+}

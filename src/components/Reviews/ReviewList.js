@@ -23,6 +23,6 @@ grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
 /* grid-auto-rows:minmax(min-content, max-content); */
 align-items:start;
 grid-gap: 4rem;
-padding: 0 2rem;
+padding: 0 1rem;
 `;
 export default ReviewList

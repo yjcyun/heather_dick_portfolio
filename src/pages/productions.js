@@ -5,7 +5,7 @@ import Banner from '../components/Banner';
 const Productions = () => {
   return (
     <Layout>
-      <div className="page-height page-margin">
+      <div className="page">
         <Banner 
           heading="quote goes here"
           subHeading="Heather's productions"

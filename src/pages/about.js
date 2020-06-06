@@ -22,7 +22,7 @@ export const query = graphql`
 const about = ({ data }) => {
   return (
     <Layout>
-      <div className="page-height extra-margin max-width ipad-padding">
+      <div className="page">
         <Title
           title="biography"
           subtitle="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rem nesciunt ex accusamus repudiandae, velit, ab corporis itaque iure natus quos tenetur. Eveniet, eum distinctio. Dolorum rem sint laudantium veniam, nulla cumque dolore unde blanditiis ducimus esse recusandae optio eum commodi!" />
