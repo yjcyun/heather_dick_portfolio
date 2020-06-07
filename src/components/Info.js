@@ -5,7 +5,7 @@ import Image from 'gatsby-image';
 
 const getImage = graphql`
   query {
-    defaultBcg:file(relativePath: {eq: "defaultImg.jpg"}) {
+    defaultBcg:file(relativePath: {eq: "headshot.jpg"}) {
       childImageSharp {
         fluid {
           ...GatsbyImageSharpFluid
@@ -37,10 +37,10 @@ const Info = ({ img, children, reverse }) => {
 const InfoWrapper = styled.section`
 display: grid;
 grid-template-columns:${props => props.reverse ? '1fr 2fr' : '2fr 1fr'};
-grid-gap:2rem;
+grid-column-gap:2rem;
 justify-content:center;
 align-items: start;
-min-height: var(--minHeight);
+/* min-height: var(--minHeight); */
 max-width: 1170px;
 margin: 0 auto 3rem;
 
@@ -62,6 +62,10 @@ margin: 0 auto 3rem;
 
 .info-contact{
   margin: 2rem 0 1rem;
+}
+
+.info-author{
+  font-size: 1.7rem;
 }
 
 .info-image{

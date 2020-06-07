@@ -22,7 +22,6 @@ module.exports = {
         queryLimit: 1000, // Default to 100
         contentTypes: [`resumes`, `blogs`],
         // singleTypes: [`home-page`, `contact`],
-   
       },
     },
   ]
