@@ -1,11 +1,11 @@
 import React, { useState } from 'react'
 import styled from 'styled-components';
-import posters from '../../constants/posters';
+import Image from 'gatsby-image';
 import ProductionsItem from './ProductionsItem';
 import ProductionModal from './ProductionModal';
 
 
-const ProductionsList = () => {
+const ProductionsList = ({ posters }) => {
   const [selectedPoster, setPoster] = React.useState(null);
 
   const openModal = (item) => {
@@ -19,6 +19,7 @@ const ProductionsList = () => {
     <ProductionsListWrapper>
       {
         posters.map(item => {
+          console.log(item);
           return (
             <div key={item.id}>
               <div onClick={() => openModal(item)}>
@@ -30,7 +31,7 @@ const ProductionsList = () => {
                 closeModal={closeModal}
               >
                 <div className="modal-children">
-                  <img src={selectedPoster ? selectedPoster.img : null} />
+                  <Image fluid={selectedPoster ? selectedPoster.img.childImageSharp.fluid : null} className="poster-img" alt="poster" />
                   <div className="modal-text">
                     <p>production date: {selectedPoster ? selectedPoster.date : null}</p>
                     <h3>{selectedPoster ? selectedPoster.title : null}</h3>

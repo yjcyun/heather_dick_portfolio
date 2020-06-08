@@ -12,7 +12,7 @@ const ProductionModal = ({ show, children, closeModal }) => {
         <div className="modal-content">
           {children}
 
-          <button onClick={closeModal}>
+          <button onClick={closeModal} className="close-btn">
             <MdClose />
           </button>
         </div>
@@ -53,6 +53,14 @@ right:0;
   z-index:101;
   overflow:auto;
   padding: 2rem;
+}
+.close-btn{
+  position:absolute;
+  right:2%;
+  top:2%;
+  border: none;
+  background: transparent;
+  font-size: 2rem;
 }
 `;
 
