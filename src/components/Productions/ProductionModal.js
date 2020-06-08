@@ -47,7 +47,7 @@ right:0;
   left: 50%;
   transform: translate(-50%,-50%);
   min-height: 30%;
-  width: 60%;
+  width: 40vw;
   background-color: white;
   box-shadow: 0 0 5px rgba(0,0,0,0.05);
   z-index:101;

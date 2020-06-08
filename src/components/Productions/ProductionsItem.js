@@ -4,12 +4,12 @@ import Image from 'gatsby-image';
 
 const ProductionsItem = ({ item }) => {
   const { img, title, subtitle, date } = item;
+  console.log(img)
   return (
     <ProductionsItemWrapper>
       <div className="poster-img">
-        <img src={img} alt="posters" />
+        <Image fluid={img.childImageSharp.fluid} alt="posters" className="poster-gatsby-img"/>
         <div className="poster-layover">
-          <h4></h4>
         </div>
       </div>
     </ProductionsItemWrapper>
@@ -23,7 +23,7 @@ const ProductionsItemWrapper = styled.div`
   position: relative;
 }
 
-img{
+.poster-gatsby-img{
   height: 100%;
 }
 

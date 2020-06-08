@@ -3,6 +3,7 @@ import { graphql } from 'gatsby';
 import Layout from '../components/Layout';
 import Title from '../components/Title';
 import ProductionsList from '../components/Productions/ProductionsList';
+import PostersList from '../components/Productions/PostersList';
 
 export const query = graphql`
   {
@@ -17,7 +18,7 @@ export const query = graphql`
         img {
           childImageSharp {
             fluid {
-              src
+              ...GatsbyImageSharpFluid
             }
           }
         }

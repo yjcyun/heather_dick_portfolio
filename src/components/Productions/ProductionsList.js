@@ -11,6 +11,7 @@ const ProductionsList = ({ posters }) => {
   const openModal = (item) => {
     setPoster(item);
   }
+
   const closeModal = () => {
     setPoster(null);
   }
@@ -31,11 +32,11 @@ const ProductionsList = ({ posters }) => {
                 closeModal={closeModal}
               >
                 <div className="modal-children">
-                  <Image fluid={selectedPoster ? selectedPoster.img.childImageSharp.fluid : null} className="poster-img" alt="poster" />
+                  <Image fluid={selectedPoster ? selectedPoster.img.childImageSharp.fluid : null} alt="poster" />
                   <div className="modal-text">
-                    <p>production date: {selectedPoster ? selectedPoster.date : null}</p>
-                    <h3>{selectedPoster ? selectedPoster.title : null}</h3>
-                    <p>{selectedPoster ? selectedPoster.subtitle : null}</p>
+                    <p><strong>{selectedPoster ? selectedPoster.show : null}</strong> from {selectedPoster ? selectedPoster.company : null}</p>
+                    <p>
+                      Directed by : {selectedPoster ? selectedPoster.director : null} on {selectedPoster ? selectedPoster.date : null}</p>
                   </div>
                 </div>
               </ProductionModal>
@@ -50,10 +51,16 @@ const ProductionsList = ({ posters }) => {
 const ProductionsListWrapper = styled.div`
 display:grid;
 grid-row-gap: 1.5rem;
+
 .modal-children{
   display:grid;
-  grid-template-columns: 1fr 1fr;
   grid-gap: 1rem;
+  max-height: 70vh;
+}
+.modal-text{
+  padding-bottom: 1rem;
+  display:flex;
+  flex-direction: column;
 }
 
 @media(min-width: 768px){
