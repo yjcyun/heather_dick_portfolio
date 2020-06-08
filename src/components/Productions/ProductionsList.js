@@ -3,10 +3,24 @@ import styled from 'styled-components';
 import Image from 'gatsby-image';
 import ProductionsItem from './ProductionsItem';
 import ProductionModal from './ProductionModal';
+import Button from '../Button';
 
+// get unique cateogories
+const getCategories = items => {
+  let tempItems = items.map(item => {
+    return item.category;
+  });
+  let tempCategories = new Set(tempItems);
+  let categories = Array.from(tempCategories);
+  categories = ['all', ...categories];
+  return categories;
+}
 
 const ProductionsList = ({ posters }) => {
-  const [selectedPoster, setPoster] = React.useState(null);
+  const [selectedPoster, setPoster] = useState(null);
+  const [items] = useState(posters);
+  const [posterItems, setPosterItems] = useState(posters);
+  const [categories] = useState(getCategories(posters));
 
   const openModal = (item) => {
     setPoster(item);
@@ -16,11 +30,50 @@ const ProductionsList = ({ posters }) => {
     setPoster(null);
   }
 
+  const handleFilter = (category) => {
+    let tempPosters = [...items];
+    if (category === 'all') {
+      setPosterItems(tempPosters);
+    }
+    else {
+      let filteredItems = tempPosters.filter((item) => item.category === category);
+      setPosterItems(filteredItems);
+    }
+  }
+
+  const productionChildren = () => {
+    if (selectedPoster) {
+      return (
+        <>
+          <Image fluid={selectedPoster.img.childImageSharp.fluid} alt="poster" className="modal-img" />
+          <div className="modal-text">
+            <p><strong>{selectedPoster.show}</strong> from {selectedPoster.company}</p>
+            {selectedPoster.category === 'directing'
+              ? <p> Produced on  {selectedPoster.date}</p>
+              : <p>Heather Dick as {selectedPoster.role} on {selectedPoster.date}</p>
+            }
+          </div>
+        </>
+      )
+    } else {
+      return null;
+    }
+  }
+
   return (
-    <ProductionsListWrapper>
-      {
-        posters.map(item => {
-          console.log(item);
+    <>
+      {categories.map((category, index) => {
+        return (
+          <button
+            type="button"
+            key={index}
+            className="btn filter-btn"
+            onClick={() => handleFilter(category)}
+          >{category}</button>
+        )
+      })}
+      <ProductionsListWrapper>
+        {posterItems.map(item => {
           return (
             <div key={item.id}>
               <div onClick={() => openModal(item)}>
@@ -32,19 +85,15 @@ const ProductionsList = ({ posters }) => {
                 closeModal={closeModal}
               >
                 <div className="modal-children">
-                  <Image fluid={selectedPoster ? selectedPoster.img.childImageSharp.fluid : null} alt="poster" />
-                  <div className="modal-text">
-                    <p><strong>{selectedPoster ? selectedPoster.show : null}</strong> from {selectedPoster ? selectedPoster.company : null}</p>
-                    <p>
-                      Directed by : {selectedPoster ? selectedPoster.director : null} on {selectedPoster ? selectedPoster.date : null}</p>
-                  </div>
+                  {productionChildren()}
                 </div>
               </ProductionModal>
             </div>
           )
         })
-      }
-    </ProductionsListWrapper>
+        }
+      </ProductionsListWrapper>
+    </>
   )
 }
 
@@ -54,9 +103,11 @@ grid-row-gap: 1.5rem;
 
 .modal-children{
   display:grid;
+  grid-template-rows:auto;
   grid-gap: 1rem;
   max-height: 70vh;
 }
+
 .modal-text{
   padding-bottom: 1rem;
   display:flex;
@@ -65,7 +116,7 @@ grid-row-gap: 1.5rem;
 
 @media(min-width: 768px){
   padding: 0;
-  grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+  grid-template-columns: repeat(auto-fill, minmax(300px,1fr));
   grid-auto-rows: 1fr;
   grid-gap: 1.5rem;
 }

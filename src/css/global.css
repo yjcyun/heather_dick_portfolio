@@ -134,6 +134,25 @@ Navbar
 Button
 ===============*/
 
+.btn{
+  padding: 1rem 3rem;
+  letter-spacing: 0.1rem;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-family: var(--mainFont);
+}
+
+.filter-btn{
+  background:var(--lighterGold);
+  margin-right: 1rem;
+  border-radius:1.5rem;
+  padding: 0.5rem 1rem;
+  font-weight: bold;
+  margin-bottom: 3rem;
+}
+
 /*=============== 
 Pages
 ===============*/

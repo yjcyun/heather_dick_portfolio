@@ -3,12 +3,11 @@ import styled from 'styled-components';
 import Image from 'gatsby-image';
 
 const ProductionsItem = ({ item }) => {
-  const { img, title, subtitle, date } = item;
-  console.log(img)
+  const { img } = item;
   return (
     <ProductionsItemWrapper>
       <div className="poster-img">
-        <Image fluid={img.childImageSharp.fluid} alt="posters" className="poster-gatsby-img"/>
+        <Image fluid={img.childImageSharp.fluid} alt="posters" className="poster-gatsby-img" />
         <div className="poster-layover">
         </div>
       </div>

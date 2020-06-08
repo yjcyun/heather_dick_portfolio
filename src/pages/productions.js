@@ -3,7 +3,7 @@ import { graphql } from 'gatsby';
 import Layout from '../components/Layout';
 import Title from '../components/Title';
 import ProductionsList from '../components/Productions/ProductionsList';
-import PostersList from '../components/Productions/PostersList';
+import Filter from '../components/Productions/Filter';
 
 export const query = graphql`
   {
@@ -14,6 +14,7 @@ export const query = graphql`
         date(formatString: "MMM Do, YYYY")
         director
         id
+        role
         show
         img {
           childImageSharp {
@@ -34,6 +35,7 @@ const Productions = ({
     <Layout>
       <div className="page">
         <Title title="Productions" subtitle="A collection of Heather's production posters...any subtitle? quotes?" />
+        <Filter posters={posters} />
         <ProductionsList posters={posters} />
       </div>
     </Layout>
