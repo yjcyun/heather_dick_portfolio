@@ -1,6 +1,5 @@
 import React from 'react';
 import { graphql, Link } from 'gatsby';
-import { FaLongArrowAltLeft } from 'react-icons/fa';
 import ReactMarkdown from 'react-markdown';
 import styled from 'styled-components';
 import Layout from '../components/Layout';

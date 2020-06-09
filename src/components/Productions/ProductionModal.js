@@ -7,7 +7,7 @@ const ProductionModal = ({ show, children, closeModal }) => {
   if (show) {
     return (
       <ModalWrapper>
-        <div className="modal-backdrop"
+        <div role="button" tabIndex={0} onKeyDown={closeModal}  className="modal-backdrop"
           onClick={closeModal} />
         <div className="modal-content">
           {children}

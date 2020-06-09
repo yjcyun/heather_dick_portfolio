@@ -1,47 +1,55 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
 import styled from 'styled-components';
 import ResumeItem from './ResumeItem';
 
 const query = graphql`
-  {
-    allStrapiResumes(sort: {fields: resume_scripts___year, order: DESC}) {
+ {
+    allStrapiResumes {
       nodes {
-        resume_scripts {
-          company
-          role
-          id
-          title
-          year
-        }
-        resume_productions {
-          company
-          id
-          role
-          year
-          title
-        }
+        id
+        role
+        show
+        category
+        company
       }
     }
   }
 `
+
+// get unique cateogories
+const getCategories = items => {
+  let tempItems = items.map(item => {
+    return item.category;
+  });
+  console.log(tempItems);
+  let tempCategories = new Set(tempItems);
+  let categories = Array.from(tempCategories);
+  categories = ['all', ...categories];
+  
+  return categories;
+}
+
 const ResumeList = () => {
-  const data = useStaticQuery(query);
-  const {
-    allStrapiResumes: { nodes }
-  } = data;
+  const { allStrapiResumes: { nodes } } = useStaticQuery(query);
+
+  const [categories] = useState(getCategories(nodes));
+
+
+  const renderList = nodes.map(item => {
+    console.log(item.category);
+    return (
+      <>
+        <h3>{item.category}</h3>
+        <ResumeItem key={item.id} item={item} categories={categories} />
+      </>
+    )
+  });
 
   return (
     <ResumeWrapper>
-      {/* single resume */}
-      <h1>Scripts</h1>
-      {nodes[0].resume_scripts.map(item => <ResumeItem key={item.id} item={item} />)}
-      {/* end of single resume */}
 
-      {/* single resume */}
-      <h1>Productions</h1>
-      {nodes[0].resume_productions.map(item => <ResumeItem key={item.id} item={item} />)}
-      {/* end of single resume */}
+      {renderList}
     </ResumeWrapper>
   )
 

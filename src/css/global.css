@@ -152,6 +152,9 @@ Button
   font-weight: bold;
   margin-bottom: 3rem;
 }
+.filter-btn:visited, .filter-btn:focus{
+  background-color: var(--mainGold);
+}
 
 /*=============== 
 Pages

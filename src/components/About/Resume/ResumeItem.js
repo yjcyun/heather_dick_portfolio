@@ -1,12 +1,14 @@
-import React from 'react'
+import React from 'react';
+import styled from 'styled-components';
 
-const ResumeItem = ({ item }) => {
-  const { company, year, title, role } = item;
+const ResumeItem = ({ item, categories }) => {
+  const { company, show, role } = item;
+
+  
 
   return (
     <div>
-      <h3>{company} | {title} | {year}</h3>
-      <h4>{role}</h4>
+      <h3>{company} | {show} | {role}</h3>
     </div>
 
   )

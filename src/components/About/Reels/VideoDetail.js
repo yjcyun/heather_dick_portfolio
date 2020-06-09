@@ -1,36 +1,13 @@
-import React, {useEffect} from 'react';
-import ReactPlayer from 'react-player';
+import React from 'react';
 import styled from 'styled-components';
 
 const VideoDetail = ({video}) => {
-// useEffect(()=>{
-//   return <ReactPlayer
-//     url={video}
-//     config={{
-//       vimeo: {
-//         playerOptions: {
-//           color: '783fbe',
-//           controls: false
-//         }
-//       }
-//     }}
-//   />
 
-// },[]);
+//console.log(video);
 
   return (
     <VideoDetailWrapper>
-      <ReactPlayer
-        url={video}
-        config={{
-          vimeo: {
-            playerOptions: {
-              color: '783fbe',
-              controls: false
-            }
-          }
-        }}
-      />
+     {video}
     </VideoDetailWrapper>
   )
 }

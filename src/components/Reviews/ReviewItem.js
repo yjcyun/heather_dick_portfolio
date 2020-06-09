@@ -4,10 +4,11 @@ import styled from 'styled-components';
 
 const ReviewItem = ({ review }) => {
   const { text, author } = review;
+
   return (
     <ReviewItemWrapper>
       <div className="bubble">
-        <p><FaQuoteLeft className="quote-icon"/>{text}</p>
+        <p><FaQuoteLeft className="quote-icon" />{text}</p>
         <span className="author">-{author}</span>
       </div>
       <div className="pointer"></div>
@@ -27,6 +28,7 @@ const ReviewItemWrapper = styled.div`
   padding: 1.5rem 2.5rem;
   text-align: center;
 }
+
 
 .pointer {
 	height: 4rem;

@@ -3,7 +3,6 @@ import styled from 'styled-components';
 import Image from 'gatsby-image';
 import ProductionsItem from './ProductionsItem';
 import ProductionModal from './ProductionModal';
-import Button from '../Button';
 
 // get unique cateogories
 const getCategories = items => {
@@ -43,14 +42,15 @@ const ProductionsList = ({ posters }) => {
 
   const productionChildren = () => {
     if (selectedPoster) {
+      const { img, company, show, date, role, category } = selectedPoster;
       return (
         <>
-          <Image fluid={selectedPoster.img.childImageSharp.fluid} alt="poster" className="modal-img" />
+          <Image fluid={img.childImageSharp.fluid} alt="poster" className="modal-img" />
           <div className="modal-text">
-            <p><strong>{selectedPoster.show}</strong> from {selectedPoster.company}</p>
-            {selectedPoster.category === 'directing'
-              ? <p> Produced on  {selectedPoster.date}</p>
-              : <p>Heather Dick as {selectedPoster.role} on {selectedPoster.date}</p>
+            <p><strong>{show}</strong> from {company}</p>
+            {category === 'directing'
+              ? <p> Produced on  {date}</p>
+              : <p>Heather Dick as {role} on {date}</p>
             }
           </div>
         </>
@@ -76,7 +76,7 @@ const ProductionsList = ({ posters }) => {
         {posterItems.map(item => {
           return (
             <div key={item.id}>
-              <div onClick={() => openModal(item)}>
+              <div role="button" tabIndex={0} onKeyDown={() => openModal(item)} onClick={() => openModal(item)}>
                 <ProductionsItem item={item} />
               </div>
 
