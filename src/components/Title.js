@@ -2,41 +2,38 @@ import React from 'react';
 import styled from 'styled-components';
 
 
-const Title = ({ title, subtitle}) => {
+const Title = ({ title }) => {
   return (
     <TitleWrapper>
       <h1 className="title">{title}</h1>
-      <h3 className="subtitle">{subtitle}</h3>
+      <hr className="title-hr"/>
     </TitleWrapper>
   )
 }
 
 const TitleWrapper = styled.section`
 margin: 0 1rem 5rem;
+text-align:center;
 
 .title{
   font-family: var(--titleFont);
-  color: #190d27;
-  margin-bottom:1rem;
-  font-size:2.5rem;
-  letter-spacing:0.1rem;
+  font-size:2rem;
   text-transform: uppercase;
   display: inline-block;
+  font-weight: 400;
+}
+.title-hr{
+  margin: 1rem auto;
 }
 
+
 @media (min-width: 996px) {
-  margin:0 0 5rem;
+  margin:0 auto 5rem;
 
   .title{
-    letter-spacing: 0.15rem;
-    font-size:3rem;
+    font-size:2.4rem;
   }
   
-  .subtitle {
-    width: 100%;
-    font-size: 1rem;
-    width: 80%;
-  }
 }
 `;
 

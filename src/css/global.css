@@ -1,5 +1,5 @@
 /* font */
-@import url("https://fonts.googleapis.com/css2?&family=Poppins:wght@300&family=Playfair+Display:wght@700&family=Montserrat&family=Playball&display=swap");
+@import url("https://fonts.googleapis.com/css2?&family=Poppins:wght@300&family=Playfair+Display:wght@700&family=Oswald&family=Playball&display=swap");
 
 /*=============== 
 Variables
@@ -7,16 +7,17 @@ Variables
 :root {
   --mainPurple: #542c85;
   --lightPurple: #783fbe;
-  --mainGold: #c4882d;
+  --mainGold: #A78425;
   --lightGold: #ccb764;
   --lighterGold:#dfd29e;
+  --lightGrey: #F8F7F5;
   --beige: #ece7df;
   --clr2: #5a5a5a;
   /* --clr3:#656565; */
 
   --mainWhite: #fff;
   --mainFont: "Poppins", sans-serif;
-  --titleFont: "Playfair Display", serif;
+  --titleFont: "Oswald", sans-serif;
   --cursiveFont: "Playball", cursive;
   --transition: all 0.2s linear;
   --minHeight: calc(100vh - 213px);
@@ -33,14 +34,10 @@ Global Styles
 
 hr {
   border: none;
-  border-top: 0.6px solid var(--lightGold);
-}
-
-@media screen and (max-width: 768px) {
-  hr {
-    width: 90%;
-    margin: auto;
-  }
+  border: 1px solid var(--mainGold);
+  text-align:center;
+  width: 8rem;
+  margin:1rem 0;
 }
 
 body {
@@ -65,11 +62,9 @@ a:hover {
   color: black;
 }
 
-/*=============== 
-Pages 
-===============*/
-.page-height {
-  min-height: var(--minHeight);
+.max-width{
+  max-width: 1170px;
+  margin:0 auto;
 }
 
 /*=============== 
@@ -133,27 +128,38 @@ Navbar
 /*=============== 
 Button
 ===============*/
-
 .btn{
   padding: 1rem 3rem;
   letter-spacing: 0.1rem;
   outline: none;
-  border: none;
+  border: 1px solid var(--mainGold);
   cursor: pointer;
   text-transform: uppercase;
   font-family: var(--mainFont);
+  background: transparent;
+  color: var(--mainGold);
+  font-weight:bold;
+  font-size: 1rem;
 }
 
 .filter-btn{
-  background:var(--lighterGold);
   margin-right: 1rem;
-  border-radius:1.5rem;
   padding: 0.5rem 1rem;
-  font-weight: bold;
   margin-bottom: 3rem;
+  transition: var(--transition);
 }
-.filter-btn:visited, .filter-btn:focus{
+/* .filter-btn:visited, .filter-btn:focus{
   background-color: var(--mainGold);
+} */
+.filter-btn:hover {
+  background-color:var(--mainGold);
+  color: white;
+}
+
+.production-btn{
+  padding: 0.5rem 1rem;
+  color: white;
+  border: 1px solid white;
 }
 
 .about-btn{
@@ -166,9 +172,14 @@ Pages
 ===============*/
 .page {
   margin: 20vh auto;
+  min-height: calc(100vh - 72px - 213px);
   max-width: 1170px;
+}
+.about-page{
+   margin: 20vh auto;
   min-height: calc(100vh - 72px - 213px);
 }
+
 @media (max-width: 1200px) {
   .page {
     padding: 0 2rem;
@@ -180,4 +191,12 @@ Pages
     padding: 0;
     margin: 20vh auto;
   }
+}
+
+/*=============== 
+section
+===============*/
+.section-title{
+  text-transform: uppercase;
+  font-size: 2.5rem;
 }

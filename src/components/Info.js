@@ -36,13 +36,14 @@ const Info = ({ img, children, reverse }) => {
 
 const InfoWrapper = styled.section`
 display: grid;
-grid-template-columns:${props => props.reverse ? '1fr 2fr' : '2fr 1fr'};
+grid-template-columns:${props => props.reverse ? '2fr 3fr' : '2fr 1fr'};
 grid-column-gap:2rem;
 justify-content:center;
 align-items: start;
 /* min-height: var(--minHeight); */
-max-width: 1170px;
-margin: 0 auto 3rem;
+
+margin: 0 auto;
+
 
 .info-text {
   text-align: left;

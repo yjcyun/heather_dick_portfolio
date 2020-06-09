@@ -1,13 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const VideoDetail = ({video}) => {
+const VideoDetail = ({ video }) => {
 
-//console.log(video);
+  //console.log(video);
 
   return (
     <VideoDetailWrapper>
-     {video}
+      <div dangerouslySetInnerHTML={{ __html: video }}></div>
     </VideoDetailWrapper>
   )
 }
@@ -18,6 +18,7 @@ justify-content: center;
 align-items: center;
 margin: 2rem auto;
 flex:3;
+padding-top: 3rem;
 `;
 
 export default VideoDetail

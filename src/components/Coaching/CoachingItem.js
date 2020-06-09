@@ -20,7 +20,7 @@ padding: 3rem 0 0;
 
   .coaching-img {
     height: 15rem;
-    flex:1;
+    flex:2;
     margin-bottom: 2rem;
   }
 
@@ -32,7 +32,10 @@ padding: 3rem 0 0;
   h1{
     font-family: var(--titleFont);
     font-size:1.6rem;
+    font-weight: 400;
+    background: var(--lightGrey);
     margin-bottom:0.5rem;
+    display: inline-block;
   }
   
   @media (max-width: 768px){

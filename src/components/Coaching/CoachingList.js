@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import CoachingItem from './CoachingItem';
-import { graphql, useStaticQuery,Link } from 'gatsby';
+import { graphql, useStaticQuery, Link } from 'gatsby';
 
 const getImage = graphql`
   query {
@@ -29,7 +29,6 @@ const CoachingList = () => {
 
   return (
     <CoachingListWrapper>
-      <hr />
       <CoachingItem
         image={image1}
         title="Acting Coaching"
@@ -41,24 +40,38 @@ const CoachingList = () => {
         title="Voice Coaching"
         desc="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Pariatur, officiis debitis. Veritatis ipsam dolor, molestias quasi earum cum nostrum incidunt harum soluta quo, hic expedita aspernatur nam accusantium nobis ad laudantium molestiae, sequi beatae! Cumque quos minima quod officiis consequatur nulla, molestiae voluptate voluptas mollitia provident, molestias dicta asperiores blanditiis."
       />
-      <hr style={{marginTop:'2rem'}}/>
-      <h2 className="coaching-contact">If you would like to work with me, do not hesitate to 
-      <Link to="/contact" className="coaching-link">contact me</Link>.
-      </h2>
+      <div className="contact-container">
+        <h4 className="coaching-contact">Do you need help with your upcoming theatre/vocal project?</h4>
+        <h4 className="coaching-contact strong">Contact Heather and she will guide you to the right direction.</h4>
+
+        <Link to="/contact">
+          <button className="btn">send your questions</button>
+        </Link>
+      </div>
     </CoachingListWrapper>
   )
 }
 
 const CoachingListWrapper = styled.section`
+.contact-container{
+  text-align:center;
+  margin-top: 2rem;
+}
+
 .coaching-contact {
-  text-align: center;
-  margin: 2rem 0;
+  margin:0.5rem 0;
+  font-weight: 400;
+  font-size: 1.5rem;
+}
+
+.coaching-contact.strong{
+  font-weight: bold;
+  margin-bottom: 2rem;
 }
 
 .coaching-link {
   color: var(--mainPurple);
   transition: var(--transition);
-  margin-left: 0.7rem;
 }
 
 .coaching-link:hover {

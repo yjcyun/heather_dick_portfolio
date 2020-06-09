@@ -25,7 +25,7 @@ const VideoListWrapper = styled.div`
 display:flex;
 justify-content:center;
 align-items: flex-start;
-flex:1
+flex:1;
 `;
 
 export default VideoList

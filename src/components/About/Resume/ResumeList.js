@@ -2,6 +2,9 @@ import React, { useState } from 'react';
 import { graphql, useStaticQuery, Link } from 'gatsby';
 import styled from 'styled-components';
 import ResumeItem from './ResumeItem';
+import img1 from '../../../images/carousel-1.jpg';
+import img2 from '../../../images/carousel-2.jpg';
+import img3 from '../../../images/carousel-3.jpg';
 
 const query = graphql`
  {
@@ -43,12 +46,24 @@ const ResumeList = () => {
   return (
     <ResumeWrapper>
       <>
-        {categories.map((item, index) => (
-          <div key={index} className="resume-item">
-            <h1 className="resume-category">{item}</h1>
-            {renderList(item)}
+        <h1 className="section-title">best work</h1>
+        <hr />
+        <div className="resume-column">
+          <div className="resume-content">
+            {categories.map((item, index) => (
+              <div key={index} className="resume-item">
+                <h1 className="resume-category">{item}</h1>
+                {renderList(item)}
+              </div>
+            ))}
           </div>
-        ))}
+          <div className="resume-img">
+            <img src={img1} alt="Heather resume" />
+            <img src={img2} alt="Heather resume" />
+            <img src={img3} alt="Heather resume" />
+          </div>
+        </div>
+
         <Link to="/contact">
           <button className="btn about-btn">contact for full resume</button>
         </Link>
@@ -59,6 +74,19 @@ const ResumeList = () => {
 
 const ResumeWrapper = styled.section`
 padding: 0 5rem;
+.resume-column{
+  display:flex;
+}
+.resume-img{
+  margin-top: 1rem;
+  flex:1;
+}
+.resume-img img {
+  margin: 0.5rem 0;
+}
+.resume-content{
+ flex:3;
+}
 .resume-item{
   padding-bottom: 1rem;
 }

@@ -62,6 +62,7 @@ const ProductionsList = ({ posters }) => {
 
   return (
     <>
+    <FilterBtnWrapper>
       {categories.map((category, index) => {
         return (
           <button
@@ -72,6 +73,7 @@ const ProductionsList = ({ posters }) => {
           >{category}</button>
         )
       })}
+      </FilterBtnWrapper>
       <ProductionsListWrapper>
         {posterItems.map(item => {
           return (
@@ -96,6 +98,10 @@ const ProductionsList = ({ posters }) => {
     </>
   )
 }
+
+const FilterBtnWrapper = styled.div`
+text-align:center;
+`;
 
 const ProductionsListWrapper = styled.div`
 display:grid;

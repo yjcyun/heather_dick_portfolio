@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import axios from 'axios';
 import VideoList from './VideoList';
 import VideoDetail from './VideoDetail';
+import Subtitle from '../../Subtitle';
 
 // import image1 from '../../../images/thumbnail1.jpg';
 // import image2 from '../../../images/thumbnail2.jpg';
@@ -44,7 +45,6 @@ class Reels extends Component {
     const response = await axios.get(`https://vimeo.com/api/oembed.json?url=${videoID[0]}`);
 
     const data = await response.data;
-
     this.setState({ selectedVideo: data.html });
     thumbnails.push(data.thumbnail_url);
   };
@@ -53,15 +53,13 @@ class Reels extends Component {
     this.setState({ selectedVideo: video })
   }
 
+
   render() {
-    // console.log(thumbnails[0]);
     return (
       <ReelsWrapper>
-        <h1>production reels</h1>
-        <hr />
+      <Subtitle subtitle="production reels"/>
         <div className="videos">
-          <VideoDetail video={this.state.selectedVideo
-} />
+          <VideoDetail video={this.state.selectedVideo} />
           <VideoList
             videos={this.state.videos}
             onVideoSelect={this.onVideoSelect} />
@@ -72,9 +70,9 @@ class Reels extends Component {
 }
 
 const ReelsWrapper = styled.section`
- /* margin:10rem auto; */
- padding:3rem 0;
+  margin:5rem auto 2rem;
   min-height: 100vh;
+  padding: 0 5rem;
 
  .videos{
  display:flex;

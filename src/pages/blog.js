@@ -31,9 +31,6 @@ const blog = ({
   return (
     <Layout>
       <div className="page">
-        <Title title="Blog Page"
-          subtitle="short introduction about this page or leave it blank"
-        />
         <BlogList blogs={blogs} />
       </div>
     </Layout>
