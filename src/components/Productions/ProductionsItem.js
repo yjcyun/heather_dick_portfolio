@@ -9,7 +9,8 @@ const ProductionsItem = ({ item }) => {
       <div className="poster-img">
         <Image fluid={img.childImageSharp.fluid} alt="posters" className="poster-gatsby-img" />
         <div className="poster-layover">
-          <button className="btn production-btn">learn more</button>
+          <button className="btn production-btn">learn more<hr className="short-hr"/>
+          </button>
         </div>
       </div>
     </ProductionsItemWrapper>
@@ -30,7 +31,7 @@ const ProductionsItemWrapper = styled.div`
 }
 
 .poster-layover{
-  background:linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7));
+  background:linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.7));
   height: 25rem;
   width: 100%;
   position:absolute;
@@ -39,8 +40,8 @@ const ProductionsItemWrapper = styled.div`
   opacity:0;
   transition: var(--transition);
   display:flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: flex-start;
+  align-items: flex-end;
 }
 
 .poster-img:hover .poster-layover{
