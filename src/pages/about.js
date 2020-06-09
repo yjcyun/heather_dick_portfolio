@@ -34,7 +34,6 @@ const about = ({ data }) => {
         </Info>
         <Reels />
         <ResumeList />
-        <Button styled className="about-btn" text="contact for full resume" />
       </div>
     </Layout>
   )

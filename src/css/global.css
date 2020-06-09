@@ -156,6 +156,11 @@ Button
   background-color: var(--mainGold);
 }
 
+.about-btn{
+ background:var(--lightGold);
+ margin-top: 2rem;
+}
+
 /*=============== 
 Pages
 ===============*/
