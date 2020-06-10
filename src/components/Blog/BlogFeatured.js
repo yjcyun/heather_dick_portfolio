@@ -5,6 +5,7 @@ import styled from 'styled-components';
 import SocialLinks from '../../constants/socialLinks';
 
 const BlogFeatured = ({ blogs }) => {
+  console.log(blogs);
   return (
     <BlogFeaturedWrapper>
       <section className="featured-header">
