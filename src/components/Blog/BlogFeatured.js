@@ -44,7 +44,7 @@ display:flex;
 flex-direction: column;
 margin-left: 2.5rem;
 border: 1px solid lightgray;
-border-top: 1rem solid var(--lightGold);
+border-top: 1rem solid var(--mainPurple);
 text-align:center;
 
 .featured-header{
@@ -64,7 +64,7 @@ text-align:center;
   display:flex;
   align-items: center;
   justify-content:center;
-  background: var(--beige);
+  background: var(--lighterGold);
 }
 
 .blog-card{

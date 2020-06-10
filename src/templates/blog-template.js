@@ -42,7 +42,7 @@ export const query = graphql`
 
 const BlogTemplate = ({ data }) => {
   const { blog: { date, blog, title, author, thumbnail }, featured: { nodes: blogs } } = data;
-
+console.log(blogs);
   return (
     <Layout>
       <BlogTemplateWrapper className="page">
