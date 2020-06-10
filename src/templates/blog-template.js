@@ -1,10 +1,12 @@
 import React from 'react';
 import { graphql, Link } from 'gatsby';
+import Image from 'gatsby-image';
 import ReactMarkdown from 'react-markdown';
 import styled from 'styled-components';
 import Layout from '../components/Layout';
 import BlogFeatured from '../components/Blog/BlogFeatured';
 import Button from '../components/Button';
+
 
 export const query = graphql`
   query GetSingleBlog($slug: String){
@@ -13,6 +15,13 @@ export const query = graphql`
       blog
       author
       title
+      thumbnail {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
     }
     featured: allStrapiBlogs(sort: {fields: date, order: DESC}) {
       nodes {
@@ -32,29 +41,28 @@ export const query = graphql`
  `;
 
 const BlogTemplate = ({ data }) => {
-  const { blog: { date, blog, title, author }, featured: { nodes: blogs } } = data;
+  const { blog: { date, blog, title, author, thumbnail }, featured: { nodes: blogs } } = data;
 
   return (
     <Layout>
       <BlogTemplateWrapper className="page">
-        <div className="header">
-          <h1 className="blog-title">
-            {title}</h1>
-          <h5 className="blog-author">Written by {author} | {date}</h5>
+        <div className="main-blog">
+          <div className="header">
+            <h5 className="blog-author">Written by {author} | {date}</h5>
+            <h1 className="blog-title">
+              {title}</h1>
+            <hr className="center-hr" />
+            <Image fluid={thumbnail.childImageSharp.fluid} className="thumbnail" />
+          </div>
+          <ReactMarkdown source={blog} className="blog-markdown" />
+          <Link to="/blog" className="blog-btn">
+            <Button styled text="back to blog" />
+          </Link>
         </div>
 
-        <div className="main-blog">
-          <article className="blog-content">
-            <ReactMarkdown source={blog} className="blog-markdown" />
-            <Link to="/blog" className="blog-btn">
-              <Button styled text="back to blog" />
-            </Link>
-          </article>
-          <article className="blog-sidebar">
-            <BlogFeatured blogs={blogs} />
-          </article>
+        <div className="blog-sidebar">
+          <BlogFeatured blogs={blogs} />
         </div>
-        
       </BlogTemplateWrapper>
     </Layout>
   )
@@ -62,18 +70,16 @@ const BlogTemplate = ({ data }) => {
 
 const BlogTemplateWrapper = styled.div`
 padding: 0 1rem;
+display: flex;
 
-.main-blog{
-  display:flex;
-  margin-top: 3rem;
+.header{
+padding-bottom: 4rem;
+text-align:center;
 }
 
-.blog-content{
-  flex:1;
-  display:flex;
-  flex-direction: column;
-  min-height: 1065px;
-  justify-content: space-between;
+.thumbnail{
+  width: 70%;
+  margin: auto;
 }
 
 .blog-markdown{
@@ -87,27 +93,8 @@ padding: 0 1rem;
 
 .blog-author{
   font-size: 1rem;
-  color: grey;
+  color: var(--mainGold);
 }
-
-/* .blog-btn {
-    color: black;
-    text-transform:uppercase;
-    letter-spacing:0.1rem;
-    font-size: 1.3rem;
-    margin-top: 2rem;
-    box-shadow: 0 2px black;
-    text-decoration:none;
-  }
-
-  .blog-btn:hover {
-    color: var(--lightPurple);
-    box-shadow: 0 2px var(--lightPurple);
-  }
-
-  .blog-btn span{
-    margin-left: 1rem;
-  } */
 
 ul, ol{
   padding-left: 2rem;
@@ -147,8 +134,9 @@ img{
 @media(min-width: 768px) {
   padding: 0 2rem;
 }
+
 @media (min-width: 996px){
-  .blog-content{
+  .main-blog{
   flex:5;
   }
 
@@ -157,6 +145,15 @@ img{
   }
   .blog-title{
   font-size: 4rem;
+  }
+
+  .blog-sidebar ul{
+  display: flex;
+  padding-left: 0;
+  }
+
+.blog-sidebar li{
+  list-style: none;
 }
 
 }

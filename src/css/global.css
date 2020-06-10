@@ -34,14 +34,21 @@ Global Styles
 
 hr {
   border: none;
-  border: 1px solid var(--mainGold);
+  border-top: 1px solid var(--mainGold);
   text-align:center;
   width: 8rem;
   margin:1rem 0;
 }
 .short-hr {
   width:3.5rem;
+  margin: 0;
+}
+.shortest-hr {
+  width:2.3rem;
   margin: 0.5rem 0;
+}
+.center-hr {
+  margin: 0 auto;
 }
 
 body {
@@ -211,6 +218,7 @@ icons
 ===============*/
 .featured-icons{
   display:flex;
+  justify-content: center;
 }
 
 .social-icon{
