@@ -28,10 +28,14 @@ export const query = graphql`
         id
         slug
         title
+        featured
         thumbnail {
           childImageSharp {
             fluid {
               ...GatsbyImageSharpFluid
+            }
+            fixed(fit: COVER, height: 60, width: 80) {
+              ...GatsbyImageSharpFixed
             }
           }
         }

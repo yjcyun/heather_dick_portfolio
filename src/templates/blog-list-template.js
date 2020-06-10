@@ -17,6 +17,7 @@ export const query = graphql`
         description
         title
         featured
+        author
         date(formatString: "MMM Do, YYYY")
         thumbnail {
           childImageSharp {
@@ -120,6 +121,7 @@ display:flex;
   justify-content:flex-end;
   flex:5;
   margin-top: 2rem;
+  padding-right: 3rem;
 }
 .page-direction{
   color: var(--mainGold);
@@ -145,7 +147,7 @@ display:flex;
   padding: 0;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(350px,1fr));
-  grid-gap: 1.5rem;
+  grid-gap: 2rem;
   flex:3;
   }
   
@@ -153,6 +155,7 @@ display:flex;
 @media (min-width: 996px){
   .blog-cards{
   flex:5;
+  padding: 0 3rem;
   }
 
   .blog-sidebar{

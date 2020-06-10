@@ -40,6 +40,7 @@ const BlogCardWrapper = styled.div`
   margin-bottom: '2rem';
   text-align:center;
   background: var(--lightGrey);
+  border-radius: 10px;
 }
 
 .blog article {
@@ -56,6 +57,8 @@ const BlogCardWrapper = styled.div`
 
 .blog-img{
   height: 15rem;
+  border-top-left-radius:10px;
+  border-top-right-radius:10px;
 }
 
 .blog-header {
@@ -70,6 +73,7 @@ const BlogCardWrapper = styled.div`
 }
 .blog-text h3{
   margin: 0.5rem auto;
+  text-transform: capitalize;
 }
 `;
 
