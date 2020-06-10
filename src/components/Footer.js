@@ -18,7 +18,7 @@ const Footer = () => {
           </div>
           <div className="footer-social">
             <p>follow me</p>
-            <SocialLinks styleClass="nav-links" />
+            <SocialLinks styleClass="nav-links" footer/>
           </div>
           <div className="footer-contact">
             <p>Contact</p>
@@ -33,7 +33,7 @@ const Footer = () => {
 }
 
 const FooterWrapper = styled.footer`
-background: var(--beige);
+background: var(--lightGrey);
 color: #222;
 padding: 2rem;
 

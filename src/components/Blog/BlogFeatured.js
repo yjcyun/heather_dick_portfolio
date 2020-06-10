@@ -1,21 +1,34 @@
 import React from 'react'
 import styled from 'styled-components';
-import BlogCard from './BlogCard';
+import { Link } from 'gatsby';
+import SocialLinks from '../../constants/socialLinks';
 
 const BlogFeatured = ({ blogs }) => {
+  console.log(blogs);
   return (
     <BlogFeaturedWrapper>
-      <h2 className="featured-title">Featured Articles</h2>
-      {blogs.map(item => (
-        <div className="blog-card" key={item.id}>
-          <BlogCard
-            key={item.id}
-            {...item}
-            hide
-            featured
-          />
-        </div>
-      ))}
+      <section className="featured-header">
+        <h2 className="featured-title">All the latest from Heather</h2>
+        <hr />
+        <p className="featured-subtitle">connect with her :</p>
+        <SocialLinks styleClass="featured-icons" />
+      </section>
+
+      <section className="featured-header">
+        <p className="featured-subtitle">featured posts :</p>
+        {blogs.map(item => (
+          <div className="blog-card" key={item.id}>
+            <Link to={`/blog/${item.slug}`}>
+              <h3>{item.title}</h3>
+            </Link>
+          </div>
+        ))}
+      </section>
+
+      <section className="featured-header">
+        <p className="featured-subtitle">latest events :</p>
+      </section>
+
     </BlogFeaturedWrapper>
   )
 }
@@ -27,14 +40,23 @@ margin-left: 2.5rem;
 border: 1px solid lightgray;
 border-top: 1rem solid var(--lightGold);
 
+.featured-header{
+  width: 90%;
+  margin: 1rem auto;
+}
 .featured-title{
-  text-align:center;
+  font-size: 2rem;
+  color: var(--textPurple);
+}
+.featured-subtitle {
   text-transform: uppercase;
-  margin-top: 1rem;
+  letter-spacing: 0.07rem;
+  margin-bottom: 0.5rem;
 }
 
 .blog-card{
-  padding: 1rem;
+  padding: 0.2rem 0;
+  text-decoration:underline;
 }
 
 a{

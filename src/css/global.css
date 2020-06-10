@@ -7,12 +7,12 @@ Variables
 :root {
   --mainPurple: #542c85;
   --lightPurple: #783fbe;
+  --textPurple: #745c97;
   --mainGold: #A78425;
   --lightGold: #ccb764;
   --lighterGold:#dfd29e;
   --lightGrey: #F8F7F5;
   --beige: #ece7df;
-  --clr2: #5a5a5a;
   /* --clr3:#656565; */
 
   --mainWhite: #fff;
@@ -204,4 +204,17 @@ section
 .section-title{
   text-transform: uppercase;
   font-size: 2.5rem;
+}
+
+/*=============== 
+icons
+===============*/
+.featured-icons{
+  display:flex;
+}
+
+.social-icon{
+  color: var(--textPurple);
+  margin-right: 1rem;
+  font-size: 1rem;
 }

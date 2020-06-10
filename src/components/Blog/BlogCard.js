@@ -37,18 +37,9 @@ const BlogCardWrapper = styled.div`
   height: auto;
   display:grid;
   transition: var(--transition);
-  margin-bottom: ${props => props.featured ? '0' : '2rem'};
+  margin-bottom: '2rem';
   text-align:center;
-  box-shadow:0px 1px 2px rgba(46,41,51,0.08), 0px 2px 4px rgba(71,63,79,0.08);
-}
-
-.blog:hover{
-  box-shadow:5px 10px 20px rgba(46,41,51,0.08), 5px 10px 10px rgba(71,63,79,0.08);
-  transform: translateY(-4px);
-}
-
-.blog:hover h3 {
-  color: var(--lightPurple);
+  background: var(--lightGrey);
 }
 
 .blog article {
