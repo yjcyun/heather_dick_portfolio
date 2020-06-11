@@ -77,6 +77,9 @@ position:relative;
   font-size: 3rem;
   line-height: 1;
   margin:0.7rem auto 0;
+  font-family: 'Dancing Script', cursive;
+  /* color: var(-mainPurple)!important; */
+  font-weight: bold;
 }
 
 .hero-title h3 {

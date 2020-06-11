@@ -36,6 +36,7 @@ const LogoWrapper = styled.section`
     line-height: 1;
     margin-bottom: 0;
     margin-left: 0.5rem;
+    color: var(--mainWhite);
   }
 
   .logo-company{

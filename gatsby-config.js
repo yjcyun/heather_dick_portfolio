@@ -4,9 +4,7 @@ file system for images
 strapi 
 */
 
-const VIMEO_ID = process.env.REACT_APP_VIMEO_ID;
-const SECRET = process.env.REACT_APP_SECRET;
-const ACCESS_TOKEN = process.env.REACT_APP_ACCESS_TOKEN;
+
 
 module.exports = {
   /* Your site config here */
@@ -29,13 +27,28 @@ module.exports = {
         // singleTypes: [`home-page`, `contact`],
       },
     },
-    {
-      resolve: 'gatsby-source-vimeo-all',
-      options: {
-        clientId: VIMEO_ID,
-        clientSecret: SECRET,
-        accessToken: ACCESS_TOKEN
-      }
-    },
+    // {
+    //   resolve: 'gatsby-source-vimeo-all',
+    //   options: {
+    //     clientId: process.env.GATSBY_VIMEO_ID,
+    //     clientSecret: process.env.GATSBY_SECRET,
+    //     accessToken: process.env.GATSBY_ACCESS_TOKEN
+    //   }
+    // },
+    // {
+    //   resolve: `gatsby-source-vimeo`,
+    //   options: {
+    //     clientID: process.env.GATSBY_VIMEO_ID,
+    //     clientSecret: process.env.GATSBY_SECRET,
+    //     userID: 'user117137254',
+    //     transformer(video) {
+    //       // Transform the video data [OPTIONAL]
+    //       // i.e. Add extra fields or alter existing field
+    //       video.newField = 'value'
+    //       return video
+    //     }
+    //   },
+    // },
+  
   ]
 }

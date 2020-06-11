@@ -25,8 +25,8 @@ const NavbarWrapper = styled.nav`
   top: 0;
   left: 0;
   width: 100%;
-  background: var(--mainWhite);
-  color: var(--mainPurple);
+  background: var(--mainPurple);
+  color: var(--mainWhite);
 
   .nav-header{
     display: flex;
@@ -40,10 +40,10 @@ const NavbarWrapper = styled.nav`
   }
 
   .nav-links a {
-    color: var(--mainPurple);
+    color: var(--mainWhite);
     transition: var(--transition);
     font-size: 1rem;
-    text-transform: lowercase;
+    text-transform: uppercase;
     font-weight: bold;
     letter-spacing: 0.1rem;
     text-decoration: none;
