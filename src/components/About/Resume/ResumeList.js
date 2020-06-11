@@ -44,18 +44,25 @@ const ResumeList = () => {
     }
   });
 
+
+
   return (
     <ResumeWrapper>
       <>
-        <Subtitle subtitle="BEST WORK" />
+        <Subtitle subtitle="SELECTED CREDITS" />
         <div className="resume-column">
           <div className="resume-content">
-            {categories.map((item, index) => (
-              <div key={index} className="resume-item">
-                <h1 className="resume-category">{item}</h1>
-                {renderList(item)}
-              </div>
-            ))}
+            {
+              categories.map((item, index) => {
+                console.log(item);
+                return (
+                  <div key={index} className="resume-item">
+                    <h1 className="resume-category">{item}</h1>
+                    {renderList(item)}
+                  </div>
+                )
+              })}
+           
           </div>
           <div className="resume-img">
             <img src={img1} alt="Heather resume" />

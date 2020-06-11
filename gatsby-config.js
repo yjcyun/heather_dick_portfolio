@@ -3,6 +3,11 @@ styled-components
 file system for images
 strapi 
 */
+
+const VIMEO_ID = process.env.REACT_APP_VIMEO_ID;
+const SECRET = process.env.REACT_APP_SECRET;
+const ACCESS_TOKEN = process.env.REACT_APP_ACCESS_TOKEN;
+
 module.exports = {
   /* Your site config here */
   plugins: [
@@ -20,9 +25,17 @@ module.exports = {
       options: {
         apiURL: `http://localhost:1337`,
         queryLimit: 1000, // Default to 100
-        contentTypes: [`resumes`, `blogs`,`productions`],
+        contentTypes: [`resumes`, `blogs`, `productions`],
         // singleTypes: [`home-page`, `contact`],
       },
+    },
+    {
+      resolve: 'gatsby-source-vimeo-all',
+      options: {
+        clientId: VIMEO_ID,
+        clientSecret: SECRET,
+        accessToken: ACCESS_TOKEN
+      }
     },
   ]
 }
