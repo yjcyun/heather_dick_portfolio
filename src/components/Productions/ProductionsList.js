@@ -44,7 +44,7 @@ const ProductionsList = ({ posters }) => {
     if (selectedPoster) {
       const { img, company, show, date, role, category } = selectedPoster;
       return (
-        <>
+        <div className="modal-container">
           <Image fluid={img.childImageSharp.fluid} alt="poster" className="modal-img" />
           <div className="modal-text">
             <p><strong>{show}</strong> from {company}</p>
@@ -53,7 +53,7 @@ const ProductionsList = ({ posters }) => {
               : <p>Heather Dick as {role} on {date}</p>
             }
           </div>
-        </>
+        </div>
       )
     } else {
       return null;
@@ -110,22 +110,21 @@ text-align:center;
 const ProductionsListWrapper = styled.div`
 display:grid;
 grid-row-gap: 1.5rem;
+padding: 0 1rem;
 
-.modal-children{
+.modal-container{
   display:grid;
-  grid-template-rows:auto;
+  overflow: hidden;
   grid-gap: 1rem;
-  max-height: 70vh;
+  max-height: 80vh;
 }
 
-.modal-text{
-  padding-bottom: 1rem;
-  display:flex;
-  flex-direction: column;
-}
+.modal-img{
+  height: 100%;
+  object-fit: contain;
+} 
 
 @media(min-width: 768px){
-  padding: 0;
   grid-template-columns: repeat(auto-fill, minmax(300px,1fr));
   /* grid-auto-rows: 1fr; */
   grid-gap: 1.5rem;

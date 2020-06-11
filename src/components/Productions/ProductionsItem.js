@@ -55,11 +55,13 @@ const ProductionsItemWrapper = styled.div`
   display:flex;
   justify-content: flex-start;
   align-items: flex-end;
+  border-radius: 10px;
 }
 
 .poster-img:hover .poster-layover{
   opacity:1;
 }
+
 
 `;
 export default ProductionsItem
