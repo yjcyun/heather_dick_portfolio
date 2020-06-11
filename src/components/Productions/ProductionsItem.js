@@ -3,13 +3,20 @@ import styled from 'styled-components';
 import Image from 'gatsby-image';
 
 const ProductionsItem = ({ item }) => {
-  const { img } = item;
+  const { img, show, company } = item;
   return (
     <ProductionsItemWrapper>
       <div className="poster-img">
         <Image fluid={img.childImageSharp.fluid} alt="posters" className="poster-gatsby-img" />
+        <div className="poster-footer">
+          <p><strong>{show}</strong> by {company}</p>
+        </div>
+
+
+
+        {/* POSTER LAYOVER */}
         <div className="poster-layover">
-          <button className="btn production-btn">learn more<hr className="short-hr"/>
+          <button className="btn production-btn">learn more<hr className="short-hr" />
           </button>
         </div>
       </div>
@@ -19,15 +26,21 @@ const ProductionsItem = ({ item }) => {
 
 const ProductionsItemWrapper = styled.div`
 .poster-img{
-  height: 25rem;
   cursor: pointer;
   position: relative;
   transition: var(--transition);
+  display: grid;
   position:relative;
+  border-radius: 5px;
 }
 
 .poster-gatsby-img{
-  height: 100%;
+  height: 25rem;
+  border-radius: 10px;
+}
+
+.poster-footer{
+  margin: 0.5rem 0;
 }
 
 .poster-layover{

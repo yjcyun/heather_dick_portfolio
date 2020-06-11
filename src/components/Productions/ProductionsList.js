@@ -62,23 +62,27 @@ const ProductionsList = ({ posters }) => {
 
   return (
     <>
-    <FilterBtnWrapper>
-      {categories.map((category, index) => {
-        return (
-          <button
-            type="button"
-            key={index}
-            className="btn filter-btn"
-            onClick={() => handleFilter(category)}
-          >{category}</button>
-        )
-      })}
+      <FilterBtnWrapper>
+        {categories.map((category, index) => {
+          return (
+            <button
+              type="button"
+              key={index}
+              className="btn filter-btn"
+              onClick={() => handleFilter(category)}
+            >{category}</button>
+          )
+        })}
       </FilterBtnWrapper>
       <ProductionsListWrapper>
         {posterItems.map(item => {
           return (
             <div key={item.id}>
-              <div role="button" tabIndex={0} onKeyDown={() => openModal(item)} onClick={() => openModal(item)}>
+              <div
+                role="button"
+                tabIndex={0}
+                onKeyDown={() => openModal(item)} onClick={() => openModal(item)}
+              >
                 <ProductionsItem item={item} />
               </div>
 
@@ -123,7 +127,7 @@ grid-row-gap: 1.5rem;
 @media(min-width: 768px){
   padding: 0;
   grid-template-columns: repeat(auto-fill, minmax(300px,1fr));
-  grid-auto-rows: 1fr;
+  /* grid-auto-rows: 1fr; */
   grid-gap: 1.5rem;
 }
 `;
