@@ -12,40 +12,42 @@ import Subtitle from '../../Subtitle';
 
 let thumbnails = [];
 
+
 class Reels extends Component {
   state = {
     videos: [
       {
         id: 0,
-        url: "https://vimeo.com/140710198",
+        url: "140710198",
         thumbnail: thumbnails[0]
       },
       {
         id: 1,
-        url: "https://vimeo.com/137428733",
+        url: "137428733",
         thumbnail: thumbnails[1]
       },
       {
         id: 2,
-        url: "https://vimeo.com/139617873",
+        url: "139617873",
         thumbnail: thumbnails[2]
       },
       {
         id: 3,
-        url: "https://vimeo.com/140080056",
+        url: "140080056",
         thumbnail: thumbnails[3]
       },
     ],
-    selectedVideo: null
+    selectedVideo: "140710198"
   }
 
   async componentDidMount() {
-    const videoID = ['https://vimeo.com/140710198']
+    // const response1 = await axios.get(`https://vimeo.com/api/oembed.json?url=https://vimeo.com/140710198}`);
 
-    const response = await axios.get(`https://vimeo.com/api/oembed.json?url=${videoID[0]}`);
+    const response = await axios.get("https://api.vimeo.com/users/siriustheatricalcompany/videos?fields=uri,duration,pictures.sizes.link,download&uris=/videos/140710198,/videos/137428733&per_page=2");
 
     const data = await response.data;
-    this.setState({ selectedVideo: data.html });
+    console.log(data);
+    // const data1 = await response1.data;
     thumbnails.push(data.thumbnail_url);
   };
 
@@ -57,7 +59,7 @@ class Reels extends Component {
   render() {
     return (
       <ReelsWrapper>
-      <Subtitle subtitle="production reels"/>
+        <Subtitle subtitle="PRODUCTION REELS" />
         <div className="videos">
           <VideoDetail video={this.state.selectedVideo} />
           <VideoList

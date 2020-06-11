@@ -1,5 +1,5 @@
 /* font */
-@import url("https://fonts.googleapis.com/css2?&family=Poppins:wght@300&family=Playfair+Display:wght@700&family=Oswald&family=Playball&display=swap");
+@import url("https://fonts.googleapis.com/css2?&family=Poppins:wght@300&family=Playfair+Display:wght@700&family=Oswald:wght@300;400&family=Playball&display=swap");
 
 /*=============== 
 Variables
@@ -8,10 +8,10 @@ Variables
   --mainPurple: #542c85;
   --lightPurple: #783fbe;
   --textPurple: #745c97;
-  --mainGold: #A78425;
+  --mainGold: #a78425;
   --lightGold: #ccb764;
-  --lighterGold:#dfd29e;
-  --lightGrey: #F8F7F5;
+  --lighterGold: #dfd29e;
+  --lightGrey: #f8f7f5;
   --beige: #ece7df;
   /* --clr3:#656565; */
 
@@ -35,16 +35,15 @@ Global Styles
 hr {
   border: none;
   border-top: 1px solid var(--mainGold);
-  text-align:center;
+  text-align: center;
   width: 8rem;
-  margin:1rem 0;
+  margin: 1rem 0;
 }
 .short-hr {
-  width:3.5rem;
-  margin: 0;
+  width: 3.5rem;
 }
 .shortest-hr {
-  width:2.3rem;
+  width: 2.3rem;
   margin: 0.5rem 0;
 }
 .center-hr {
@@ -73,9 +72,9 @@ a:hover {
   color: black;
 }
 
-.max-width{
+.max-width {
   max-width: 1170px;
-  margin:0 auto;
+  margin: 0 auto;
 }
 
 /*=============== 
@@ -121,12 +120,14 @@ Navbar
   transform: translateY(8px);
 }
 
-/* .page-margin {
-  margin-top: 72px;
+.page-margin {
+  margin-top: 56px;
 }
+
 .extra-margin{
   margin: 20vh auto;
-} */
+}
+
 /* .ipad-padding{
   padding: 0 2rem;
 }
@@ -139,7 +140,7 @@ Navbar
 /*=============== 
 Button
 ===============*/
-.btn{
+.btn {
   padding: 1rem 3rem;
   letter-spacing: 0.1rem;
   outline: none;
@@ -149,11 +150,20 @@ Button
   font-family: var(--mainFont);
   background: transparent;
   color: var(--mainGold);
-  font-weight:bold;
+  font-weight: bold;
   font-size: 1rem;
+  transition: var(--transition);
+  position: relative;
 }
 
-.filter-btn{
+.btn:after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  transition: var(--transition);
+}
+
+.filter-btn {
   margin-right: 1rem;
   padding: 0.5rem 1rem;
   margin-bottom: 3rem;
@@ -163,52 +173,80 @@ Button
   background-color: var(--mainGold);
 } */
 .filter-btn:hover {
-  background-color:var(--mainGold);
+  background-color: var(--mainGold);
   color: white;
 }
 
-.production-btn{
+.production-btn {
   padding: 0.5rem 1rem;
   color: white;
   border: none;
   margin: 1rem;
 }
 
-.about-btn{
- background:var(--lightGold);
- margin-top: 2rem;
+.about-btn {
+  margin-top: 2rem;
+}
+
+.hero-btn {
+  margin: 2rem auto;
+  overflow: hidden;
+  border: 1px solid var(--mainPurple);
+  color: var(--mainPurple);
+}
+
+.hero-btn:after {
+  width: 100%;
+  height: 0;
+  top: 50%;
+  left: 50%;
+  background: var(--mainPurple);
+  opacity: 0;
+  transform: translateX(-50%) translateY(-50%) rotate(45deg);
+}
+
+.hero-btn:hover,
+.hero-btn:active {
+  color: #fff;
+}
+
+.hero-btn:hover:after {
+  height: 260%;
+  opacity: 1;
+}
+
+.hero-btn:active:after {
+  height: 400%;
+  opacity: 1;
 }
 
 /*=============== 
 Pages
 ===============*/
 .page {
-  margin: 20vh auto;
+  margin: 10rem auto;
   min-height: calc(100vh - 72px - 213px);
   max-width: 1170px;
 }
-.about-page{
-   margin: 20vh auto;
-  min-height: calc(100vh - 72px - 213px);
+.about-page {
+  margin: 10rem auto 0;
+}
+.about-page-reels{
+  margin: 0 auto;
+  max-width: 1170px
 }
 
-@media (max-width: 1200px) {
-  .page {
-    padding: 0 2rem;
-    margin: 13vh auto;
-  }
-}
-@media (max-width: 400px) {
-  .page {
-    padding: 0;
-    margin: 20vh auto;
+@media (max-width: 768px) {
+  .page{
+    margin: 6rem auto 0;
+    padding-bottom: 5rem;
   }
 }
 
 /*=============== 
 section
 ===============*/
-.section-title{
+.section-title {
   text-transform: uppercase;
   font-size: 2.5rem;
 }
@@ -216,12 +254,12 @@ section
 /*=============== 
 icons
 ===============*/
-.featured-icons{
-  display:flex;
+.featured-icons {
+  display: flex;
   justify-content: center;
 }
 
-.social-icon{
+.social-icon {
   color: var(--textPurple);
   margin-right: 1rem;
   font-size: 1rem;

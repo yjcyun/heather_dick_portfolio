@@ -19,7 +19,6 @@ const ReviewItem = ({ review }) => {
 const ReviewItemWrapper = styled.div`
 .bubble{
   position: relative;
-  font-family: sans-serif;
   font-size: 1rem;
   line-height: 24px;
   background: #F7EDDE;

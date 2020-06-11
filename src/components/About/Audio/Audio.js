@@ -1,18 +1,23 @@
 import React from 'react'
 import styled from 'styled-components';
+import Subtitle from '../../Subtitle';
 
 const Audio = () => {
   return (
     <AudioWrapper>
-      <h1 className="section-title">Audio Productions</h1>
-      <hr />
+      <div className="audio-productions">
+        <Subtitle subtitle="AUDIO PRODUCTIONS" />
+      </div>
     </AudioWrapper>
   )
 }
 
 const AudioWrapper = styled.section`
-padding: 0 5rem 5rem;
 
+.audio-productions{
+  max-width:1170px;
+  padding: 0 5rem;
+}
 `;
 
 export default Audio

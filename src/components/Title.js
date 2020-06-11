@@ -2,11 +2,12 @@ import React from 'react';
 import styled from 'styled-components';
 
 
-const Title = ({ title }) => {
+const Title = ({ title,subtitle }) => {
   return (
     <TitleWrapper>
       <h1 className="title">{title}</h1>
       <hr className="title-hr"/>
+      <h2 className="subtitle">{subtitle}</h2>
     </TitleWrapper>
   )
 }
@@ -26,14 +27,22 @@ text-align:center;
   margin: 1rem auto;
 }
 
+.subtitle{
+  font-size:1.2rem;
+  padding-top:1rem;
+}
+
 
 @media (min-width: 996px) {
   margin:0 auto 5rem;
 
   .title{
     font-size:2.4rem;
-  }
-  
+  }  
+}
+
+@media (max-width: 576px) {
+  margin: 0 1rem 0;
 }
 `;
 

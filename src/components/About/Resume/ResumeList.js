@@ -5,6 +5,7 @@ import ResumeItem from './ResumeItem';
 import img1 from '../../../images/carousel-1.jpg';
 import img2 from '../../../images/carousel-2.jpg';
 import img3 from '../../../images/carousel-3.jpg';
+import Subtitle from '../../Subtitle';
 
 const query = graphql`
  {
@@ -46,8 +47,7 @@ const ResumeList = () => {
   return (
     <ResumeWrapper>
       <>
-        <h1 className="section-title">best work</h1>
-        <hr />
+        <Subtitle subtitle="BEST WORK" />
         <div className="resume-column">
           <div className="resume-content">
             {categories.map((item, index) => (
@@ -74,6 +74,7 @@ const ResumeList = () => {
 
 const ResumeWrapper = styled.section`
 padding: 0 5rem;
+ margin:5rem auto 2rem;
 .resume-column{
   display:flex;
 }

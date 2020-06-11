@@ -1,5 +1,6 @@
 import React from 'react';
 import { graphql, useStaticQuery, Link } from 'gatsby';
+import { FaInfoCircle } from 'react-icons/fa';
 import styled from 'styled-components';
 import Image from 'gatsby-image';
 
@@ -32,6 +33,8 @@ const StyledHero = () => {
         <Link to="/about">
           <button className="btn hero-btn">learn more</button>
         </Link>
+
+        <p className="event-news"><FaInfoCircle className="icon" /> Upcoming Event: Monday June 10 - Siriusly Fun Workshop</p>
       </div>
       <div className="hero-image">
         <Image
@@ -50,15 +53,22 @@ display: flex;
 flex-direction: column;
 align-items: center;
 max-width: 1170px;
-margin: auto;
+margin: 3rem auto 0;
 min-height: calc(100vh - 72px);
 grid-auto-flow: dense;
+position:relative;
 
 .hero-text{
   order:2;
   padding: 0 1rem;
   margin-top: 2rem;
   text-align:center;
+}
+
+.event-news{
+  position: absolute;
+  bottom:0;
+  left: 2%;
 }
 
 .hero-title h1{
@@ -81,22 +91,6 @@ grid-auto-flow: dense;
   text-transform: capitalize;
 }
 
-.hero-btn{
-  margin-top: 2rem;
-  text-transform: uppercase;
-  background: var(--mainPurple);
-  color: white;
-  transition: var(--transition);
-}
-
-.hero-btn a {
-  color: white;
-}
-
-.hero-btn:hover {
-  background: var(--mainGold);
-}
-
 .hero-image{
   display:flex;
   position:relative;
@@ -113,6 +107,13 @@ grid-auto-flow: dense;
 
 .background-frame{
  display: none;
+}
+/* .event-news{
+  margin-top:10rem;
+  margin-bottom:2rem;
+} */
+.icon{
+  color: var(--mainGold);
 }
 
 @media (min-width: 768px) {
@@ -131,13 +132,18 @@ grid-auto-flow: dense;
   .hero-subtitle h5{
     font-size: 1.5rem;
   }
+  .event-news{
+  position: absolute;
+  bottom:2%;
+  left: 2%;
+}
 }
 
 @media (min-width: 996px) {
   flex-direction: row;
    .hero-text{
     order:0;
-    text-align:left;
+    text-align:center;
     padding: 0 3rem 0 1.5rem;
   }
   .hero-image{
@@ -171,17 +177,17 @@ grid-auto-flow: dense;
 
 @media (min-width: 1110px) {
   .hero-image{
-    width: 30rem;
+    width: 33rem;
   }
 
   .background-img{
-    width: 30rem;
-    height: 35rem;
+    width: 33rem;
+    height: 40rem;
   }
 
   .background-frame{
-    width: 30rem;
-    height: 35rem;
+    width: 33rem;
+    height: 40rem;
   }
 }
 `;
