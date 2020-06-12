@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { graphql, useStaticQuery, Link } from 'gatsby';
 import styled from 'styled-components';
 import ResumeItem from './ResumeItem';
+import ResumeFeatured from './ResumeFeatured';
 import img1 from '../../../images/carousel-1.jpg';
 import img2 from '../../../images/carousel-2.jpg';
 import img3 from '../../../images/carousel-3.jpg';
@@ -63,13 +64,11 @@ const ResumeList = () => {
                   </div>
                 )
               })}
-
           </div>
-          <div className="resume-img">
-            <img src={img1} alt="Heather resume" />
-            <img src={img2} alt="Heather resume" />
-            <img src={img3} alt="Heather resume" />
+          <div className="resume-featured">
+            <ResumeFeatured />
           </div>
+          
         </div>
 
         <Link to="/contact">
@@ -83,7 +82,7 @@ const ResumeList = () => {
 const ResumeWrapper = styled.section`
 padding: 5rem 7rem;
  margin:0 auto;
- background-color: #f8f6eb;
+
 .resume-column{
   display:flex;
 }
@@ -95,7 +94,10 @@ padding: 5rem 7rem;
   margin: 0.5rem 0;
 }
 .resume-content{
- flex:3;
+ flex:5;
+}
+.resume-featured{
+  flex:2;
 }
 .resume-item{
   padding: 3rem 0;
