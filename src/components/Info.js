@@ -41,7 +41,9 @@ grid-column-gap:2rem;
 padding:1.5rem 1rem;
 justify-content:center;
 align-items: start;
-background: linear-gradient(#fff 0%, var(--lighterGold) 70%, #fff 100%);
+/* background: linear-gradient(#fff 0%, var(--lighterGold) 70%, #fff 100%); */
+background-color: #f2f4fb;
+background-image: url("https://www.transparenttextures.com/patterns/paper.png");
 /* background: var(--lighterGold); */
 margin: 0 auto;
 

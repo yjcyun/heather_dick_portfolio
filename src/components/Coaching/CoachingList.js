@@ -29,17 +29,19 @@ const CoachingList = () => {
 
   return (
     <CoachingListWrapper>
-      <CoachingItem
-        image={image1}
-        title="Acting Coaching"
-        desc="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Pariatur, officiis debitis. Veritatis ipsam dolor, molestias quasi earum cum nostrum incidunt harum soluta quo, hic expedita aspernatur nam accusantium nobis ad laudantium molestiae, sequi beatae! Cumque quos minima quod officiis consequatur nulla, molestiae voluptate voluptas mollitia provident, molestias dicta asperiores blanditiis."
-      />
+      <div className="coaching-container">
+        <CoachingItem
+          image={image1}
+          title="Acting Coaching"
+          desc="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Pariatur, officiis debitis. Veritatis ipsam dolor, molestias quasi earum cum nostrum incidunt harum soluta quo, hic expedita aspernatur nam accusantium nobis ad laudantium molestiae, sequi beatae! Cumque quos minima quod officiis consequatur nulla, molestiae voluptate voluptas mollitia provident, molestias dicta asperiores blanditiis."
+        />
 
-      <CoachingItem
-        image={image2}
-        title="Voice Coaching"
-        desc="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Pariatur, officiis debitis. Veritatis ipsam dolor, molestias quasi earum cum nostrum incidunt harum soluta quo, hic expedita aspernatur nam accusantium nobis ad laudantium molestiae, sequi beatae! Cumque quos minima quod officiis consequatur nulla, molestiae voluptate voluptas mollitia provident, molestias dicta asperiores blanditiis."
-      />
+        <CoachingItem
+          image={image2}
+          title="Voice Coaching"
+          desc="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Pariatur, officiis debitis. Veritatis ipsam dolor, molestias quasi earum cum nostrum incidunt harum soluta quo, hic expedita aspernatur nam accusantium nobis ad laudantium molestiae, sequi beatae! Cumque quos minima quod officiis consequatur nulla, molestiae voluptate voluptas mollitia provident, molestias dicta asperiores blanditiis."
+        />
+      </div>
       <div className="contact-container">
         <h4 className="coaching-contact">Do you need help with your upcoming theatre/vocal project?</h4>
         <h4 className="coaching-contact strong">Contact Heather and she will guide you to the right direction.</h4>
@@ -53,6 +55,12 @@ const CoachingList = () => {
 }
 
 const CoachingListWrapper = styled.section`
+.coaching-container{
+background-color: #f8f6f1;
+background-image: url("https://www.transparenttextures.com/patterns/subtle-dark-vertical.png");
+padding: 0 1rem;
+}
+
 .contact-container{
   text-align:center;
   margin-top: 2rem;

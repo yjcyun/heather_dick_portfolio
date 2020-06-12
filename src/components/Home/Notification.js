@@ -41,12 +41,16 @@ const ToastWrapper = styled.div`
 .Toastify__toast {
   background-color: white;
   color: black;
- 
   border-top: 10px solid var(--mainPurple);
   border-bottom-right-radius: 1rem;
   border-bottom-left-radius: 1rem;
   height: 7rem;
   width: 15rem;
+}
+@media(min-width: 768px) {
+  .Toastify__toast{
+    left: 10px;
+  }
 }
 `;
 
