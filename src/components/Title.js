@@ -20,7 +20,7 @@ flex-direction:column;
 
 .title{
   font-family: var(--titleFont);
-  font-size:2rem;
+  font-size:2.5rem;
   text-transform: uppercase;
   display: inline-block;
   font-weight: 400;

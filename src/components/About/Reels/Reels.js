@@ -38,12 +38,14 @@ class Reels extends Component {
   render() {
     return (
       <ReelsWrapper>
-        <Subtitle subtitle="REELS" />
-        <div className="videos">
-          <VideoDetail video={this.state.selectedVideo} />
-          <VideoList
-            videos={this.state.videos}
-            onVideoSelect={this.onVideoSelect} />
+        <div className="max-width">
+          <Subtitle subtitle="REELS" />
+          <div className="videos">
+            <VideoDetail video={this.state.selectedVideo} />
+            <VideoList
+              videos={this.state.videos}
+              onVideoSelect={this.onVideoSelect} />
+          </div>
         </div>
       </ReelsWrapper>
     )
@@ -51,13 +53,27 @@ class Reels extends Component {
 }
 
 const ReelsWrapper = styled.section`
-  margin:5rem auto 2rem;
+  margin:10rem auto 0;
   min-height: 100vh;
-  padding: 0 5rem;
+  padding: 7rem;
+  background-image: linear-gradient(#fff 0%, var(--lightestPurple) 100%);
 
- .videos{
- display:flex;
- flex-direction: column;
+  .videos{
+  display:flex;
+  flex-direction:column;
+  }
+
+ .max-width{
+   display:flex;
+   flex-direction:column;
+   justify-content:space-between;
+ }
+
+ @media (min-width: 996px) {
+   padding: 2rem;
+  .max-width{
+    flex-direction:row;
+  }
  }
 `;
 

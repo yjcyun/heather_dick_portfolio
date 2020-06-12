@@ -16,6 +16,8 @@ const query = graphql`
         show
         category
         company
+        location
+        names
       }
     }
   }
@@ -46,7 +48,7 @@ const ResumeList = () => {
 
   return (
     <ResumeWrapper>
-      <>
+      <div className="max-width"> 
         <Subtitle subtitle="SELECTED CREDITS" />
         <div className="resume-column">
           <div className="resume-content">
@@ -73,14 +75,15 @@ const ResumeList = () => {
         <Link to="/contact">
           <button className="btn about-btn">contact for full resume</button>
         </Link>
-      </>
+      </div>
     </ResumeWrapper>
   )
 }
 
 const ResumeWrapper = styled.section`
-padding: 0 5rem;
- margin:5rem auto 2rem;
+padding: 5rem 7rem;
+ margin:0 auto;
+ background-color: #f8f6eb;
 .resume-column{
   display:flex;
 }
@@ -95,7 +98,7 @@ padding: 0 5rem;
  flex:3;
 }
 .resume-item{
-  padding-bottom: 1rem;
+  padding: 3rem 0;
 }
 
 .resume-category{

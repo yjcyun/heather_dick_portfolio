@@ -2,7 +2,6 @@ import React from 'react'
 import styled from 'styled-components';
 import { graphql, useStaticQuery } from 'gatsby';
 import Image from 'gatsby-image';
-import bcg from '../images/bcg.jpg';
 
 const getImage = graphql`
   query {
@@ -37,18 +36,18 @@ const Info = ({ img, children, reverse }) => {
 
 const InfoWrapper = styled.section`
 display: grid;
-grid-template-columns:${props => props.reverse ? '2fr 3fr' : '2fr 1fr'};
+grid-template-columns: 1fr;
 grid-column-gap:2rem;
+padding:1.5rem 1rem;
 justify-content:center;
 align-items: start;
-background-image: linear-gradient(135deg,var(--lighterGold) 0%, #fdfcfb 100%);
-padding: 2rem;
-margin: 0 auto;
+background: linear-gradient(#fff 0%, var(--lighterGold) 70%, #fff 100%);
 
+margin: 0 auto;
 
 .info-text {
   text-align: left;
-  padding: 0 2rem;
+  padding: 2rem 1rem;
   order: ${props => props.reverse ? '2' : ''};
 }
 
@@ -74,8 +73,14 @@ margin: 0 auto;
 order: ${props => props.reverse ? '1' : ''};
 }
 
-@media (max-width: 768px) {
-  grid-template-columns: 1fr;
+@media (min-width: 768px) {
+  grid-template-columns:${props => props.reverse ? '2fr 3fr' : '2fr 1fr'};
+  padding: 2rem 5rem;
+
+  .info-text {
+  text-align: left;
+  padding: 0 2rem 0;
+}
 }
 
 `;

@@ -33,7 +33,7 @@ const Footer = () => {
 }
 
 const FooterWrapper = styled.footer`
-background: var(--lightGrey);
+background: var(--beige);
 color: #222;
 padding: 2rem;
 

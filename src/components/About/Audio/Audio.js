@@ -3,13 +3,20 @@ import styled from 'styled-components';
 import Subtitle from '../../Subtitle';
 import AudioItem from './AudioItem';
 
+
+const track = [267474434, 267474514, 267474514];
+
 const Audio = () => {
   return (
     <AudioWrapper>
-      <div className="audio-productions">
-        <Subtitle subtitle="AUDIO PRODUCTIONS" />
-        <AudioItem />
-       
+      <div className="max-width">
+        <Subtitle subtitle="AUDIO" white />
+        <div className="audio-item-container">
+          {track.map((item, index) => {
+            return <div key={index}><AudioItem track={item} /></div>
+          })}
+        </div>
+
       </div>
     </AudioWrapper>
   )
@@ -17,11 +24,23 @@ const Audio = () => {
 
 
 const AudioWrapper = styled.section`
+ background:#543864;
+padding:7rem;
+.max-width{
+   display:flex;
+   justify-content:space-between;
+ }
 
-.audio-productions{
-  max-width:1170px;
-  padding: 0 5rem;
+.audio-item-container {
+  display:grid;
+  grid-template-columns: 1fr 1fr 1fr;
 }
+.audio-item-container div{
+  display:flex;
+  justify-content: flex-end;
+  align-items:center;
+}
+
 `;
 
 export default Audio

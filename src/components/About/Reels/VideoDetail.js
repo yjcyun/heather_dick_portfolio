@@ -6,22 +6,26 @@ const VideoDetail = ({ video }) => {
   return (
     <VideoDetailWrapper>
       <div className="video-frame">
-        <iframe src={`https://player.vimeo.com/video/${video}`} width="840" height="460" frameBorder="0" allow="fullscreen" allowFullScreen></iframe>
+        <iframe src={`https://player.vimeo.com/video/${video}?byline=0&portrait=0`} className="responsive-iframe" frameborder="0" allow="autoplay; fullscreen" allowfullscreen />
       </div>
     </VideoDetailWrapper>
   )
 }
 
 const VideoDetailWrapper = styled.div`
-display: flex;
-justify-content: center;
-align-items: center;
-margin: 0 auto 3rem;
-
 .video-frame{
-  width: 840px;
-  height: 460px;
+  padding:56.25% 0 0 0;
+  margin-bottom: 3rem;
+  position:relative;
   background: black;
+}
+
+.responsive-iframe{
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
 }
 `;
 
