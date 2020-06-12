@@ -55,7 +55,7 @@ const BlogFeaturedWrapper = styled.section`
 display:flex;
 flex-direction: column;
 margin-left: 2.5rem;
-margin-top: 3.5rem;
+margin-top: 2rem;
 border: 1px solid lightgray;
 border-top: 1rem solid var(--mainPurple);
 text-align:center;

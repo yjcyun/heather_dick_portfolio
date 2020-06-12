@@ -5,7 +5,7 @@ import Image from 'gatsby-image';
 
 const getImage = graphql`
   query {
-    defaultBcg:file(relativePath: {eq: "headshot.jpg"}) {
+    defaultBcg:file(relativePath: {eq: "headshots/headshot4.jpg"}) {
       childImageSharp {
         fluid {
           ...GatsbyImageSharpFluid
@@ -15,7 +15,7 @@ const getImage = graphql`
   }
 `;
 
-const Info = ({ img, children, reverse }) => {
+const Info = ({ children, reverse }) => {
   const data = useStaticQuery(getImage);
 
   return (
@@ -26,7 +26,7 @@ const Info = ({ img, children, reverse }) => {
       <div className="info-image">
         <Image
           className="background-img"
-          fluid={img || data.defaultBcg.childImageSharp.fluid}
+          fluid={data.defaultBcg.childImageSharp.fluid}
         >
         </Image>
       </div>

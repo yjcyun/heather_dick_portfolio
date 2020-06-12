@@ -19,7 +19,6 @@ const ResumeItem = ({ item }) => {
 
 const ResumeItemWrapper = styled.div`
 text-transform: capitalize;
-letter-spacing: 0.1rem;
 margin:0.5rem 0;
 font-size: 1.1rem;
 

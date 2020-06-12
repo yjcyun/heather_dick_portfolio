@@ -100,7 +100,7 @@ padding: 5rem 7rem;
   flex:2;
 }
 .resume-item{
-  padding: 3rem 0;
+  padding: 1.5rem 0;
 }
 
 .resume-category{
