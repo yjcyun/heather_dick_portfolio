@@ -36,15 +36,13 @@ const getCategories = items => {
 const ResumeList = () => {
   const { allStrapiResumes: { nodes } } = useStaticQuery(query);
   // array of unique categories
-  const [categories] = useState(getCategories(nodes));
+  const [categories, setCategories] = useState(getCategories(nodes));
 
   const renderList = (categoryResume) => nodes.map(item => {
     if (item.category === categoryResume) {
       return <ResumeItem key={item.id} item={item} />
     }
   });
-
-
 
   return (
     <ResumeWrapper>
@@ -54,15 +52,16 @@ const ResumeList = () => {
           <div className="resume-content">
             {
               categories.map((item, index) => {
-                console.log(item);
                 return (
                   <div key={index} className="resume-item">
-                    <h1 className="resume-category">{item}</h1>
+                    <h1 className="resume-category">
+                      {item === 'film' ? 'film&televsion' : item}
+                    </h1>
                     {renderList(item)}
                   </div>
                 )
               })}
-           
+
           </div>
           <div className="resume-img">
             <img src={img1} alt="Heather resume" />

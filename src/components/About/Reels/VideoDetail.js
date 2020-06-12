@@ -5,9 +5,9 @@ const VideoDetail = ({ video }) => {
 
   return (
     <VideoDetailWrapper>
-      <iframe src={`https://player.vimeo.com/video/${video}`} width="840" height="660" frameBorder="0" allow="autoplay; fullscreen" allowFullScreen></iframe>
-
-      {/* <div dangerouslySetInnerHTML={{ __html: video }}></div> */}
+      <div className="video-frame">
+        <iframe src={`https://player.vimeo.com/video/${video}`} width="840" height="460" frameBorder="0" allow="fullscreen" allowFullScreen></iframe>
+      </div>
     </VideoDetailWrapper>
   )
 }
@@ -16,8 +16,13 @@ const VideoDetailWrapper = styled.div`
 display: flex;
 justify-content: center;
 align-items: center;
-margin: 0 auto;
-flex:3;
+margin: 0 auto 3rem;
+
+.video-frame{
+  width: 840px;
+  height: 460px;
+  background: black;
+}
 `;
 
 export default VideoDetail

@@ -20,6 +20,7 @@ const ProductionsList = ({ posters }) => {
   const [items] = useState(posters);
   const [posterItems, setPosterItems] = useState(posters);
   const [categories] = useState(getCategories(posters));
+  const [selectedFilterIndex, setSelectedFilterIndex] = useState(null);
 
   const openModal = (item) => {
     setPoster(item);
@@ -29,7 +30,7 @@ const ProductionsList = ({ posters }) => {
     setPoster(null);
   }
 
-  const handleFilter = (category) => {
+  const handleFilter = (category, index) => {
     let tempPosters = [...items];
     if (category === 'all') {
       setPosterItems(tempPosters);
@@ -38,6 +39,7 @@ const ProductionsList = ({ posters }) => {
       let filteredItems = tempPosters.filter((item) => item.category === category);
       setPosterItems(filteredItems);
     }
+    setSelectedFilterIndex(index);
   }
 
   const productionChildren = () => {
@@ -68,7 +70,7 @@ const ProductionsList = ({ posters }) => {
             <button
               type="button"
               key={index}
-              className="btn filter-btn"
+              className={selectedFilterIndex === index ? 'btn active' : 'btn filter-btn'}
               onClick={() => handleFilter(category)}
             >{category}</button>
           )

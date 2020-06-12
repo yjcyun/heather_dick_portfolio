@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components';
 import { graphql, useStaticQuery } from 'gatsby';
 import Image from 'gatsby-image';
+import bcg from '../images/bcg.jpg';
 
 const getImage = graphql`
   query {
@@ -40,8 +41,8 @@ grid-template-columns:${props => props.reverse ? '2fr 3fr' : '2fr 1fr'};
 grid-column-gap:2rem;
 justify-content:center;
 align-items: start;
-/* min-height: var(--minHeight); */
-
+background-image: linear-gradient(135deg,var(--lighterGold) 0%, #fdfcfb 100%);
+padding: 2rem;
 margin: 0 auto;
 
 

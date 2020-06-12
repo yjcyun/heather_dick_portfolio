@@ -2,7 +2,6 @@ import React from 'react';
 import { graphql } from 'gatsby';
 import Layout from '../components/Layout';
 import Title from '../components/Title';
-import Button from '../components/Button';
 import Info from '../components/Info';
 import Reels from '../components/About/Reels/Reels';
 

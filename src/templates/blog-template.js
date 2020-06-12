@@ -5,7 +5,6 @@ import ReactMarkdown from 'react-markdown';
 import styled from 'styled-components';
 import Layout from '../components/Layout';
 import BlogFeatured from '../components/Blog/BlogFeatured';
-import Button from '../components/Button';
 
 
 export const query = graphql`
@@ -60,7 +59,7 @@ console.log(blogs);
           </div>
           <ReactMarkdown source={blog} className="blog-markdown" />
           <Link to="/blog" className="blog-btn">
-            <Button styled text="back to blog" />
+            {/* <Button styled text="back to blog" /> */}
           </Link>
         </div>
 

@@ -1,12 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
+import leaf from '../images/leaf.svg';
 
-
-const Title = ({ title,subtitle }) => {
+const Title = ({ title, subtitle }) => {
   return (
     <TitleWrapper>
       <h1 className="title">{title}</h1>
-      <hr className="title-hr"/>
+      <img src={leaf} className="leaf" />
       <h2 className="subtitle">{subtitle}</h2>
     </TitleWrapper>
   )
@@ -15,6 +15,8 @@ const Title = ({ title,subtitle }) => {
 const TitleWrapper = styled.section`
 margin: 0 1rem 5rem;
 text-align:center;
+display:flex;
+flex-direction:column;
 
 .title{
   font-family: var(--titleFont);
@@ -23,13 +25,14 @@ text-align:center;
   display: inline-block;
   font-weight: 400;
 }
-.title-hr{
-  margin: 1rem auto;
-}
 
 .subtitle{
   font-size:1.2rem;
   padding-top:1rem;
+}
+.leaf{
+  width: 25%;
+  margin: 0 auto;
 }
 
 

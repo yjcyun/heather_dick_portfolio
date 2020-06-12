@@ -1,17 +1,8 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
-import axios from 'axios';
 import VideoList from './VideoList';
 import VideoDetail from './VideoDetail';
 import Subtitle from '../../Subtitle';
-
-// import image1 from '../../../images/thumbnail1.jpg';
-// import image2 from '../../../images/thumbnail2.jpg';
-// import image3 from '../../../images/thumbnail3.jpg';
-// import image4 from '../../../images/thumbnail4.jpg';
-
-let thumbnails = [];
-
 
 class Reels extends Component {
   state = {
@@ -19,47 +10,35 @@ class Reels extends Component {
       {
         id: 0,
         url: "140710198",
-        thumbnail: thumbnails[0]
+        thumbnail: 'https://i.vimeocdn.com/video/537416426_640.jpg'
       },
       {
         id: 1,
         url: "137428733",
-        thumbnail: thumbnails[1]
+        thumbnail: "https://i.vimeocdn.com/video/532338250_640.webp",
       },
       {
         id: 2,
         url: "139617873",
-        thumbnail: thumbnails[2]
+        thumbnail: "https://i.vimeocdn.com/video/535538525_640.webp"
       },
       {
         id: 3,
         url: "140080056",
-        thumbnail: thumbnails[3]
+        thumbnail: "https://i.vimeocdn.com/video/537346272_640.webp"
       },
     ],
     selectedVideo: "140710198"
   }
 
-  async componentDidMount() {
-    // const response1 = await axios.get(`https://vimeo.com/api/oembed.json?url=https://vimeo.com/140710198}`);
-
-    const response = await axios.get("https://api.vimeo.com/users/siriustheatricalcompany/videos?fields=uri,duration,pictures.sizes.link,download&uris=/videos/140710198,/videos/137428733&per_page=2");
-
-    const data = await response.data;
-    console.log(data);
-    // const data1 = await response1.data;
-    thumbnails.push(data.thumbnail_url);
-  };
-
   onVideoSelect = video => {
     this.setState({ selectedVideo: video })
   }
 
-
   render() {
     return (
       <ReelsWrapper>
-        <Subtitle subtitle="PRODUCTION REELS" />
+        <Subtitle subtitle="REELS" />
         <div className="videos">
           <VideoDetail video={this.state.selectedVideo} />
           <VideoList
