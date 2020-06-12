@@ -59,7 +59,7 @@ console.log(blogs);
           </div>
           <ReactMarkdown source={blog} className="blog-markdown" />
           <Link to="/blog" className="blog-btn">
-            {/* <Button styled text="back to blog" /> */}
+          <button className="btn">see all blogs</button>
           </Link>
         </div>
 

@@ -31,13 +31,31 @@ export const query = graphql`
         }
       }
     }
+    featured: allStrapiBlogs(sort: {fields: date, order: DESC}) {
+      nodes {
+        id
+        slug
+        title
+        featured
+        thumbnail {
+          childImageSharp {
+            fluid {
+              ...GatsbyImageSharpFluid
+            }
+            fixed(fit: COVER, height: 60, width: 80) {
+              ...GatsbyImageSharpFixed
+            }
+          }
+        }
+      }
+    }
   }
 `
 const BlogListTemplate = (props) => {
   const { data: { posts: { nodes } } } = props;
-  console.log(nodes);
-  const { currentPage, numOfPages } = props.pageContext;
+  const { featured: { nodes: blogs } } = props.data;
 
+  const { currentPage, numOfPages } = props.pageContext;
   const isFirst = currentPage === 1;
   const isLast = currentPage === numOfPages;
   const prevPage = currentPage - 1 === 1 ? `/blog` : `/blog/${currentPage - 1}`;
@@ -57,9 +75,9 @@ const BlogListTemplate = (props) => {
                 />
               ))}
             </div>
-
+            {/* blog featured */}
             <div className="blog-sidebar">
-              <BlogFeatured blogs={nodes} />
+              <BlogFeatured blogs={blogs} />
             </div>
           </div>
 

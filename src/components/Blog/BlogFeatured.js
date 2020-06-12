@@ -1,10 +1,31 @@
 import React from 'react';
-import { Link } from 'gatsby';
+import { graphql, useStaticQuery, Link } from 'gatsby';
+import { GiChainedHeart } from 'react-icons/gi';
 import Image from 'gatsby-image';
 import styled from 'styled-components';
 import SocialLinks from '../../constants/socialLinks';
 
+const query = graphql`
+ {
+  notification:allStrapiNotifications {
+    nodes {
+      notification
+      id
+    }
+  }
+}
+`;
+
 const BlogFeatured = ({ blogs }) => {
+  const { notification: { nodes: notification } } = useStaticQuery(query);
+  const events = notification.map(item => {
+    return (
+      <ul style={{ textAlign: 'left', paddingBottom: '1rem' }}>
+        <li><GiChainedHeart style={{ color: 'tomato' }} /> {item.notification}</li>
+      </ul>
+    )
+  });
+
   return (
     <BlogFeaturedWrapper>
       <section className="featured-header">
@@ -31,7 +52,8 @@ const BlogFeatured = ({ blogs }) => {
       </section>
 
       <section className="featured-header">
-        <p className="featured-subtitle">latest events :</p>
+        <p className="featured-subtitle">latest events</p>
+        {events}
       </section>
 
     </BlogFeaturedWrapper>

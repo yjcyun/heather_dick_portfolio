@@ -1,6 +1,5 @@
 import React from 'react';
 import { graphql, useStaticQuery, Link } from 'gatsby';
-import { FaInfoCircle } from 'react-icons/fa';
 import styled from 'styled-components';
 import Image from 'gatsby-image';
 import bcg from '../../images/bcg.jpg';
