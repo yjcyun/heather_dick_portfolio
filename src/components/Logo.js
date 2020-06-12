@@ -18,6 +18,7 @@ const Logo = () => {
 }
 
 const LogoWrapper = styled.section`
+position:relative;
   .logo-link{
       display:flex;
       align-items: center;

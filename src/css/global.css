@@ -1,6 +1,11 @@
 /* font */
 @import url("https://fonts.googleapis.com/css2?&family=Poppins:wght@300&family=Dancing+Script:wght@700&family=Oswald:wght@300;400&display=swap");
 
+@font-face {
+  font-family: 'Chasy';
+  src: url('../fonts/Brusher.ttf') format('truetype');
+}
+
 /*=============== 
 Variables
 ===============*/

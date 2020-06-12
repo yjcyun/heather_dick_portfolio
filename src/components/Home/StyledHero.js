@@ -3,10 +3,12 @@ import { graphql, useStaticQuery, Link } from 'gatsby';
 import { FaInfoCircle } from 'react-icons/fa';
 import styled from 'styled-components';
 import Image from 'gatsby-image';
+import bcg from '../../images/bcg.jpg';
+import Logo from '../Logo';
 
 const getImage = graphql`
   query {
-    defaultBcg:file(relativePath: {eq: "defaultImg.jpg"}) {
+    defaultBcg:file(relativePath: {eq: "headshots/headshot2.jpg"}) {
       childImageSharp {
         fluid {
           ...GatsbyImageSharpFluid
@@ -20,31 +22,36 @@ const StyledHero = () => {
   const data = useStaticQuery(getImage);
 
   return (
-    <HeroWrapper>
-      <div className="hero-text">
-        <div className="hero-title">
-          <h1>heather dick</h1>
-          <h3>&sirius theatrical company</h3>
-        </div>
-        <div className="hero-subtitle">
-          <h5>actor. writer. producer.</h5>
+    <>
+      {/* <Logo className="logo" /> */}
+      <HeroWrapper>
+
+        <div className="hero-text">
+          <div className="hero-text-wrapper">
+            <div className="hero-title">
+              <h1>heather dick</h1>
+              <h3>&sirius theatrical company</h3>
+            </div>
+            <div className="hero-subtitle">
+              <h5>actor. writer. producer.</h5>
+            </div>
+
+            <Link to="/about">
+              <button className="btn hero-btn">learn more</button>
+            </Link>
+          </div>
+          {/* <p className="event-news"><FaInfoCircle className="icon" /> Upcoming Event: Monday June 10 - Siriusly Fun Workshop</p> */}
         </div>
 
-        <Link to="/about">
-          <button className="btn hero-btn">learn more</button>
-        </Link>
-
-        <p className="event-news"><FaInfoCircle className="icon" /> Upcoming Event: Monday June 10 - Siriusly Fun Workshop</p>
-      </div>
-      <div className="hero-image">
-        <Image
-          className="background-img"
-          fluid={data.defaultBcg.childImageSharp.fluid}
-        >
-        </Image>
-        <div className="background-frame"></div>
-      </div>
-    </HeroWrapper>
+        <div className="hero-image">
+          <Image
+            className="background-img"
+            fluid={data.defaultBcg.childImageSharp.fluid}
+          >
+          </Image>
+        </div>
+      </HeroWrapper>
+    </>
   )
 }
 
@@ -52,17 +59,32 @@ const HeroWrapper = styled.section`
 display: flex;
 flex-direction: column;
 align-items: center;
-max-width: 1170px;
-margin: 3rem auto 0;
-min-height: calc(100vh - 72px);
-grid-auto-flow: dense;
+justify-content: center;
+margin: 0 auto;
+height: 100vh;
 position:relative;
+
+::after{
+  content:"";
+background-color: rgba(0,0,0,1);
+background-image: url(${bcg});
+background-position:center;
+background-size: cover;
+opacity:0.3;
+top:0;
+left:0;
+bottom:0;
+right:0;
+position:absolute;
+z-index:-1
+}
 
 .hero-text{
   order:2;
   padding: 0 1rem;
   margin-top: 2rem;
   text-align:center;
+  position:relative;
 }
 
 .event-news{
@@ -72,14 +94,13 @@ position:relative;
 }
 
 .hero-title h1{
-  text-transform: uppercase;
+  text-transform: capitalize;
   letter-spacing: 0.05rem;
   font-size: 3rem;
   line-height: 1;
   margin:0.7rem auto 0;
-  font-family: 'Dancing Script', cursive;
-  /* color: var(-mainPurple)!important; */
-  font-weight: bold;
+  font-family: 'Chasy', cursive;
+  color: var(--mainPurple);
 }
 
 .hero-title h3 {
@@ -105,21 +126,24 @@ position:relative;
 
 .background-img{
   width: 100%;
-  height: 20rem;
 }
 
 .background-frame{
  display: none;
 }
-/* .event-news{
-  margin-top:10rem;
-  margin-bottom:2rem;
-} */
+
 .icon{
-  color: var(--mainGold);
+  color: var(--mainPurple);
 }
 
 @media (min-width: 768px) {
+  padding: 0 2rem 0 1rem;
+
+  .background-frame{
+   
+    left: 0;
+  }
+
   .hero-text{
     margin-top:3rem;
   }
@@ -158,7 +182,7 @@ position:relative;
     height: 30rem;
   }
   .hero-title h1{
-  font-size: 4rem;
+  font-size: 6rem;
   }
   .hero-title h3 {
     font-size: 1.7rem;
