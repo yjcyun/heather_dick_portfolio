@@ -96,6 +96,7 @@ text-align:center;
   flex:2;
   border-radius:0.5rem;
 }
+
 .title-link{
   flex:3;
   margin-left: 0.5rem;

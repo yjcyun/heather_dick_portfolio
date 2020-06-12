@@ -6,7 +6,6 @@ import styled from 'styled-components';
 import Layout from '../components/Layout';
 import BlogFeatured from '../components/Blog/BlogFeatured';
 
-
 export const query = graphql`
   query GetSingleBlog($slug: String){
     blog:strapiBlogs(slug:{eq:$slug}) {
@@ -45,7 +44,7 @@ export const query = graphql`
 
 const BlogTemplate = ({ data }) => {
   const { blog: { date, blog, title, author, thumbnail }, featured: { nodes: blogs } } = data;
-console.log(blogs);
+
   return (
     <Layout>
       <BlogTemplateWrapper className="page">
@@ -59,10 +58,10 @@ console.log(blogs);
           </div>
           <ReactMarkdown source={blog} className="blog-markdown" />
           <Link to="/blog" className="blog-btn">
-          <button className="btn">see all blogs</button>
+            <button className="btn">see all blogs</button>
           </Link>
         </div>
-
+        {/* featured sidebar */}
         <div className="blog-sidebar">
           <BlogFeatured blogs={blogs} />
         </div>
@@ -72,8 +71,9 @@ console.log(blogs);
 }
 
 const BlogTemplateWrapper = styled.div`
-padding: 0 1rem;
+padding: 1rem;
 display: flex;
+flex-direction:column;
 
 .header{
 padding-bottom: 4rem;
@@ -92,6 +92,7 @@ text-align:center;
 .blog-title{
   font-size: 2rem;
   text-transform: capitalize;
+  margin-top:1rem;
 }
 
 .blog-author{
@@ -99,6 +100,20 @@ text-align:center;
   color: var(--mainGold);
 }
 
+.blog-sidebar {
+  margin-top: 2rem;
+}
+
+.blog-sidebar ul{
+  display: flex;
+  padding-left: 0;
+  }
+
+.blog-sidebar li{
+  list-style: none;
+}
+
+/* markdown */
 ul, ol{
   padding-left: 2rem;
   display: inline-block;
@@ -133,31 +148,27 @@ img{
   height: auto;
   margin: 3rem 0;
 }
+/* end of markdown */
 
 @media(min-width: 768px) {
-  padding: 0 2rem;
+  padding: 4rem 1rem;
+  flex-direction:row;
+
+  .blog-sidebar{
+    margin-left:1.5rem;
+    flex:2;
+  }
+   .main-blog{
+  flex:5;
+  }
 }
 
 @media (min-width: 996px){
-  .main-blog{
-  flex:5;
-  }
-
-  .blog-sidebar{
-  flex:2;
-  }
   .blog-title{
   font-size: 4rem;
   }
 
-  .blog-sidebar ul{
-  display: flex;
-  padding-left: 0;
-  }
-
-.blog-sidebar li{
-  list-style: none;
-}
+ 
 
 }
 `;
