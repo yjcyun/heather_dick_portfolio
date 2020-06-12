@@ -1,5 +1,6 @@
 import React from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
+import { GiChainedHeart } from 'react-icons/gi';
 import Image from 'gatsby-image';
 import styled from 'styled-components';
 
@@ -23,8 +24,16 @@ const getImage = graphql`
   }
 `;
 
-const BlogFeatured = () => {
+const BlogFeatured = ({ notification }) => {
   const data = useStaticQuery(getImage);
+  const events = notification.map(item => {
+    return (
+      <ul style={{ textAlign: 'left', paddingBottom: '1rem' }}>
+        <li><GiChainedHeart style={{color:'tomato'}}/> {item.notification}</li>
+      </ul>
+    )
+  });
+
   return (
     <BlogFeaturedWrapper>
       <section className="featured-header">
@@ -33,13 +42,14 @@ const BlogFeatured = () => {
 
       <section className="featured-header">
         <p className="featured-subtitle">latest news</p>
+        {events}
       </section>
 
       <section className="featured-header">
         <p className="featured-subtitle">mini gallery</p>
         {data.allFile.edges.map(({ node }, index) => {
           return (
-            <Image fluid={node.childImageSharp.fluid} key={index} alt="Heather's headshot" className="mini-gallery"/>
+            <Image fluid={node.childImageSharp.fluid} key={index} alt="Heather's headshot" className="mini-gallery" />
           )
         })}
       </section>

@@ -13,7 +13,8 @@ const query = graphql`
         id
       }
     }
-  }`;
+  }
+`;
 
 const CloseButton = ({ closeToast }) => (
   <i className="material-icons" onClick={closeToast}><IoIosCloseCircle /></i>

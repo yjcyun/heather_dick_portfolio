@@ -2,7 +2,6 @@ import React from 'react';
 import styled from 'styled-components';
 import NavLinks from '../constants/links';
 import Logo from './Logo';
-import bcg from '../images/bcg.jpg';
 
 const Navbar = ({ toggleNavbar }) => {
   return (
@@ -26,7 +25,7 @@ const NavbarWrapper = styled.nav`
   top: 0;
   left: 0;
   width: 100%;
-  background: url(${bcg});
+  background: var(--textPurple);
   background-size: cover;
   background-position:center;
 
@@ -44,7 +43,7 @@ const NavbarWrapper = styled.nav`
   }
 
   .nav-links a {
-    color: var(--mainPurple);
+    color: #fff;
     transition: var(--transition);
     font-size: 1rem;
     text-transform: uppercase;
@@ -88,7 +87,7 @@ const NavbarWrapper = styled.nav`
     } 
 
     .nav-links a:hover{
-      box-shadow:0 4px var(--mainGold);
+      box-shadow:0 4px var(--lighterGold);
     }
 
     .menu-btn {

@@ -8,7 +8,7 @@ import Brush from '../../../images/brush.svg';
 
 const query = graphql`
  {
-    allStrapiResumes {
+    resume:allStrapiResumes {
       nodes {
         id
         role
@@ -19,8 +19,14 @@ const query = graphql`
         names
       }
     }
+    notification:allStrapiNotifications {
+      nodes {
+        notification
+        id
+      }
+    }
   }
-`
+`;
 
 // get unique cateogories
 const getCategories = items => {
@@ -35,11 +41,13 @@ const getCategories = items => {
 }
 
 const ResumeList = () => {
-  const { allStrapiResumes: { nodes } } = useStaticQuery(query);
-  // array of unique categories
-  const [categories, setCategories] = useState(getCategories(nodes));
+  const { resume: { nodes: resume } } = useStaticQuery(query);
+  const { notification: { nodes: notification } } = useStaticQuery(query);
 
-  const renderList = (categoryResume) => nodes.map(item => {
+  // array of unique categories
+  const [categories, setCategories] = useState(getCategories(resume));
+
+  const renderList = (categoryResume) => resume.map(item => {
     if (item.category === categoryResume) {
       return <ResumeItem key={item.id} item={item} />
     }
@@ -69,7 +77,7 @@ const ResumeList = () => {
             </Link>
           </div>
           <div className="resume-featured">
-            <ResumeFeatured />
+            <ResumeFeatured notification={notification}/>
           </div>
         </div>
       </div>

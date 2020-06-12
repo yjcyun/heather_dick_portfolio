@@ -4,10 +4,8 @@ import Layout from '../components/Layout';
 import Title from '../components/Title';
 import Info from '../components/Info';
 import Reels from '../components/About/Reels/Reels';
-
 import ResumeList from '../components/About/Resume/ResumeList';
 import Audio from '../components/About/Audio/Audio';
-import Subtitle from '../components/Subtitle';
 
 export const query = graphql`
   query {
