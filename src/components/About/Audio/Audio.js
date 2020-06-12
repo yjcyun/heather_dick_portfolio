@@ -40,6 +40,9 @@ padding:7rem;
   justify-content: flex-end;
   align-items:center;
 }
+@media (min-width:996px){
+  
+}
 
 `;
 

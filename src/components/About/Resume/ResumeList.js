@@ -3,10 +3,8 @@ import { graphql, useStaticQuery, Link } from 'gatsby';
 import styled from 'styled-components';
 import ResumeItem from './ResumeItem';
 import ResumeFeatured from './ResumeFeatured';
-import img1 from '../../../images/carousel-1.jpg';
-import img2 from '../../../images/carousel-2.jpg';
-import img3 from '../../../images/carousel-3.jpg';
 import Subtitle from '../../Subtitle';
+import Brush from '../../../images/brush.svg';
 
 const query = graphql`
  {
@@ -49,56 +47,68 @@ const ResumeList = () => {
 
   return (
     <ResumeWrapper>
-      <div className="max-width"> 
+      <div className="max-width">
         <Subtitle subtitle="SELECTED CREDITS" />
         <div className="resume-column">
           <div className="resume-content">
-            {
-              categories.map((item, index) => {
-                return (
-                  <div key={index} className="resume-item">
-                    <h1 className="resume-category">
-                      {item === 'film' ? 'film&televsion' : item}
-                    </h1>
-                    {renderList(item)}
-                  </div>
-                )
-              })}
+            <div>
+              {
+                categories.map((item, index) => {
+                  return (
+                    <div key={index} className="resume-item">
+                      <h1 className="resume-category">
+                        {item === 'film' ? 'film&televsion' : item}
+                      </h1>
+                      {/* <img src={brush} className="brush-detail"/> */}
+                      {renderList(item)}
+                    </div>
+                  )
+                })}
+            </div>
+            <Link to="/contact">
+              <button className="btn about-btn">contact for full resume</button>
+            </Link>
           </div>
           <div className="resume-featured">
             <ResumeFeatured />
           </div>
-          
+
         </div>
 
-        <Link to="/contact">
-          <button className="btn about-btn">contact for full resume</button>
-        </Link>
+
       </div>
     </ResumeWrapper>
   )
 }
 
 const ResumeWrapper = styled.section`
-padding: 5rem 7rem;
- margin:0 auto;
+padding: 7rem;
+margin:0 auto;
 
 .resume-column{
   display:flex;
 }
+
 .resume-img{
   margin-top: 1rem;
   flex:1;
 }
+
 .resume-img img {
   margin: 0.5rem 0;
 }
+
 .resume-content{
  flex:5;
+ display:flex;
+ flex-direction:column;
+ justify-content:space-between;
 }
+
 .resume-featured{
   flex:2;
 }
+
 .resume-item{
   padding: 1.5rem 0;
 }
@@ -107,6 +117,10 @@ padding: 5rem 7rem;
   text-transform: uppercase;
   margin: 1rem 0;
   letter-spacing: 0.1rem;
+  display:inline-block;
+  background: url(${Brush});
+  background-size: cover;
+  background-position:center;
 }
 `;
 

@@ -40,7 +40,7 @@ flex-direction:column;
   margin:0 auto 5rem;
 
   .title{
-    font-size:2.4rem;
+    font-size:3.7rem;
   }  
 }
 

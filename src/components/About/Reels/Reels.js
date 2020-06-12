@@ -53,9 +53,9 @@ class Reels extends Component {
 }
 
 const ReelsWrapper = styled.section`
-  margin:10rem auto 0;
-  min-height: 100vh;
-  padding: 7rem;
+  margin:3rem auto 0;
+  min-height: 60vh;
+  padding: 1rem 1rem 5rem;
   background-image: linear-gradient(#fff 0%, var(--lightestPurple) 100%);
 
   .videos{
@@ -70,7 +70,8 @@ const ReelsWrapper = styled.section`
  }
 
  @media (min-width: 996px) {
-   padding: 2rem;
+   margin:6rem auto 0;
+   padding: 3rem 7rem 7rem;
   .max-width{
     flex-direction:row;
   }

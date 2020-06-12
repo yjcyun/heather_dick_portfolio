@@ -144,15 +144,6 @@ Navbar
   margin: 20vh auto;
 }
 
-/* .ipad-padding{
-  padding: 0 2rem;
-}
-@media (max-width: 768px) {
-  .ipad-padding{
-    padding:0;
-  };
-} */
-
 /*=============== 
 Button
 ===============*/
@@ -200,8 +191,35 @@ Button
 }
 
 .about-btn {
-  margin-top: 2rem;
-  /* border:1px solid var(--mainPurple); */
+  overflow:hidden;
+}
+
+.about-btn:after {
+	width: 0;
+	height: 103%;
+	top: 50%;
+	left: 50%;
+	background: var(--mainGold);
+	opacity: 0;
+	-webkit-transform: translateX(-50%) translateY(-50%);
+	-moz-transform: translateX(-50%) translateY(-50%);
+	-ms-transform: translateX(-50%) translateY(-50%);
+	transform: translateX(-50%) translateY(-50%);
+}
+
+.about-btn:hover,
+.about-btn:active {
+	color: #fff;
+}
+
+.about-btn:hover:after {
+	width: 90%;
+	opacity: 1;
+}
+
+.about-btn:active:after {
+	width: 101%;
+	opacity: 1;
 }
 
 .hero-btn {

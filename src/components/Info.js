@@ -42,7 +42,7 @@ padding:1.5rem 1rem;
 justify-content:center;
 align-items: start;
 background: linear-gradient(#fff 0%, var(--lighterGold) 70%, #fff 100%);
-
+/* background: var(--lighterGold); */
 margin: 0 auto;
 
 .info-text {
@@ -51,10 +51,12 @@ margin: 0 auto;
   order: ${props => props.reverse ? '2' : ''};
 }
 
-.info-text h1{
+.info-subtitle{
+  font-family: var(--titleFont);
+  font-weight: 300;
   font-size: 2rem;
-  letter-spacing:0.1rem;
-  margin-bottom:0.4rem;
+  margin-bottom: 0.4rem;
+  letter-spacing: 0.1rem;
 }
 
 .info-text p{
@@ -73,16 +75,15 @@ margin: 0 auto;
 order: ${props => props.reverse ? '1' : ''};
 }
 
-@media (min-width: 768px) {
+@media (min-width: 996px) {
   grid-template-columns:${props => props.reverse ? '2fr 3fr' : '2fr 1fr'};
-  padding: 2rem 5rem;
+  padding: 5rem;
 
   .info-text {
   text-align: left;
   padding: 0 2rem 0;
+  }
 }
-}
-
 `;
 
 export default Info

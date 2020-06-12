@@ -2,7 +2,6 @@ import React from 'react';
 import styled from 'styled-components';
 
 const VideoDetail = ({ video }) => {
-
   return (
     <VideoDetailWrapper>
       <div className="video-frame">
@@ -13,20 +12,20 @@ const VideoDetail = ({ video }) => {
 }
 
 const VideoDetailWrapper = styled.div`
-.video-frame{
-  padding:56.25% 0 0 0;
-  margin-bottom: 3rem;
-  position:relative;
-  background: black;
-}
+  .video-frame{
+    padding:56.25% 0 0 0;
+    margin-bottom: 3rem;
+    position:relative;
+    background: black;
+  }
 
-.responsive-iframe{
-  position:absolute;
-  top:0;
-  left:0;
-  width:100%;
-  height:100%;
-}
+  .responsive-iframe{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+  }
 `;
 
 export default VideoDetail
