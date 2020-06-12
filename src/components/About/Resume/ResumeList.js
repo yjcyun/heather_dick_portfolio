@@ -27,10 +27,10 @@ const getCategories = items => {
   let tempItems = items.map(item => {
     return item.category;
   });
+
   let tempCategories = new Set(tempItems);
   let categories = Array.from(tempCategories);
   categories = [...categories];
-
   return categories;
 }
 
@@ -59,7 +59,6 @@ const ResumeList = () => {
                       <h1 className="resume-category">
                         {item === 'film' ? 'film&televsion' : item}
                       </h1>
-                      {/* <img src={brush} className="brush-detail"/> */}
                       {renderList(item)}
                     </div>
                   )
@@ -72,41 +71,29 @@ const ResumeList = () => {
           <div className="resume-featured">
             <ResumeFeatured />
           </div>
-
         </div>
-
-
       </div>
     </ResumeWrapper>
   )
 }
 
 const ResumeWrapper = styled.section`
-padding: 7rem;
-margin:0 auto;
+padding: 3rem 1rem;
+margin:3rem auto;
 
 .resume-column{
   display:flex;
-}
-
-.resume-img{
-  margin-top: 1rem;
-  flex:1;
-}
-
-.resume-img img {
-  margin: 0.5rem 0;
+  flex-direction:column;
 }
 
 .resume-content{
- flex:5;
+ flex:1;
  display:flex;
  flex-direction:column;
- justify-content:space-between;
 }
 
 .resume-featured{
-  flex:2;
+  flex:1;
 }
 
 .resume-item{
@@ -122,6 +109,31 @@ margin:0 auto;
   background-size: cover;
   background-position:center;
 }
+
+@media (min-width: 768px){
+  .resume-column{
+    flex-direction:row;
+  }
+
+  .resume-content{
+  flex:5;
+  padding-right: 1rem;
+  }
+
+  .resume-featured{
+    flex:2;
+  }
+}
+
+@media (min-width: 996px){
+  padding: 7rem;
+  margin:0 auto;
+}
+
+@media(min-width: 1024px){
+  padding: 7rem 2rem;
+}
+
 `;
 
 export default ResumeList

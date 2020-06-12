@@ -76,6 +76,10 @@ const ReelsWrapper = styled.section`
     flex-direction:row;
   }
  }
+
+  @media(min-width: 1024px){
+    padding: 7rem 2rem;
+  }
 `;
 
 export default Reels

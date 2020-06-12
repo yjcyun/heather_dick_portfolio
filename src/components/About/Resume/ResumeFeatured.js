@@ -2,7 +2,6 @@ import React from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
 import Image from 'gatsby-image';
 import styled from 'styled-components';
-import SocialLinks from '../../../constants/socialLinks';
 
 const getImage = graphql`
   {
@@ -30,8 +29,6 @@ const BlogFeatured = () => {
     <BlogFeaturedWrapper>
       <section className="featured-header">
         <h2 className="featured-title">Heather's Corner</h2>
-        {/* <p className="featured-subtitle">connect with her</p>
-        <SocialLinks styleClass="featured-icons" /> */}
       </section>
 
       <section className="featured-header">
@@ -46,7 +43,6 @@ const BlogFeatured = () => {
           )
         })}
       </section>
-
     </BlogFeaturedWrapper>
   )
 }
@@ -54,7 +50,6 @@ const BlogFeatured = () => {
 const BlogFeaturedWrapper = styled.section`
 display:flex;
 flex-direction: column;
-margin-left: 2.5rem;
 margin-top: 2rem;
 border: 1px solid lightgray;
 border-top: 1rem solid var(--mainPurple);
@@ -64,10 +59,10 @@ text-align:center;
   width: 90%;
   margin: 1rem auto;
 }
+
 .featured-title{
   font-size: 1.6rem;
   color: var(--textPurple);
-  margin-bottom: 2rem;
 }
 
 .featured-subtitle {
@@ -80,38 +75,9 @@ text-align:center;
   background: var(--lighterGold);
 }
 
-.blog-card{
-  padding: 0.2rem 0;
-  display:flex;
-}
-
 .mini-gallery {
   margin: 0.5rem 0;
 }
-.title-link{
-  flex:3;
-  margin-left: 0.5rem;
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-  text-align:left;
-}
-.title-link p{
-  font-weight: bold;
-}
-
-a{
-  color: black !important;
-  text-decoration: none !important;
-}
-
-img{
-  margin:0 !important;
-}
-
-@media (max-width:996px){
-    display:none;
-  }
 `;
 
 export default BlogFeatured

@@ -11,7 +11,6 @@ const ResumeItem = ({ item }) => {
         {company ? <><span className="divider"> | </span> {company}</> : ''}
         {location ? <> <span className='divider'>|</span> {location}</> : ''}
         {names ? <> <span className='divider'>|</span> {names}</> : ''}
-
       </p>
     </ResumeItemWrapper>
   )
@@ -20,13 +19,18 @@ const ResumeItem = ({ item }) => {
 const ResumeItemWrapper = styled.div`
 text-transform: capitalize;
 margin:0.5rem 0;
-font-size: 1.1rem;
+font-size: 90%;
 
 .divider{
-  color: var(--lightGold);
+  color: var(--mainGold);
 }
+
 .none {
   opacity: 0;
+}
+
+@media(min-width:996px){
+font-size: 1.1rem;
 }
 `;
 export default ResumeItem
