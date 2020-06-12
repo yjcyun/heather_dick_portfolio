@@ -63,7 +63,7 @@ const BlogFeatured = ({ blogs }) => {
 const BlogFeaturedWrapper = styled.section`
 display:flex;
 flex-direction: column;
-margin-left: 2.5rem;
+/* margin-left: 2.5rem; */
 border: 1px solid lightgray;
 border-top: 1rem solid var(--mainPurple);
 text-align:center;
@@ -116,10 +116,6 @@ a{
 img{
   margin:0 !important;
 }
-
-@media (max-width:996px){
-    display:none;
-  }
 `;
 
 export default BlogFeatured

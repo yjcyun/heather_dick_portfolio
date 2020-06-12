@@ -28,10 +28,11 @@ flex-direction:column;
 
 .subtitle{
   font-size:1.2rem;
-  padding-top:1rem;
+  padding:1rem;
 }
+
 .leaf{
-  width: 25%;
+  width: 50%;
   margin: 0 auto;
 }
 
@@ -42,6 +43,9 @@ flex-direction:column;
   .title{
     font-size:3.7rem;
   }  
+  .leaf{
+    width: 25%;
+  }
 }
 
 @media (max-width: 576px) {

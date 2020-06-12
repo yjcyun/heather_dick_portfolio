@@ -118,7 +118,10 @@ const BlogListWrapper = styled.section`
 .blog-wrapper{
 position:relative;
 display:flex;
+flex-direction:column;
+padding: 0 1rem;
 }
+
 .page-numbers{
   padding: 0.5rem;
   color: #000;
@@ -156,28 +159,36 @@ display:flex;
 .empty-flex{
   flex:2;
 }
+.blog-cards{
+  margin-bottom:2rem;
+}
 
-@media(max-width:415px){
-  padding: 0 1rem;
-}
 @media(min-width: 768px){
-  .blog-cards{
-  padding: 0;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px,1fr));
-  grid-gap: 2rem;
-  flex:3;
+  .blog-wrapper{
+    flex-direction:row;
   }
-  
+
+  .blog-cards{
+    padding: 0 1rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+    grid-gap: 2rem;
+    flex:5;
+  } 
+
+  .blog-sidebar{
+    flex:3;
+  }
 }
+
 @media (min-width: 996px){
   .blog-cards{
-  flex:5;
-  padding: 0 3rem;
+    flex:5;
+    padding: 0 3rem;
   }
 
   .blog-sidebar{
-  flex:2;
+    flex:2;
   }
 }
 `;
