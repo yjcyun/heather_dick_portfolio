@@ -3,15 +3,15 @@
 
 @font-face {
   font-family: "Chasy";
-  src: url("../fonts/Brusher.ttf") format("truetype");
+  src: url("../fonts/Chasy.otf") format("opentype");
 }
 
 /*=============== 
 Variables
 ===============*/
 :root {
-  --mainPurple: #542c85;
   --darkPurple: #27004d;
+  --mainPurple: #542c85;
   --lightPurple: #783fbe;
   --textPurple: #745c97;
   --lightestPurple: #e3e7f6;
@@ -192,8 +192,8 @@ Button
 .filter-btn-active {
   background: #3b0074;
 }
-@media(min-width:768px){
-  .filter-btn{
+@media (min-width: 768px) {
+  .filter-btn {
     padding: 1rem 3rem;
   }
 }
