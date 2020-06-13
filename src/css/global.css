@@ -205,11 +205,11 @@ Button
   margin: 1rem;
 }
 
-.about-btn {
+.about-btn, .contact-btn {
   overflow: hidden;
 }
 
-.about-btn:after {
+.about-btn:after, .contact-btn:after {
   width: 0;
   height: 103%;
   top: 50%;
@@ -223,16 +223,20 @@ Button
 }
 
 .about-btn:hover,
-.about-btn:active {
+.about-btn:active,
+.contact-btn:hover,
+.contact-btn:active {
   color: #fff;
 }
 
-.about-btn:hover:after {
+.about-btn:hover:after,
+.contact-btn:hover:after {
   width: 90%;
   opacity: 1;
 }
 
-.about-btn:active:after {
+.about-btn:active:after,
+.contact-btn:active:after {
   width: 101%;
   opacity: 1;
 }

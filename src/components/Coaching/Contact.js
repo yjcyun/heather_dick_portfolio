@@ -13,7 +13,7 @@ const Contact = () => {
         <h4 className="coaching-contact strong">Contact Heather and she will guide you to the right direction.</h4>
 
         <Link to="/contact">
-          <button className="btn">send your questions</button>
+          <button className="btn contact-btn">send your questions</button>
         </Link>
       </div>
     </ContactWrapper>
