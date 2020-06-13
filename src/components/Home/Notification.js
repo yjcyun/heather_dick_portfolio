@@ -11,20 +11,24 @@ const query = graphql`
       nodes {
         notification
         id
+        home
       }
     }
   }
 `;
 
 const CloseButton = ({ closeToast }) => (
-  <i className="material-icons" onClick={closeToast}><IoIosCloseCircle /></i>
+  <i role="button" tabIndex={0} onKeyDown={closeToast} className="material-icons" onClick={closeToast}><IoIosCloseCircle /></i>
 )
 
 const Notification = () => {
   const { allStrapiNotifications: { nodes } } = useStaticQuery(query);
-  console.log(nodes);
-  nodes.map(item=>{
-    return toast.success(item.notification);
+  nodes.map(item => {
+    if (item.home) {
+      return toast.success(item.notification);
+    } else {
+      return null;
+    }
   })
 
   return (

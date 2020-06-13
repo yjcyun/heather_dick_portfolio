@@ -5,7 +5,7 @@ const VideoDetail = ({ video }) => {
   return (
     <VideoDetailWrapper>
       <div className="video-frame">
-        <iframe src={`https://player.vimeo.com/video/${video}?byline=0&portrait=0`} className="responsive-iframe" frameBorder="0" allow="autoplay; fullscreen" allowFullScreen />
+        <iframe src={`https://player.vimeo.com/video/${video}?byline=0&portrait=0`} className="responsive-iframe" frameBorder="0" allow="autoplay; fullscreen" allowFullScreen title={video}/>
       </div>
     </VideoDetailWrapper>
   )

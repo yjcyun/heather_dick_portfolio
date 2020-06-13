@@ -6,7 +6,7 @@ const Title = ({ title, subtitle }) => {
   return (
     <TitleWrapper>
       <h1 className="title">{title}</h1>
-      <img src={leaf} className="leaf" />
+      <img src={leaf} className="leaf" alt="leaf" />
       <h2 className="subtitle">{subtitle}</h2>
     </TitleWrapper>
   )

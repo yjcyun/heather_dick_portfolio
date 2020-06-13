@@ -29,7 +29,7 @@ const data = [
     icon: <FaFacebook className="social-icon" />,
     url: 'https://www.linkedin.com',
     text: "Facebook"
-  }
+  },
 ];
 
 const links = data.map(link => (

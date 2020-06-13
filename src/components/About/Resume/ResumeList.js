@@ -45,12 +45,13 @@ const ResumeList = () => {
   const { notification: { nodes: notification } } = useStaticQuery(query);
 
   // array of unique categories
-  const [categories, setCategories] = useState(getCategories(resume));
+  const [categories] = useState(getCategories(resume));
 
   const renderList = (categoryResume) => resume.map(item => {
     if (item.category === categoryResume) {
       return <ResumeItem key={item.id} item={item} />
     }
+    return;
   });
 
   return (

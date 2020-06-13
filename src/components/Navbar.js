@@ -14,7 +14,7 @@ const Navbar = ({ toggleNavbar }) => {
           </div>
         </div>
 
-        <NavLinks styleClass="nav-links" home />
+        <NavLinks styleClass="nav-links" />
       </div>
     </NavbarWrapper>
   )

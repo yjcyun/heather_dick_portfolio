@@ -3,44 +3,36 @@ import styled from 'styled-components';
 import CoachingItem from './CoachingItem';
 import { graphql, useStaticQuery, Link } from 'gatsby';
 
-const getImage = graphql`
-  query {
-    defaultBcg:file(relativePath: {eq: "carousel-3.jpg"}) {
-      childImageSharp {
-        fluid {
-          ...GatsbyImageSharpFluid
+const query = graphql`
+  {
+    coaching:allStrapiCoachings {
+      nodes {
+        category
+        id
+        title
+        image {
+          childImageSharp {
+            fluid {
+              ...GatsbyImageSharpFluid
+            }
+          }
         }
-      }
-    }
-   secondBcg:file(relativePath: {eq: "carousel-2.jpg"}) {
-      childImageSharp {
-        fluid {
-          ...GatsbyImageSharpFluid
-        }
+        description
       }
     }
   }
-`;
+`
 
 const CoachingList = () => {
-  const data = useStaticQuery(getImage);
-  const image1 = data.defaultBcg.childImageSharp.fluid;
-  const image2 = data.secondBcg.childImageSharp.fluid;
-
+  const data = useStaticQuery(query);
   return (
     <CoachingListWrapper>
       <div className="coaching-container">
-        <CoachingItem
-          image={image1}
-          title="Acting Coaching"
-          desc="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Pariatur, officiis debitis. Veritatis ipsam dolor, molestias quasi earum cum nostrum incidunt harum soluta quo, hic expedita aspernatur nam accusantium nobis ad laudantium molestiae, sequi beatae! Cumque quos minima quod officiis consequatur nulla, molestiae voluptate voluptas mollitia provident, molestias dicta asperiores blanditiis."
-        />
-
-        <CoachingItem
-          image={image2}
-          title="Voice Coaching"
-          desc="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Pariatur, officiis debitis. Veritatis ipsam dolor, molestias quasi earum cum nostrum incidunt harum soluta quo, hic expedita aspernatur nam accusantium nobis ad laudantium molestiae, sequi beatae! Cumque quos minima quod officiis consequatur nulla, molestiae voluptate voluptas mollitia provident, molestias dicta asperiores blanditiis."
-        />
+        {data.coaching.nodes.map(item => {
+          return (
+           <CoachingItem key={item.id} image={item.image.childImageSharp.fluid} desc={item.description} title={item.title}/>
+          )
+        })}
       </div>
       <div className="contact-container">
         <h4 className="coaching-contact">Do you need help with your upcoming theatre/vocal project?</h4>

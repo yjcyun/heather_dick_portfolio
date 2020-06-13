@@ -3,7 +3,6 @@ import { graphql, useStaticQuery, Link } from 'gatsby';
 import styled from 'styled-components';
 import Image from 'gatsby-image';
 import bcg from '../../images/bcg.jpg';
-import Logo from '../Logo';
 
 const getImage = graphql`
   query {
@@ -22,7 +21,6 @@ const StyledHero = () => {
 
   return (
     <>
-      {/* <Logo className="logo" /> */}
       <HeroWrapper>
 
         <div className="hero-text">
