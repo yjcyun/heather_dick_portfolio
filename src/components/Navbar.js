@@ -25,7 +25,7 @@ const NavbarWrapper = styled.nav`
   top: 0;
   left: 0;
   width: 100%;
-  background: var(--textPurple);
+  background: #27004d;
   background-size: cover;
   background-position:center;
 

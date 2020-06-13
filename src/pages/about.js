@@ -9,7 +9,7 @@ import Audio from '../components/About/Audio/Audio';
 
 export const query = graphql`
   query {
-    aboutImg: file(relativePath:{eq:"headshot.jpg"}){
+    aboutImg: file(relativePath:{eq:"headshots/headshot4.jpg"}){
       childImageSharp {
         fluid {
           ...GatsbyImageSharpFluid

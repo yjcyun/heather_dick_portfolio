@@ -6,7 +6,7 @@ import Title from '../components/Title';
 
 export const query = graphql`
   query {
-    contactImg: file(relativePath:{eq:"contact.jpg"}){
+    contactImg: file(relativePath:{eq:"headshots/headshot1.jpg"}){
       childImageSharp {
         fluid {
           ...GatsbyImageSharpFluid
@@ -28,11 +28,11 @@ const contact = ({data}) => {
             <h3 className="info-author">Heather Dick</h3>
             <p>email[at]email[dot]com</p>
           </div>
-          <div>
+          {/* <div>
             <h3 className="info-author">Management Company</h3>
             <p>416-123-1234</p>
             <p>email[at]email[dot]com</p>
-          </div>
+          </div> */}
         </Info>
       </div>
     </Layout>

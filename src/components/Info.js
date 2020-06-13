@@ -15,7 +15,7 @@ const getImage = graphql`
   }
 `;
 
-const Info = ({ children, reverse }) => {
+const Info = ({ children, reverse,img }) => {
   const data = useStaticQuery(getImage);
 
   return (
@@ -26,7 +26,7 @@ const Info = ({ children, reverse }) => {
       <div className="info-image">
         <Image
           className="background-img"
-          fluid={data.defaultBcg.childImageSharp.fluid}
+          fluid={img || data.defaultBcg.childImageSharp.fluid}
         >
         </Image>
       </div>
@@ -71,6 +71,7 @@ margin: 0 auto;
 
 .info-author{
   font-size: 1.7rem;
+  font-family: var(--titleFont);
 }
 
 .info-image{

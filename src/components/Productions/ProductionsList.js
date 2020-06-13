@@ -39,6 +39,7 @@ const ProductionsList = ({ posters }) => {
       let filteredItems = tempPosters.filter((item) => item.category === category);
       setPosterItems(filteredItems);
     }
+    console.log(index);
     setSelectedFilterIndex(index);
   }
 
@@ -61,7 +62,7 @@ const ProductionsList = ({ posters }) => {
       return null;
     }
   }
-
+console.log(selectedFilterIndex);
   return (
     <>
       <FilterBtnWrapper>
@@ -70,9 +71,10 @@ const ProductionsList = ({ posters }) => {
             <button
               type="button"
               key={index}
-              className={selectedFilterIndex === index ? 'btn active' : 'btn filter-btn'}
-              onClick={() => handleFilter(category)}
+              className={selectedFilterIndex === index ? 'btn filter-btn filter-btn-active' : 'btn filter-btn'}
+              onClick={() => handleFilter(category,index)}
             >{category}</button>
+         
           )
         })}
       </FilterBtnWrapper>
@@ -107,6 +109,9 @@ const ProductionsList = ({ posters }) => {
 
 const FilterBtnWrapper = styled.div`
 text-align:center;
+  display:flex;
+  flex-direction:row;
+  justify-content:center;
 `;
 
 const ProductionsListWrapper = styled.div`

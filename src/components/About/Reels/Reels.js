@@ -56,7 +56,6 @@ const ReelsWrapper = styled.section`
   margin:3rem auto 0;
   min-height: 60vh;
   padding: 1rem 1rem 5rem;
-  background-image: linear-gradient(#fff 0%, var(--lightestPurple) 100%);
 
   .videos{
   display:flex;
@@ -70,7 +69,7 @@ const ReelsWrapper = styled.section`
  }
 
  @media (min-width: 996px) {
-   margin:6rem auto 0;
+   margin:2rem auto 0;
    padding: 3rem 7rem 7rem;
   .max-width{
     flex-direction:row;

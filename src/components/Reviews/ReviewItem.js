@@ -21,7 +21,7 @@ const ReviewItemWrapper = styled.div`
   position: relative;
   font-size: 1rem;
   line-height: 24px;
-  background: #F7EDDE;
+  background: var(--lightestPurple);
   border-radius: 40px;
   border-bottom-left-radius: 0;
   padding: 1.5rem 2.5rem;
@@ -33,7 +33,7 @@ const ReviewItemWrapper = styled.div`
 	height: 4rem;
   width: 7rem;
   clip-path: polygon(0 0, 0 100%, 100% 0);
-	background: #F7EDDE;
+  background:var(--lightestPurple);
 	margin-top: -1rem;
 }
 

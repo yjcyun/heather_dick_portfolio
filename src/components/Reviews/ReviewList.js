@@ -22,7 +22,7 @@ display: grid;
 grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
 align-items:start;
 grid-gap: 4rem;
-padding: 0 4rem;
+padding: 2rem 4rem;
 @media(max-width: 576px){
   margin: 0 1rem;
   padding: 0;

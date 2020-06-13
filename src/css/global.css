@@ -2,8 +2,8 @@
 @import url("https://fonts.googleapis.com/css2?&family=Poppins:wght@300&family=Dancing+Script:wght@700&family=Oswald:wght@300;400&display=swap");
 
 @font-face {
-  font-family: 'Chasy';
-  src: url('../fonts/Brusher.ttf') format('truetype');
+  font-family: "Chasy";
+  src: url("../fonts/Brusher.ttf") format("truetype");
 }
 
 /*=============== 
@@ -11,15 +11,16 @@ Variables
 ===============*/
 :root {
   --mainPurple: #542c85;
+  --darkPurple: #27004d;
   --lightPurple: #783fbe;
-  --lightestPurple:#f0eaf8;
   --textPurple: #745c97;
-  --faintPurple:#f2f4fb;
+  --lightestPurple: #e3e7f6;
+  --faintPurple: #f2f4fb;
   --mainGold: #a78425;
   --lightGold: #ccb764;
   --lighterGold: #dfd29e;
   --lightGrey: #f8f7f5;
-  --background: #F1F5F8;
+  --background: #f1f5f8;
   --beige: #ece7df;
   /* --clr3:#656565; */
 
@@ -85,14 +86,14 @@ a:hover {
   margin: 0 auto;
 }
 /* icon */
-.icon{
+.icon {
   color: var(--mainPurple);
-  cursor:pointer;
+  cursor: pointer;
 }
-.icon:hover{
+.icon:hover {
   color: var(--lightPurple);
 }
-:focus{
+:focus {
   outline: none;
 }
 
@@ -137,16 +138,16 @@ Navbar
   transform: translateY(8px);
 }
 
-.open .menu-btn-burger{
-  transform:translateX(-50px);
-  background:transparent;
+.open .menu-btn-burger {
+  transform: translateX(-50px);
+  background: transparent;
 }
 
 .page-margin {
   margin-top: 56px;
 }
 
-.extra-margin{
+.extra-margin {
   margin: 20vh auto;
 }
 
@@ -161,7 +162,7 @@ Button
   cursor: pointer;
   text-transform: uppercase;
   font-family: var(--mainFont);
-  background:none;
+  background: none;
   color: var(--mainGold);
   font-weight: bold;
   font-size: 1rem;
@@ -177,16 +178,25 @@ Button
 }
 
 .filter-btn {
-  margin:2rem 0.5rem 3rem;
+  margin: 2rem 0.5rem 3rem;
   padding: 0.5rem 1rem;
-  background: var(--lightGold);
+  background: var(--lightPurple);
   color: white;
-  border-color: var(--lightGold);
+  border-color: var(--lightPurple);
 }
 
 .filter-btn:hover {
-  background-color: var(--mainGold);
+  background-color: #3b0074;
+  border-color: #3b0074;
   color: white;
+}
+.filter-btn-active {
+  background: #3b0074;
+}
+@media(min-width:768px){
+  .filter-btn{
+    padding: 1rem 3rem;
+  }
 }
 
 .production-btn {
@@ -197,35 +207,35 @@ Button
 }
 
 .about-btn {
-  overflow:hidden;
+  overflow: hidden;
 }
 
 .about-btn:after {
-	width: 0;
-	height: 103%;
-	top: 50%;
-	left: 50%;
-	background: var(--mainGold);
-	opacity: 0;
-	-webkit-transform: translateX(-50%) translateY(-50%);
-	-moz-transform: translateX(-50%) translateY(-50%);
-	-ms-transform: translateX(-50%) translateY(-50%);
-	transform: translateX(-50%) translateY(-50%);
+  width: 0;
+  height: 103%;
+  top: 50%;
+  left: 50%;
+  background: var(--mainGold);
+  opacity: 0;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -ms-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
 }
 
 .about-btn:hover,
 .about-btn:active {
-	color: #fff;
+  color: #fff;
 }
 
 .about-btn:hover:after {
-	width: 90%;
-	opacity: 1;
+  width: 90%;
+  opacity: 1;
 }
 
 .about-btn:active:after {
-	width: 101%;
-	opacity: 1;
+  width: 101%;
+  opacity: 1;
 }
 
 .hero-btn {
@@ -260,8 +270,8 @@ Button
   opacity: 1;
 }
 
-.active{
-  background:black;
+.active {
+  background: black;
 }
 
 /*=============== 
@@ -275,13 +285,13 @@ Pages
 .about-page {
   margin: 10rem auto 0;
 }
-.about-page-reels{
+.about-page-reels {
   margin: 0 auto;
-  max-width: 1170px
+  max-width: 1170px;
 }
 
 @media (max-width: 768px) {
-  .page{
+  .page {
     margin: 6rem auto 0;
     padding-bottom: 5rem;
   }
