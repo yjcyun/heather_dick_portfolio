@@ -35,7 +35,7 @@ const Notification = () => {
     <ToastWrapper>
       <ToastContainer
         position="bottom-left"
-        autoClose={false}
+        autoClose={6000}
         closeButton={CloseButton}
       />
     </ToastWrapper>
@@ -52,9 +52,10 @@ const ToastWrapper = styled.div`
   height: 7rem;
   width: 15rem;
 }
-@media(min-width: 768px) {
+
+@media (max-width: 420px){
   .Toastify__toast{
-    left: 10px;
+    width: 100%;
   }
 }
 `;
