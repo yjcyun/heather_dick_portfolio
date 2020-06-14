@@ -2,18 +2,16 @@ import React from 'react';
 import styled from 'styled-components';
 import NavLinks from '../constants/links';
 import Logo from './Logo';
+import Burger from './Burger';
 
-const Navbar = ({ toggleNavbar }) => {
+const Navbar = ({ toggleNavbar, isOpen }) => {
   return (
     <NavbarWrapper>
       <div className="nav-center">
         <div className="nav-header">
           <Logo />
-          <div className="menu-btn" role="button" tabIndex={0} onClick={toggleNavbar} onKeyDown={toggleNavbar}>
-            <div className="menu-btn-burger"></div>
-          </div>
+          <Burger isOpen={isOpen} toggle={toggleNavbar} />
         </div>
-
         <NavLinks styleClass="nav-links" />
       </div>
     </NavbarWrapper>
@@ -26,16 +24,14 @@ const NavbarWrapper = styled.nav`
   left: 0;
   width: 100%;
   background: #27004d;
-  background-size: cover;
-  background-position:center;
-
-  color: var(--mainPurple);
+  height: 5rem;
 
   .nav-header{
     display: flex;
     align-items: center;
     justify-content:space-between;
     padding: 0.5rem 0.8rem;
+    height: 5rem;
   }
 
   .nav-links {
@@ -52,56 +48,47 @@ const NavbarWrapper = styled.nav`
     text-decoration: none;
   }
 
-  @media (max-width: 400px) {
-    h3.logo-text{
-      font-size: 0.9rem;
-    }
-  }
-
-  @media (max-width: 1199px) {
+  @media(min-width:768px){
     .nav-center{
-      max-width: 900px;
-      margin: 0 auto;
+      display: grid;
+      height: 5rem;
+      max-width: 1202px;
+      margin: auto;
+      align-items: center !important;
+      padding: 0 1rem;
     }
+
+    .nav-header {
+      justify-content:space-between;
+    }  
   }
 
-  @media (min-width: 1200px) {
-    .nav-center {
-      display: grid;
-      grid-template-columns: 1fr 1.5fr;
-      align-items: center !important;
-      max-width: 1170px;
-      margin: 0 auto;
-    }
-
-    .nav-header{
-      padding: 1rem 0;
-      justify-content: flex-start;
-    }
-
-    .nav-links{
-      /* display: none; */
-      display: ${props => props.home ? 'none' : 'flex'};
-      width: 100%;
-      justify-content:space-around;
-    } 
+  @media (min-width: 996px) {
+  .nav-center {
+    grid-template-columns: 1fr 1.5fr;
+  }
+  
+  .nav-links{
+    display: ${props => props.home ? 'none' : 'flex'};
+    width: 100%;
+    justify-content:space-around;
+  } 
 
     .nav-links a:hover{
       box-shadow:0 4px var(--lighterGold);
-    }
-
-    .menu-btn {
-      display: none;
     } 
     
     .logo-text{
       display: flex;
       flex-direction: column;
-      font-size: 1.2rem;
+      font-size: 1.3rem;
       width: auto;
       text-align: left;
       line-height: 0.5;
       margin-left: 0.5rem;
+    }
+     .menu-btn {
+      display: none;
     }
   
   }

@@ -6,7 +6,7 @@ import Contact from '../components/Contact/Contact';
 const contact = () => {
   return (
     <Layout>
-      <div className="page">
+      <div className="page contact-page">
         <Title
           title="CONTACT"
           subtitle="If you would like to work with Heather or have any questions, reach out to her via email or social media."

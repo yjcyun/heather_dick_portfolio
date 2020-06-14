@@ -1,9 +1,16 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import styled from 'styled-components';
 import NavLinks from '../constants/links';
 import SocialLinks from '../constants/socialLinks';
 
+
+
 const Sidebar = ({ isOpen, toggleNavbar }) => {
+  
+  useEffect(() => {
+    isOpen && (document.body.style.overflow = "hidden");
+    !isOpen && (document.body.style.overflow = "");
+  }, [isOpen]);
   return (
     <SidebarWrapper>
       <aside className={`sidebar ${isOpen ? 'show-sidebar' : ''}`}>
@@ -20,10 +27,10 @@ const SidebarWrapper = styled.div`
 .sidebar{
   background: white;
   position: fixed;
-  top: 76px;
+  top: 80px;
   left:0;
   width: 100%;
-  height: calc(100vh - 76px);
+  height: calc(100vh - 80px);
   z-index:100;
   display:grid;
   place-items:center;
@@ -46,7 +53,7 @@ const SidebarWrapper = styled.div`
   font-weight: bold;
   transition: var(--transition);
   margin-bottom: 0.5rem;
-  /* text-transform: capitalize; */
+  text-transform: capitalize;
   letter-spacing: 0.1rem;
 }
 .sidebar-links li a:hover{
@@ -62,21 +69,10 @@ const SidebarWrapper = styled.div`
 .social-links {
   width: auto;
 }
-.close-btn{
-  position:absolute;
-  right: 4.75%;
-  top: 2.75%;
-  font-size: 2.5rem;
-  background:transparent;
-  border-color: transparent;
-  color: var(--clr-black);
-  cursor: pointer;
-  &:focus{
-    outline: none;
-  }
+
 }
 
-@media (min-width: 768px) {
+@media (min-width: 996px) {
   .sidebar {
     transform: translateX(-100%);
   }
