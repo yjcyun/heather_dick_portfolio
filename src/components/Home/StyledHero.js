@@ -106,10 +106,12 @@ const HeroWrapper = styled.section`
   align-items: center;
   justify-content:center;
   width: 100%;
+  height: 25rem;
 }
 
 .background-img{
   width: 100%;
+  height: 100%;
 }
 
 @media (min-width: 768px) {
@@ -131,6 +133,11 @@ const HeroWrapper = styled.section`
   .hero-subtitle h5{
     font-size: 1.5rem;
   }
+
+  .hero-image{
+  height: 60%;
+}
+
 }
 
 @media (min-width: 996px) {
@@ -153,14 +160,8 @@ const HeroWrapper = styled.section`
   .hero-subtitle h5{
     font-size: 1.2rem;
   }
-}
 
-@media (min-width: 1110px) {
   .hero-image{
-    width: 33rem;
-  }
-
-  .background-img{
     width: 33rem;
     height: 40rem;
   }
