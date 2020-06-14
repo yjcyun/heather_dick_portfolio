@@ -9,7 +9,7 @@ const Audio = () => {
   return (
     <AudioWrapper>
       <div className="max-width">
-        <Subtitle subtitle="AUDIO" white />
+        <Subtitle subtitle="AUDIO" linkUrl="https://www.google.ca" linkText="all audio" white />
         <div className="audio-item-container">
           {track.map((item, index) => {
             return <div key={index}><AudioItem track={item} /></div>
@@ -32,7 +32,7 @@ padding:3rem 1rem;
 .audio-item-container {
   display:grid;
   grid-template-columns: 1fr;
-  
+  margin-top: 1rem;
 }
 
 .audio-item-container div{
@@ -52,6 +52,7 @@ padding:3rem 1rem;
   
   .audio-item-container {
     grid-template-columns: 1fr 1fr 1fr;
+    margin-top: 0;
   }
 
   .audio-item-container div{

@@ -39,7 +39,7 @@ class Reels extends Component {
     return (
       <ReelsWrapper>
         <div className="max-width">
-          <Subtitle subtitle="REELS" />
+          <Subtitle subtitle="REELS" linkUrl="https://vimeo.com/siriustheatricalcompany" linkText="All reels"/>
           <div className="videos">
             <VideoDetail video={this.state.selectedVideo} />
             <VideoList
@@ -60,6 +60,7 @@ const ReelsWrapper = styled.section`
   .videos{
   display:flex;
   flex-direction:column;
+  margin-top: 1rem;
   }
 
  .max-width{
@@ -70,6 +71,7 @@ const ReelsWrapper = styled.section`
 
  @media (min-width: 996px) {
    margin:2rem auto 0;
+   margin-top: 0;
    padding: 3rem 7rem 7rem;
   .max-width{
     flex-direction:row;

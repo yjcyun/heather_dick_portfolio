@@ -57,7 +57,7 @@ const ResumeList = () => {
   return (
     <ResumeWrapper>
       <div className="max-width">
-        <Subtitle subtitle="SELECTED CREDITS" />
+        <Subtitle subtitle="SELECTED CREDITS" credits />
         <div className="resume-column">
           <div className="resume-content">
             <div>
@@ -73,12 +73,12 @@ const ResumeList = () => {
                   )
                 })}
             </div>
-            <Link to="/contact">
+            <Link to="/contact" className="about-btn-container">
               <button className="btn about-btn">contact for full resume</button>
             </Link>
           </div>
           <div className="resume-featured">
-            <ResumeFeatured notification={notification}/>
+            <ResumeFeatured notification={notification} />
           </div>
         </div>
       </div>
@@ -119,6 +119,11 @@ margin:3rem auto;
   background-position:center;
 }
 
+.about-btn-container {
+  margin: 3rem 0;
+  text-align:center;
+}
+
 @media (min-width: 768px){
   .resume-column{
     flex-direction:row;
@@ -132,6 +137,11 @@ margin:3rem auto;
   .resume-featured{
     flex:2;
   }
+
+  .about-btn-container {
+    margin: 3rem 0;
+    text-align:left;
+  }
 }
 
 @media (min-width: 996px){
@@ -142,7 +152,6 @@ margin:3rem auto;
 @media(min-width: 1024px){
   padding: 7rem 2rem;
 }
-
 `;
 
 export default ResumeList

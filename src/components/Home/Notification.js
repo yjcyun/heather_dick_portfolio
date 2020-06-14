@@ -55,7 +55,8 @@ const ToastWrapper = styled.div`
 
 @media (max-width: 420px){
   .Toastify__toast{
-    width: 100%;
+    width: 90%;
+    margin: 0 auto;
   }
 }
 `;
