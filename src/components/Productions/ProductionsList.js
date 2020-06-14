@@ -39,7 +39,6 @@ const ProductionsList = ({ posters }) => {
       let filteredItems = tempPosters.filter((item) => item.category === category);
       setPosterItems(filteredItems);
     }
-    console.log(index);
     setSelectedFilterIndex(index);
   }
 
@@ -62,7 +61,6 @@ const ProductionsList = ({ posters }) => {
       return null;
     }
   }
-console.log(selectedFilterIndex);
   return (
     <>
       <FilterBtnWrapper>

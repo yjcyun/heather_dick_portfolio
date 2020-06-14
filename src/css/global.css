@@ -179,9 +179,10 @@ Button
 .filter-btn {
   margin: 2rem 0.5rem 3rem;
   padding: 0.5rem 1rem;
-  background: var(--lightPurple);
-  color: white;
+  /* background: var(--lightPurple); */
+  color: var(--mainPurple);
   border-color: var(--lightPurple);
+  border-radius:10px;
 }
 
 .filter-btn:hover {
@@ -189,9 +190,12 @@ Button
   border-color: #3b0074;
   color: white;
 }
+
 .filter-btn-active {
   background: #3b0074;
+  color: white;
 }
+
 @media (min-width: 768px) {
   .filter-btn {
     padding: 1rem 3rem;

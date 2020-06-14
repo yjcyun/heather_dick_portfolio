@@ -20,7 +20,7 @@ const BlogFeatured = ({ blogs }) => {
   const { notification: { nodes: notification } } = useStaticQuery(query);
   const events = notification.map(item => {
     return (
-      <ul style={{ textAlign: 'left', paddingBottom: '1rem' }}>
+      <ul style={{ textAlign: 'left', paddingBottom: '1rem' }} key={item.id}>
         <li><GiChainedHeart style={{ color: 'tomato' }} /> {item.notification}</li>
       </ul>
     )

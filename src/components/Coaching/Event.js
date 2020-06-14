@@ -28,7 +28,7 @@ const Event = () => {
             {nodes.map(item => {
               if (item.coaching) {
                 return (
-                  <h4>{item.notification}</h4>
+                  <h4 key={item.id}>{item.notification}</h4>
                 )
               }
             })}
