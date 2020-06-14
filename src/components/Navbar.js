@@ -43,7 +43,6 @@ const NavbarWrapper = styled.nav`
     transition: var(--transition);
     font-size: 1rem;
     text-transform: uppercase;
-    font-weight: bold;
     letter-spacing: 0.1rem;
     text-decoration: none;
   }

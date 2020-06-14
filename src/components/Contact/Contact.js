@@ -22,9 +22,8 @@ const Contact = () => {
       <div className="contact-content">
         <SocialLinks styleClass="social-links contact" home />
         <a href={`mailto:%69%6E%66%6F%40%68%65%61%74%68%65%72%64%69%63%6B%2E%63%6F%6D`} >
-            <FaRegEnvelope className="social-icon email-icon"
-               />
-          </a>
+          <FaRegEnvelope className="social-icon email-icon" />
+        </a>
       </div>
     </ContactWrapper>
   )
