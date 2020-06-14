@@ -4,10 +4,12 @@ import CoachingList from '../components/Coaching/CoachingList';
 import Title from '../components/Title';
 import Event from '../components/Coaching/Event';
 import Contact from '../components/Coaching/Contact';
+import SEO from '../components/SEO';
 
 const coaching = () => {
   return (
     <Layout>
+      <SEO title="Coaching" description="coaching page"/>
       <div className="page">
         <Title 
         title="coaching philosophy" 

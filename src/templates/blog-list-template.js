@@ -6,6 +6,7 @@ import Title from '../components/Title';
 import Layout from '../components/Layout';
 import BlogFeatured from '../components/Blog/BlogFeatured';
 import BlogCard from '../components/Blog/BlogCard';
+import SEO from '../components/SEO';
 
 
 export const query = graphql`
@@ -63,6 +64,7 @@ const BlogListTemplate = (props) => {
 
   return (
     <Layout>
+      <SEO title="Blog" description="blog page description" />
       <div className="page">
         <Title title="blogs" />
         <BlogListWrapper>

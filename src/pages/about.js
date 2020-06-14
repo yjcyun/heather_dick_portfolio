@@ -6,6 +6,7 @@ import Info from '../components/Info';
 import Reels from '../components/About/Reels/Reels';
 import ResumeList from '../components/About/Resume/ResumeList';
 import Audio from '../components/About/Audio/Audio';
+import SEO from '../components/SEO';
 
 export const query = graphql`
   query {
@@ -22,6 +23,7 @@ export const query = graphql`
 const about = ({ data }) => {
   return (
     <Layout>
+      <SEO title="About" description="about Heather" />
       <div className="about-page">
         <Title title="biography" subtitle="Insert quote here. Be ri-DICK-ulous!" />
       </div>

@@ -5,6 +5,7 @@ import ReactMarkdown from 'react-markdown';
 import styled from 'styled-components';
 import Layout from '../components/Layout';
 import BlogFeatured from '../components/Blog/BlogFeatured';
+import SEO from '../components/SEO';
 
 export const query = graphql`
   query GetSingleBlog($slug: String){
@@ -13,6 +14,7 @@ export const query = graphql`
       blog
       author
       title
+      description
       thumbnail {
         childImageSharp {
           fluid {
@@ -43,10 +45,11 @@ export const query = graphql`
  `;
 
 const BlogTemplate = ({ data }) => {
-  const { blog: { date, blog, title, author, thumbnail }, featured: { nodes: blogs } } = data;
+  const { blog: { date, blog, title, author, thumbnail, description }, featured: { nodes: blogs } } = data;
 
   return (
     <Layout>
+      <SEO title={title} description={description} />
       <BlogTemplateWrapper className="page">
         <div className="main-blog">
           <div className="header">

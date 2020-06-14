@@ -3,6 +3,7 @@ import { graphql } from 'gatsby';
 import Layout from '../components/Layout';
 import Title from '../components/Title';
 import ProductionsList from '../components/Productions/ProductionsList';
+import SEO from '../components/SEO';
 
 export const query = graphql`
   {
@@ -32,8 +33,9 @@ const Productions = ({
 }) => {
   return (
     <Layout>
+      <SEO title="Productions" description="Productions page" />
       <div className="page">
-        <Title title="Productions" subtitle="Any subtitle on this page? quote?"/>
+        <Title title="Productions" subtitle="Any subtitle on this page? quote?" />
         <ProductionsList posters={posters} />
       </div>
     </Layout>

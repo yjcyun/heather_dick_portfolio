@@ -6,7 +6,7 @@ strapi
 
 module.exports = {
   siteMetadata: {
-    title: 'Heather Dick | Sirius Theatrical Company |Actor. Voice. Coach. | Toronto',
+    title: 'Heather Dick | Sirius Theatrical Company | Actor. Director. Coach | Toronto',
     description: "A professional actor and certified voice coach with a decade of experience based in Toronto. Provide private acting and voice lessons.Add more description here...",
     author: "Christina Yun",
     twitterUsername: "@Sirius_Theatre",
