@@ -26,9 +26,9 @@ const getImage = graphql`
 
 const BlogFeatured = ({ notification }) => {
   const data = useStaticQuery(getImage);
-  const events = notification.map(item => {
+  const events = notification.map((item,index) => {
     return (
-      <ul style={{ textAlign: 'left', paddingBottom: '1rem' }}>
+      <ul key={index} style={{ textAlign: 'left', paddingBottom: '1rem' }}>
         <li><GiChainedHeart style={{color:'tomato'}}/> {item.notification}</li>
       </ul>
     )

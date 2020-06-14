@@ -11,8 +11,9 @@ Variables
 ===============*/
 :root {
   --darkPurple: #27004d;
-  --mainPurple: #542c85;
-  --lightPurple: #783fbe;
+  --mainPurple: #452475;
+  --lightPurple: #542c85;
+  --lighterPurple: #783fbe;
   --textPurple: #745c97;
   --lightestPurple: #e3e7f6;
   --faintPurple: #f2f4fb;
@@ -168,7 +169,7 @@ Button
 .about-btn,
 .contact-btn {
   overflow: hidden;
-  text-align:center;
+  text-align: center;
 }
 
 .about-btn:after,
@@ -204,10 +205,10 @@ Button
   opacity: 1;
 }
 
-@media and (min-width:768px){
-.about-btn{
-  text-align:left
-}
+@media (min-width: 768px) {
+  .about-btn {
+    text-align: left;
+  }
 }
 
 .hero-btn {
@@ -243,7 +244,7 @@ Button
 }
 
 .active {
-  background: black;
+  background: #000;
 }
 
 /*=============== 

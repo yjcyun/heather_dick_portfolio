@@ -11,7 +11,7 @@ const query = graphql`
         siteUrl
         image
         siteTitle: title
-        twitterUsername
+        twitterHandle
       }
     }
   }
@@ -19,7 +19,7 @@ const query = graphql`
 
 const SEO = ({ title, description }) => {
   const { site } = useStaticQuery(query);
-  const { siteDescription, siteTitle, siteUrl, image, twitterUsername } = site.siteMetadata;
+  const { siteDescription, siteTitle, siteUrl, image, twitterHandle } = site.siteMetadata;
 
   return (
     <Helmet
@@ -27,6 +27,12 @@ const SEO = ({ title, description }) => {
       title={`${title} | ${siteTitle}`}>
       <meta name="description" content={description || siteDescription} />
       <meta name="image" content={image} />
+      {/* twitter cards */}
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:creator" content={twitterHandle} />
+      <meta name="twitter:title" content={siteTitle} />
+      <meta name="twitter:description" content={siteDescription} />
+      <meta name="twitter:image" content={`${siteUrl}${image}`} />
     </Helmet>
   )
 }

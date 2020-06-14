@@ -21,8 +21,7 @@ const Audio = () => {
 }
 
 const AudioWrapper = styled.section`
-background:#2c0057;
-background-image: url("https://www.transparenttextures.com/patterns/paper.png");
+background:var(--lightPurple);
 padding:3rem 1rem;
 
 .max-width{

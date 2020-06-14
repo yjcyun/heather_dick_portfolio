@@ -14,6 +14,7 @@ export const query = graphql`
       blog
       author
       title
+      slug
       description
       thumbnail {
         childImageSharp {
@@ -41,12 +42,27 @@ export const query = graphql`
         }
       }
     }
+    website:site {
+      siteMetadata {
+        author
+        siteDescription: description
+        siteUrl
+        image
+        siteTitle: title
+        twitterHandle
+      }
+    }
   }
  `;
 
 const BlogTemplate = ({ data }) => {
-  const { blog: { date, blog, title, author, thumbnail, description }, featured: { nodes: blogs } } = data;
+  const {
+    blog: { date, slug, blog, title, author, thumbnail, description },
+    featured: { nodes: blogs },
+    website: { siteMetadata: { siteUrl, twitterHandle } }
+  } = data;
 
+  const url = `${siteUrl}/${slug}`;
   return (
     <Layout>
       <SEO title={title} description={description} />

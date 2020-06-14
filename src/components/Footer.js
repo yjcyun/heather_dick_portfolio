@@ -33,8 +33,8 @@ const Footer = () => {
 }
 
 const FooterWrapper = styled.footer`
-background: var(--beige);
-color: #222;
+background: #1d0039;
+color: #fff;
 padding: 2rem;
 
 .footer-center{
@@ -43,7 +43,7 @@ padding: 2rem;
 }
 
 a{
-  color: #222;
+  color: #fff;
 }
 
 p{

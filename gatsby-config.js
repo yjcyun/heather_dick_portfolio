@@ -9,7 +9,7 @@ module.exports = {
     title: 'Heather Dick | Sirius Theatrical Company | Actor. Director. Coach | Toronto',
     description: "A professional actor and certified voice coach with a decade of experience based in Toronto. Provide private acting and voice lessons.Add more description here...",
     author: "Christina Yun",
-    twitterUsername: "@Sirius_Theatre",
+    twitterHandle: "@Sirius_Theatre",
     image: "/twitter-card.png",
     siteUrl: "https://heather-dick-draft.netlify.app"
   },
@@ -18,6 +18,7 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-sitemap`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
