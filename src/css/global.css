@@ -168,6 +168,7 @@ Button
 .about-btn,
 .contact-btn {
   overflow: hidden;
+  text-align:center;
 }
 
 .about-btn:after,
@@ -201,6 +202,12 @@ Button
 .contact-btn:active:after {
   width: 101%;
   opacity: 1;
+}
+
+@media and (min-width:768px){
+.about-btn{
+  text-align:left
+}
 }
 
 .hero-btn {

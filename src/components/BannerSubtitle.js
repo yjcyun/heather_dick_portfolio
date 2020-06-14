@@ -15,7 +15,7 @@ const BannerWrapper = styled.div`
 .event-title{
   text-transform: capitalize;
   font-family: 'Chasy';
-  font-size: 4rem;
+  font-size: 3.5rem;
   line-height: 1;
   display:flex;
   justify-content: center;
@@ -29,6 +29,9 @@ const BannerWrapper = styled.div`
 }
 
 @media (min-width: 768px) {
+  .event-title{
+    font-size: 4rem;
+  }
   .horn{
     width: 80px;
     margin-right: 2rem;
