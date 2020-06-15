@@ -21,11 +21,7 @@ Variables
   --lightGold: #ccb764;
   --lighterGold: #dfd29e;
   --lightGrey: #f8f7f5;
-  --background: #f1f5f8;
   --beige: #ece7df;
-  /* --clr3:#656565; */
-
-  --mainWhite: #fff;
   --mainFont: "Poppins", sans-serif;
   --titleFont: "Oswald", sans-serif;
   --cursiveFont: "Playball", cursive;
@@ -269,10 +265,6 @@ Pages
 }
 
 @media (max-width: 768px) {
-  /* .page {
-    margin: 6rem auto 0;
-    padding-bottom: 5rem;
-  } */
   .contact-page {
     padding-bottom: 0;
   }

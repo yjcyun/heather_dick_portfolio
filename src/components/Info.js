@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components';
 import { graphql, useStaticQuery } from 'gatsby';
 import Image from 'gatsby-image';
+import paper from '../images/paper.png';
 
 const getImage = graphql`
   query {
@@ -41,10 +42,8 @@ grid-column-gap:2rem;
 padding:1.5rem 1rem;
 justify-content:center;
 align-items: start;
-/* background: linear-gradient(#fff 0%, var(--lighterGold) 70%, #fff 100%); */
 background-color: #f2f4fb;
-background-image: url("https://www.transparenttextures.com/patterns/paper.png");
-/* background: var(--lighterGold); */
+background-image: url(${paper});
 margin: 0 auto;
 
 .info-text {
