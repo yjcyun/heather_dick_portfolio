@@ -26,10 +26,15 @@ const getImage = graphql`
 
 const BlogFeatured = ({ notification }) => {
   const data = useStaticQuery(getImage);
-  const events = notification.map((item,index) => {
+  const events = notification.map((item, index) => {
     return (
-      <ul key={index} style={{ textAlign: 'left', paddingBottom: '1rem' }}>
-        <li><GiChainedHeart style={{color:'tomato'}}/> {item.notification}</li>
+      <ul key={index} className="featured-events">
+        <li>
+          <GiChainedHeart
+            style={{ color: 'tomato' }}
+            className="events-icon" />
+          <span>{item.notification}</span>
+        </li>
       </ul>
     )
   });
@@ -64,25 +69,45 @@ margin-top: 2rem;
 border: 1px solid lightgray;
 border-top: 1rem solid var(--mainPurple);
 text-align:center;
+padding: 0 0.5rem;
 
 .featured-header{
-  width: 90%;
-  margin: 1rem auto;
+  width: 100%;
+  margin: 0.5rem auto;
 }
 
 .featured-title{
   font-size: 1.6rem;
+  margin-top: 0.6rem;
   color: var(--textPurple);
 }
 
 .featured-subtitle {
   text-transform: uppercase;
   letter-spacing: 0.07rem;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.8rem;
   display:flex;
   align-items: center;
   justify-content:center;
   background: var(--lighterGold);
+}
+
+.featured-events{
+ text-align: left;
+ padding-bottom: 1rem;
+}
+
+.featured-events li {
+  display:flex;
+}
+
+.events-icon {
+  flex: 1;
+  margin-top: 0.2rem;
+}
+
+.featured-events li span{
+  flex:7;
 }
 
 .mini-gallery {

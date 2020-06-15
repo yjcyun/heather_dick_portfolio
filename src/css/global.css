@@ -292,20 +292,26 @@ icons
 .featured-icons {
   display: flex;
   justify-content: center;
-  align-items:center;
+  align-items: center;
   margin-top: 1rem;
 }
 
-.featured-icons .social-icon{
+.featured-icons .social-icon {
   font-size: 1.7rem;
   margin: 0 0.5rem;
 }
-
-
-
 
 .social-icon {
   color: var(--lightPurple);
   margin-right: 1rem;
   font-size: 1rem;
+}
+
+.ScrollUpButton__Container.ScrollUpButton__Toggled, .ScrollUpButton__Container {
+  fill: white !important;
+  background-color: var(--mainPurple) !important;
+  border-radius: 50%;
+  height: 35px !important;
+  width: 35px !important;
+  padding: 5px !important;
 }

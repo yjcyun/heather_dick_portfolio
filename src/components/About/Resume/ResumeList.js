@@ -130,12 +130,12 @@ margin:3rem auto;
   }
 
   .resume-content{
-  flex:5;
+  flex:3;
   padding-right: 1rem;
   }
 
   .resume-featured{
-    flex:2;
+    flex:1;
   }
 
   .about-btn-container {

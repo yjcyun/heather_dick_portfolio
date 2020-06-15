@@ -161,9 +161,6 @@ padding: 0 1rem;
 .empty-flex{
   flex:2;
 }
-.blog-cards{
-  margin-bottom:2rem;
-}
 
 @media(min-width: 768px){
   .blog-wrapper{

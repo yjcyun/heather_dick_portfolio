@@ -33,6 +33,8 @@ const BlogCard = ({
 }
 
 const BlogCardWrapper = styled.div`
+margin-bottom:2rem;
+
 .blog{
   height: auto;
   display:grid;
@@ -80,6 +82,10 @@ const BlogCardWrapper = styled.div`
 .blog-text h3{
   margin: 0.5rem auto;
   text-transform: capitalize;
+}
+
+@media (min-width: 768px) {
+  margin-bottom: 0;
 }
 `;
 
