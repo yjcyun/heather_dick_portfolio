@@ -9,7 +9,7 @@ import Brush from '../../../images/brush.svg';
 
 const query = graphql`
  {
-    resume:allStrapiResumes {
+    resumes:allStrapiResumes {
       nodes {
         id
         role
@@ -20,7 +20,7 @@ const query = graphql`
         names
       }
     }
-    notification:allStrapiNotifications {
+    notifications:allStrapiNotifications {
       nodes {
         notification
         id
@@ -42,8 +42,8 @@ const getCategories = items => {
 }
 
 const ResumeList = () => {
-  const { resume: { nodes: resume } } = useStaticQuery(query);
-  const { notification: { nodes: notification } } = useStaticQuery(query);
+  const { resumes: { nodes: resume } } = useStaticQuery(query);
+  const { notifications: { nodes: notification } } = useStaticQuery(query);
 
   // array of unique categories
   const [categories] = useState(getCategories(resume));
