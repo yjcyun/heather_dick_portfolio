@@ -73,7 +73,6 @@ const ProductionsList = ({ posters }) => {
               className={selectedFilterIndex === index ? 'btn filter-btn filter-btn-active' : 'btn filter-btn'}
               onClick={() => handleFilter(category,index)}
             >{category}</button>
-         
           )
         })}
       </FilterBtnWrapper>

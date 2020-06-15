@@ -41,8 +41,8 @@ const StyledHero = () => {
         <Image
           className="background-img"
           fluid={data.defaultBcg.childImageSharp.fluid}
-        >
-        </Image>
+        />
+        <p className="image-caption">Photo taken by John Doe</p>
       </div>
     </HeroWrapper>
   )
@@ -102,11 +102,14 @@ const HeroWrapper = styled.section`
 
 .hero-image{
   display:flex;
+  flex-direction: column;
+  position:relative;
   position:relative;
   align-items: center;
   justify-content:center;
   width: 100%;
   height: 25rem;
+  transition: var(--transition);
 }
 
 .background-img{

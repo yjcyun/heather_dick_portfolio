@@ -21,16 +21,16 @@ const Info = ({ children, reverse, img }) => {
 
   return (
     <InfoWrapper reverse={reverse}>
-        <div className="info-text">
-          {children}
-        </div>
-        <div className="info-image">
-          <Image
-            className="background-img"
-            fluid={img || data.defaultBcg.childImageSharp.fluid}
-          >
-          </Image>
-        </div>
+      <div className="info-text">
+        {children}
+      </div>
+      <div className="hero-image">
+        <Image
+          className="background-img"
+          fluid={img || data.defaultBcg.childImageSharp.fluid}
+        />
+        <p className="image-caption">Photo taken by John Doe</p>
+      </div>
     </InfoWrapper>
   )
 }
@@ -73,8 +73,9 @@ margin: 0 auto;
   font-family: var(--titleFont);
 }
 
-.info-image{
-order: ${props => props.reverse ? '1' : ''};
+.hero-image{
+  position: relative;
+  order: ${props => props.reverse ? '1' : ''};
 }
 
 @media (min-width: 996px) {

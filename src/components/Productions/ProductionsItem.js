@@ -43,7 +43,7 @@ const ProductionsItemWrapper = styled.div`
 
 .poster-footer{
   padding: 0.5rem;
-  background: white;
+  background: rgba(255,255,255,0.5);
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
 }

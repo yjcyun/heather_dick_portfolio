@@ -15,7 +15,7 @@ const Layout = ({ children }) => {
       <Navbar toggleNavbar={toggleNavbar} isOpen={isOpen} />
       <Sidebar isOpen={isOpen} />
       <ScrollUpButton
-        AnimationDuration={1000}
+        AnimationDuration={500}
         ContainerClassName='ScrollUpButton__Container'
         TransitionClassName='ScrollUpButton__Toggled'
       />

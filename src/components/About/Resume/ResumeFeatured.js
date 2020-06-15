@@ -57,6 +57,7 @@ const BlogFeatured = ({ notification }) => {
             <Image fluid={node.childImageSharp.fluid} key={index} alt="Heather's headshot" className="mini-gallery" />
           )
         })}
+        <p>Photos taken by John Doe</p>
       </section>
     </BlogFeaturedWrapper>
   )
