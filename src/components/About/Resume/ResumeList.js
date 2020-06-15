@@ -43,7 +43,6 @@ const getCategories = items => {
 
 const ResumeList = () => {
   const { resume: { nodes: resume } } = useStaticQuery(query);
-  console.log(resume);
   const { notification: { nodes: notification } } = useStaticQuery(query);
 
   // array of unique categories
