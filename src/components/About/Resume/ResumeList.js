@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { graphql, useStaticQuery, Link } from 'gatsby';
 import styled from 'styled-components';
 import Fade from 'react-reveal/Fade';
+import Obfuscate from 'react-obfuscate';
 import ResumeItem from './ResumeItem';
 import ResumeFeatured from './ResumeFeatured';
 import Subtitle from '../../Subtitle';
@@ -72,9 +73,9 @@ const ResumeList = () => {
                   )
                 })}
             </Fade>
-            <Link to="/contact" className="about-btn-container">
+            <Obfuscate email="info@heatherdick.com" aria-label="Email Me" className="about-btn-container">
               <button className="btn about-btn">contact for full resume</button>
-            </Link>
+            </Obfuscate>
           </div>
           <div className="resume-featured">
             <ResumeFeatured notification={notification} />

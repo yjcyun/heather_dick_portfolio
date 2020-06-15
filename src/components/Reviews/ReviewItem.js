@@ -31,7 +31,6 @@ const ReviewItemWrapper = styled.div`
   text-align: center;
 }
 
-
 .pointer {
 	height: 4rem;
   width: 7rem;
@@ -51,8 +50,6 @@ const ReviewItemWrapper = styled.div`
   font-size: 2.5rem;
   margin-right: 1rem;
 }
-
-
 `;
 
 export default ReviewItem

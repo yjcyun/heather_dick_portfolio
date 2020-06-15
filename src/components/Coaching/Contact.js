@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'gatsby';
 import styled from 'styled-components';
 import Bounce from 'react-reveal/Bounce';
+import Obfuscate from 'react-obfuscate';
 import BannerSubtitle from '../BannerSubtitle';
 import question from '../../images/question.png';
 
@@ -14,9 +15,9 @@ const Contact = () => {
           <h4 className="coaching-contact">Do you need help with your upcoming theatre/vocal project?</h4>
           <h4 className="coaching-contact strong">Contact Heather and she will guide you to the right direction.</h4>
 
-          <Link to="/contact">
+          <Obfuscate email="info@heatherdick.com" aria-label="Email Me" className="about-btn-container">
             <button className="btn contact-btn">send your questions</button>
-          </Link>
+          </Obfuscate>
         </div>
       </Bounce>
     </ContactWrapper>

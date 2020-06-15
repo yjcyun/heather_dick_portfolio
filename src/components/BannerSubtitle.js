@@ -5,7 +5,7 @@ const BannerSubtitle = ({ icon, title }) => {
   return (
     <BannerWrapper>
       <h2 className="event-title">
-        <img src={icon} className="horn" alt="horn" />  {title}
+        <img src={icon} className="icon" alt="icon" />  {title}
       </h2>
     </BannerWrapper>
   )
@@ -23,7 +23,7 @@ const BannerWrapper = styled.div`
   margin:auto 1rem;
 }
 
-.horn{
+.icon{
   width: 60px;
   margin-right: 0rem;
 }
@@ -32,7 +32,7 @@ const BannerWrapper = styled.div`
   .event-title{
     font-size: 4rem;
   }
-  .horn{
+  .icon{
     width: 80px;
     margin-right: 2rem;
   }

@@ -1,17 +1,24 @@
 import React from 'react';
-import { Link } from 'gatsby';
 import BannerSubtitle from '../BannerSubtitle';
+import Obfuscate from 'react-obfuscate';
+import styled from 'styled-components';
 import clap from '../../images/clap.png';
 
 const SubmitReview = () => {
   return (
-    <div>
-      <BannerSubtitle icon={clap} title="Send Heather Your Reviews!" />
-      <a href="" style={{ display:'flex', justifyContent:'center', marginTop:'2rem' }}>
+    <SubmitReviewWrapper>
+      <BannerSubtitle icon={clap} title="Send  Your Reviews!" />
+      <Obfuscate email="info@heatherdick.com" aria-label="Email Me" className="about-btn-container">
         <button className="btn about-btn">send email</button>
-      </a>
-    </div>
+      </Obfuscate>
+    </SubmitReviewWrapper>
   )
 }
 
-export default SubmitReview
+const SubmitReviewWrapper = styled.div`
+text-align:center;
+.about-btn{
+  margin-top:2rem;
+}
+`;
+export default SubmitReview;
