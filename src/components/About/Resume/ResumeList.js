@@ -61,7 +61,7 @@ const ResumeList = () => {
         <Subtitle subtitle="SELECTED CREDITS" credits />
         <div className="resume-column">
           <div className="resume-content">
-            <Bounce bottom duration={2000}>
+            <Bounce bottom duration={1500}>
               {categories.map((item, index) => {
                   return (
                     <div key={index} className="resume-item">
