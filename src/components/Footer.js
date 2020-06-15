@@ -18,13 +18,14 @@ const Footer = () => {
           </div>
           <div className="footer-social">
             <p>follow me</p>
-            <SocialLinks styleClass="nav-links" footer/>
+            <SocialLinks styleClass="nav-links" footer />
           </div>
           <div className="footer-contact">
             <p>Contact</p>
-            <small>email@email.com</small>
-            <small>Toronto, ON</small>
-           
+            <div>
+              <small>email[@]email[.]com</small>
+              <small>Toronto, ON</small>
+            </div>
           </div>
         </div>
       </div>
@@ -33,7 +34,7 @@ const Footer = () => {
 }
 
 const FooterWrapper = styled.footer`
-background: #1d0039;
+background: var(--darkestPurple);
 color: #fff;
 padding: 2rem;
 
@@ -49,6 +50,7 @@ a{
 p{
   margin-bottom:0.5rem;
 }
+
 .footer-logo {
   margin-bottom: 0.5rem;
 }
@@ -63,14 +65,17 @@ text-align: left;
 }
 
 .footer-nav a:hover, .footer-social a:hover{
-  color: var(--lightPurple);
   font-weight:bold;
 }
 
 .footer-contact{
   text-transform: none;
   grid-column: 1/3;
-  display:inline-block;
+}
+
+.footer-contact div{
+  display:flex;
+  flex-direction: column;
 }
 
 .footer-contact small {
@@ -102,15 +107,6 @@ text-align: left;
   .footer-contact{
     grid-column: 3/3;
   }
-
-  .footer-contact small {
-    margin-right: 0;
-    display:block;
-  }
 }
-  
-
-
-
 `;
 export default Footer

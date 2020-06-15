@@ -10,6 +10,7 @@
 Variables
 ===============*/
 :root {
+  --darkestPurple: #1d0039;
   --darkPurple: #27004d;
   --mainPurple: #452475;
   --lightPurple: #542c85;
@@ -250,16 +251,19 @@ Pages
 ===============*/
 .page {
   margin: 10rem auto;
-  min-height: calc(100vh - 72px - 213px);
+  min-height: calc(100vh - 80px - 213px);
   max-width: 1170px;
 }
+
 .about-page {
   margin: 10rem auto 0;
 }
+
 .about-page-reels {
   margin: 0 auto;
   max-width: 1170px;
 }
+
 .contact-page {
   margin: 10rem auto 0;
 }
@@ -299,7 +303,8 @@ icons
   font-size: 1rem;
 }
 
-.ScrollUpButton__Container.ScrollUpButton__Toggled, .ScrollUpButton__Container {
+.ScrollUpButton__Container.ScrollUpButton__Toggled,
+.ScrollUpButton__Container {
   fill: white !important;
   background-color: var(--mainPurple) !important;
   border-radius: 50%;
