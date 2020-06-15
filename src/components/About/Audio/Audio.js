@@ -28,20 +28,35 @@ background:#201733;
 padding:3rem 1rem;
 
 .max-width{
+   display:-webkit-box;
+   display:-ms-flexbox;
    display:flex;
-   flex-direction:column;
+   -webkit-box-orient:vertical;
+   -webkit-box-direction:normal;
+       -ms-flex-direction:column;
+           flex-direction:column;
  }
 
 .audio-item-container {
+  display:-ms-grid;
   display:grid;
-  grid-template-columns: 1fr;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  margin-top:16px;
   margin-top: 1rem;
 }
 
 .audio-item-container div{
+  display:-webkit-box;
+  display:-ms-flexbox;
   display:flex;
-  justify-content: center;
-  align-items:center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align:center;
+      -ms-flex-align:center;
+          align-items:center;
+  margin-bottom:16px;
   margin-bottom:1rem;
 }
 
@@ -49,16 +64,24 @@ padding:3rem 1rem;
   padding:7rem;
 
   .max-width{
+    -webkit-box-orient:horizontal;
+    -webkit-box-direction:normal;
+    -ms-flex-direction:row;
     flex-direction:row;
+    -webkit-box-pack:justify;
+    -ms-flex-pack:justify;
     justify-content:space-between;
   }
-  
+
   .audio-item-container {
+    -ms-grid-columns: 1fr 1fr 1fr;
     grid-template-columns: 1fr 1fr 1fr;
     margin-top: 0;
   }
 
   .audio-item-container div{
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
     justify-content: flex-end;
     margin-bottom:0;
   }
@@ -67,6 +90,6 @@ padding:3rem 1rem;
 @media(min-width: 1024px){
   padding: 7rem 2rem;
 }
-`;
+  `;
 
 export default Audio

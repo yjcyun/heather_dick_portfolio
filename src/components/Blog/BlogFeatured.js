@@ -65,50 +65,81 @@ const BlogFeatured = ({ blogs }) => {
 }
 
 const BlogFeaturedWrapper = styled.section`
+display:-webkit-box;
+display:-ms-flexbox;
 display:flex;
-flex-direction: column;
+-webkit-box-orient: vertical;
+-webkit-box-direction: normal;
+-ms-flex-direction: column;
+        flex-direction: column;
 border: 1px solid lightgray;
 border-top: 1rem solid var(--mainPurple);
 text-align:center;
 
 .featured-header{
   width: 90%;
+  margin:16px auto;
   margin: 1rem auto;
 }
 
 .featured-title{
+  font-size:32px;
   font-size: 2rem;
   color: var(--textPurple);
+  margin-bottom:19.2px;
   margin-bottom: 1.2rem;
   line-height: 1;
 }
 
 .featured-subtitle {
   text-transform: uppercase;
+  letter-spacing:1.12px;
   letter-spacing: 0.07rem;
+  margin-bottom:16px;
   margin-bottom: 1rem;
+  display:-webkit-box;
+  display:-ms-flexbox;
   display:flex;
-  align-items: center;
-  justify-content:center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack:center;
+      -ms-flex-pack:center;
+          justify-content:center;
   background: var(--lighterGold);
 }
 
 .blog-card{
+  padding:3.2px 0;
   padding: 0.2rem 0;
+  display:-webkit-box;
+  display:-ms-flexbox;
   display:flex;
 }
 
 .fixed-img{
-  flex:2;
+  -webkit-box-flex:2;
+      -ms-flex:2;
+          flex:2;
   border-radius:0.5rem;
 }
 
 .title-link{
-  flex:3;
+  -webkit-box-flex:3;
+      -ms-flex:3;
+          flex:3;
+  margin-left:8px;
   margin-left: 0.5rem;
+  display:-webkit-box;
+  display:-ms-flexbox;
   display:flex;
-  flex-direction:column;
-  justify-content:center;
+  -webkit-box-orient:vertical;
+  -webkit-box-direction:normal;
+      -ms-flex-direction:column;
+          flex-direction:column;
+  -webkit-box-pack:center;
+      -ms-flex-pack:center;
+          justify-content:center;
   text-align:left;
 }
 
@@ -118,20 +149,28 @@ text-align:center;
 
 .featured-events{
  text-align: left;
+ padding-bottom:16px;
  padding-bottom: 1rem;
 }
 
 .featured-events li {
+  display:-webkit-box;
+  display:-ms-flexbox;
   display:flex;
 }
 
 .events-icon {
-  flex: 1;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  margin-top:3.2px;
   margin-top: 0.2rem;
 }
 
 .featured-events li span{
-  flex:7;
+  -webkit-box-flex:7;
+      -ms-flex:7;
+          flex:7;
 }
 
 

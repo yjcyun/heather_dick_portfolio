@@ -14,6 +14,7 @@ const VideoDetail = ({ video }) => {
 const VideoDetailWrapper = styled.div`
   .video-frame{
     padding:56.25% 0 0 0;
+    margin-bottom:48px;
     margin-bottom: 3rem;
     position:relative;
     background: black;

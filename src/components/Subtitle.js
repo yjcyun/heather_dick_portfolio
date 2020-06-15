@@ -23,15 +23,18 @@ color: ${props => props.white ? '#fff' : '000'};
 }
 
 .link{
+  font-size: 22.4px;
   font-size: 1.4rem;
   text-transform: uppercase;
+  padding-bottom: 32px;
   padding-bottom: 2rem;
   color:  ${props => props.white ? '#fff' : '000'};
-  display: ${props=>props.credits? 'none': 'block'}
+  display: ${props => props.credits ? 'none' : 'block'}
 }
 .link:hover{
   text-decoration: underline;
-  text-decoration-color: var(--mainGold);
+  -webkit-text-decoration-color: var(--mainGold);
+          text-decoration-color: var(--mainGold);
 }
 
 @media (min-width: 768px){

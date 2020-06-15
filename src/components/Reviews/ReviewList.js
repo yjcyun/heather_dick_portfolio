@@ -18,10 +18,13 @@ const ReviewList = () => {
 }
 
 const ReviewListWrapper = styled.section`
+display: -ms-grid;
 display: grid;
 /* grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); */
-grid-template-columns: 1fr 1fr;
-align-items:start;
+-ms-grid-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+-ms-grid-row-align:start;
+    align-items:start;
 grid-gap: 4rem;
 padding: 2rem 4rem;
 margin-bottom: 5rem;
@@ -29,7 +32,8 @@ margin-bottom: 5rem;
 @media(max-width: 576px){
   margin: 0 1rem 5rem 1rem;
   padding: 0;
-  grid-template-columns: 1fr;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
 }
 `;
 export default ReviewList

@@ -15,16 +15,25 @@ const BannerWrapper = styled.div`
 .event-title{
   text-transform: capitalize;
   font-family: 'Chasy';
+  font-size: 56px;
   font-size: 3.5rem;
   line-height: 1;
+  display:-webkit-box;
+  display:-ms-flexbox;
   display:flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: auto 16px;
   margin:auto 1rem;
 }
 
 .icon{
   width: 60px;
+  margin-right: 0px;
   margin-right: 0rem;
 }
 

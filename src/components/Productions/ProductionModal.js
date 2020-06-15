@@ -44,12 +44,14 @@ right:0;
   position: relative;
   top: 50%;
   left: 50%;
-  transform: translate(-50%,-50%);
+  -webkit-transform: translate(-50%,-50%);
+          transform: translate(-50%,-50%);
   max-width: 30vw;
   background-color: white;
   box-shadow: 0 0 5px rgba(0,0,0,0.05);
   z-index:101;
   overflow:auto;
+  padding: 32px;
   padding: 2rem;
 }
 .close-btn{
@@ -58,6 +60,7 @@ right:0;
   top:5px;
   border: none;
   background: transparent;
+  font-size: 24px;
   font-size: 1.5rem;
 }
   @media (max-width: 420px) {
@@ -72,7 +75,6 @@ right:0;
     .modal-content{
       max-width: 55vw;
   } 
-
 }
 `;
 

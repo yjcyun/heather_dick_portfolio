@@ -41,16 +41,20 @@ const SidebarWrapper = styled.div`
   width: 100%;
   height: calc(100vh - 80px);
   z-index:100;
+  display:-ms-grid;
   display:grid;
   place-items:center;
   opacity: 0 ;
+  -webkit-transition: var(--transition);
   transition: var(--transition);
-  transform: translateX(100%);
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
 }
 
 .show-sidebar {
   opacity:1;
-  transform: translateX(0);
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
 }
 
 
@@ -58,25 +62,37 @@ const SidebarWrapper = styled.div`
   display: block;
   text-align:left;
   color: var(--darkPurple);
+  font-size: 32px;
   font-size: 2rem;
   font-weight: bold;
+  -webkit-transition: var(--transition);
   transition: var(--transition);
+  margin-bottom: 8px;
   margin-bottom: 0.5rem;
   text-transform: uppercase;
+  letter-spacing: 1.6px;
   letter-spacing: 0.1rem;
 }
 
 .social-links-wrapper{
+  display:-webkit-box;
+  display:-ms-flexbox;
   display:flex;
-  justify-content:center;
+  -webkit-box-pack:center;
+      -ms-flex-pack:center;
+          justify-content:center;
+  margin-top: 32px;
   margin-top: 2rem;
 }
 
 .social-links {
+  display:-webkit-box;
+  display:-ms-flexbox;
   display:flex;
 }
 
 .social-icon, .email-icon{
+  font-size: 32px;
   font-size:2rem;
   color: var(--darkPurple);
 }
@@ -84,7 +100,8 @@ const SidebarWrapper = styled.div`
 
 @media (min-width: 996px) {
   .sidebar {
-    transform: translateX(-100%);
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
   }
 }
 

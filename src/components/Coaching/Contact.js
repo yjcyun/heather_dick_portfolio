@@ -28,23 +28,29 @@ const ContactWrapper = styled.div`
 text-align:center;
 
 .contact-container{
+  margin-top:32px;
   margin-top: 2rem;
+  padding:0 8px;
   padding: 0 0.5rem;
 }
 
 .coaching-contact {
+  margin:8px 0;
   margin:0.5rem 0;
   font-weight: 400;
+  font-size:24px;
   font-size: 1.5rem;
 }
 
 .coaching-contact.strong{
   font-weight: bold;
+  margin-bottom:32px;
   margin-bottom: 2rem;
 }
 
 .coaching-link {
   color: var(--mainPurple);
+  -webkit-transition:var(--transition);
   transition: var(--transition);
 }
 

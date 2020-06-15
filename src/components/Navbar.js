@@ -27,10 +27,18 @@ const NavbarWrapper = styled.nav`
   height: 5rem;
 
   .nav-header{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content:space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack:justify;
+        -ms-flex-pack:justify;
+            justify-content:space-between;
+    padding: 8px 12.8px;
     padding: 0.5rem 0.8rem;
+    height: 80px;
     height: 5rem;
   }
 
@@ -40,37 +48,46 @@ const NavbarWrapper = styled.nav`
 
   .nav-links a {
     color: #fff;
+    -webkit-transition: var(--transition);
     transition: var(--transition);
+    font-size: 16px;
     font-size: 1rem;
     text-transform: uppercase;
+    letter-spacing: 1.6px;
     letter-spacing: 0.1rem;
     text-decoration: none;
   }
 
   @media(min-width:768px){
     .nav-center{
+      display: -ms-grid;
       display: grid;
       height: 5rem;
       max-width: 1202px;
       margin: auto;
-      align-items: center !important;
+      -ms-grid-row-align: center !important;
+          align-items: center !important;
       padding: 0 1rem;
     }
 
     .nav-header {
-      justify-content:space-between;
-    }  
+      -webkit-box-pack:justify;
+          -ms-flex-pack:justify;
+              justify-content:space-between;
+    }
   }
 
   @media (min-width: 996px) {
   .nav-center {
-    grid-template-columns: 1fr 1.5fr;
+    -ms-grid-columns: 1fr 1.5fr;
+        grid-template-columns: 1fr 1.5fr;
   }
-  
+
   .nav-links{
     display: ${props => props.home ? 'none' : 'flex'};
     width: 100%;
-    justify-content:space-around;
+    -ms-flex-pack:distribute;
+        justify-content:space-around;
   } 
 
     .nav-links a:hover{
@@ -78,8 +95,13 @@ const NavbarWrapper = styled.nav`
     } 
     
     .logo-text{
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
-      flex-direction: column;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
       font-size: 1.3rem;
       width: auto;
       text-align: left;
@@ -89,7 +111,6 @@ const NavbarWrapper = styled.nav`
      .menu-btn {
       display: none;
     }
-  
   }
 `;
 

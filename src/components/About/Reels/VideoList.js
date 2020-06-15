@@ -24,13 +24,23 @@ const VideoList = ({ videos, onVideoSelect }) => {
 }
 
 const VideoListWrapper = styled.div`
+display:-ms-grid;
 display:grid;
+-ms-grid-columns: 1fr 1fr;
 grid-template-columns: 1fr 1fr;
 
 @media(min-width: 768px){
+  display:-webkit-box;
+  display:-ms-flexbox;
   display:flex;
+  -webkit-box-pack:center;
+  -ms-flex-pack:center;
   justify-content:center;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
   align-items: flex-start;
+  -webkit-box-flex:1;
+  -ms-flex:1;
   flex:1;
 }
 `;

@@ -34,37 +34,57 @@ margin-top: 3rem;
 padding-bottom: 10rem;
 
 .contact-content {
+  display:-webkit-box;
+  display:-ms-flexbox;
   display:flex;
-  justify-content:center;
+  -webkit-box-pack:center;
+      -ms-flex-pack:center;
+          justify-content:center;
 }
 
 .contact.social-links{
+  display:-webkit-box;
+  display:-ms-flexbox;
   display:flex;
-  flex-direction:row;
+  -webkit-box-orient:horizontal;
+  -webkit-box-direction:normal;
+      -ms-flex-direction:row;
+          flex-direction:row;
 }
 
 .contact.social-links a, .email-icon-wrapper{
+  display:-webkit-box;
+  display:-ms-flexbox;
   display:flex;
   border-radius: 50%;
+  width: 48px;
   width: 3rem;
+  height: 48px;
   height: 3rem;
   background: var(--lightGold);
+  margin: 0 8px;
   margin: 0 0.5rem;
   box-shadow: 0 5px 4px rgba(0,0,0,0.5);
+  -webkit-transition: var(--transition);
   transition: var(--transition);
 }
 
 .social-icon, .email-icon{
+  font-size: 48px;
   font-size:3rem;
+  margin: 0 16px;
   margin: 0 1rem;
   color:black;
+  -webkit-transition: 0.6s;
   transition: 0.6s;
+  -webkit-transition: var(--transition);
   transition: var(--transition);
 }
 
 .contact.social-links a:hover, 
 .email-icon-wrapper:hover {
-  transform: translate(0, -1.5rem);
+  -webkit-transform: translate(0, -1.5rem);
+          transform: translate(0, -1.5rem);
 }
 
 @media(min-width: 768px){

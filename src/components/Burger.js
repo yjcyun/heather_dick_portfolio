@@ -24,7 +24,9 @@ const MenuBtnWrapper = styled.div`
   min-width: 48px;
   padding: 0px;
   width: 48px;
-  align-self: center;
+  -ms-flex-item-align: center;
+      align-self: center;
+  -webkit-transition: all 0.3s;
   transition: all 0.3s;
   
   &:hover, 
@@ -36,18 +38,23 @@ const MenuBtnWrapper = styled.div`
 
 .menu-button.active .bar{
   background-color: transparent;
+  -webkit-transition: .2s;
   transition: .2s;
 }
 
 .menu-button.active .bar:before {
-  transform: rotate(45deg) translate(4px, 9px);
+  -webkit-transform: rotate(45deg) translate(4px, 9px);
+          transform: rotate(45deg) translate(4px, 9px);
+  -webkit-transition: .3s;
   transition: .3s;
   width: 28px;
   left: 1px;
 }
 
 .menu-button.active .bar:after {
-  transform: rotate(-45deg) translate(3px, -7px);
+  -webkit-transform: rotate(-45deg) translate(3px, -7px);
+          transform: rotate(-45deg) translate(3px, -7px);
+  -webkit-transition: .3s;
   transition: .3s;
   width: 28px;
   left: 1px;
@@ -61,8 +68,10 @@ const MenuBtnWrapper = styled.div`
   border-radius: 3px;
   display: block;
   position: relative;
+  -webkit-transition: all 0.3s;
   transition: all 0.3s;
-  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
 }
 
 .bar:before,
@@ -74,8 +83,10 @@ const MenuBtnWrapper = styled.div`
   height: 3px;
   margin: 4px auto;
   position: absolute;
+  -webkit-transition: all 0.3s;
   transition: all 0.3s;
-  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
 }
 
 .bar:before {

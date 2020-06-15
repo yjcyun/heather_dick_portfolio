@@ -45,45 +45,57 @@ const Event = () => {
 const EventWrapper = styled.div`
 text-align:center;
 .event-container {
+  margin:96px auto;
   margin: 6rem auto;
 }
 
 .event-notification-wrapper {
-  filter: drop-shadow(-1px 6px 3px rgba(50, 50, 0, 0.5));
+  -webkit-filter: drop-shadow(-1px 6px 3px rgba(50, 50, 0, 0.5));
+          filter: drop-shadow(-1px 6px 3px rgba(50, 50, 0, 0.5));
 }
 
 .event-notification{
+  margin:16px auto;
   margin: 1rem auto;
   width: 90%;
+  padding:32px 16px 160px;
   padding:2rem 1rem 10rem;
-  clip-path: polygon(100% 0, 100% 100%, 50% 75%, 0% 100%, 0 50%, 0% 0%);
+  -webkit-clip-path: polygon(100% 0, 100% 100%, 50% 75%, 0% 100%, 0 50%, 0% 0%);
+          clip-path: polygon(100% 0, 100% 100%, 50% 75%, 0% 100%, 0 50%, 0% 0%);
   background: var(--mainPurple);
 }
 
 .event-notification h4{
   color: white;
   margin: 0 auto;
+  font-size:24px;
   font-size:1.5rem;
+  padding:0 16px;
   padding: 0 1rem;
 }
 
 .contact-container{
+  margin-top:32px;
   margin-top: 2rem;
 }
 
 .coaching-contact {
+  margin:8px 0;
   margin:0.5rem 0;
   font-weight: 400;
+  font-size:24px;
   font-size: 1.5rem;
 }
 
 .coaching-contact.strong{
   font-weight: bold;
+  margin-bottom:32px;
   margin-bottom: 2rem;
 }
 
 .coaching-link {
   color: var(--mainPurple);
+  -webkit-transition:var(--transition);
   transition: var(--transition);
 }
 
@@ -96,7 +108,8 @@ text-align:center;
     margin: 1rem auto;
     width: 80%;
     padding:3rem;
-    clip-path: polygon(100% 0, 95% 50%, 100% 100%, 0% 100%, 5% 50%, 0% 0%);
+    -webkit-clip-path: polygon(100% 0, 95% 50%, 100% 100%, 0% 100%, 5% 50%, 0% 0%);
+            clip-path: polygon(100% 0, 95% 50%, 100% 100%, 0% 100%, 5% 50%, 0% 0%);
     background: var(--mainPurple);
   }
 }

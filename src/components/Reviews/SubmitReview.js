@@ -21,6 +21,7 @@ const SubmitReview = () => {
 const SubmitReviewWrapper = styled.div`
 text-align:center;
 .about-btn{
+  margin-top:32px;
   margin-top:2rem;
 }
 `;

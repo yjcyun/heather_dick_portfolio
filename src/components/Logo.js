@@ -20,22 +20,34 @@ const Logo = () => {
 const LogoWrapper = styled.section`
 position:relative;
   .logo-link{
+      display:-webkit-box;
+      display:-ms-flexbox;
       display:flex;
-      align-items: center;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
     }
 
   .logo-img{
     width: 40px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 
   .logo-text{
+    letter-spacing:1.6px;
     letter-spacing: 0.1rem;
     font-weight: normal;
     line-height: 1;
     margin-bottom: 0;
+    margin-left:8px;
     margin-left: 0.5rem;
     color: #fff;
   }

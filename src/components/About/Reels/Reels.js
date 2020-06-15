@@ -58,22 +58,39 @@ const ReelsWrapper = styled.section`
   padding: 1rem 1rem 5rem;
 
   .videos{
-  display:flex;
-  flex-direction:column;
-  margin-top: 1rem;
+    display:-webkit-box;
+    display:-ms-flexbox;
+    display:flex;
+    -webkit-box-orient:vertical;
+    -webkit-box-direction:normal;
+    -ms-flex-direction:column;
+    flex-direction:column;
+    margin-top:16px;
+    margin-top: 1rem;
   }
 
  .max-width{
-   display:flex;
-   flex-direction:column;
-   justify-content:space-between;
- }
+    display:-webkit-box;
+    display:-ms-flexbox;
+    display:flex;
+    -webkit-box-orient:vertical;
+    -webkit-box-direction:normal;
+    -ms-flex-direction:column;
+    flex-direction:column;
+    -webkit-box-pack:justify;
+    -ms-flex-pack:justify;
+    justify-content:space-between;
+  }
 
  @media (min-width: 996px) {
-   margin:2rem auto 0;
-   margin-top: 0;
-   padding: 3rem 7rem 7rem;
+  margin:2rem auto 0;
+  margin-top: 0;
+  padding: 3rem 7rem 7rem;
+
   .max-width{
+    -webkit-box-orient:horizontal;
+    -webkit-box-direction:normal;
+    -ms-flex-direction:row;
     flex-direction:row;
   }
  }

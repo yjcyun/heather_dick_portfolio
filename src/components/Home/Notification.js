@@ -47,9 +47,13 @@ const ToastWrapper = styled.div`
   background-color: white;
   color: black;
   border-top: 10px solid var(--mainPurple);
+  border-bottom-right-radius: 16px;
   border-bottom-right-radius: 1rem;
+  border-bottom-left-radius: 16px;
   border-bottom-left-radius: 1rem;
+  height: 112px;
   height: 7rem;
+  width: 240px;
   width: 15rem;
 }
 

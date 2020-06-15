@@ -18,30 +18,44 @@ const CoachingItem = ({ image, desc, title }) => {
 }
 
 const CoachingItemWrapper = styled.section`
+display: -webkit-box;
+display: -ms-flexbox;
 display: flex;
 padding: 3rem 0 0;
 
   .coaching-img {
+    height: 240px;
     height: 15rem;
-    flex:2;
+    -webkit-box-flex:2;
+        -ms-flex:2;
+            flex:2;
+    margin-bottom: 32px;
     margin-bottom: 2rem;
   }
 
   .coaching-text{
-    flex:3;
+    -webkit-box-flex:3;
+        -ms-flex:3;
+            flex:3;
+    padding: 0 32px;
     padding: 0 2rem;
   }
 
   h1{
     font-family: var(--titleFont);
+    font-size: 25.6px;
     font-size:1.6rem;
     font-weight: 400;
+    margin-bottom: 8px;
     margin-bottom:0.5rem;
     display: inline-block;
   }
   
   @media (max-width: 768px){
-    flex-direction:column;
+    -webkit-box-orient:vertical;
+    -webkit-box-direction:normal;
+        -ms-flex-direction:column;
+            flex-direction:column;
     padding: 3rem 1rem 0;
 
     .coaching-text{

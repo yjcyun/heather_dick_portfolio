@@ -12,11 +12,18 @@ const VideoItem = ({ thumbnail, video, onVideoSelect }) => {
 
 const VideoItemWrapper = styled.div`
 margin: 0.5rem;
+display:-webkit-box;
+display:-ms-flexbox;
 display:flex;
+-webkit-box-pack:center;
+-ms-flex-pack:center;
 justify-content:center;
+-webkit-box-align:center;
+-ms-flex-align:center;
 align-items:center;
 
 .thumbnail-img{
+  width: 144px;
   width: 9rem;
   cursor: pointer;
 }

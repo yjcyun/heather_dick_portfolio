@@ -15,11 +15,17 @@ const Title = ({ title, subtitle }) => {
 const TitleWrapper = styled.section`
 margin: 0 1rem 5rem;
 text-align:center;
+display:-webkit-box;
+display:-ms-flexbox;
 display:flex;
-flex-direction:column;
+-webkit-box-orient:vertical;
+-webkit-box-direction:normal;
+-ms-flex-direction:column;
+        flex-direction:column;
 
 .title{
   font-family: var(--titleFont);
+  font-size: 40px;
   font-size:2.5rem;
   text-transform: uppercase;
   display: inline-block;
@@ -27,7 +33,9 @@ flex-direction:column;
 }
 
 .subtitle{
+  font-size: 19.2px;
   font-size:1.2rem;
+  padding: 16px;
   padding:1rem;
 }
 

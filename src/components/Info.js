@@ -36,12 +36,17 @@ const Info = ({ children, reverse, img }) => {
 }
 
 const InfoWrapper = styled.section`
+display: -ms-grid;
 display: grid;
-grid-template-columns: 1fr;
+-ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
 grid-column-gap:2rem;
 padding:1.5rem 1rem;
-justify-content:center;
-align-items: start;
+-webkit-box-pack:center;
+-ms-flex-pack:center;
+        justify-content:center;
+-ms-grid-row-align: start;
+    align-items: start;
 /* background-color: #f2f4fb; */
 /* background-color: #131217; */
 background-color: var(--lightestPurple);
@@ -51,6 +56,7 @@ margin: 0 auto;
 
 .info-text {
   text-align: left;
+  padding: 32px 16px;
   padding: 2rem 1rem;
   order: ${props => props.reverse ? '2' : ''};
 }
@@ -58,7 +64,9 @@ margin: 0 auto;
 .info-subtitle{
   font-family: var(--titleFont);
   font-weight: 300;
+  font-size: 32px;
   font-size: 2rem;
+  margin-bottom: 6.4px;
   margin-bottom: 0.4rem;
 }
 
@@ -67,10 +75,12 @@ margin: 0 auto;
 }
 
 .info-contact{
+  margin: 32px 0 16px;
   margin: 2rem 0 1rem;
 }
 
 .info-author{
+  font-size: 27.2px;
   font-size: 1.7rem;
   font-family: var(--titleFont);
 }

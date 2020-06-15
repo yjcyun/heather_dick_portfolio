@@ -22,32 +22,42 @@ const ReviewItem = ({ review }) => {
 const ReviewItemWrapper = styled.div`
 .bubble{
   position: relative;
+  font-size: 16px;
   font-size: 1rem;
   line-height: 24px;
   background: var(--lightestPurple);
   border-radius: 40px;
   border-bottom-left-radius: 0;
+  padding: 24px 40px;
   padding: 1.5rem 2.5rem;
   text-align: center;
 }
 
 .pointer {
+	height: 64px;
 	height: 4rem;
+  width: 112px;
   width: 7rem;
-  clip-path: polygon(0 0, 0 100%, 100% 0);
+  -webkit-clip-path: polygon(0 0, 0 100%, 100% 0);
+          clip-path: polygon(0 0, 0 100%, 100% 0);
   background:var(--lightestPurple);
+	margin-top: -16px;
 	margin-top: -1rem;
 }
 
 .author{
   position: absolute;
+  bottom: -48px;
   bottom: -3rem;
+  left: 80px;
   left: 5rem;
 }
 
 .quote-icon{
   color: var(--mainPurple);
+  font-size: 40px;
   font-size: 2.5rem;
+  margin-right: 16px;
   margin-right: 1rem;
 }
 `;
