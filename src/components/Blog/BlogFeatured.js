@@ -134,6 +134,7 @@ text-align:center;
   flex:7;
 }
 
+
 a{
   color: black !important;
   text-decoration: none !important;

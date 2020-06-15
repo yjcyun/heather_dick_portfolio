@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { graphql, useStaticQuery, Link } from 'gatsby';
 import styled from 'styled-components';
-import Fade from 'react-reveal/Fade';
+import Bounce from 'react-reveal/Bounce';
 import Obfuscate from 'react-obfuscate';
 import ResumeItem from './ResumeItem';
 import ResumeFeatured from './ResumeFeatured';
@@ -61,7 +61,7 @@ const ResumeList = () => {
         <Subtitle subtitle="SELECTED CREDITS" credits />
         <div className="resume-column">
           <div className="resume-content">
-            <Fade bottom>
+            <Bounce bottom duration={2000}>
               {categories.map((item, index) => {
                   return (
                     <div key={index} className="resume-item">
@@ -72,7 +72,7 @@ const ResumeList = () => {
                     </div>
                   )
                 })}
-            </Fade>
+            </Bounce>
             <Obfuscate email="info@heatherdick.com" aria-label="Email Me" className="about-btn-container">
               <button className="btn about-btn">contact for full resume</button>
             </Obfuscate>
