@@ -42,8 +42,7 @@ const getCategories = items => {
 }
 
 const ResumeList = () => {
-  const { resumes: { nodes: resume } } = useStaticQuery(query);
-  const { notifications: { nodes: notification } } = useStaticQuery(query);
+  const { resumes: { nodes: resume }, notifications: { nodes: notification }} = useStaticQuery(query);
 
   // array of unique categories
   const [categories] = useState(getCategories(resume));
