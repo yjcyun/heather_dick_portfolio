@@ -114,9 +114,10 @@ margin:3rem auto;
   margin: 1rem 0;
   letter-spacing: 0.1rem;
   display:inline-block;
-  background: url(${Brush});
+  /* background: url(${Brush});
   background-size: cover;
-  background-position:center;
+  background-position:center; */
+  color: var(--lighterPurple);
 }
 
 .about-btn-container {

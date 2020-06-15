@@ -1,12 +1,12 @@
 import React from 'react'
 import styled from 'styled-components';
 
-const BannerSubtitle = ({icon, title}) => {
+const BannerSubtitle = ({ icon, title }) => {
   return (
     <BannerWrapper>
       <h2 className="event-title">
-        <img src={icon} className="horn" />  {title}
-        </h2>
+        <img src={icon} className="horn" alt="horn" />  {title}
+      </h2>
     </BannerWrapper>
   )
 }

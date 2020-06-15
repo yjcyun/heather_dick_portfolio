@@ -2,11 +2,11 @@ import React from 'react'
 import styled from 'styled-components';
 import { graphql, useStaticQuery } from 'gatsby';
 import Image from 'gatsby-image';
-import paper from '../images/paper.png';
+import subtle from '../images/subtle-dark-vertical.png';
 
 const getImage = graphql`
   query {
-    defaultBcg:file(relativePath: {eq: "headshots/headshot4.jpg"}) {
+    defaultBcg:file(relativePath: {eq: "headshots/headshot1.jpg"}) {
       childImageSharp {
         fluid {
           ...GatsbyImageSharpFluid
@@ -42,8 +42,11 @@ grid-column-gap:2rem;
 padding:1.5rem 1rem;
 justify-content:center;
 align-items: start;
-background-color: #f2f4fb;
-background-image: url(${paper});
+/* background-color: #f2f4fb; */
+/* background-color: #131217; */
+background-color: var(--lightestPurple);
+/* color: white; */
+background-image: url(${subtle});
 margin: 0 auto;
 
 .info-text {
@@ -57,7 +60,6 @@ margin: 0 auto;
   font-weight: 300;
   font-size: 2rem;
   margin-bottom: 0.4rem;
-  letter-spacing: 0.1rem;
 }
 
 .info-text p{

@@ -11,7 +11,7 @@ import SEO from '../components/SEO';
 
 export const query = graphql`
   query {
-    aboutImg: file(relativePath:{eq:"headshots/headshot4.jpg"}){
+    aboutImg: file(relativePath:{eq:"headshots/headshot1.jpg"}){
       childImageSharp {
         fluid {
           ...GatsbyImageSharpFluid

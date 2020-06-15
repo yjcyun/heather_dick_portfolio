@@ -12,8 +12,6 @@ const ProductionsItem = ({ item }) => {
           <p><strong>{show}</strong> by {company}</p>
         </div>
 
-
-
         {/* POSTER LAYOVER */}
         <div className="poster-layover">
           <button className="btn production-btn">learn more<hr className="short-hr" />
@@ -31,21 +29,14 @@ const ProductionsItemWrapper = styled.div`
   transition: var(--transition);
   display: grid;
   position:relative;
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
 }
 
 .poster-gatsby-img{
   height: 25rem;
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
 }
 
 .poster-footer{
   padding: 0.5rem;
-  background: rgba(255,255,255,0.5);
-  border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 5px;
 }
 
 .poster-layover{
@@ -60,7 +51,6 @@ const ProductionsItemWrapper = styled.div`
   display:flex;
   justify-content: flex-start;
   align-items: flex-end;
-  border-radius: 10px;
 }
 
 .poster-img:hover .poster-layover{

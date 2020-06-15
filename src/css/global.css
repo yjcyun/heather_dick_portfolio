@@ -25,7 +25,6 @@ Variables
   --beige: #ece7df;
   --mainFont: "Poppins", sans-serif;
   --titleFont: "Oswald", sans-serif;
-  --cursiveFont: "Playball", cursive;
   --transition: all 0.2s linear;
   --minHeight: calc(100vh - 213px);
 }
@@ -131,7 +130,7 @@ Button
 }
 
 .filter-btn {
-  margin: 2rem 0.5rem 3rem;
+  margin: 0 0.5rem 3rem;
   padding: 0.5rem 1rem;
   /* background: var(--lightPurple); */
   color: var(--mainPurple);
@@ -168,6 +167,7 @@ Button
 .blog-btn {
   overflow: hidden;
   text-align: center;
+  border-radius:2rem;
 }
 
 .about-btn:after,
@@ -197,7 +197,7 @@ Button
 .about-btn:hover:after,
 .contact-btn:hover:after,
 .blog-btn:hover:after {
-  width: 90%;
+  width: 100%;
   opacity: 1;
 }
 
