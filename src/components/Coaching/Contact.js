@@ -1,21 +1,24 @@
 import React from 'react';
 import { Link } from 'gatsby';
 import styled from 'styled-components';
+import Bounce from 'react-reveal/Bounce';
 import BannerSubtitle from '../BannerSubtitle';
 import question from '../../images/question.png';
 
 const Contact = () => {
   return (
     <ContactWrapper>
-      <BannerSubtitle icon={question} title="Have any questions?" />
-      <div className="contact-container">
-        <h4 className="coaching-contact">Do you need help with your upcoming theatre/vocal project?</h4>
-        <h4 className="coaching-contact strong">Contact Heather and she will guide you to the right direction.</h4>
+      <Bounce bottom duration={1000} delay={200} >
+        <BannerSubtitle icon={question} title="Have any questions?" />
+        <div className="contact-container">
+          <h4 className="coaching-contact">Do you need help with your upcoming theatre/vocal project?</h4>
+          <h4 className="coaching-contact strong">Contact Heather and she will guide you to the right direction.</h4>
 
-        <Link to="/contact">
-          <button className="btn contact-btn">send your questions</button>
-        </Link>
-      </div>
+          <Link to="/contact">
+            <button className="btn contact-btn">send your questions</button>
+          </Link>
+        </div>
+      </Bounce>
     </ContactWrapper>
   )
 }

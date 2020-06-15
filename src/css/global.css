@@ -167,13 +167,15 @@ Button
 }
 
 .about-btn,
-.contact-btn {
+.contact-btn,
+.blog-btn {
   overflow: hidden;
   text-align: center;
 }
 
 .about-btn:after,
-.contact-btn:after {
+.contact-btn:after,
+.blog-btn:after {
   width: 0;
   height: 103%;
   top: 50%;
@@ -189,18 +191,22 @@ Button
 .about-btn:hover,
 .about-btn:active,
 .contact-btn:hover,
-.contact-btn:active {
+.contact-btn:active,
+.blog-btn:hover,
+.blog-btn:active {
   color: #fff;
 }
 
 .about-btn:hover:after,
-.contact-btn:hover:after {
+.contact-btn:hover:after,
+.blog-btn:hover:after {
   width: 90%;
   opacity: 1;
 }
 
 .about-btn:active:after,
-.contact-btn:active:after {
+.contact-btn:active:after,
+.blog-btn:active:after {
   width: 101%;
   opacity: 1;
 }
@@ -243,10 +249,6 @@ Button
   opacity: 1;
 }
 
-.active {
-  background: #000;
-}
-
 /*=============== 
 Pages
 ===============*/
@@ -267,10 +269,10 @@ Pages
 }
 
 @media (max-width: 768px) {
-  .page {
+  /* .page {
     margin: 6rem auto 0;
     padding-bottom: 5rem;
-  }
+  } */
   .contact-page {
     padding-bottom: 0;
   }
@@ -290,10 +292,20 @@ icons
 .featured-icons {
   display: flex;
   justify-content: center;
+  align-items:center;
+  margin-top: 1rem;
 }
 
+.featured-icons .social-icon{
+  font-size: 1.7rem;
+  margin: 0 0.5rem;
+}
+
+
+
+
 .social-icon {
-  color: var(--textPurple);
+  color: var(--lightPurple);
   margin-right: 1rem;
   font-size: 1rem;
 }

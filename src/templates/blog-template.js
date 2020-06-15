@@ -76,8 +76,8 @@ const BlogTemplate = ({ data }) => {
             <Image fluid={thumbnail.childImageSharp.fluid} className="thumbnail" />
           </div>
           <ReactMarkdown source={blog} className="blog-markdown" />
-          <Link to="/blog" className="blog-btn">
-            <button className="btn">see all blogs</button>
+          <Link to="/blog" >
+            <button className="blog-btn btn">see all blogs</button>
           </Link>
         </div>
         {/* featured sidebar */}
@@ -186,9 +186,6 @@ img{
   .blog-title{
   font-size: 4rem;
   }
-
- 
-
 }
 `;
 

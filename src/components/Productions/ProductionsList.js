@@ -107,15 +107,18 @@ const ProductionsList = ({ posters }) => {
 
 const FilterBtnWrapper = styled.div`
 text-align:center;
-  display:flex;
-  flex-direction:row;
-  justify-content:center;
+display:flex;
+flex-direction:row;
+justify-content:center;
 `;
 
 const ProductionsListWrapper = styled.div`
 display:grid;
 grid-row-gap: 1.5rem;
-padding: 0 1rem;
+padding: 3rem 2rem;
+background: var(--lightestPurple);
+background-image: url("https://www.transparenttextures.com/patterns/subtle-dark-vertical.png");
+border-radius: 1rem;
 
 .modal-container{
   display:grid;

@@ -31,6 +31,7 @@ const Contact = () => {
 
 const ContactWrapper = styled.div`
 margin-top: 3rem;
+padding-bottom: 10rem;
 
 .contact-content {
   display:flex;

@@ -31,16 +31,21 @@ const ProductionsItemWrapper = styled.div`
   transition: var(--transition);
   display: grid;
   position:relative;
-  border-radius: 5px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
 }
 
 .poster-gatsby-img{
   height: 25rem;
-  border-radius: 10px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
 }
 
 .poster-footer{
-  margin: 0.5rem 0;
+  padding: 0.5rem;
+  background: white;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
 }
 
 .poster-layover{

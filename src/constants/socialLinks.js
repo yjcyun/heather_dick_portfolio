@@ -34,7 +34,7 @@ const data = [
 
 const links = data.map(link => (
   <li key={link.id}>
-    <a href={link.url}>
+    <a href={link.url} className="sociallink-a">
       {link.icon}
     </a>
   </li>

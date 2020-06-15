@@ -39,8 +39,12 @@ const BlogCardWrapper = styled.div`
   transition: var(--transition);
   margin-bottom: '2rem';
   text-align:center;
-  background: var(--lightGrey);
+  background: var(--beige);
   border-radius: 10px;
+}
+
+.blog:hover .blog-text h3{
+  color: var(--lightPurple);
 }
 
 .blog article {
@@ -68,9 +72,11 @@ const BlogCardWrapper = styled.div`
   font-size:0.9rem;
   color: grey;
 }
+
 .dot-icon{
   display: ${props => props.hide ? 'none' : ''}
 }
+
 .blog-text h3{
   margin: 0.5rem auto;
   text-transform: capitalize;

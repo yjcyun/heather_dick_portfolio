@@ -1,14 +1,17 @@
 import React from 'react'
 import styled from 'styled-components';
 import Image from 'gatsby-image';
+import Slide from 'react-reveal/Slide';
 
 const CoachingItem = ({ image, desc, title }) => {
   return (
     <CoachingItemWrapper>
       <Image fluid={image} className="coaching-img" />
       <div className="coaching-text">
+      <Slide bottom duration={1000}>
         <h1>{title}</h1>
         <p className="coaching-desc">{desc}</p>
+        </Slide>
       </div>
     </CoachingItemWrapper>
   )
@@ -33,7 +36,6 @@ padding: 3rem 0 0;
     font-family: var(--titleFont);
     font-size:1.6rem;
     font-weight: 400;
-    background: var(--lightGrey);
     margin-bottom:0.5rem;
     display: inline-block;
   }

@@ -1,17 +1,20 @@
 import React from 'react';
 import { FaQuoteLeft } from 'react-icons/fa';
 import styled from 'styled-components';
+import Slide from 'react-reveal/Slide';
 
 const ReviewItem = ({ review }) => {
   const { text, author } = review;
 
   return (
     <ReviewItemWrapper>
-      <div className="bubble">
-        <p><FaQuoteLeft className="quote-icon" />{text}</p>
-        <span className="author">-{author}</span>
-      </div>
-      <div className="pointer"></div>
+      <Slide bottom duration={1000}>
+        <div className="bubble">
+          <p><FaQuoteLeft className="quote-icon" />{text}</p>
+          <span className="author">-{author}</span>
+        </div>
+        <div className="pointer"></div>
+      </Slide>
     </ReviewItemWrapper>
   )
 }

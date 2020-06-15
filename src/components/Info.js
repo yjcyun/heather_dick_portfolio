@@ -15,21 +15,21 @@ const getImage = graphql`
   }
 `;
 
-const Info = ({ children, reverse,img }) => {
+const Info = ({ children, reverse, img }) => {
   const data = useStaticQuery(getImage);
 
   return (
     <InfoWrapper reverse={reverse}>
-      <div className="info-text">
-        {children}
-      </div>
-      <div className="info-image">
-        <Image
-          className="background-img"
-          fluid={img || data.defaultBcg.childImageSharp.fluid}
-        >
-        </Image>
-      </div>
+        <div className="info-text">
+          {children}
+        </div>
+        <div className="info-image">
+          <Image
+            className="background-img"
+            fluid={img || data.defaultBcg.childImageSharp.fluid}
+          >
+          </Image>
+        </div>
     </InfoWrapper>
   )
 }

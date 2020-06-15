@@ -1,8 +1,9 @@
 import React from 'react'
 import { graphql, useStaticQuery, Link } from 'gatsby';
 import styled from 'styled-components';
-import BannerSubtitle from '../BannerSubtitle';
 import horn from '../../images/horn.png';
+import Bounce from 'react-reveal/Bounce';
+import BannerSubtitle from '../BannerSubtitle';
 
 const query = graphql`
   {
@@ -22,20 +23,21 @@ const Event = () => {
   return (
     <EventWrapper>
       <div className="event-container">
-        <BannerSubtitle icon={horn} title="what's upcoming?" />
-        <div className="event-notification-wrapper">
-          <div className="event-notification">
-            {nodes.map(item => {
-              if (item.coaching) {
-                return (
-                  <h4 key={item.id}>{item.notification}</h4>
-                )
-              }
-            })}
+        <Bounce bottom duration={1000}>
+          <BannerSubtitle icon={horn} title="what's upcoming?" />
+          <div className="event-notification-wrapper">
+            <div className="event-notification">
+              {nodes.map(item => {
+                if (item.coaching) {
+                  return (
+                    <h4 key={item.id}>{item.notification}</h4>
+                  )
+                }
+              })}
+            </div>
           </div>
-        </div>
+        </Bounce>
       </div>
-
     </EventWrapper>
   )
 }
@@ -90,13 +92,13 @@ text-align:center;
 }
 
 @media (min-width: 768px) {
-.event-notification{
-  margin: 1rem auto;
-  width: 80%;
-  padding:3rem;
-  clip-path: polygon(100% 0, 95% 50%, 100% 100%, 0% 100%, 5% 50%, 0% 0%);
-  background: var(--mainPurple);
-}
+  .event-notification{
+    margin: 1rem auto;
+    width: 80%;
+    padding:3rem;
+    clip-path: polygon(100% 0, 95% 50%, 100% 100%, 0% 100%, 5% 50%, 0% 0%);
+    background: var(--mainPurple);
+  }
 }
 `;
 

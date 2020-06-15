@@ -18,10 +18,14 @@ const query = graphql`
 
 const BlogFeatured = ({ blogs }) => {
   const { notification: { nodes: notification } } = useStaticQuery(query);
+
   const events = notification.map(item => {
     return (
-      <ul style={{ textAlign: 'left', paddingBottom: '1rem' }} key={item.id}>
-        <li><GiChainedHeart style={{ color: 'tomato' }} /> {item.notification}</li>
+      <ul className="featured-events" key={item.id}>
+        <li>
+          <GiChainedHeart className="events-icon" style={{color:'tomato'}}/>
+          <span> {item.notification}</span>
+        </li>
       </ul>
     )
   });
@@ -63,7 +67,6 @@ const BlogFeatured = ({ blogs }) => {
 const BlogFeaturedWrapper = styled.section`
 display:flex;
 flex-direction: column;
-/* margin-left: 2.5rem; */
 border: 1px solid lightgray;
 border-top: 1rem solid var(--mainPurple);
 text-align:center;
@@ -72,16 +75,18 @@ text-align:center;
   width: 90%;
   margin: 1rem auto;
 }
+
 .featured-title{
   font-size: 2rem;
   color: var(--textPurple);
-  margin-bottom: 2rem;
+  margin-bottom: 1.2rem;
+  line-height: 1;
 }
 
 .featured-subtitle {
   text-transform: uppercase;
   letter-spacing: 0.07rem;
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
   display:flex;
   align-items: center;
   justify-content:center;
@@ -92,6 +97,7 @@ text-align:center;
   padding: 0.2rem 0;
   display:flex;
 }
+
 .fixed-img{
   flex:2;
   border-radius:0.5rem;
@@ -105,8 +111,27 @@ text-align:center;
   justify-content:center;
   text-align:left;
 }
+
 .title-link p{
   font-weight: bold;
+}
+
+.featured-events{
+ text-align: left;
+ padding-bottom: 1rem;
+}
+
+.featured-events li {
+  display:flex;
+}
+
+.events-icon {
+  flex: 1;
+  margin-top: 0.2rem;
+}
+
+.featured-events li span{
+  flex:7;
 }
 
 a{

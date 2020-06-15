@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { graphql, useStaticQuery, Link } from 'gatsby';
 import styled from 'styled-components';
+import Fade from 'react-reveal/Fade';
 import ResumeItem from './ResumeItem';
 import ResumeFeatured from './ResumeFeatured';
 import Subtitle from '../../Subtitle';
@@ -60,9 +61,8 @@ const ResumeList = () => {
         <Subtitle subtitle="SELECTED CREDITS" credits />
         <div className="resume-column">
           <div className="resume-content">
-            <div>
-              {
-                categories.map((item, index) => {
+            <Fade bottom>
+              {categories.map((item, index) => {
                   return (
                     <div key={index} className="resume-item">
                       <h1 className="resume-category">
@@ -72,7 +72,7 @@ const ResumeList = () => {
                     </div>
                   )
                 })}
-            </div>
+            </Fade>
             <Link to="/contact" className="about-btn-container">
               <button className="btn about-btn">contact for full resume</button>
             </Link>
