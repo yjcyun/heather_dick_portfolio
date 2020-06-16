@@ -41,11 +41,20 @@ const SidebarWrapper = styled.div`
   width: 100%;
   height: calc(100vh - 80px);
   z-index:100;
-  display:-ms-grid;
+  /* display:-ms-grid;
   display:grid;
   justify-content: center;
   align-items:center;
-  place-items:center;
+  place-items:center; */
+   display:-webkit-box;
+  display:-ms-flexbox;
+  display:flex;
+  -webkit-box-pack:center;
+  -ms-flex-pack:center;
+          justify-content:center;
+  -webkit-box-align:center;
+  -ms-flex-align:center;
+          align-items:center;
   opacity: 0 ;
   -webkit-transition: var(--transition);
   transition: var(--transition);

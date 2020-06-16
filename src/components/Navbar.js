@@ -62,8 +62,9 @@ const NavbarWrapper = styled.nav`
 
   @media(min-width:768px){
     .nav-center{
-      display: -ms-grid;
-      display: grid;
+      display:-webkit-box;
+      display:-ms-flexbox;
+      display:flex;
       height: 5rem;
       max-width: 1202px;
       margin: auto;
@@ -72,19 +73,21 @@ const NavbarWrapper = styled.nav`
       padding: 0 1rem;
     }
 
+    .nav-links{
+      -webkit-box-flex:1.5;
+          -ms-flex:1.5;
+              flex:1.5;
+    }
+
     .nav-header {
       -webkit-box-pack:justify;
           -ms-flex-pack:justify;
               justify-content:space-between;
+              flex: 1
     }
   }
 
   @media (min-width: 996px) {
-  .nav-center {
-    -ms-grid-columns: 1fr 1.5fr;
-        grid-template-columns: 1fr 1.5fr;
-  }
-
   .nav-links{
     display: -webkit-box;
     display: -ms-flexbox;
