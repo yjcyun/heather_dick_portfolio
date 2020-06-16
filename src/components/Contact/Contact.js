@@ -3,6 +3,7 @@ import { graphql } from 'gatsby';
 import { FaRegEnvelope } from 'react-icons/fa';
 import styled from 'styled-components';
 import SocialLinks from '../../constants/socialLinks';
+import Info from '../Info';
 
 export const query = graphql`
   query {
@@ -20,10 +21,17 @@ const Contact = () => {
   return (
     <ContactWrapper>
       <div className="contact-content">
-        <SocialLinks styleClass="social-links contact" home />
+        <Info>
+          <h2 className="info-subtitle">Heather Dick</h2>
+          <p>email@email.com</p><br/>
+          <h2 className="info-subtitle">Management Comapny</h2>
+          <p>email@email.com</p>
+          <p>123-123-1234</p>
+        </Info>
+        {/* <SocialLinks styleClass="social-links contact" home />
         <a href={`mailto:%69%6E%66%6F%40%68%65%61%74%68%65%72%64%69%63%6B%2E%63%6F%6D`} className="email-icon-wrapper">
           <FaRegEnvelope className="social-icon email-icon" />
-        </a>
+        </a> */}
       </div>
     </ContactWrapper>
   )

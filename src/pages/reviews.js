@@ -8,7 +8,7 @@ import SubmitReview from '../components/Reviews/SubmitReview';
 const Reviews = () => {
   return (
     <Layout>
-    <SEO title="Reviews & Testimonials" description="reviews and testimonials page"/>
+      <SEO title="Reviews" description="Testimonials from clients, performers & directors Heather Dick has worked with over the years. Also, quotes from professional reviews of notable shows either starred in or directed by Heather Dick."/>
       <div className="page">
         <Title
           title="Reviews & Testimonials"

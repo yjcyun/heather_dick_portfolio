@@ -24,7 +24,7 @@ export const query = graphql`
 const about = ({ data }) => {
   return (
     <Layout>
-      <SEO title="About" description="about Heather" />
+      <SEO title="Biography" description="Heather Dick is an internationally recognized Canadian voice and performance artist. She is an actor, director, writer, comedian, coach, Designated Linklater Voice Teacher & audio book narrator. She has worked in theatre, film, television, commercials & has done voice work. She is the founding Artistic Director of the Sirius Theatrical Company." />
       <div className="about-page">
         <Title title="biography" subtitle="The Sirius Theatrical Company works out of the 80-seat black box theatre, Donald Hendry Hall, in Mimico Presbyterian Church in south Etobicoke. We focus on reflecting the cultural and artistic diversity of the greater Toronto community and in particular the many different cultures, languages, social and age groups that make up the Etobicoke community in which we live and work." />
 

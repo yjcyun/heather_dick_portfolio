@@ -25,7 +25,7 @@ const StyledHero = () => {
         <div className="hero-text-wrapper">
           <div className="hero-title">
             <h1>heather dick</h1>
-            <h3>&sirius theatrical company</h3>
+            <h3>& the Sirius Theatrical Company</h3>
           </div>
           <div className="hero-subtitle">
             <h5>actor. writer. producer.</h5>
@@ -72,7 +72,6 @@ const HeroWrapper = styled.section`
   background-position:center;
   background-size: cover;
   opacity:0.3;
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";
   top:0;
   left:0;
   bottom:0;
@@ -99,20 +98,19 @@ const HeroWrapper = styled.section`
   font-size: 48px;
   font-size: 3rem;
   line-height: 1;
-  margin: 11.2px auto 0;
-  margin:0.7rem auto 0;
-  font-family: 'Chasy', cursive;
+  margin: 11.2px auto;
+  margin:0.7rem auto;
+  font-family: 'Margetha', cursive;
   color: var(--mainPurple);
 }
 
 .hero-title h3 {
-  text-transform: capitalize;
   letter-spacing: 1.6px;
   letter-spacing: 0.1rem;
   font-size: 19.2px;
   font-size: 1.2rem;
-  margin-bottom: 8px;
-  margin-bottom: 0.5rem;
+  margin: 8px 0;
+  margin: 0.5rem 0;
 }
 
 .hero-subtitle h5{

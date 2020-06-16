@@ -10,7 +10,7 @@ const Logo = () => {
         <img src={logo} alt="Heather Dick Logo" className="logo-img" />
         <h3 className="logo-text">
           <span className="logo-name">Heather Dick &</span><br />
-          <span className="logo-company">Sirius Theatrical Company</span>
+          <span className="logo-company">the Sirius Theatrical Company</span>
         </h3>
       </Link>
     </LogoWrapper>

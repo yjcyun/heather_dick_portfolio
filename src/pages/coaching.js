@@ -9,7 +9,7 @@ import SEO from '../components/SEO';
 const coaching = () => {
   return (
     <Layout>
-      <SEO title="Coaching" description="coaching page"/>
+      <SEO title="Coaching" description="Heather Dick is a well-respected acting coach and voice coach for film, television, theatre & commercials. The Sirius Theatrical Company offers acting classes and voice classes for professional actors, corporate groups & beginners in Toronto and the Greater Toronto Area."/>
       <div className="page">
         <Title 
         title="coaching philosophy" 

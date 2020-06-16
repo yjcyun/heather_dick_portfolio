@@ -16,11 +16,11 @@ const getImage = graphql`
   }
 `;
 
-const Info = ({ children, img }) => {
+const Info = ({ children, img }, contact) => {
   const data = useStaticQuery(getImage);
 
   return (
-    <InfoWrapper>
+    <InfoWrapper contact={contact}>
       <div className="hero-image">
         <Image
           className="background-img"
@@ -50,6 +50,7 @@ align-items: start;
 background-color: var(--lightestPurple);
 background-image: url(${subtle});
 margin: 0 auto;
+max-width: ${props => props.contact ? '1170px' : ''};
 
 .info-text {
   text-align: left;
