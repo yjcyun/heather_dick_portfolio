@@ -43,6 +43,8 @@ const SidebarWrapper = styled.div`
   z-index:100;
   display:-ms-grid;
   display:grid;
+  justify-content: center;
+  align-items:center;
   place-items:center;
   opacity: 0 ;
   -webkit-transition: var(--transition);
@@ -56,7 +58,6 @@ const SidebarWrapper = styled.div`
   -webkit-transform: translateX(0);
           transform: translateX(0);
 }
-
 
 .sidebar-links li a{
   display: block;

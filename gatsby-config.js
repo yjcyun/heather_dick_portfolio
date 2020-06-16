@@ -37,7 +37,7 @@ module.exports = {
       resolve: `gatsby-source-strapi`,
       options: {
         apiURL:`https://heatherdick.herokuapp.com`,
-        // apiURL: `http://localhost:1337`,
+        //apiURL: `http://localhost:1337`,
         queryLimit: 1000, // Default to 100
         contentTypes: [`resumes`, `blogs`, `productions`, `notifications`, `coachings`]
       },

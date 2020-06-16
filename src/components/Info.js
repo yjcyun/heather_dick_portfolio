@@ -1,6 +1,6 @@
 import React from 'react'
-import styled from 'styled-components';
 import { graphql, useStaticQuery } from 'gatsby';
+import styled from 'styled-components';
 import Image from 'gatsby-image';
 import subtle from '../images/subtle-dark-vertical.png';
 
@@ -16,20 +16,21 @@ const getImage = graphql`
   }
 `;
 
-const Info = ({ children, reverse, img }) => {
+const Info = ({ children, img }) => {
   const data = useStaticQuery(getImage);
 
   return (
-    <InfoWrapper reverse={reverse}>
-      <div className="info-text">
-        {children}
-      </div>
+    <InfoWrapper>
       <div className="hero-image">
         <Image
           className="background-img"
           fluid={img || data.defaultBcg.childImageSharp.fluid}
         />
         <p className="image-caption">Photo taken by John Doe</p>
+      </div>
+
+      <div className="info-text">
+        {children}
       </div>
     </InfoWrapper>
   )
@@ -47,10 +48,7 @@ padding:1.5rem 1rem;
         justify-content:center;
 -ms-grid-row-align: start;
     align-items: start;
-/* background-color: #f2f4fb; */
-/* background-color: #131217; */
 background-color: var(--lightestPurple);
-/* color: white; */
 background-image: url(${subtle});
 margin: 0 auto;
 
@@ -58,7 +56,6 @@ margin: 0 auto;
   text-align: left;
   padding: 32px 16px;
   padding: 2rem 1rem;
-  order: ${props => props.reverse ? '2' : ''};
 }
 
 .info-subtitle{
@@ -87,11 +84,10 @@ margin: 0 auto;
 
 .hero-image{
   position: relative;
-  order: ${props => props.reverse ? '1' : ''};
 }
 
 @media (min-width: 996px) {
-  grid-template-columns:${props => props.reverse ? '2fr 3fr' : '2fr 1fr'};
+  grid-template-columns:2fr 3fr;
   padding: 5rem;
 
   .info-text {

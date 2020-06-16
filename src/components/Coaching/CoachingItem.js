@@ -6,13 +6,14 @@ import Slide from 'react-reveal/Slide';
 const CoachingItem = ({ image, desc, title }) => {
   return (
     <CoachingItemWrapper>
-      <Image fluid={image} className="coaching-img" />
-      <div className="coaching-text">
-      <Slide bottom duration={1000}>
-        <h1>{title}</h1>
-        <p className="coaching-desc">{desc}</p>
-        </Slide>
-      </div>
+      <Slide bottom>
+        <Image fluid={image} className="coaching-img" />
+        <div className="coaching-text">
+          <h1>{title}</h1>
+          <p className="coaching-desc">{desc}</p>
+
+        </div>
+      </Slide>
     </CoachingItemWrapper>
   )
 }
