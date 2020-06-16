@@ -11,7 +11,7 @@ module.exports = {
     author: "Christina Yun",
     twitterHandle: "@Sirius_Theatre",
     image: "/twitter-card.png",
-    siteUrl: "https://heather-dick-draft.netlify.app"
+    siteUrl: "https://heatherdick.netlify.app"
   },
   plugins: [
     `gatsby-plugin-styled-components`,
@@ -40,6 +40,22 @@ module.exports = {
         // apiURL: `http://localhost:1337`,
         queryLimit: 1000, // Default to 100
         contentTypes: [`resumes`, `blogs`, `productions`, `notifications`, `coachings`]
+      },
+    },
+    {
+      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      options: {
+        fonts: [
+          {
+            family: `Oswald`,
+            subset:[`latin`],
+            variants: [`300`,`400`],
+          },
+          {
+            family: `Poppins`,
+            variants: [`300`, `400`]
+          }
+        ],
       },
     }
   ]
