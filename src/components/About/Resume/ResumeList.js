@@ -70,9 +70,12 @@ const ResumeList = () => {
                     </div>
                   )
                 })}
-            <Obfuscate email="info@heatherdick.com" aria-label="Email Me" className="about-btn-container">
+            {/* <Obfuscate email="info@heatherdick.com" aria-label="Email Me" className="about-btn-container">
               <button className="btn about-btn">contact for full resume</button>
-            </Obfuscate>
+            </Obfuscate> */}
+            <Link to="/contact" className="about-btn-container">
+              <button className="btn about-btn">contact for full resume</button>
+            </Link>
           </div>
           <div className="resume-featured">
             <ResumeFeatured notification={notification} />

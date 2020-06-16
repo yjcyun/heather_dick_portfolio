@@ -15,9 +15,9 @@ const Contact = () => {
           <h4 className="coaching-contact">Do you need help with your upcoming theatre/vocal project?</h4>
           <h4 className="coaching-contact strong">Contact Heather and she will guide you to the right direction.</h4>
 
-          <Obfuscate email="info@heatherdick.com" aria-label="Email Me" className="about-btn-container">
+          <Link to="/contact" className="about-btn-container">
             <button className="btn contact-btn">send your questions</button>
-          </Obfuscate>
+          </Link>
         </div>
       </Bounce>
     </ContactWrapper>

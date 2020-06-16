@@ -14,7 +14,7 @@ const BannerSubtitle = ({ icon, title }) => {
 const BannerWrapper = styled.div`
 .event-title{
   text-transform: capitalize;
-  font-family: 'Chasy';
+  font-family: 'Margetha';
   font-size: 56px;
   font-size: 3.5rem;
   line-height: 1;
