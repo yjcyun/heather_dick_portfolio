@@ -345,7 +345,6 @@ icons
 
 .image-caption{
   opacity: 0;
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
   position:absolute;
   bottom: 0;
   left:0;
@@ -361,5 +360,4 @@ icons
 
 .hero-image:hover .image-caption{
   opacity:1;
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
 }

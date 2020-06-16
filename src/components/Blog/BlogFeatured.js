@@ -21,10 +21,12 @@ const BlogFeatured = ({ blogs }) => {
 
   const events = notification.map(item => {
     return (
-      <ul className="featured-events" key={item.id}>
+      <ul key={item.id} className="featured-events">
         <li>
-          <GiChainedHeart className="events-icon" style={{color:'tomato'}}/>
-          <span> {item.notification}</span>
+          <GiChainedHeart
+            style={{ color: 'tomato' }}
+            className="events-icon" />
+          <span>{item.notification}</span>
         </li>
       </ul>
     )
@@ -161,16 +163,16 @@ text-align:center;
 
 .events-icon {
   -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  -ms-flex: 1;
+  flex: 1;
   margin-top:3.2px;
   margin-top: 0.2rem;
 }
 
 .featured-events li span{
   -webkit-box-flex:7;
-      -ms-flex:7;
-          flex:7;
+  -ms-flex:7;
+  flex:7;
 }
 
 

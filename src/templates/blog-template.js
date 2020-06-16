@@ -123,19 +123,18 @@ text-align:center;
   margin-top: 2rem;
 }
 
-.blog-sidebar ul{
-  display: flex;
-  padding-left: 0;
-  }
-
 .blog-sidebar li{
   list-style: none;
 }
 
+.blog-sidebar ul{
+  padding: 0;
+  padding-bottom: 1rem;
+}
+
 /* markdown */
 ul, ol{
-  padding-left: 2rem;
-  display: inline-block;
+  padding: 2rem 0 0 2rem;
 }
 
 ul li{
@@ -143,13 +142,11 @@ ul li{
 }
 
 blockquote {
-  border: 1px solid var(--mainGold);
-  border-left: 10px solid var(--mainGold);
+  border-left: 10px solid var(--lighterPurple);
+  background:var(--lightestPurple);
   padding: 0.5rem;
-  border-radius: 0.3rem;
   line-height:2;
   margin: 2rem 0;
-  display: inline-block;
 }
 
 a{
@@ -174,11 +171,13 @@ img{
   flex-direction:row;
 
   .blog-sidebar{
-    margin-left:1.5rem;
+    margin-left:2rem;
     flex:2;
   }
-   .main-blog{
-  flex:5;
+
+  .main-blog{
+    flex:5;
+    padding:0 2rem;
   }
 }
 
