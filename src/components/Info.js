@@ -37,11 +37,9 @@ const Info = ({ children, img }) => {
 }
 
 const InfoWrapper = styled.section`
-display: -ms-grid;
-display: grid;
--ms-grid-columns: 1fr;
-    grid-template-columns: 1fr;
-grid-column-gap:2rem;
+display:-webkit-box;
+display:-ms-flexbox;
+display:flex;
 padding:1.5rem 1rem;
 -webkit-box-pack:center;
 -ms-flex-pack:center;
@@ -56,6 +54,9 @@ margin: 0 auto;
   text-align: left;
   padding: 32px 16px;
   padding: 2rem 1rem;
+    -webkit-box-flex:1;
+      -ms-flex:1;
+          flex:1;
 }
 
 .info-subtitle{
@@ -84,11 +85,14 @@ margin: 0 auto;
 
 .hero-image{
   position: relative;
+    -webkit-box-flex:1;
+      -ms-flex:1;
+          flex:1;
 }
 
 @media (min-width: 996px) {
   grid-template-columns:2fr 3fr;
-  padding: 5rem;
+  padding: 4rem 2rem;
 
   .info-text {
   text-align: left;

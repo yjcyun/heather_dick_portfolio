@@ -21,9 +21,6 @@ const Audio = () => {
 }
 
 const AudioWrapper = styled.section`
-/* background:var(--lightPurple); */
-/* background:#131217; */
-/* background:#333; */
 background:#201733;
 padding:3rem 1rem;
 
@@ -38,10 +35,17 @@ padding:3rem 1rem;
  }
 
 .audio-item-container {
-  display:-ms-grid;
+  /* display:-ms-grid;
   display:grid;
   -ms-grid-columns: 1fr;
-      grid-template-columns: 1fr;
+      grid-template-columns: 1fr; */
+  display:-webkit-box;
+  display:-ms-flexbox;
+  display:flex;
+  -webkit-box-orient:vertical;
+  -webkit-box-direction:normal;
+  -ms-flex-direction:column;
+  flex-direction:column;
   margin-top:16px;
   margin-top: 1rem;
 }
@@ -74,8 +78,10 @@ padding:3rem 1rem;
   }
 
   .audio-item-container {
-    -ms-grid-columns: 1fr 1fr 1fr;
-    grid-template-columns: 1fr 1fr 1fr;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
     margin-top: 0;
   }
 

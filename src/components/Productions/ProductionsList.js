@@ -113,7 +113,6 @@ justify-content:center;
 `;
 
 const ProductionsListWrapper = styled.div`
-display:-ms-grid;
 display:grid;
 grid-row-gap: 1.5rem;
 padding: 3rem 2rem;
@@ -122,7 +121,6 @@ background-image: url(${subtle});
 border-radius: 1rem;
 
 .modal-container{
-  display:-ms-grid;
   display:grid;
   overflow: hidden;
   grid-gap: 1rem;
@@ -131,13 +129,11 @@ border-radius: 1rem;
 
 .modal-img{
   height: 100%;
-  -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
 } 
 
 @media(min-width: 768px){
-  -ms-grid-columns: (minmax(300px,1fr))[auto-fill];
-      grid-template-columns: repeat(auto-fill, minmax(300px,1fr));
+  grid-template-columns: repeat(auto-fill, minmax(300px,1fr));
   /* grid-auto-rows: 1fr; */
   grid-gap: 1.5rem;
 }
