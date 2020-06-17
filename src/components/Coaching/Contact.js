@@ -2,7 +2,6 @@ import React from 'react';
 import { Link } from 'gatsby';
 import styled from 'styled-components';
 import Bounce from 'react-reveal/Bounce';
-import Obfuscate from 'react-obfuscate';
 import BannerSubtitle from '../BannerSubtitle';
 import question from '../../images/question.png';
 
