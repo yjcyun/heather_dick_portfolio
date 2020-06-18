@@ -36,7 +36,7 @@ const Contact = () => {
             </div>
           </div>
           <div className="info-single">
-            <h2 className="info-subtitle">Management Comapny</h2>
+            <h2 className="info-subtitle">Management Company</h2>
             <CompanyLinks styleClass="contact-social" />
           </div>
         </Info>
@@ -48,15 +48,6 @@ const Contact = () => {
 const ContactWrapper = styled.div`
 margin-top: 3rem;
 padding-bottom: 10rem;
-
-.contact-content {
-  display:-webkit-box;
-  display:-ms-flexbox;
-  display:flex;
-  -webkit-box-pack:center;
-      -ms-flex-pack:center;
-          justify-content:center;
-}
 
 .contact-social, .footer-icon{
   color: var(--lighterPurple);
@@ -71,21 +62,7 @@ padding-bottom: 10rem;
   font-size: 1.5rem;
 }
 
-
-
-
 @media(min-width: 768px){
-  /* .contact.social-links .social-icon, 
-  .email-icon{
-    font-size:4rem;
-  }
-
-  .contact.social-links a, 
-  .email-icon-wrapper{
-    width: 4rem;
-    height: 4rem;
-    margin: 0 1rem;
-  } */
 }
 `;
 

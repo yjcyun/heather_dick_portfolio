@@ -50,12 +50,10 @@ align-items: start;
 background-color: var(--lightestPurple);
 background-image: url(${subtle});
 margin: 0 auto;
-max-width: ${props => props.contact ? '1170px' : ''};
 
 .info-text {
   text-align: left;
-  padding: 32px 16px;
-  padding: 2rem 1rem;
+  padding: ${props=> props.contact? '2rem': '2rem 1rem'};
 }
 
 .info-subtitle{
@@ -63,12 +61,12 @@ max-width: ${props => props.contact ? '1170px' : ''};
   font-weight: 300;
   font-size: 32px;
   font-size: 3rem;
-  margin-bottom: 1rem;
-  
+  margin-bottom: 2rem;
+  line-height: 1;
 }
 
 .info-single{
-  margin: 0 0 3rem 3rem; 
+  margin: 2rem auto; 
 }
 
 .info-text p{
@@ -117,7 +115,12 @@ max-width: ${props => props.contact ? '1170px' : ''};
   -ms-flex:2;
   flex:${props => props.contact ? '1' : '2'};
   }
+
+  .info-single{
+    margin: 0 0 3rem 3rem; 
+  }
 }
+
 `;
 
 export default Info
