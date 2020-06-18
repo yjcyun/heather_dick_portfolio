@@ -16,17 +16,7 @@ class Reels extends Component {
         id: 1,
         url: "137428733",
         thumbnail: "https://i.vimeocdn.com/video/532338250_640.jpg",
-      },
-      {
-        id: 2,
-        url: "139617873",
-        thumbnail: "https://i.vimeocdn.com/video/535538525_640.jpg"
-      },
-      {
-        id: 3,
-        url: "140080056",
-        thumbnail: "https://i.vimeocdn.com/video/537346272_640.jpg"
-      },
+      }
     ],
     selectedVideo: "140710198"
   }
@@ -61,6 +51,7 @@ const ReelsWrapper = styled.section`
     display:-webkit-box;
     display:-ms-flexbox;
     display:flex;
+    flex:1;
     -webkit-box-orient:vertical;
     -webkit-box-direction:normal;
     -ms-flex-direction:column;
@@ -93,10 +84,17 @@ const ReelsWrapper = styled.section`
     -ms-flex-direction:row;
     flex-direction:row;
   }
+
+  .videos{
+    margin-left: 4rem;
+  }
  }
 
   @media(min-width: 1024px){
     padding: 7rem 2rem;
+    .videos{
+      margin-left: 8rem;
+    }
   }
 `;
 

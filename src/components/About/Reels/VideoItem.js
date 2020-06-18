@@ -30,7 +30,7 @@ align-items:center;
 
 @media (min-width: 996px){
   .thumbnail-img{
-    width: 10rem;
+    width: 14rem;
   }
 }
 `;

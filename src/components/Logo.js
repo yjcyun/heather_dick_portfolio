@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'gatsby';
 import styled from 'styled-components';
-import logo from '../images/logo.png';
+import logo from '../images/logo.jpg';
 
 const Logo = () => {
   return (
@@ -39,6 +39,7 @@ position:relative;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+            border: 1px solid white;
   }
 
   .logo-text{
@@ -47,14 +48,19 @@ position:relative;
     font-weight: normal;
     line-height: 1;
     margin-bottom: 0;
-    margin-left:8px;
-    margin-left: 0.5rem;
+    margin-left: 0.7rem;
     color: #fff;
   }
 
   .logo-company{
-    font-size: 70%;
+    font-size: 60%;
+    letter-spacing: '';
   }
+  @media(min-width: 768px){
+    .logo-company{
+      font-size: 70%;
+    }
+  })
 `;
 
 export default Logo

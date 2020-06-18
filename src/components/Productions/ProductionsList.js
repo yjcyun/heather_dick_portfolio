@@ -3,7 +3,6 @@ import styled from 'styled-components';
 import Image from 'gatsby-image';
 import ProductionsItem from './ProductionsItem';
 import ProductionModal from './ProductionModal';
-import subtle from '../../images/subtle-dark-vertical.png';
 
 // get unique cateogories
 const getCategories = items => {
@@ -116,8 +115,6 @@ const ProductionsListWrapper = styled.div`
 display:grid;
 grid-row-gap: 1.5rem;
 padding: 3rem 2rem;
-background: var(--lightestPurple);
-background-image: url(${subtle});
 border-radius: 1rem;
 
 .modal-container{

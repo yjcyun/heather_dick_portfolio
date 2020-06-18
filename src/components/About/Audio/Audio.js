@@ -21,7 +21,7 @@ const Audio = () => {
 }
 
 const AudioWrapper = styled.section`
-background:#201733;
+background:var(--darkPurple);
 padding:3rem 1rem;
 
 .max-width{

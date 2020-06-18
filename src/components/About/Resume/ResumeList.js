@@ -8,7 +8,7 @@ import Brush from '../../../images/brush.svg';
 
 const query = graphql`
  {
-    resumes:allStrapiResumes {
+    resumes:allStrapiResumes(sort: {fields: category, order: ASC}) {
       nodes {
         id
         role
@@ -17,6 +17,7 @@ const query = graphql`
         company
         location
         names
+        created_at
       }
     }
     notifications:allStrapiNotifications {
@@ -41,17 +42,31 @@ const getCategories = items => {
 }
 
 const ResumeList = () => {
-  const { resumes: { nodes: resume }, notifications: { nodes: notification }} = useStaticQuery(query);
+  const { resumes: { nodes: resume }, notifications: { nodes: notification } } = useStaticQuery(query);
 
   // array of unique categories
   const [categories] = useState(getCategories(resume));
 
-  const renderList = (categoryResume) => resume.map(item => {
-    if (item.category === categoryResume) {
-      return <ResumeItem key={item.id} item={item} />
-    }
-    return;
-  });
+  // const renderList = (categoryResume) => resume.map(item => {
+
+  //   if (item.category === categoryResume) {
+  //     return <ResumeItem key={item.id} item={item} />
+  //   }
+  //   return;
+  // });
+
+  let newArr = [];
+  const renderList = (categoryResume) => resume
+    .sort((a, b) => b.created_at > a.created_at ? 1 : -1)
+    .map(item => {
+      if (item.category === categoryResume) {
+        return <ResumeItem key={item.id} item={item} />
+      }
+      return;
+    })
+
+
+
 
   return (
     <ResumeWrapper>
@@ -59,16 +74,16 @@ const ResumeList = () => {
         <Subtitle subtitle="SELECTED CREDITS" credits />
         <div className="resume-column">
           <div className="resume-content">
-              {categories.map((item, index) => {
-                  return (
-                    <div key={index} className="resume-item">
-                      <h1 className="resume-category">
-                        {item === 'film' ? 'film&televsion' : item}
-                      </h1>
-                      {renderList(item)}
-                    </div>
-                  )
-                })}
+            {categories.map((item, index) => {
+              return (
+                <div key={index} className="resume-item">
+                  <h1 className="resume-category">
+                    {item === 'bfilm' ? 'film&televsion' : item}
+                  </h1>
+                  {renderList(item)}
+                </div>
+              )
+            })}
             <Link to="/contact" className="about-btn-container">
               <button className="btn about-btn">contact for full resume</button>
             </Link>

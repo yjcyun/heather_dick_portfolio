@@ -31,7 +31,7 @@ const StyledHero = () => {
             <h5>actor. writer. producer.</h5>
           </div>
 
-          <Link to="/about">
+          <Link to="/bio">
             <button className="btn hero-btn">learn more</button>
           </Link>
         </div>

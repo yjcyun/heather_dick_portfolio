@@ -45,6 +45,7 @@ const CoachingList = () => {
 const CoachingListWrapper = styled.section`
 .coaching-container{
 background-color: var(--beige);
+
 background-image: url("https://www.transparenttextures.com/patterns/subtle-dark-vertical.png");
 padding: 0 16px 32px;
 padding: 0 1rem 2rem;

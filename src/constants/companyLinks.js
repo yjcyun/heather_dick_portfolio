@@ -1,44 +1,34 @@
 import React from 'react';
-import { FaLinkedin, FaTwitterSquare, FaInstagramSquare, FaFacebookSquare, FaLinkedinIn, FaTwitter, FaInstagram, FaFacebook } from 'react-icons/fa';
+import { FaTwitterSquare, FaInstagramSquare, FaFacebookSquare } from 'react-icons/fa';
+import { IoIosGlobe } from 'react-icons/io';
+
 
 const data = [
   {
     id: 1,
-    footerIcon: <FaLinkedin className="footer-icon" />,
-    icon: <FaLinkedinIn className="social-icon" />,
+    footerIcon: <IoIosGlobe className="footer-icon" />,
     url: 'https://www.linkedin.com',
-    text: "LinkedIn"
+    text: "www.website.com"
   },
   {
     id: 2,
     footerIcon: <FaTwitterSquare className="footer-icon" />,
-    icon: <FaTwitter className="social-icon" />,
     url: 'https://www.linkedin.com',
     text: "Twitter"
   },
   {
     id: 3,
     footerIcon: <FaInstagramSquare className="footer-icon" />,
-    icon: <FaInstagram className="social-icon" />,
     url: 'https://www.linkedin.com',
     text: "Instagram"
   },
   {
     id: 4,
     footerIcon: <FaFacebookSquare className="footer-icon" />,
-    icon: <FaFacebook className="social-icon" />,
     url: 'https://www.linkedin.com',
     text: "Facebook"
   },
 ];
-
-const links = data.map(link => (
-  <li key={link.id}>
-    <a href={link.url}>
-      {link.icon}
-    </a>
-  </li>
-));
 
 const footerLinks = data.map(link => (
   <li key={link.id}>
@@ -48,6 +38,6 @@ const footerLinks = data.map(link => (
   </li>
 ));
 
-export default ({ styleClass, footer }) => (
-  <ul className={`${styleClass}`}>{footer ? footerLinks : links}</ul>
+export default ({ styleClass }) => (
+  <ul className={`${styleClass}`}>{footerLinks}</ul>
 );

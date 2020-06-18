@@ -62,9 +62,13 @@ max-width: ${props => props.contact ? '1170px' : ''};
   font-family: var(--titleFont);
   font-weight: 300;
   font-size: 32px;
-  font-size: 2rem;
-  margin-bottom: 6.4px;
-  margin-bottom: 0.4rem;
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  
+}
+
+.info-single{
+  margin: 0 0 3rem 3rem; 
 }
 
 .info-text p{
@@ -103,15 +107,15 @@ max-width: ${props => props.contact ? '1170px' : ''};
   .info-text {
   text-align: left;
   padding: 0 2rem 0;
-  -webkit-box-flex:1;
-  -ms-flex:1;
-  flex:3;
+  -webkit-box-flex:3;
+  -ms-flex:3;
+  flex:${props => props.contact ? '1' : '3'};
   }
 
   .hero-image{
   -webkit-box-flex:1;
-  -ms-flex:1;
-  flex:2;
+  -ms-flex:2;
+  flex:${props => props.contact ? '1' : '2'};
   }
 }
 `;

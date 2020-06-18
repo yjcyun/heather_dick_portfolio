@@ -23,7 +23,8 @@ const NavbarWrapper = styled.nav`
   top: 0;
   left: 0;
   width: 100%;
-  background: #27004d;
+  /* background: #27004d; */
+  background:#612972;
   height: 5rem;
 
   .nav-header{

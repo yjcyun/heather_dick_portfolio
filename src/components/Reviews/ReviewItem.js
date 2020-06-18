@@ -26,11 +26,13 @@ const ReviewItemWrapper = styled.div`
   font-size: 1rem;
   line-height: 24px;
   background: var(--lightestPurple);
+  /* background: #f7f4e8; */
   border-radius: 40px;
   border-bottom-left-radius: 0;
   padding: 24px 40px;
   padding: 1.5rem 2.5rem;
   text-align: center;
+  border: 3px solid var(--darkPurple);
 }
 
 .pointer {
@@ -39,10 +41,11 @@ const ReviewItemWrapper = styled.div`
   width: 112px;
   width: 7rem;
   -webkit-clip-path: polygon(0 0, 0 100%, 100% 0);
-          clip-path: polygon(0 0, 0 100%, 100% 0);
-  background:var(--lightestPurple);
+  clip-path: polygon(0 0, 0 100%, 100% 0);
+  /* background:var(--lightestPurple); */
+  background:#f7f4e8;
 	margin-top: -16px;
-	margin-top: -1rem;
+  margin-top: -1rem;
 }
 
 .author{
