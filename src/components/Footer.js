@@ -34,7 +34,7 @@ const Footer = () => {
 }
 
 const FooterWrapper = styled.footer`
-background: var(--darkestPurple);
+background: var(--mainPurple);
 color: #fff;
 padding: 2rem;
 

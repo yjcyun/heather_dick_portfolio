@@ -62,7 +62,7 @@ text-align:center;
   padding:2rem 1rem 10rem;
   -webkit-clip-path: polygon(100% 0, 100% 100%, 50% 75%, 0% 100%, 0 50%, 0% 0%);
           clip-path: polygon(100% 0, 100% 100%, 50% 75%, 0% 100%, 0 50%, 0% 0%);
-  background: var(--mainPurple);
+  background: var(--darkPurple);
 }
 
 .event-notification h4{
@@ -93,7 +93,7 @@ text-align:center;
   margin-bottom: 2rem;
 }
 
-.coaching-link {
+/* .coaching-link {
   color: var(--mainPurple);
   -webkit-transition:var(--transition);
   transition: var(--transition);
@@ -101,7 +101,7 @@ text-align:center;
 
 .coaching-link:hover {
   box-shadow:0 4px var(--mainGold);
-}
+} */
 
 @media (min-width: 768px) {
   .event-notification{
@@ -110,7 +110,6 @@ text-align:center;
     padding:3rem;
     -webkit-clip-path: polygon(100% 0, 95% 50%, 100% 100%, 0% 100%, 5% 50%, 0% 0%);
             clip-path: polygon(100% 0, 95% 50%, 100% 100%, 0% 100%, 5% 50%, 0% 0%);
-    background: var(--mainPurple);
   }
 }
 `;

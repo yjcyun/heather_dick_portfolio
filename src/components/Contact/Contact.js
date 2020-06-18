@@ -28,7 +28,7 @@ const Contact = () => {
           <div className="info-single">
             <h2 className="info-subtitle">Heather Dick</h2>
             <div className="social">
-              <div style={{marginBottom:'2rem'}}>
+              <div>
                 <FaRegEnvelope className="contact-social" />
                 <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;%65%6D%61%69%6C%40%65%6D%61%69%6C%2E%63%6F%6D">email@email.com</a>
               </div>

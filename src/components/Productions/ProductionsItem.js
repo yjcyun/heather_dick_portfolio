@@ -40,7 +40,12 @@ const ProductionsItemWrapper = styled.div`
 
 .poster-footer{
   padding: 8px;
-  padding: 0.5rem;
+  padding: 1rem 0.5rem;
+  background: var(--lightestPurple);
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  height: 5rem;
+
 }
 
 .poster-layover{
