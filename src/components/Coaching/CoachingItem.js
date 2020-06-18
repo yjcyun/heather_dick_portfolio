@@ -5,14 +5,11 @@ import Image from 'gatsby-image';
 const CoachingItem = ({ image, desc, title }) => {
   return (
     <CoachingItemWrapper>
-  
-        <Image fluid={image} className="coaching-img" />
+      <Image fluid={image} className="coaching-img" />
       <div className="coaching-text">
         <h1>{title}</h1>
         <p className="coaching-desc">{desc}</p>
-
       </div>
-
     </CoachingItemWrapper>
   )
 }
@@ -27,16 +24,17 @@ padding: 3rem 0 0;
     height: 240px;
     height: 15rem;
     -webkit-box-flex:2;
-        -ms-flex:2;
-            flex:2;
+    -ms-flex:2;
+    flex:2;
     margin-bottom: 32px;
     margin-bottom: 2rem;
+  
   }
 
   .coaching-text{
     -webkit-box-flex:3;
-        -ms-flex:3;
-            flex:3;
+    -ms-flex:3;
+    flex:3;
     padding: 0 32px;
     padding: 0 2rem;
   }
@@ -54,12 +52,20 @@ padding: 3rem 0 0;
   @media (max-width: 768px){
     -webkit-box-orient:vertical;
     -webkit-box-direction:normal;
-        -ms-flex-direction:column;
-            flex-direction:column;
+    -ms-flex-direction:column;
+    flex-direction:column;
     padding: 3rem 1rem 0;
 
     .coaching-text{
       padding: 0;
+    }
+  }
+  
+  @media (min-width: 996px){
+    justify-content: center;
+    align-items:center;
+    .coaching-img{
+      margin-bottom: 0;
     }
   }
 `;

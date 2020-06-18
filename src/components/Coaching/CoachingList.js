@@ -3,6 +3,7 @@ import { graphql, useStaticQuery } from 'gatsby';
 import styled from 'styled-components';
 import CoachingItem from './CoachingItem';
 import Fade from 'react-reveal/Fade';
+import verticalBcg from '../../images/subtle-dark-vertical.png';
 
 const query = graphql`
   {
@@ -46,7 +47,7 @@ const CoachingListWrapper = styled.section`
 .coaching-container{
 background-color: var(--beige);
 
-background-image: url("https://www.transparenttextures.com/patterns/subtle-dark-vertical.png");
+background-image: url(${verticalBcg});
 padding: 0 16px 32px;
 padding: 0 1rem 2rem;
 }
