@@ -73,7 +73,7 @@ display:flex;
 -webkit-box-orient: vertical;
 -webkit-box-direction: normal;
 -ms-flex-direction: column;
-        flex-direction: column;
+flex-direction: column;
 border: 1px solid lightgray;
 border-top: 1rem solid var(--mainPurple);
 text-align:center;
@@ -85,12 +85,10 @@ text-align:center;
 }
 
 .featured-title{
-  font-size:32px;
-  font-size: 2rem;
+  font-size: 1.5rem;
   color: var(--textPurple);
   margin-bottom:19.2px;
   margin-bottom: 1.2rem;
-  line-height: 1;
 }
 
 .featured-subtitle {
