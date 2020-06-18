@@ -28,7 +28,10 @@ const Contact = () => {
           <div className="info-single">
             <h2 className="info-subtitle">Heather Dick</h2>
             <div className="social">
-              <FaRegEnvelope className="contact-social" /> <span>email@email.com</span>
+              <div style={{marginBottom:'2rem'}}>
+                <FaRegEnvelope className="contact-social" />
+                <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;%65%6D%61%69%6C%40%65%6D%61%69%6C%2E%63%6F%6D">email@email.com</a>
+              </div>
               <SocialLinks footer styleClass="contact-social" />
             </div>
           </div>
@@ -37,11 +40,6 @@ const Contact = () => {
             <CompanyLinks styleClass="contact-social" />
           </div>
         </Info>
-
-        {/* <SocialLinks styleClass="social-links contact" home />
-        <a href={`mailto:%69%6E%66%6F%40%68%65%61%74%68%65%72%64%69%63%6B%2E%63%6F%6D`} className="email-icon-wrapper">
-          <FaRegEnvelope className="social-icon email-icon" />
-        </a> */}
       </div>
     </ContactWrapper>
   )
@@ -60,63 +58,16 @@ padding-bottom: 10rem;
           justify-content:center;
 }
 
-/*
-.contact.social-links{
-  display:-webkit-box;
-  display:-ms-flexbox;
-  display:flex;
-  -webkit-box-orient:horizontal;
-  -webkit-box-direction:normal;
-      -ms-flex-direction:row;
-          flex-direction:row;
-}
-
-.contact.social-links a, .email-icon-wrapper{
-  display:-webkit-box;
-  display:-ms-flexbox;
-  display:flex;
-  border-radius: 50%;
-  width: 48px;
-  width: 3rem;
-  height: 48px;
-  height: 3rem;
-  background: var(--lightGold);
-  margin: 0 8px;
-  margin: 0 0.5rem;
-  box-shadow: 0 5px 4px rgba(0,0,0,0.5);
-  -webkit-transition: var(--transition);
-  transition: var(--transition);
-} 
-
-.social-icon, .email-icon{
-  font-size: 48px;
-  font-size:3rem;
-  margin: 0 16px;
-  margin: 0 1rem;
-  color:black;
-  -webkit-transition: 0.6s;
-  transition: 0.6s;
-  -webkit-transition: var(--transition);
-  transition: var(--transition);
-}
-
-.contact.social-links a:hover, 
-.email-icon-wrapper:hover {
-  -webkit-transform: translate(0, -1.5rem);
-          transform: translate(0, -1.5rem);
-}
-
-*/
 .contact-social, .footer-icon{
   color: var(--lighterPurple);
   font-size: 1.5rem;
 }
 
-.contact-social a:hover, .footer-icon a:hover{
+.contact-social a:hover, .footer-icon a:hover, .social a:hover{
   font-weight:bold;
 }
 
-.social span{
+.social a{
   font-size: 1.5rem;
 }
 
