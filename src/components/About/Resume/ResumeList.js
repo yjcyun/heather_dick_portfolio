@@ -55,7 +55,6 @@ const ResumeList = () => {
   //   return;
   // });
 
-  let newArr = [];
   const renderList = (categoryResume) => resume
     .sort((a, b) => b.created_at > a.created_at ? 1 : -1)
     .map(item => {
@@ -63,10 +62,26 @@ const ResumeList = () => {
         return <ResumeItem key={item.id} item={item} />
       }
       return;
-    })
+    });
 
-
-
+  const switchTitle = (category) => {
+    switch (category) {
+      case 'atheatre':
+        return 'theatre';
+      case 'bfilm':
+        return 'film & television';
+      case 'caudio':
+        return 'audio';
+      case 'ddirecting':
+        return 'directing';
+      case 'evocalcoaching':
+        return 'vocal coaching';
+      case 'fwriting':
+        return 'dramaturgy & writing';
+      case 'gtraining':
+        return 'training';
+    }
+  };
 
   return (
     <ResumeWrapper>
@@ -78,7 +93,7 @@ const ResumeList = () => {
               return (
                 <div key={index} className="resume-item">
                   <h1 className="resume-category">
-                    {item === 'bfilm' ? 'film&televsion' : item}
+                    {switchTitle(item)}
                   </h1>
                   {renderList(item)}
                 </div>
