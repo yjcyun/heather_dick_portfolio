@@ -57,12 +57,10 @@ export const query = graphql`
 
 const BlogTemplate = ({ data }) => {
   const {
-    blog: { date, slug, blog, title, author, thumbnail, description },
-    featured: { nodes: blogs },
-    website: { siteMetadata: { siteUrl, twitterHandle } }
+    blog: { date,  blog, title, author, thumbnail, description },
+    featured: { nodes: blogs }
   } = data;
 
-  const url = `${siteUrl}/${slug}`;
   return (
     <Layout>
       <SEO title={title} description={description} />

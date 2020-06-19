@@ -1,5 +1,5 @@
 import React from 'react'
-import { graphql, useStaticQuery, Link } from 'gatsby';
+import { graphql, useStaticQuery} from 'gatsby';
 import styled from 'styled-components';
 import horn from '../../images/horn.png';
 import Bounce from 'react-reveal/Bounce';
@@ -31,7 +31,7 @@ const Event = () => {
                 if (item.coaching) {
                   return (
                     <h4 key={item.id}>{item.notification}</h4>
-                  )
+                  );
                 }
               })}
             </div>
@@ -92,16 +92,6 @@ text-align:center;
   margin-bottom:32px;
   margin-bottom: 2rem;
 }
-
-/* .coaching-link {
-  color: var(--mainPurple);
-  -webkit-transition:var(--transition);
-  transition: var(--transition);
-}
-
-.coaching-link:hover {
-  box-shadow:0 4px var(--mainGold);
-} */
 
 @media (min-width: 768px) {
   .event-notification{

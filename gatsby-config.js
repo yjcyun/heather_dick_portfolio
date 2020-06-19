@@ -1,13 +1,7 @@
-/*
-styled-components
-file system for images
-strapi 
-*/
-
 module.exports = {
   siteMetadata: {
-    title: 'Heather Dick | Sirius Theatrical Company | Actor. Director. Coach | Toronto',
-    description: "A professional actor and certified voice coach with a decade of experience based in Toronto. Provide private acting and voice lessons.Add more description here...",
+    title: 'Heather Dick | Sirius Theatrical Company | Actor. Director. Writer. Linklater Voice Teacher. | Toronto',
+    description: "A professional theatre, film, television and voice actor, director, writer and Designated Linklater Voice coach based in Toronto, Canada.  She is the Artistic Director of the Sirius Theatrical Company, a multi-disciplinary performance company.",
     author: "Christina Yun",
     twitterHandle: "@Sirius_Theatre",
     image: "/twitter-card.png",

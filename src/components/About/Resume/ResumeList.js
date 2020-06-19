@@ -80,6 +80,8 @@ const ResumeList = () => {
         return 'dramaturgy & writing';
       case 'gtraining':
         return 'training';
+      default:
+        return 'default';
     }
   };
 
