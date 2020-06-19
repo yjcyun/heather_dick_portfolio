@@ -3,6 +3,7 @@ import { graphql, useStaticQuery, Link } from 'gatsby';
 import styled from 'styled-components';
 import Image from 'gatsby-image';
 import bcg from '../../images/bcg.jpg';
+import Name from './Name';
 
 const getImage = graphql`
   query {
@@ -24,7 +25,7 @@ const StyledHero = () => {
       <div className="hero-text">
         <div className="hero-text-wrapper">
           <div className="hero-title">
-            <h1>heather dick</h1>
+            <Name />
             <h3>& the Sirius Theatrical Company</h3>
           </div>
           <div className="hero-subtitle">
@@ -55,13 +56,13 @@ const HeroWrapper = styled.section`
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   -webkit-box-align: center;
   -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
   margin: 0 auto;
   height: 100vh;
   position:relative;
@@ -89,19 +90,6 @@ const HeroWrapper = styled.section`
   margin-top: 32px;
   margin-top: 2rem;
   text-align:center;
-}
-
-.hero-title h1{
-  text-transform: capitalize;
-  letter-spacing: 0.8px;
-  letter-spacing: 0.05rem;
-  font-size: 48px;
-  font-size: 3rem;
-  line-height: 1;
-  margin: 11.2px auto;
-  margin:0.7rem auto;
-  font-family: 'Margetha', cursive;
-  color: var(--mainPurple);
 }
 
 .hero-title h3 {
@@ -152,12 +140,9 @@ const HeroWrapper = styled.section`
 
   .hero-text{
     margin-top:3rem;
+    width: 45rem;
   }
   
-  .hero-title h1{
-  font-size: 5rem;
-  }
-
   .hero-title h3 {
     font-size: 2rem;
     margin-bottom:2rem;

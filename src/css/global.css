@@ -181,7 +181,7 @@ Button
 .blog-btn {
   overflow: hidden;
   text-align: center;
-  border-radius:2rem;
+  border-radius: 2rem;
 }
 
 .about-btn:after,
@@ -246,7 +246,7 @@ Button
   opacity: 0;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
   -webkit-transform: translateX(-50%) translateY(-50%) rotate(45deg);
-          transform: translateX(-50%) translateY(-50%) rotate(45deg);
+  transform: translateX(-50%) translateY(-50%) rotate(45deg);
 }
 
 .hero-btn:hover,
@@ -315,11 +315,11 @@ icons
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   margin-top: 16px;
   margin-top: 1rem;
 }
@@ -339,25 +339,32 @@ icons
   font-size: 1rem;
 }
 
-.social-icon:hover{
+.social-icon:hover {
   color: var(--darkestPurple);
 }
 
-.image-caption{
+.image-caption {
   opacity: 0;
-  position:absolute;
+  position: absolute;
   bottom: 0;
-  left:0;
+  left: 0;
   width: 100%;
   height: auto;
   padding: 32px 16px;
   padding: 2rem 1rem;
-  background: rgba(0,0,0,0.5);
+  background: rgba(0, 0, 0, 0.5);
   color: white;
   -webkit-transition: var(--transition);
   transition: var(--transition);
 }
 
-.hero-image:hover .image-caption{
-  opacity:1;
+.hero-image:hover .image-caption {
+  opacity: 1;
 }
+
+#logo path:nth-child(1){
+  stroke-dasharray: 200px;
+  stroke-dashoffset: 50px;
+}
+
+
