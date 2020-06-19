@@ -42,8 +42,4 @@ exports.createPages = async ({ graphql, actions }) => {
       }
     })
   })
-
-  const result2 = await graphql(`
-    
-  `)
 }
