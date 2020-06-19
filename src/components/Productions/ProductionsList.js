@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { IoMdClose } from 'react-icons/io';
 import styled from 'styled-components';
 import Image from 'gatsby-image';
@@ -50,7 +50,7 @@ const ProductionsList = ({ posters }) => {
       return (
         <div className="modal-container">
           <Image fluid={img.childImageSharp.fluid} alt="poster" className="modal-img" />
-          <div className="modal-text">
+          <div style={{marginTop:'1rem'}}>
             <p><strong>{show}</strong> from {company}</p>
             {category === 'directing'
               ? <p> Produced on  {date}</p>
@@ -87,11 +87,12 @@ const ProductionsList = ({ posters }) => {
                 isOpen={selectedPoster !== null}
                 onRequestClose={closeModal}
                 style={customStyles}
+                ariaHideApp={false}
               >
                 {productionChildren()}
-                <div>
-                  <button onClick={closeModal}>
-                    <IoMdClose />
+                <div style={{position:'absolute', top:'0', right:'0'}}>
+                  <button onClick={closeModal} style={{background:'transparent', outline:'none', border:'none'}} className="modal-close">
+                    <IoMdClose style={{fontSize:'1.5rem'}}/>
                   </button>
                 </div>
               </Modal>

@@ -11,12 +11,6 @@ const ProductionsItem = ({ item }) => {
         <div className="poster-footer">
           <p><strong>{show}</strong> by {company}</p>
         </div>
-
-        {/* POSTER LAYOVER */}
-        <div className="poster-layover">
-          <button className="btn production-btn">learn more<hr className="short-hr" />
-          </button>
-        </div>
       </div>
     </ProductionsItemWrapper>
   )
@@ -34,7 +28,8 @@ const ProductionsItemWrapper = styled.div`
   box-shadow: 4px 4px 6px 0px rgba(0,0,0,0.1);
 -webkit-box-shadow: 4px 4px 6px 0px rgba(0,0,0,0.1);
 -moz-box-shadow: 4px 4px 6px 0px rgba(0,0,0,0.1);
-
+overflow:hidden;
+transition: var(--transition);
 }
 
 .poster-img:hover{
@@ -43,8 +38,13 @@ const ProductionsItemWrapper = styled.div`
 -moz-box-shadow: 5px 7px 10px 0px rgba(0,0,0,0.43);
 }
 
+.poster-img:hover .poster-gatsby-img{
+  transform: scale(1.07);
+}
+
 .poster-gatsby-img{
-  height: 20rem;
+  height: 25rem;
+  transition: var(--transition);
 }
 
 .poster-footer{
@@ -54,30 +54,5 @@ const ProductionsItemWrapper = styled.div`
   text-align:center;
 }
 
-.poster-layover{
-  background:-webkit-linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.7));
-  background:linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.7));
-  height: 20rem;
-  width: 100%;
-  position:absolute;
-  top:0;
-  left:0;
-  opacity:0;
-  -webkit-transition: var(--transition);
-  transition: var(--transition);
-  display:-webkit-box;
-  display:-ms-flexbox;
-  display:flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.poster-img:hover .poster-layover{
-  opacity:1;
-}
 `;
 export default ProductionsItem

@@ -18,7 +18,7 @@ const query = graphql`
 `;
 
 const CloseButton = ({ closeToast }) => (
-  <i role="button" tabIndex={0} onKeyDown={closeToast} className="material-icons" onClick={closeToast}><IoIosCloseCircle /></i>
+  <i role="button" tabIndex={0} onKeyDown={closeToast} className="material-icons" onClick={closeToast}><IoIosCloseCircle className="close-icon" /></i>
 )
 
 const Notification = () => {
@@ -43,6 +43,9 @@ const Notification = () => {
 }
 
 const ToastWrapper = styled.div`
+.Toastify__toast-container{
+  width: auto;
+}
 .Toastify__toast {
   background-color: white;
   color: black;
@@ -57,10 +60,14 @@ const ToastWrapper = styled.div`
   width: 15rem;
 }
 
+.close-icon{
+  font-size: 1.5rem;
+}
+
 @media (max-width: 420px){
   .Toastify__toast{
     width: 90%;
-    margin: 0 auto;
+    margin: 0 auto 1rem;
   }
 }
 `;
