@@ -1,8 +1,10 @@
 import React, { useState } from 'react'
+import { IoMdClose } from 'react-icons/io';
 import styled from 'styled-components';
 import Image from 'gatsby-image';
+import Modal from 'react-modal';
 import ProductionsItem from './ProductionsItem';
-import ProductionModal from './ProductionModal';
+import ProductionsFilter from './ProductionsFilter';
 
 // get unique cateogories
 const getCategories = items => {
@@ -61,20 +63,14 @@ const ProductionsList = ({ posters }) => {
       return null;
     }
   }
+
   return (
     <>
-      <FilterBtnWrapper>
-        {categories.map((category, index) => {
-          return (
-            <button
-              type="button"
-              key={index}
-              className={selectedFilterIndex === index ? 'btn filter-btn filter-btn-active' : 'btn filter-btn'}
-              onClick={() => handleFilter(category,index)}
-            >{category}</button>
-          )
-        })}
-      </FilterBtnWrapper>
+      <ProductionsFilter
+        categories={categories}
+        handleFilter={handleFilter}
+        selectedFilterIndex={selectedFilterIndex}
+      />
       <ProductionsListWrapper>
         {posterItems.map(item => {
           return (
@@ -87,29 +83,39 @@ const ProductionsList = ({ posters }) => {
                 <ProductionsItem item={item} />
               </div>
 
-              <ProductionModal
-                show={selectedPoster !== null}
-                closeModal={closeModal}
+              <Modal
+                isOpen={selectedPoster !== null}
+                onRequestClose={closeModal}
+                style={customStyles}
               >
-                <div className="modal-children">
-                  {productionChildren()}
+                {productionChildren()}
+                <div>
+                  <button onClick={closeModal}>
+                    <IoMdClose />
+                  </button>
                 </div>
-              </ProductionModal>
+              </Modal>
             </div>
           )
-        })
-        }
+        })}
       </ProductionsListWrapper>
     </>
   )
 }
 
-const FilterBtnWrapper = styled.div`
-text-align:center;
-display:flex;
-flex-direction:row;
-justify-content:center;
-`;
+const customStyles = {
+  overlay: {
+    backgroundColor: 'rgba(0,0,0,0.4)'
+  },
+  content: {
+    top: '50%',
+    left: '50%',
+    right: 'auto',
+    bottom: 'auto',
+    marginRight: '-50%',
+    transform: 'translate(-50%, -50%)'
+  }
+};
 
 const ProductionsListWrapper = styled.div`
 display:grid;
@@ -117,21 +123,8 @@ grid-row-gap: 1.5rem;
 padding: 3rem 2rem;
 border-radius: 1rem;
 
-.modal-container{
-  display:grid;
-  overflow: hidden;
-  grid-gap: 1rem;
-  max-height: 80vh;
-}
-
-.modal-img{
-  height: 100%;
-  object-fit: contain;
-} 
-
 @media(min-width: 768px){
   grid-template-columns: repeat(auto-fill, minmax(300px,1fr));
-  /* grid-auto-rows: 1fr; */
   grid-gap: 1.5rem;
 }
 `;

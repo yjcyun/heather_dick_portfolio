@@ -31,28 +31,33 @@ const ProductionsItemWrapper = styled.div`
   display: -ms-grid;
   display: grid;
   position:relative;
+  box-shadow: 4px 4px 6px 0px rgba(0,0,0,0.1);
+-webkit-box-shadow: 4px 4px 6px 0px rgba(0,0,0,0.1);
+-moz-box-shadow: 4px 4px 6px 0px rgba(0,0,0,0.1);
+
+}
+
+.poster-img:hover{
+  box-shadow: 5px 7px 10px 0px rgba(0,0,0,0.43);
+-webkit-box-shadow: 5px 7px 10px 0px rgba(0,0,0,0.43);
+-moz-box-shadow: 5px 7px 10px 0px rgba(0,0,0,0.43);
 }
 
 .poster-gatsby-img{
-  height: 400px;
-  height: 25rem;
+  height: 20rem;
 }
 
 .poster-footer{
   padding: 8px;
   padding: 1rem 0.5rem;
-  background: var(--lightestPurple);
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
-  height: 5rem;
-
+  height: 5rem; 
+  text-align:center;
 }
 
 .poster-layover{
   background:-webkit-linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.7));
   background:linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.7));
-  height: 400px;
-  height: 25rem;
+  height: 20rem;
   width: 100%;
   position:absolute;
   top:0;
@@ -63,12 +68,12 @@ const ProductionsItemWrapper = styled.div`
   display:-webkit-box;
   display:-ms-flexbox;
   display:flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .poster-img:hover .poster-layover{
