@@ -1,20 +1,15 @@
 import React from 'react'
 import styled from 'styled-components';
 import Image from 'gatsby-image';
-import Fade from 'react-reveal/Fade';
 
 const CoachingItem = ({ image, desc, title }) => {
   return (
     <CoachingItemWrapper>
-
       <Image fluid={image} className="coaching-img" />
       <div className="coaching-text">
-        <Fade bottom cascade>
           <h1>{title}</h1>
           <p className="coaching-desc">{desc}</p>
-        </Fade>
       </div>
-
     </CoachingItemWrapper>
   )
 }

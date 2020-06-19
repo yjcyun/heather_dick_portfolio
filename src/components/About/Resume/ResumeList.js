@@ -47,14 +47,6 @@ const ResumeList = () => {
   // array of unique categories
   const [categories] = useState(getCategories(resume));
 
-  // const renderList = (categoryResume) => resume.map(item => {
-
-  //   if (item.category === categoryResume) {
-  //     return <ResumeItem key={item.id} item={item} />
-  //   }
-  //   return;
-  // });
-
   const renderList = (categoryResume) => resume
     .sort((a, b) => b.created_at > a.created_at ? 1 : -1)
     .map(item => {
