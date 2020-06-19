@@ -25,7 +25,6 @@
     "gatsby-plugin-sharp": "^2.6.9",
     "gatsby-plugin-sitemap": "^2.4.5",
     "gatsby-plugin-styled-components": "^3.3.2",
-    "gatsby-remark-embed-video": "^3.0.10",
     "gatsby-source-filesystem": "^2.3.8",
     "gatsby-source-strapi": "0.0.12",
     "gatsby-transformer-sharp": "^2.5.3",
@@ -41,7 +40,6 @@
     "react-scroll-up-button": "^1.6.4",
     "react-share": "^4.2.0",
     "react-toastify": "^6.0.5",
-    "simple-react-lightbox": "^3.2.2-4",
     "styled-components": "^5.1.1"
   },
   "devDependencies": {

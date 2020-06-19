@@ -2,7 +2,6 @@ import React from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
 import styled from 'styled-components';
 import CoachingItem from './CoachingItem';
-import Fade from 'react-reveal/Fade';
 import verticalBcg from '../../images/subtle-dark-vertical.png';
 
 const query = graphql`
@@ -32,9 +31,7 @@ const CoachingList = () => {
       <div className="coaching-container">
         {data.coaching.nodes.map(item => {
           return (
-            <Fade bottom>
               <CoachingItem key={item.id} image={item.image.childImageSharp.fluid} desc={item.description} title={item.title} />
-            </Fade>
           )
         })}
       </div>

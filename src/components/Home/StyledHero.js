@@ -1,5 +1,5 @@
 import React from 'react';
-import { graphql, useStaticQuery, Link } from 'gatsby';
+import { graphql, useStaticQuery,Link } from 'gatsby';
 import styled from 'styled-components';
 import Image from 'gatsby-image';
 import bcg from '../../images/bcg.jpg';
@@ -170,10 +170,6 @@ const HeroWrapper = styled.section`
             order:0;
     text-align:center;
     padding: 0 3rem 0 1.5rem;
-  }
-
-  .hero-title h1{
-  font-size: 6rem;
   }
 
   .hero-title h3 {

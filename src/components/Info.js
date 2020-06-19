@@ -30,7 +30,7 @@ const Info = ({ children, img }, contact) => {
       </div>
 
       <div className="info-text">
-        {children}
+          {children}
       </div>
     </InfoWrapper>
   )
@@ -53,7 +53,7 @@ margin: 0 auto;
 
 .info-text {
   text-align: left;
-  padding: ${props=> props.contact? '2rem': '2rem 1rem'};
+  padding: ${props => props.contact ? '2rem' : '2rem 1rem'};
 }
 
 .info-subtitle{
