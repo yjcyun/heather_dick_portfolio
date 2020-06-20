@@ -38,15 +38,16 @@ overflow:auto;
   bottom:0;
   right:0;
   z-index:100;
-  background-color: rgba(0,0,0,0.3);
+  background-color: rgba(0,0,0,0.4);
 }
+
 .modal-content{
   position: relative;
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%,-50%);
           transform: translate(-50%,-50%);
-  max-width: 30vw;
+  max-width: 50vw;
   height: auto;
   background-color: white;
   box-shadow: 0 0 5px rgba(0,0,0,0.05);
@@ -54,7 +55,6 @@ overflow:auto;
   padding: 32px;
   padding: 2rem;
 }
-
 
 .close-btn{
   position:absolute;

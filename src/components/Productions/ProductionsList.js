@@ -5,7 +5,6 @@ import ProductionsItem from './ProductionsItem';
 import ProductionsFilter from './ProductionsFilter';
 import ProductionModal from './ProductionModal';
 
-
 // get unique cateogories
 const getCategories = items => {
   let tempItems = items.map(item => {
@@ -51,11 +50,12 @@ const ProductionsList = ({ posters }) => {
         <div className="modal-container">
           <Image fluid={img.childImageSharp.fluid} alt="poster" className="modal-img" />
           <div style={{ marginTop: '1rem' }}>
-            <p><strong>{show}</strong> from {company}</p>
-            {category === 'directing'
+            <p><strong>{show}</strong></p>
+            <p>To be updated soon...</p>
+            {/* {category === 'directing'
               ? <p> Produced on  {date}</p>
               : <p>Heather Dick as {role} on {date}</p>
-            }
+            } */}
           </div>
         </div>
       )
@@ -108,13 +108,14 @@ border-radius: 1rem;
 
 .modal-container{
   display:grid;
-  overflow: hidden;
+  /* overflow: hidden; */
   grid-gap: 1rem;
   max-height: 80vh;
 }
 .modal-img{
+  width: 100%;
   height: 100%;
-  object-fit: contain;
+  /* object-fit: contain; */
 } 
 
 @media(min-width: 768px){
