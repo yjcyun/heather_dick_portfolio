@@ -29,6 +29,9 @@ const Footer = () => {
           </div>
         </div>
       </div>
+      <div className="footer-center" style={{marginTop:'0.8rem'}}>
+        <span className="footer-copyright">Copyright &copy; {new Date().getFullYear()} Heather Dick & The Sirius Theatrical Company</span>
+      </div>
     </FooterWrapper>
   )
 }
@@ -88,6 +91,10 @@ text-align: left;
   font-size: 0.8rem;
 }
 
+.footer-copyright{
+  font-size: 0.7rem;
+}
+
 @media (min-width: 576px) {
   .footer-center{
     display:flex;
@@ -108,6 +115,10 @@ text-align: left;
   .footer-contact{
     grid-column: 3/3;
   }
+  
+  .footer-copyright{
+    margin-top: -1rem;
+}
 }
 `;
 export default Footer

@@ -1,10 +1,10 @@
 import React, { useState } from 'react'
-import { IoMdClose } from 'react-icons/io';
 import styled from 'styled-components';
 import Image from 'gatsby-image';
-import Modal from 'react-modal';
 import ProductionsItem from './ProductionsItem';
 import ProductionsFilter from './ProductionsFilter';
+import ProductionModal from './ProductionModal';
+
 
 // get unique cateogories
 const getCategories = items => {
@@ -50,7 +50,7 @@ const ProductionsList = ({ posters }) => {
       return (
         <div className="modal-container">
           <Image fluid={img.childImageSharp.fluid} alt="poster" className="modal-img" />
-          <div style={{marginTop:'1rem'}}>
+          <div style={{ marginTop: '1rem' }}>
             <p><strong>{show}</strong> from {company}</p>
             {category === 'directing'
               ? <p> Produced on  {date}</p>
@@ -83,19 +83,15 @@ const ProductionsList = ({ posters }) => {
                 <ProductionsItem item={item} />
               </div>
 
-              <Modal
-                isOpen={selectedPoster !== null}
-                onRequestClose={closeModal}
-                style={customStyles}
-                ariaHideApp={false}
+
+              <ProductionModal
+                show={selectedPoster !== null}
+                closeModal={closeModal}
               >
-                {productionChildren()}
-                <div style={{position:'absolute', top:'0', right:'0'}}>
-                  <button onClick={closeModal} style={{background:'transparent', outline:'none', border:'none'}} className="modal-close">
-                    <IoMdClose style={{fontSize:'1.5rem'}}/>
-                  </button>
+                <div className="modal-children">
+                  {productionChildren()}
                 </div>
-              </Modal>
+              </ProductionModal>
             </div>
           )
         })}
@@ -104,28 +100,25 @@ const ProductionsList = ({ posters }) => {
   )
 }
 
-const customStyles = {
-  overlay: {
-    backgroundColor: 'rgba(0,0,0,0.4)'
-  },
-  content: {
-    top: '50%',
-    left: '50%',
-    right: 'auto',
-    bottom: 'auto',
-    marginRight: '-50%',
-    transform: 'translate(-50%, -50%)'
-  }
-};
-
 const ProductionsListWrapper = styled.div`
 display:grid;
 grid-row-gap: 1.5rem;
 padding: 3rem 2rem;
 border-radius: 1rem;
 
+.modal-container{
+  display:grid;
+  overflow: hidden;
+  grid-gap: 1rem;
+  max-height: 80vh;
+}
+.modal-img{
+  height: 100%;
+  object-fit: contain;
+} 
+
 @media(min-width: 768px){
-  grid-template-columns: repeat(auto-fill, minmax(300px,1fr));
+          grid-template-columns: repeat(auto-fill, minmax(300px,1fr));
   grid-gap: 1.5rem;
 }
 `;
