@@ -44,7 +44,7 @@ const Notification = () => {
 
 const ToastWrapper = styled.div`
 .Toastify__toast-container{
-  width: auto;
+  width: 15rem;
 }
 .Toastify__toast {
   background-color: white;
