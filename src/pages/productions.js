@@ -21,9 +21,6 @@ export const query = graphql`
             fluid {
               ...GatsbyImageSharpFluid
             }
-            fixed {
-              ...GatsbyImageSharpFixed
-            }
           }
         }
       }
@@ -35,13 +32,13 @@ const Productions = ({
   data: { posters: { nodes: posters } }
 }) => {
   return (
-      <Layout>
-        <SEO title="Productions" description="Productions page" />
-        <div className="page">
-          <Title title="Productions" subtitle="Any subtitle on this page? quote?" />
-          <ProductionsList posters={posters} />
-        </div>
-      </Layout>
+    <Layout>
+      <SEO title="Productions" description="Productions page" />
+      <div className="page">
+        <Title title="Productions" subtitle="Any subtitle on this page? quote?" />
+        <ProductionsList posters={posters} />
+      </div>
+    </Layout>
   )
 }
 

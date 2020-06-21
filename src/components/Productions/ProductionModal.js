@@ -29,7 +29,7 @@ top:0;
 left:0;
 bottom:0;
 right:0;
-overflow:auto;
+
 
 .modal-backdrop{
   position: fixed;
@@ -47,13 +47,13 @@ overflow:auto;
   left: 50%;
   -webkit-transform: translate(-50%,-50%);
           transform: translate(-50%,-50%);
-  max-width: 50vw;
-  height: auto;
-  background-color: white;
+  /* max-width: 100%;
+  width: 40vw;
+  max-height:100%;
   box-shadow: 0 0 5px rgba(0,0,0,0.05);
   z-index:101;
   padding: 32px;
-  padding: 2rem;
+  padding: 2rem; */
 }
 
 .close-btn{
@@ -65,6 +65,7 @@ overflow:auto;
   font-size: 24px;
   font-size: 1.5rem;
 }
+
   @media (max-width: 420px) {
     .modal-content{
       max-width: 90vw;
