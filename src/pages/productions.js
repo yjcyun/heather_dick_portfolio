@@ -38,7 +38,7 @@ const Productions = ({
       <SEO title="Productions" description="Productions page" />
       <div className="page">
         <Title title="Productions" subtitle="Any subtitle on this page? quote?" />
-        <ProductionsList posters={posters} />
+        {/* <ProductionsList posters={posters} /> */}
         <Contact icon={medal} title="Work With Heather!" btnText="send email">
           <h4 className="coaching-contact margin-bottom">Contact Heather if you'd like to work with her</h4>
         </Contact>

@@ -41,11 +41,6 @@ module.exports = {
       options: {
         fonts: [
           {
-            family: `Oswald`,
-            subset:[`latin`],
-            variants: [`300`,`400`],
-          },
-          {
             family: `Poppins`,
             variants: [`300`, `400`]
           }
