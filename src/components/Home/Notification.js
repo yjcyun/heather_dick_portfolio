@@ -23,9 +23,12 @@ const CloseButton = ({ closeToast }) => (
 
 const Notification = () => {
   const { allStrapiNotifications: { nodes } } = useStaticQuery(query);
+
   nodes.map(item => {
     if (item.home) {
-      return toast.success(item.notification);
+      return toast(item.notification, {
+        position:toast.POSITION.BOTTOM_LEFT
+      });
     } else {
       return null;
     }
@@ -37,6 +40,7 @@ const Notification = () => {
         position="bottom-left"
         // autoClose={6000}
         autoClose={false}
+        hideProgressBar={false}
         closeButton={CloseButton}
       />
     </ToastWrapper>
