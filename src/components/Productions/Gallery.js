@@ -39,13 +39,14 @@ export class Gallery extends Component {
         {showLightbox && (
           <DialogOverlay
             onDismiss={() => this.closeModal()}
-            style={{ background: 'rgba(0, 0, 0, 0.9)' }}>
-            <DialogContent aria-labelledby={selectedImage.id} 
-            style={contentStyle}>
+            className="modal-overlay">
+
+            <DialogContent aria-labelledby={selectedImage.id}
+              className="modal-content">
               <Img fluid={selectedImage.img.childImageSharp.fluid} />
               <p>{selectedImage.show}</p>
-              <p>To be deterimined</p>
-              <button type="button" onClick={() => this.closeModal()} style={closeBtn}>
+              <p className="test">To be deterimined</p>
+              <button type="button" onClick={() => this.closeModal()} className="close-btn">
                 <IoMdClose />
               </button>
             </DialogContent>
@@ -56,29 +57,8 @@ export class Gallery extends Component {
   }
 }
 
-const contentStyle = {
-  maxWidth: '40vw',
-  position: 'absolute',
-  top: '50%',
-  left: '50%',
-  transform: 'translate(-50%, -50%)',
-  marginTop: '0',
-  marginBottom: '0'
-}
 
-const ModalContent = styled(DialogContent)`
-color:red
-`;
 
-const closeBtn = {
-  position: 'absolute',
-  right: '5px',
-  top: '5px',
-  border: 'none',
-  background: 'transparent',
-  fontSize: '1.5rem',
-  cursor: 'pointer'
-};
 
 const LightboxContainer = styled.div`
 display:grid;

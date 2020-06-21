@@ -367,4 +367,33 @@ icons
   stroke-dashoffset: 50px;
 }
 
+/* Gallery Modal */
+.modal-overlay{
+  background: rgba(0,0,0,0.8)!important;
+}
 
+.modal-content {
+  width: 90vw!important;
+  height: auto !important;
+ position:absolute;
+ top: 50%;
+ left:50%;
+ transform: translate(-50%, -50%);
+ margin-top: 0 !important;
+}
+
+@media (min-width: 996px){
+  .modal-content{
+    width: 40vw !important;
+  }
+}
+
+.close-btn {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  border: none;
+  background: transparent;
+  font-size: 1.5rem;
+  cursor: pointer;
+};
