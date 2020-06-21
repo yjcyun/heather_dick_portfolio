@@ -39,7 +39,7 @@ const Footer = () => {
 const FooterWrapper = styled.footer`
 background: var(--mainPurple);
 color: #fff;
-padding: 2rem;
+padding: 2rem 2rem 1rem;
 
 .footer-center{
   max-width: 1170px;
@@ -92,13 +92,16 @@ text-align: left;
 }
 
 .footer-copyright{
-  font-size: 0.7rem;
+  font-size: 0.6rem;
+  display:flex;
+  justify-content:center;
 }
 
 @media (min-width: 576px) {
   .footer-center{
     display:flex;
     flex-direction: row;
+    justify-content:center;
   }
 
   .footer-logo {
@@ -117,7 +120,8 @@ text-align: left;
   }
   
   .footer-copyright{
-    margin-top: -1rem;
+    margin: 2rem auto 0;
+    font-size: 0.7rem;
 }
 }
 `;

@@ -23,8 +23,7 @@ const NavbarWrapper = styled.nav`
   top: 0;
   left: 0;
   width: 100%;
-  /* background: #27004d; */
-  background:#612972;
+  background:var(--mainPurple);
   height: 5rem;
 
   .nav-header{
@@ -101,23 +100,8 @@ const NavbarWrapper = styled.nav`
   .nav-links a:hover{
     box-shadow:0 4px var(--lighterGold);
   } 
-    
-  .logo-text{
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    font-size: 1.3rem;
-    width: auto;
-    text-align: left;
-    line-height: 0.5;
-    margin-left: 0.5rem;
-  }
   
-    .menu-btn {
+  .menu-btn {
     display: none;
   }
   }

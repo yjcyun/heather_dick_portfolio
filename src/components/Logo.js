@@ -44,11 +44,10 @@ position:relative;
 
   .logo-text{
     letter-spacing:1.6px;
-    letter-spacing: 0.1rem;
     font-weight: normal;
     line-height: 1;
     margin-bottom: 0;
-    margin-left: 0.7rem;
+    margin-left: 0.5rem;
     color: #fff;
   }
 
@@ -60,7 +59,10 @@ position:relative;
     .logo-company{
       font-size: 70%;
     }
-  })
+    .logo-text{
+      margin-left: 2rem;
+    }
+  }
 `;
 
 export default Logo
