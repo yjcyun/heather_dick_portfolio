@@ -4,20 +4,26 @@ import styled from 'styled-components';
 const BannerSubtitle = ({ icon, title }) => {
   return (
     <BannerWrapper>
+      <div className="banner-hr" />
       <h2 className="event-title">
         <img src={icon} className="icon" alt="icon" />  {title}
       </h2>
+      <div className="banner-hr" />
     </BannerWrapper>
   )
 }
 
 const BannerWrapper = styled.div`
+display:flex;
+justify-content:center;
+align-items:center;
+
 .event-title{
   text-transform: capitalize;
   font-family: 'Margetha';
   font-size: 56px;
-  font-size: 3.5rem;
-  line-height: 1;
+  font-size: 2rem;
+  line-height: 1.3;
   display:-webkit-box;
   display:-ms-flexbox;
   display:flex;

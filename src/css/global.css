@@ -57,8 +57,11 @@ hr {
   margin: 8px 0;
   margin: 0.5rem 0;
 }
-.center-hr {
-  margin: 0 auto;
+.banner-hr {
+  width: 10rem;
+  height: 0.07rem;
+  background-color: var(--mainGold);
+  margin: 0 1rem;
 }
 
 body {
@@ -144,20 +147,19 @@ Button
   margin: 0 0.5rem 3rem;
   padding: 8px 16px;
   padding: 0.5rem 1rem;
-  /* background: var(--lightPurple); */
   color: var(--mainPurple);
   border-color: var(--lightPurple);
   border-radius: 10px;
 }
 
 .filter-btn:hover {
-  background-color: #3b0074;
-  border-color: #3b0074;
+  background-color: var(--darkPurple);
+  border-color: var(--darkPurple);
   color: white;
 }
 
 .filter-btn-active {
-  background: #3b0074;
+  background: var(--darkPurple);
   color: white;
 }
 
@@ -367,9 +369,11 @@ icons
   stroke-dashoffset: 50px;
 }
 
-/* Gallery Modal */
+/*=============== 
+Gallery Modal
+===============*/
 .modal-overlay{
-  background: rgba(0,0,0,0.8)!important;
+  background: rgba(0,0,0,0.9)!important;
 }
 
 .modal-content {
@@ -380,6 +384,7 @@ icons
  left:50%;
  transform: translate(-50%, -50%);
  margin-top: 0 !important;
+ margin-bottom: 0 !important;
 }
 
 @media (min-width: 996px){

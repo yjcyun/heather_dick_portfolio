@@ -3,7 +3,8 @@ import Layout from '../components/Layout';
 import Title from '../components/Title';
 import ReviewList from '../components/Reviews/ReviewList';
 import SEO from '../components/SEO';
-import SubmitReview from '../components/Reviews/SubmitReview';
+import clap from '../images/clap.png';
+import Contact from '../components/Contact';
 
 const Reviews = () => {
   return (
@@ -15,7 +16,7 @@ const Reviews = () => {
           subtitle="See what Heather's students and press are saying about her work"
         />
         <ReviewList />
-        <SubmitReview />
+        <Contact icon={clap} btnText="Contact Heather" title="Send your reviews"></Contact>
       </div>
     </Layout>
   )

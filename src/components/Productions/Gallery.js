@@ -43,9 +43,9 @@ export class Gallery extends Component {
 
             <DialogContent aria-labelledby={selectedImage.id}
               className="modal-content">
-              <Img fluid={selectedImage.img.childImageSharp.fluid} />
+              <Img fluid={selectedImage.img.childImageSharp.fluid} /><br/>
               <p>{selectedImage.show}</p>
-              <p className="test">To be deterimined</p>
+              <p>To be deterimined</p>
               <button type="button" onClick={() => this.closeModal()} className="close-btn">
                 <IoMdClose />
               </button>
@@ -57,13 +57,10 @@ export class Gallery extends Component {
   }
 }
 
-
-
-
 const LightboxContainer = styled.div`
 display:grid;
 grid-row-gap: 1.5rem;
-padding: 3rem 2rem;
+padding: 3rem 2rem 8rem;
 
 @media(min-width: 768px){
   grid-template-columns: repeat(auto-fill, minmax(300px,1fr));

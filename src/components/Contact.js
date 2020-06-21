@@ -2,20 +2,17 @@ import React from 'react';
 import { Link } from 'gatsby';
 import styled from 'styled-components';
 import Bounce from 'react-reveal/Bounce';
-import BannerSubtitle from '../BannerSubtitle';
-import question from '../../images/question.png';
+import BannerSubtitle from './BannerSubtitle';
 
-const Contact = () => {
+const Contact = ({ children, btnText, icon,title }) => {
   return (
     <ContactWrapper>
-      <Bounce bottom duration={1000} delay={200} >
-        <BannerSubtitle icon={question} title="Have any questions?" />
+      <Bounce bottom duration={1000} >
+        <BannerSubtitle icon={icon} title={title} />
         <div className="contact-container">
-          <h4 className="coaching-contact">Do you need help with your upcoming theatre/vocal project?</h4>
-          <h4 className="coaching-contact strong">Contact Heather and she will guide you to the right direction.</h4>
-
+          {children}
           <Link to="/contact" className="about-btn-container">
-            <button className="btn contact-btn">send your questions</button>
+            <button className="btn contact-btn">{btnText}</button>
           </Link>
         </div>
       </Bounce>
@@ -25,7 +22,6 @@ const Contact = () => {
 
 const ContactWrapper = styled.div`
 text-align:center;
-
 .contact-container{
   margin-top:32px;
   margin-top: 2rem;
@@ -44,6 +40,10 @@ text-align:center;
 .coaching-contact.strong{
   font-weight: bold;
   margin-bottom:32px;
+  margin-bottom: 2rem;
+}
+
+.margin-bottom{
   margin-bottom: 2rem;
 }
 

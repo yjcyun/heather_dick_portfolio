@@ -4,6 +4,8 @@ import Layout from '../components/Layout';
 import Title from '../components/Title';
 import ProductionsList from '../components/Productions/ProductionsList';
 import SEO from '../components/SEO';
+import Contact from '../components/Contact';
+import medal from '../images/medal.png';
 
 export const query = graphql`
   {
@@ -37,6 +39,9 @@ const Productions = ({
       <div className="page">
         <Title title="Productions" subtitle="Any subtitle on this page? quote?" />
         <ProductionsList posters={posters} />
+        <Contact icon={medal} title="Work With Heather!" btnText="send email">
+          <h4 className="coaching-contact margin-bottom">Contact Heather if you'd like to work with her</h4>
+        </Contact>
       </div>
     </Layout>
   )

@@ -17,7 +17,7 @@ const ProductionsList = ({ posters }) => {
   const [items] = useState(posters);
   const [posterItems, setPosterItems] = useState(posters);
   const [categories] = useState(getCategories(posters));
-  const [selectedFilterIndex, setSelectedFilterIndex] = useState(null);
+  const [selectedFilterIndex, setSelectedFilterIndex] = useState(0);
 
   const handleFilter = (category, index) => {
     let tempPosters = [...items];

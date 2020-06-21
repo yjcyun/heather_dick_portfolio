@@ -49,5 +49,8 @@ const ProductionsItemWrapper = styled.div`
   padding: 1rem 0.5rem;
   text-align:center;
 }
+.poster-footer p {
+  font-size: 1rem;
+}
 `;
 export default ProductionsItem

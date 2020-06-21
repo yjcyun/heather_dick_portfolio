@@ -28,9 +28,9 @@ const Contact = () => {
           <div className="info-single">
             <h2 className="info-subtitle">Heather Dick</h2>
             <div className="social">
-              <div>
+              <div className="email">
                 <FaRegEnvelope className="contact-social" />
-                <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;%65%6D%61%69%6C%40%65%6D%61%69%6C%2E%63%6F%6D">email@email.com</a>
+                <span>email@email.com</span>
               </div>
               <SocialLinks footer styleClass="contact-social" />
             </div>
@@ -54,12 +54,15 @@ padding-bottom: 10rem;
   font-size: 1.5rem;
 }
 
-.contact-social a:hover, .footer-icon a:hover, .social a:hover{
+.contact-social a:hover, .footer-icon a:hover, .social span:hover{
   font-weight:bold;
 }
-
-.social a{
+.email {
+  margin-bottom: 1rem;
+}
+.social span{
   font-size: 1.5rem;
+  margin-left: 0.5rem;
 }
 
 @media(min-width: 768px){
