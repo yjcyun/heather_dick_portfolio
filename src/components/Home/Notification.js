@@ -1,7 +1,7 @@
 import React from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
 import { ToastContainer, toast } from 'react-toastify';
-import { IoIosCloseCircle } from 'react-icons/io';
+import { IoIosClose } from 'react-icons/io';
 import 'react-toastify/dist/ReactToastify.css';
 import styled from 'styled-components';
 
@@ -18,7 +18,7 @@ const query = graphql`
 `;
 
 const CloseButton = ({ closeToast }) => (
-  <i role="button" tabIndex={0} onKeyDown={closeToast} className="material-icons" onClick={closeToast}><IoIosCloseCircle className="close-icon" /></i>
+  <i role="button" tabIndex={0} onKeyDown={closeToast} className="material-icons" onClick={closeToast}><IoIosClose className="close-icon" /></i>
 )
 
 const Notification = () => {
