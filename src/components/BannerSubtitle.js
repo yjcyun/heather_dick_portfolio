@@ -43,6 +43,14 @@ align-items:center;
   margin-right: 0rem;
 }
 
+.banner-hr {
+  width: 10rem;
+  height: 0.07rem;
+  background-color: var(--mainGold);
+  margin: 0 1rem;
+  display:none;
+}
+
 @media (min-width: 768px) {
   .event-title{
     font-size: 4rem;
@@ -50,6 +58,9 @@ align-items:center;
   .icon{
     width: 80px;
     margin-right: 2rem;
+  }
+  .banner-hr{
+    display:flex;
   }
 }
 `;

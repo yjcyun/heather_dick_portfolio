@@ -20,7 +20,6 @@ const ReviewList = () => {
 const ReviewListWrapper = styled.section`
 display: -ms-grid;
 display: grid;
-/* grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); */
 -ms-grid-columns: 1fr 1fr;
     grid-template-columns: 1fr 1fr;
 -ms-grid-row-align:start;
@@ -30,7 +29,7 @@ padding: 2rem 4rem;
 margin-bottom: 5rem;
 
 @media(max-width: 576px){
-  margin: 0 1rem 5rem 1rem;
+  margin: 3rem 1rem 6rem;
   padding: 0;
   -ms-grid-columns: 1fr;
       grid-template-columns: 1fr;

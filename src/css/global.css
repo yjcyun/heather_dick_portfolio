@@ -57,12 +57,7 @@ hr {
   margin: 8px 0;
   margin: 0.5rem 0;
 }
-.banner-hr {
-  width: 10rem;
-  height: 0.07rem;
-  background-color: var(--mainGold);
-  margin: 0 1rem;
-}
+
 
 body {
   font-family: var(--mainFont);
