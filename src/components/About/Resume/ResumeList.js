@@ -8,7 +8,7 @@ import Brush from '../../../images/brush.svg';
 
 const query = graphql`
  {
-    resumes:allStrapiResumes(sort: {fields: category, order: ASC}) {
+    resumes:allStrapiResumes {
       nodes {
         id
         role
@@ -83,16 +83,18 @@ const ResumeList = () => {
         <Subtitle subtitle="SELECTED CREDITS" credits />
         <div className="resume-column">
           <div className="resume-content">
-            {categories.map((item, index) => {
-              return (
-                <div key={index} className="resume-item">
-                  <h1 className="resume-category">
-                    {switchTitle(item)}
-                  </h1>
-                  {renderList(item)}
-                </div>
-              )
-            })}
+            {categories
+              .sort((a, b) => a.category >b.category ? -1 : 1)
+              .map((item, index) => {
+                return (
+                  <div key={index} className="resume-item">
+                    <h1 className="resume-category">
+                      {switchTitle(item)}
+                    </h1>
+                    {renderList(item)}
+                  </div>
+                )
+              })}
             <Link to="/contact" className="about-btn-container">
               <button className="btn about-btn">contact for full resume</button>
             </Link>
