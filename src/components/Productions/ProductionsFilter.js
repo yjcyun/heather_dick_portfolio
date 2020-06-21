@@ -1,9 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-
 const ProductionsFilter = ({ categories, handleFilter, selectedFilterIndex }) => {
-  console.log(selectedFilterIndex);
   return (
     <FilterBtnWrapper>
       {categories.map((category, index) => {

@@ -35,7 +35,8 @@ const Notification = () => {
     <ToastWrapper>
       <ToastContainer
         position="bottom-left"
-        autoClose={6000}
+        // autoClose={6000}
+        autoClose={false}
         closeButton={CloseButton}
       />
     </ToastWrapper>
