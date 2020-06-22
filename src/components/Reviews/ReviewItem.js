@@ -23,7 +23,7 @@ const ReviewItemWrapper = styled.div`
 margin-bottom: 4rem;
 .bubble-text {
  position: relative;
- background-color: #f7eff9;
+ background-color: var(--beige);
  width: auto;
  height: auto;
  border-radius: 2em;

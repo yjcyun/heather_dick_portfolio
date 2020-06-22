@@ -60,7 +60,7 @@ position:relative;
       font-size: 70%;
     }
     .logo-text{
-      margin-left: 2rem;
+      margin-left: 1.5rem;
     }
   }
 `;

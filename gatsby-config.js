@@ -53,5 +53,13 @@ module.exports = {
         siteUrl: `https://heatherdick.netlify.app`,
       },
     },
+    {
+      resolve: 'gatsby-plugin-robots-txt',
+      options: {
+        host: 'https://heatherdick.netlify.app',
+        sitemap: 'https://heatherdick.netlify.app/sitemap.xml',
+        policy: [{ userAgent: '*', allow: '/' }]
+      }
+    }
   ]
 }
