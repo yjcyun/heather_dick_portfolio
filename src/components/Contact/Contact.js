@@ -29,7 +29,7 @@ const Contact = () => {
             <h2 className="info-subtitle">Heather Dick</h2>
             <div className="social">
               <div className="email">
-                <FaRegEnvelope className="contact-social" />
+                {/* <FaRegEnvelope className="contact-social" /> */}
                 <span>email@email.com</span>
               </div>
               <SocialLinks footer styleClass="contact-social" />
@@ -58,11 +58,21 @@ padding-bottom: 10rem;
   font-weight:bold;
 }
 .email {
-  margin-bottom: 1rem;
+  background: var(--lightPurple);
+  color: white;
+  padding: 0.2rem 1rem;
+  border-radius:2rem;
+  display:inline-block;
+  margin-bottom:1rem;
+
+}
+
+.email .contact-social{
+  color: white;
+ 
 }
 .social span{
   font-size: 1.5rem;
-  margin-left: 0.5rem;
 }
 
 @media(min-width: 768px){
