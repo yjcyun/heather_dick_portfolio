@@ -7,7 +7,7 @@ const ProductionsItem = ({ item }) => {
   return (
     <ProductionsItemWrapper>
       <div className="poster-img">
-        <Image fluid={img.childImageSharp.fluid} alt="posters" className="poster-gatsby-img" />
+        <Image fluid={item.img.childImageSharp.fluid} alt="posters" className="poster-gatsby-img" />
         <div className="poster-footer">
           <p><strong>{show}</strong></p>
         </div>

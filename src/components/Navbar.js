@@ -23,7 +23,8 @@ const NavbarWrapper = styled.nav`
   top: 0;
   left: 0;
   width: 100%;
-  background:var(--mainPurple);
+  background:var(--darkPurple);
+  /* background: var(--mainGold); */
   height: 5rem;
 
   .nav-header{
