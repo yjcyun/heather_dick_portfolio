@@ -10,15 +10,23 @@ export default class LightboxExample extends Component {
     this.state = {
       photoIndex: 0,
       isOpen: false,
-      thumbnails: props.photos.map(photo => Object.assign({ srcSet: photo.img.childImageSharp.fluid.srcSet }))
+      thumbnails: []
     };
+    
   }
+
+
 
   render() {
     const { photoIndex, isOpen, thumbnails } = this.state;
     const { photos } = this.props;
-   
-    console.log(thumbnails);
+
+    const ImgArr = photos.map(photo => {
+      const image = photo.img.childImageSharp.fluid.srcSet;
+      this.setState({ thumbnails: image })
+    });
+
+    console.log(ImgArr);
     return (
       <div>
         <LightboxContainer>

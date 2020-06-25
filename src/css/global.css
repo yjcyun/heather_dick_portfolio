@@ -366,25 +366,6 @@ icons
 /*=============== 
 Gallery Modal
 ===============*/
-.modal-overlay {
-  background: rgba(0, 0, 0, 0.9) !important;
-}
-
-.modal-content {
-  width: 90vw !important;
-  height: auto !important;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-@media (min-width: 996px) {
-  .modal-content {
-    width: 40vw !important;
-  }
-}
-
 .close-btn {
   position: absolute;
   right: 5px;
