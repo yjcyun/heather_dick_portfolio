@@ -18,7 +18,6 @@ const getImage = graphql`
 
 const Info = ({ children, img }, contact) => {
   const data = useStaticQuery(getImage);
-
   return (
     <InfoWrapper contact={contact}>
       <div className="hero-image">
@@ -53,7 +52,7 @@ margin: 0 auto;
 
 .info-text {
   text-align: left;
-  padding: ${props => props.contact ? '2rem' : '2rem 1rem'};
+  padding: ${props => props.contact ? '1rem 0.5rem' : ''};
 }
 
 .info-subtitle{

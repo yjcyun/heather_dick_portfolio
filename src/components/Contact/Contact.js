@@ -24,13 +24,13 @@ const Contact = () => {
   return (
     <ContactWrapper>
       <div className="contact-content">
-        <Info img={data.contactImg.childImageSharp.fluid}>
+        <Info img={data.contactImg.childImageSharp.fluid} contact>
           <div className="info-single">
             <h2 className="info-subtitle">Heather Dick</h2>
             <div className="social">
               <div className="email">
                 {/* <FaRegEnvelope className="contact-social" /> */}
-                <span>email@email.com</span>
+                <span>email[at]email[dot]com</span>
               </div>
               <SocialLinks footer styleClass="contact-social" />
             </div>
@@ -57,6 +57,7 @@ padding-bottom: 10rem;
 .contact-social a:hover, .footer-icon a:hover, .social span:hover{
   font-weight:bold;
 }
+
 .email {
   background: var(--lightPurple);
   color: white;
@@ -64,18 +65,14 @@ padding-bottom: 10rem;
   border-radius:2rem;
   display:inline-block;
   margin-bottom:1rem;
-
 }
 
 .email .contact-social{
   color: white;
- 
-}
-.social span{
-  font-size: 1.5rem;
 }
 
-@media(min-width: 768px){
+.social span{
+  font-size: 1.5rem;
 }
 `;
 
