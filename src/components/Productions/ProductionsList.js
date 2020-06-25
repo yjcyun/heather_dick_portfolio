@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import ProductionsFilter from './ProductionsFilter';
 import Gallery from './Gallery';
-import Gallery2 from './Gallery2';
 
 // get unique cateogories
 const getCategories = items => {
@@ -40,7 +39,6 @@ const ProductionsList = ({ posters }) => {
         selectedFilterIndex={selectedFilterIndex}
       />
       <Gallery photos={posterItems}/>
-      {/* <Gallery2 photos={posterItems}/> */}
      </>
   )
 }

@@ -30,15 +30,15 @@ const Contact = () => {
             <div className="social">
               <div className="email">
                 {/* <FaRegEnvelope className="contact-social" /> */}
-                <span>email[at]email[dot]com</span>
+                <span>info<small>[@]</small>heatherdick<small>[.]</small>com</span>
               </div>
               <SocialLinks footer styleClass="contact-social" />
             </div>
           </div>
-          <div className="info-single">
+          {/* <div className="info-single">
             <h2 className="info-subtitle">Management Company</h2>
             <CompanyLinks styleClass="contact-social" />
-          </div>
+          </div> */}
         </Info>
       </div>
     </ContactWrapper>

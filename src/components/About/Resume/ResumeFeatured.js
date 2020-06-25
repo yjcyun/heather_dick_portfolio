@@ -6,13 +6,13 @@ import styled from 'styled-components';
 
 const getImage = graphql`
   {
-    allFile(filter: {extension: {regex: "/(jpg)/"}, relativeDirectory: {eq: "headshots"}}) {
+    allFile(filter: {extension: {regex: "/(jpg)/"}, relativeDirectory: {eq: "headshots"}}, sort: {fields: name, order: ASC}) {
       edges {
         node {
           childImageSharp {
             fluid {
-              aspectRatio
               base64
+              aspectRatio
               sizes
               src
               srcSet
