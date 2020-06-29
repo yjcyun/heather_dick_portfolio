@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'gatsby';
 import styled from 'styled-components';
-import logo from '../images/logo.jpg';
+import logo from '../images/logo.svg';
 
 const Logo = () => {
   return (
@@ -29,7 +29,7 @@ position:relative;
     }
 
   .logo-img{
-    width: 40px;
+    width: 50px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -40,6 +40,7 @@ position:relative;
         -ms-flex-align: center;
             align-items: center;
             border: 1px solid white;
+            background: white;
   }
 
   .logo-text{

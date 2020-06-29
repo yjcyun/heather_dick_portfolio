@@ -1,9 +1,8 @@
 import React from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
-import { FaRegEnvelope } from 'react-icons/fa';
 import styled from 'styled-components';
 import SocialLinks from '../../constants/socialLinks';
-import CompanyLinks from '../../constants/companyLinks';
+// import CompanyLinks from '../../constants/companyLinks';
 import Info from '../Info';
 
 const getImage = graphql`

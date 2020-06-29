@@ -5,24 +5,21 @@ import Title from '../components/Title';
 import ProductionsList from '../components/Productions/ProductionsList';
 import SEO from '../components/SEO';
 import Contact from '../components/Contact';
-import medal from '../images/medal.png';
 import spotlight from '../images/spotlight.png';
 
 export const query = graphql`
-  {
-    posters: allStrapiProductions(sort: {fields: date, order: DESC}) {
+ {
+    posters:allStrapiProductions {
       nodes {
-        category
-        company
-        date(formatString: "MMM Do, YYYY")
-        director
         id
-        role
+        description
+        created_at
+        category
         show
         img {
           childImageSharp {
             fluid {
-              ...GatsbyImageSharpFluid
+          ...GatsbyImageSharpFluid
             }
           }
         }

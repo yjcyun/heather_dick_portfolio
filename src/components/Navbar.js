@@ -24,7 +24,6 @@ const NavbarWrapper = styled.nav`
   left: 0;
   width: 100%;
   background:var(--mainPurple);
-  /* background: var(--mainGold); */
   height: 5rem;
 
   .nav-header{

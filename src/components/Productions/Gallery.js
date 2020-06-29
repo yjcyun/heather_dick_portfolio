@@ -43,9 +43,9 @@ export class Gallery extends Component {
 
             <DialogContent aria-labelledby={selectedImage.id}
               className="modal-content">
-              <Img fluid={selectedImage.img.childImageSharp.fluid} /><br/>
+              <Img fluid={selectedImage.img.childImageSharp.fluid} /><br />
               <p>{selectedImage.show}</p>
-              <p>To be deterimined</p>
+              <p>{selectedImage.description}</p>
               <button type="button" onClick={() => this.closeModal()} className="close-btn">
                 <IoMdClose />
               </button>
