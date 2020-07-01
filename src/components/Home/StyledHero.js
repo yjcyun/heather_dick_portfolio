@@ -29,7 +29,7 @@ const StyledHero = () => {
             <h3>& the Sirius Theatrical Company</h3>
           </div>
           <div className="hero-subtitle">
-            <h5>actor. writer. producer.</h5>
+            <h5>performer. voice artist. director.</h5>
           </div>
 
           <Link to="/bio">

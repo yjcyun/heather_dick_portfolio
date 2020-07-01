@@ -38,6 +38,8 @@ const getCategories = items => {
   let tempCategories = new Set(tempItems);
   let categories = Array.from(tempCategories);
   categories = [...categories];
+  // sort categories in alphabetical order
+  categories = categories.sort((a, b) => a > b ? 1 : -1);
   return categories;
 }
 
@@ -47,6 +49,7 @@ const ResumeList = () => {
   // array of unique categories
   const [categories] = useState(getCategories(resume));
 
+  // sort resume item according to created time
   const renderList = (categoryResume) => resume
     .sort((a, b) => b.created_at > a.created_at ? 1 : -1)
     .map(item => {
@@ -56,21 +59,22 @@ const ResumeList = () => {
       return;
     });
 
+  // convert title 
   const switchTitle = (category) => {
     switch (category) {
-      case 'atheatre':
+      case 'a1theatre':
         return 'theatre';
-      case 'bfilm':
+      case 'b2film':
         return 'film & television';
-      case 'caudio':
+      case 'c3audio':
         return 'audio';
-      case 'ddirecting':
+      case 'd4directing':
         return 'directing';
-      case 'evocalcoaching':
+      case 'e5vocal':
         return 'vocal coaching';
-      case 'fwriting':
+      case 'f6writing':
         return 'dramaturgy & writing';
-      case 'gtraining':
+      case 'g7training':
         return 'training';
       default:
         return 'default';
@@ -84,7 +88,6 @@ const ResumeList = () => {
         <div className="resume-column">
           <div className="resume-content">
             {categories
-              .sort((a, b) => a.category >b.category ? -1 : 1)
               .map((item, index) => {
                 return (
                   <div key={index} className="resume-item">
@@ -118,27 +121,27 @@ margin:3rem auto;
   display:flex;
   -webkit-box-orient:vertical;
   -webkit-box-direction:normal;
-      -ms-flex-direction:column;
-          flex-direction:column;
+  -ms-flex-direction:column;
+  flex-direction:column;
 }
 
 .resume-content{
- -webkit-box-flex:1;
-     -ms-flex:1;
-         flex:1;
- display:-webkit-box;
- display:-ms-flexbox;
- display:flex;
- -webkit-box-orient:vertical;
- -webkit-box-direction:normal;
-     -ms-flex-direction:column;
-         flex-direction:column;
+  -webkit-box-flex:1;
+  -ms-flex:1;
+  flex:1;
+  display:-webkit-box;
+  display:-ms-flexbox;
+  display:flex;
+  -webkit-box-orient:vertical;
+  -webkit-box-direction:normal;
+  -ms-flex-direction:column;
+  flex-direction:column;
 }
 
 .resume-featured{
   -webkit-box-flex:1;
-      -ms-flex:1;
-          flex:1;
+  -ms-flex:1;
+  flex:1;
 }
 
 .resume-item{
@@ -153,9 +156,6 @@ margin:3rem auto;
   letter-spacing: 1.6px;
   letter-spacing: 0.1rem;
   display:inline-block;
-  /* background: url(${Brush});
-  background-size: cover;
-  background-position:center; */
   color: var(--lighterPurple);
 }
 
@@ -169,21 +169,21 @@ margin:3rem auto;
   .resume-column{
     -webkit-box-orient:horizontal;
     -webkit-box-direction:normal;
-        -ms-flex-direction:row;
-            flex-direction:row;
+    -ms-flex-direction:row;
+    flex-direction:row;
   }
 
   .resume-content{
-  -webkit-box-flex:3;
-      -ms-flex:3;
-          flex:3;
-  padding-right: 1rem;
+    -webkit-box-flex:3;
+    -ms-flex:3;
+    flex:3;
+    padding-right: 1rem;
   }
 
   .resume-featured{
     -webkit-box-flex:1;
-        -ms-flex:1;
-            flex:1;
+    -ms-flex:1;
+    flex:1;
   }
 
   .about-btn-container {
