@@ -3,7 +3,7 @@ import { graphql, useStaticQuery } from 'gatsby';
 import styled from 'styled-components';
 import SocialLinks from '../../constants/socialLinks';
 // import CompanyLinks from '../../constants/companyLinks';
-import Info from '../Info';
+import ContactInfo from './ContactInfo';
 
 const getImage = graphql`
   query {
@@ -23,12 +23,11 @@ const Contact = () => {
   return (
     <ContactWrapper>
       <div className="contact-content">
-        <Info img={data.contactImg.childImageSharp.fluid} contact>
+        <ContactInfo img={data.contactImg.childImageSharp.fluid}>
           <div className="info-single">
             <h2 className="info-subtitle">Heather Dick</h2>
             <div className="social">
               <div className="email">
-                {/* <FaRegEnvelope className="contact-social" /> */}
                 <span>info<small>[@]</small>heatherdick<small>[.]</small>com</span>
               </div>
               <SocialLinks footer styleClass="contact-social" />
@@ -38,7 +37,7 @@ const Contact = () => {
             <h2 className="info-subtitle">Management Company</h2>
             <CompanyLinks styleClass="contact-social" />
           </div> */}
-        </Info>
+        </ContactInfo>
       </div>
     </ContactWrapper>
   )

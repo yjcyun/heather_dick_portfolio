@@ -2,7 +2,7 @@ import React from 'react'
 import { graphql, useStaticQuery } from 'gatsby';
 import styled from 'styled-components';
 import Image from 'gatsby-image';
-import subtle from '../images/subtle-dark-vertical.png';
+import subtle from '../../../images/subtle-dark-vertical.png';
 
 const getImage = graphql`
   query {
@@ -29,7 +29,7 @@ const Info = ({ children, img }, contact) => {
       </div>
 
       <div className="info-text">
-          {children}
+        {children}
       </div>
     </InfoWrapper>
   )

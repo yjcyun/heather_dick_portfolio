@@ -2,7 +2,7 @@ import React from 'react';
 import { graphql } from 'gatsby';
 import Layout from '../components/Layout';
 import Title from '../components/Title';
-import Info from '../components/Info';
+import Info from '../components/About/Info/Info';
 import Reels from '../components/About/Reels/Reels';
 import ResumeList from '../components/About/Resume/ResumeList';
 import Audio from '../components/About/Audio/Audio';
