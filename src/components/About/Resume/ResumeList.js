@@ -4,7 +4,6 @@ import styled from 'styled-components';
 import ResumeItem from './ResumeItem';
 import ResumeFeatured from './ResumeFeatured';
 import Subtitle from '../../Subtitle';
-import Brush from '../../../images/brush.svg';
 
 const query = graphql`
  {

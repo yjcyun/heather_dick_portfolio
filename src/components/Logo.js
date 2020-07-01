@@ -19,14 +19,15 @@ const Logo = () => {
 
 const LogoWrapper = styled.section`
 position:relative;
+
   .logo-link{
-      display:-webkit-box;
-      display:-ms-flexbox;
-      display:flex;
-      -webkit-box-align: center;
-          -ms-flex-align: center;
-              align-items: center;
-    }
+    display:-webkit-box;
+    display:-ms-flexbox;
+    display:flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
 
   .logo-img{
     width: 50px;
@@ -34,17 +35,16 @@ position:relative;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-            border: 1px solid white;
-            background: white;
+    -ms-flex-align: center;
+    align-items: center;
+    background: white;
   }
 
   .logo-text{
-    letter-spacing:1.6px;
+    letter-spacing:1px;
     font-weight: normal;
     line-height: 1;
     margin-bottom: 0;
@@ -54,12 +54,13 @@ position:relative;
 
   .logo-company{
     font-size: 60%;
-    letter-spacing: '';
   }
+  
   @media(min-width: 768px){
     .logo-company{
       font-size: 70%;
     }
+    
     .logo-text{
       margin-left: 1.5rem;
     }

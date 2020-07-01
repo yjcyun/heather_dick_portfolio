@@ -33,7 +33,7 @@ font-size: 90%;
 }
 
 @media(min-width:996px){
-font-size: 1.1rem;
+  font-size: 1.1rem;
 }
 `;
 export default ResumeItem
