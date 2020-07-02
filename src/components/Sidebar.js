@@ -1,14 +1,11 @@
 import React, { useEffect } from 'react';
 import { FaRegEnvelope } from 'react-icons/fa';
-
 import styled from 'styled-components';
 import NavLinks from '../constants/links';
 import SocialLinks from '../constants/socialLinks';
 
-
-
 const Sidebar = ({ isOpen }) => {
-
+  // Prevent scroll when sidebar is open
   useEffect(() => {
     isOpen && (document.body.style.overflow = "hidden");
     !isOpen && (document.body.style.overflow = "");
@@ -21,10 +18,6 @@ const Sidebar = ({ isOpen }) => {
           <NavLinks styleClass={`${isOpen ? 'sidebar-links' : ''}`} />
           <div className="social-links-wrapper">
             <SocialLinks styleClass="social-links contact" home/>
-            <a href={`mailto:%69%6E%66%6F%40%68%65%61%74%68%65%72%64%69%63%6B%2E%63%6F%6D`} >
-              <FaRegEnvelope className="social-icon email-icon"
-              />
-            </a>
           </div>
         </div>
       </aside>
@@ -41,31 +34,26 @@ const SidebarWrapper = styled.div`
   width: 100%;
   height: calc(100vh - 80px);
   z-index:100;
-  /* display:-ms-grid;
-  display:grid;
-  justify-content: center;
-  align-items:center;
-  place-items:center; */
-   display:-webkit-box;
+  display:-webkit-box;
   display:-ms-flexbox;
   display:flex;
   -webkit-box-pack:center;
   -ms-flex-pack:center;
-          justify-content:center;
+  justify-content:center;
   -webkit-box-align:center;
   -ms-flex-align:center;
-          align-items:center;
+  align-items:center;
   opacity: 0 ;
   -webkit-transition: var(--transition);
   transition: var(--transition);
   -webkit-transform: translateX(100%);
-          transform: translateX(100%);
+  transform: translateX(100%);
 }
 
 .show-sidebar {
   opacity:1;
   -webkit-transform: translateX(0);
-          transform: translateX(0);
+  transform: translateX(0);
 }
 
 .sidebar-links li a{
@@ -85,12 +73,6 @@ const SidebarWrapper = styled.div`
 }
 
 .social-links-wrapper{
-  display:-webkit-box;
-  display:-ms-flexbox;
-  display:flex;
-  -webkit-box-pack:center;
-      -ms-flex-pack:center;
-          justify-content:center;
   margin-top: 32px;
   margin-top: 2rem;
 }
@@ -101,19 +83,18 @@ const SidebarWrapper = styled.div`
   display:flex;
 }
 
-.social-icon, .email-icon{
+.social-icon{
   font-size: 32px;
   font-size:2rem;
   color: var(--darkPurple);
 }
 
-
 @media (min-width: 996px) {
   .sidebar {
     -webkit-transform: translateX(-100%);
-            transform: translateX(-100%);
+    transform: translateX(-100%);
   }
 }
-
 `;
+
 export default Sidebar

@@ -12,14 +12,17 @@ const Footer = () => {
           <Logo />
         </div>
         <div className="footer-content">
+          {/* Page Nav */}
           <div className="footer-nav">
             <p>explore</p>
             <NavLinks styleClass="nav-links" />
           </div>
+          {/* Social medial icons */}
           <div className="footer-social">
             <p>follow me</p>
             <SocialLinks styleClass="nav-links" footer />
           </div>
+          {/* Contact */}
           <div className="footer-contact">
             <p>Contact</p>
             <div>
@@ -29,7 +32,8 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="footer-center" style={{marginTop:'0.8rem'}}>
+      {/* Copyright */}
+      <div className="footer-center" style={{ marginTop: '0.8rem' }}>
         <span className="footer-copyright">Copyright &copy; {new Date().getFullYear()} Heather Dick & The Sirius Theatrical Company</span>
       </div>
     </FooterWrapper>
@@ -60,12 +64,12 @@ p{
 }
 
 .footer-content {
-display:grid;
-grid-template-columns: 1fr 1fr;
-grid-row-gap: 1rem;
-margin-top: 1rem;
-text-transform: capitalize;
-text-align: left;
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  grid-row-gap: 1rem;
+  margin-top: 1rem;
+  text-transform: capitalize;
+  text-align: left;
 }
 
 .footer-nav a:hover, .footer-social a:hover{
@@ -122,7 +126,7 @@ text-align: left;
   .footer-copyright{
     margin: 2rem auto 0;
     font-size: 0.7rem;
-}
+  }
 }
 `;
 export default Footer

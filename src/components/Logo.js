@@ -7,7 +7,11 @@ const Logo = () => {
   return (
     <LogoWrapper>
       <Link to="/" className="logo-link">
-        <img src={logo} alt="Heather Dick Logo" className="logo-img" />
+        <img
+          src={logo}
+          alt="Sirius Theatrical Company Logo"
+          className="logo-img"
+        />
         <h3 className="logo-text">
           <span className="logo-name">Heather Dick &</span><br />
           <span className="logo-company">the Sirius Theatrical Company</span>
@@ -19,7 +23,6 @@ const Logo = () => {
 
 const LogoWrapper = styled.section`
 position:relative;
-
   .logo-link{
     display:-webkit-box;
     display:-ms-flexbox;

@@ -2,6 +2,7 @@ import React from 'react'
 import { BsArrowRight } from 'react-icons/bs';
 import styled from 'styled-components';
 
+// Used in Bio - Resume
 const Subtitle = ({ subtitle, white, linkUrl, linkText, credits }) => {
   return (
     <SubtitleWrapper white={white} credits={credits}>
@@ -31,6 +32,7 @@ color: ${props => props.white ? '#fff' : '000'};
   color:  ${props => props.white ? '#fff' : '000'};
   display: ${props => props.credits ? 'none' : 'block'}
 }
+
 .link:hover{
   text-decoration: underline;
   -webkit-text-decoration-color: var(--mainGold);
@@ -41,4 +43,5 @@ color: ${props => props.white ? '#fff' : '000'};
   font-size: 4rem;
 }
 `;
+
 export default Subtitle

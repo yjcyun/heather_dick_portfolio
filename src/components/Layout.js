@@ -7,14 +7,15 @@ import Sidebar from './Sidebar';
 
 const Layout = ({ children }) => {
   const [isOpen, setIsOpen] = useState(false);
-  const toggleNavbar = () => {
-    setIsOpen(!isOpen);
-  }
+  const toggleNavbar = () => setIsOpen(!isOpen);
 
   return (
     <LayoutWrapper>
+      {/* Top navigation bar */}
       <Navbar toggleNavbar={toggleNavbar} isOpen={isOpen} />
+      {/* Side navigation bar on mobile */}
       <Sidebar isOpen={isOpen} />
+      {/* Scroll to top button */}
       <ScrollUpButton
         AnimationDuration={500}
         ContainerClassName='ScrollUpButton__Container'
@@ -39,9 +40,10 @@ const LayoutWrapper = styled.div`
 
 @media(max-width: 450px){
   .ScrollUpButton__Container.ScrollUpButton__Toggled,
-.ScrollUpButton__Container{
-  display:none;
-}
+  .ScrollUpButton__Container{
+    display:none;
+  }
 }
 `;
+
 export default Layout;

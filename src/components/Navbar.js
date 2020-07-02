@@ -10,6 +10,7 @@ const Navbar = ({ toggleNavbar, isOpen }) => {
       <div className="nav-center">
         <div className="nav-header">
           <Logo />
+          {/* Burger will not show on desktop view */}
           <Burger isOpen={isOpen} toggle={toggleNavbar} />
         </div>
         <NavLinks styleClass="nav-links" />
@@ -33,10 +34,10 @@ const NavbarWrapper = styled.nav`
     display: -webkit-flexbox;
     display: flex;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
     -webkit-box-pack:justify;
-        -ms-flex-pack:justify;
+    -ms-flex-pack:justify;
     justify-content:space-between;
     padding: 8px 12.8px;
     padding: 0.5rem 0.8rem;
@@ -69,21 +70,21 @@ const NavbarWrapper = styled.nav`
       max-width: 1202px;
       margin: auto;
       -ms-grid-row-align: center !important;
-          align-items: center !important;
+      align-items: center !important;
       padding: 0 1rem;
     }
 
     .nav-links{
       -webkit-box-flex:1.5;
-          -ms-flex:1.5;
-              flex:1.5;
+      -ms-flex:1.5;
+      flex:1.5;
     }
 
     .nav-header {
       -webkit-box-pack:justify;
-          -ms-flex-pack:justify;
-              justify-content:space-between;
-              flex: 1
+      -ms-flex-pack:justify;
+      justify-content:space-between;
+      flex: 1
     }
   }
 
@@ -104,7 +105,7 @@ const NavbarWrapper = styled.nav`
   .menu-btn {
     display: none;
   }
-  }
+}
 `;
 
 export default Navbar

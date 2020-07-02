@@ -4,7 +4,8 @@ import styled from 'styled-components';
 import Bounce from 'react-reveal/Bounce';
 import BannerSubtitle from './BannerSubtitle';
 
-const Contact = ({ children, btnText, icon,title }) => {
+// Contact banner on the bottom of Coaching, Production, and Reviews pages
+const Contact = ({ children, btnText, icon, title }) => {
   return (
     <ContactWrapper>
       <Bounce bottom duration={1000} >

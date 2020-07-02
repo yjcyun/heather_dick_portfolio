@@ -25,7 +25,7 @@ const MenuBtnWrapper = styled.div`
   padding: 0px;
   width: 48px;
   -ms-flex-item-align: center;
-      align-self: center;
+  align-self: center;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
   
@@ -44,7 +44,7 @@ const MenuBtnWrapper = styled.div`
 
 .menu-button.active .bar:before {
   -webkit-transform: rotate(45deg) translate(4px, 9px);
-          transform: rotate(45deg) translate(4px, 9px);
+  transform: rotate(45deg) translate(4px, 9px);
   -webkit-transition: .3s;
   transition: .3s;
   width: 28px;
@@ -53,7 +53,7 @@ const MenuBtnWrapper = styled.div`
 
 .menu-button.active .bar:after {
   -webkit-transform: rotate(-45deg) translate(3px, -7px);
-          transform: rotate(-45deg) translate(3px, -7px);
+  transform: rotate(-45deg) translate(3px, -7px);
   -webkit-transition: .3s;
   transition: .3s;
   width: 28px;
@@ -71,7 +71,7 @@ const MenuBtnWrapper = styled.div`
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
   -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
+  backface-visibility: hidden;
 }
 
 .bar:before,
@@ -86,7 +86,7 @@ const MenuBtnWrapper = styled.div`
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
   -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
+  backface-visibility: hidden;
 }
 
 .bar:before {
@@ -98,6 +98,7 @@ const MenuBtnWrapper = styled.div`
   bottom: -12px;
   left: 0px;
 }
+
 @media(min-width:996px) {
   display:none;
 }
