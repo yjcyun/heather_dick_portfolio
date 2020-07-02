@@ -67,15 +67,14 @@ margin-bottom: 4rem;
   margin-bottom: 5rem;
   .author{
     position: absolute;
-    bottom: -7rem;
-    left: 80px;
-    left: 10%;
+    bottom: -5rem;
+    left: 50%;
   }
 }
 
 @media (min-width: 996px){
   .author{
-    bottom: -5rem;
+    bottom: -4rem;
     left: calc(50% - 2rem);
   }
 }
