@@ -1,5 +1,4 @@
 const data = [
- 
   {
     id: 3,
     category: `Production`,

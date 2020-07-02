@@ -33,4 +33,5 @@ const ErrorWrapper = styled.section`
     margin: 2rem 0;
   }
 `;
+
 export default Error

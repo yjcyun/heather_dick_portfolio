@@ -33,9 +33,10 @@ export const query = graphql`
     }
   }
 `
+
 const BlogListTemplate = (props) => {
   const { data: { posts: { nodes } } } = props;
-
+  // pagination setup
   const { currentPage, numOfPages } = props.pageContext;
   const isFirst = currentPage === 1;
   const isLast = currentPage === numOfPages;
@@ -67,6 +68,7 @@ const BlogListTemplate = (props) => {
           {/* pagination */}
           <div className="flex-container">
             <div className="pagination">
+            {/* If not on the first page, display a left arrow */}
               {!isFirst && (
                 <Link to={prevPage} className="page-direction">
                   Previous
@@ -86,6 +88,7 @@ const BlogListTemplate = (props) => {
                 )
               })}
 
+              {/* If not on the last page, display a right arrow */}
               {!isLast && (
                 <Link to={nextPage} className="page-direction"><FiArrowRight className="icons" />Next</Link>
               )}
@@ -100,10 +103,10 @@ const BlogListTemplate = (props) => {
 
 const BlogListWrapper = styled.section`
 .blog-wrapper{
-position:relative;
-display:flex;
-flex-direction:column;
-padding: 0 1rem;
+  position:relative;
+  display:flex;
+  flex-direction:column;
+  padding: 0 1rem;
 }
 
 .page-numbers{
