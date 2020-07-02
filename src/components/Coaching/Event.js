@@ -1,5 +1,5 @@
 import React from 'react'
-import { graphql, useStaticQuery} from 'gatsby';
+import { graphql, useStaticQuery } from 'gatsby';
 import styled from 'styled-components';
 import horn from '../../images/horn.png';
 import Bounce from 'react-reveal/Bounce';
@@ -27,13 +27,11 @@ const Event = () => {
           <BannerSubtitle icon={horn} title="what's upcoming?" />
           <div className="event-notification-wrapper">
             <div className="event-notification">
-              {nodes.map(item => {
-                if (item.coaching) {
-                  return (
-                    <h4 key={item.id}>{item.notification}</h4>
-                  );
-                }
-              })}
+              {nodes.map(item => (
+                item.coaching
+                  ? <h4 key={item.id}>{item.notification}</h4>
+                  : <h4>Default text here</h4>
+              ))}
             </div>
           </div>
         </Bounce>
