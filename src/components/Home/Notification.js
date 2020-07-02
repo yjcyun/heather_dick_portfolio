@@ -17,6 +17,7 @@ const query = graphql`
   }
 `;
 
+// Close toast button
 const CloseButton = ({ closeToast }) => (
   <i role="button" tabIndex={0} onKeyDown={closeToast} className="material-icons" onClick={closeToast}><IoIosClose className="close-icon" /></i>
 )
@@ -24,21 +25,18 @@ const CloseButton = ({ closeToast }) => (
 const Notification = () => {
   const { allStrapiNotifications: { nodes } } = useStaticQuery(query);
 
-  nodes.map(item => {
-    if (item.home) {
-      return toast(item.notification, {
-        position:toast.POSITION.BOTTOM_LEFT
-      });
-    } else {
-      return null;
-    }
-  })
+  // Only display home=true notification
+  nodes.map(item => item.home
+    ? toast(item.notification, {
+      position: toast.POSITION.BOTTOM_LEFT
+    })
+    : null
+  )
 
   return (
     <ToastWrapper>
       <ToastContainer
         position="bottom-left"
-        // autoClose={6000}
         autoClose={false}
         hideProgressBar={false}
         closeButton={CloseButton}
@@ -51,6 +49,7 @@ const ToastWrapper = styled.div`
 .Toastify__toast-container{
   width: auto;
 }
+
 .Toastify__toast {
   background-color: white;
   color: black;
@@ -71,8 +70,8 @@ const ToastWrapper = styled.div`
 
 @media (max-width: 420px){
   .Toastify__toast-container{
-  width: 100%;
-}
+    width: 100%;
+  }
   .Toastify__toast{
     width: 90%;
     margin: 0 auto 1rem;

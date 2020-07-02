@@ -1,5 +1,5 @@
 import React from 'react';
-import { graphql, useStaticQuery,Link } from 'gatsby';
+import { graphql, useStaticQuery, Link } from 'gatsby';
 import styled from 'styled-components';
 import Image from 'gatsby-image';
 import bcg from '../../images/bcg.jpg';
@@ -22,6 +22,7 @@ const StyledHero = () => {
 
   return (
     <HeroWrapper>
+      {/* Homepage text */}
       <div className="hero-text">
         <div className="hero-text-wrapper">
           <div className="hero-title">
@@ -38,10 +39,12 @@ const StyledHero = () => {
         </div>
       </div>
 
+      {/* Homepage Image */}
       <div className="hero-image">
         <Image
           className="background-img"
           fluid={data.defaultBcg.childImageSharp.fluid}
+          alt="Profile image of Heather Dick"
         />
         <p className="image-caption">Photo taken by John Doe</p>
       </div>
@@ -83,8 +86,8 @@ const HeroWrapper = styled.section`
 
 .hero-text{
   -webkit-box-ordinal-group:3;
-      -ms-flex-order:2;
-          order:2;
+  -ms-flex-order:2;
+  order:2;
   padding: 0 16px;
   padding: 0 1rem;
   margin-top: 32px;
@@ -113,16 +116,16 @@ const HeroWrapper = styled.section`
   display:flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   position:relative;
   position:relative;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack:center;
-      -ms-flex-pack:center;
-          justify-content:center;
+  -ms-flex-pack:center;
+  justify-content:center;
   width: 100%;
   height: 400px;
   height: 25rem;
@@ -137,7 +140,6 @@ const HeroWrapper = styled.section`
 
 @media (min-width: 768px) {
   padding: 0 2rem 0 1rem;
-
   .hero-text{
     margin-top:3rem;
     width: 45rem;
@@ -153,21 +155,20 @@ const HeroWrapper = styled.section`
   }
 
   .hero-image{
-  height: 60%;
-}
-
+    height: 60%;
+  }
 }
 
 @media (min-width: 996px) {
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
 
   .hero-text{
     -webkit-box-ordinal-group:1;
-        -ms-flex-order:0;
-            order:0;
+    -ms-flex-order:0;
+    order:0;
     text-align:center;
     padding: 0 3rem 0 1.5rem;
   }

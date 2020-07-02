@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components';
+
 const Name = () => {
   return (
     <NameWrapper>
@@ -43,7 +44,6 @@ const Name = () => {
 }
 
 const NameWrapper = styled.div`
-
 #logo path{
  stroke-dasharray: 1500;
  opacity: 100;
