@@ -3,9 +3,9 @@ import { FaQuoteLeft } from 'react-icons/fa';
 import styled from 'styled-components';
 import Slide from 'react-reveal/Slide';
 
+// Props from ReviewList
 const ReviewItem = ({ review }) => {
   const { text, author } = review;
-
   return (
     <ReviewItemWrapper>
       <Slide bottom duration={1000}>
@@ -72,6 +72,7 @@ margin-bottom: 4rem;
     left: 10%;
   }
 }
+
 @media (min-width: 996px){
   .author{
     bottom: -5rem;
