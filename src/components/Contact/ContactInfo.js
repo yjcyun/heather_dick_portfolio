@@ -1,33 +1,21 @@
-import React from 'react'
-import { graphql, useStaticQuery } from 'gatsby';
+import React from 'react';
 import styled from 'styled-components';
 import Image from 'gatsby-image';
 import subtle from '../../images/subtle-dark-vertical.png';
 
-const getImage = graphql`
-  query {
-    defaultBcg:file(relativePath: {eq: "headshots/headshot1.jpg"}) {
-      childImageSharp {
-        fluid {
-          ...GatsbyImageSharpFluid
-        }
-      }
-    }
-  }
-`;
-
+// Props from from Contact.js
 const ContactInfo = ({ children, img }) => {
-  const data = useStaticQuery(getImage);
   return (
     <InfoWrapper>
+      {/* Profile Image */}
       <div className="hero-image">
         <Image
           className="background-img"
-          fluid={img || data.defaultBcg.childImageSharp.fluid}
+          fluid={img}
         />
         <p className="image-caption">Photo taken by John Doe</p>
       </div>
-
+      {/* Contact Text */}
       <div className="info-text">
         {children}
       </div>
@@ -96,7 +84,6 @@ margin: 0 auto;
 @media (min-width: 996px) {
   display:flex;
   flex-direction:row;
-  
   padding: 4rem 2rem;
 
   .info-text {

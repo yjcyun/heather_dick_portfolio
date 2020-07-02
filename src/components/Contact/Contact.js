@@ -5,6 +5,7 @@ import SocialLinks from '../../constants/socialLinks';
 // import CompanyLinks from '../../constants/companyLinks';
 import ContactInfo from './ContactInfo';
 
+// Profile image
 const getImage = graphql`
   query {
     contactImg: file(relativePath:{eq:"headshots/headshot4.jpg"}){
@@ -24,6 +25,7 @@ const Contact = () => {
     <ContactWrapper>
       <div className="contact-content">
         <ContactInfo img={data.contactImg.childImageSharp.fluid}>
+          {/* Heather's Info */}
           <div className="info-single">
             <h2 className="info-subtitle">Heather Dick</h2>
             <div className="social">
@@ -33,6 +35,7 @@ const Contact = () => {
               <SocialLinks footer styleClass="contact-social" />
             </div>
           </div>
+          {/* Manager's Info */}
           {/* <div className="info-single">
             <h2 className="info-subtitle">Management Company</h2>
             <CompanyLinks styleClass="contact-social" />
