@@ -8,7 +8,6 @@ import BlogFeatured from '../components/Blog/BlogFeatured';
 import BlogCard from '../components/Blog/BlogCard';
 import SEO from '../components/SEO';
 
-
 export const query = graphql`
   query getPosts($skip:Int!, $limit:Int!){
     posts: allStrapiBlogs(sort: {fields: date, order: DESC}, limit: $limit, skip: $skip) {
@@ -32,29 +31,10 @@ export const query = graphql`
         }
       }
     }
-    featured: allStrapiBlogs(sort: {fields: date, order: DESC}) {
-      nodes {
-        id
-        slug
-        title
-        featured
-        thumbnail {
-          childImageSharp {
-            fluid {
-              ...GatsbyImageSharpFluid
-            }
-            fixed(fit: COVER, height: 60, width: 80) {
-              ...GatsbyImageSharpFixed
-            }
-          }
-        }
-      }
-    }
   }
 `
 const BlogListTemplate = (props) => {
   const { data: { posts: { nodes } } } = props;
-  const { featured: { nodes: blogs } } = props.data;
 
   const { currentPage, numOfPages } = props.pageContext;
   const isFirst = currentPage === 1;
@@ -69,6 +49,7 @@ const BlogListTemplate = (props) => {
         <Title title="blog" />
         <BlogListWrapper>
           <div className="blog-wrapper">
+            {/* single card */}
             <div className="blog-cards">
               {nodes.map(item => (
                 <BlogCard
@@ -79,7 +60,7 @@ const BlogListTemplate = (props) => {
             </div>
             {/* blog featured */}
             <div className="blog-sidebar">
-              <BlogFeatured blogs={blogs} />
+              <BlogFeatured blogs={nodes} />
             </div>
           </div>
 
@@ -104,6 +85,7 @@ const BlogListTemplate = (props) => {
                   </Link>
                 )
               })}
+
               {!isLast && (
                 <Link to={nextPage} className="page-direction"><FiArrowRight className="icons" />Next</Link>
               )}

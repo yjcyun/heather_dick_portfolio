@@ -4,6 +4,7 @@ import { BsDot } from 'react-icons/bs';
 import Image from 'gatsby-image';
 import styled from 'styled-components';
 
+// Props coming from blog-list-template
 const BlogCard = ({
   id, title, thumbnail, date, slug, author, description, hide, featured
 }) => {
@@ -14,7 +15,11 @@ const BlogCard = ({
         className="blog"
       >
         <article>
-          <Image fluid={thumbnail.childImageSharp.fluid} className="blog-img" alt="blog thumbnail" />
+          <Image
+            fluid={thumbnail.childImageSharp.fluid}
+            className="blog-img"
+            alt="blog thumbnail"
+          />
           <div className="blog-card">
             <div className="blog-header">
               <div className="blog-author">{author}</div>
@@ -81,11 +86,11 @@ margin-bottom:2rem;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack:center;
-      -ms-flex-pack:center;
-          justify-content:center;
+  -ms-flex-pack:center;
+  justify-content:center;
   -webkit-box-align:center;
-      -ms-flex-align:center;
-          align-items:center;
+  -ms-flex-align:center;
+  align-items:center;
   font-size:14.4px;
   font-size:0.9rem;
   color: grey;

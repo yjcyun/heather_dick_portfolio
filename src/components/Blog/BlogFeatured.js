@@ -19,6 +19,7 @@ const query = graphql`
 const BlogFeatured = ({ blogs }) => {
   const { notification: { nodes: notification } } = useStaticQuery(query);
 
+  // notification section
   const events = notification.map(item => {
     return (
       <ul key={item.id} className="featured-events">
@@ -37,9 +38,11 @@ const BlogFeatured = ({ blogs }) => {
       <section className="featured-header">
         <h2 className="featured-title">All the latest from Heather</h2>
         <p className="featured-subtitle">connect with her</p>
+        {/* Social media icons */}
         <SocialLinks styleClass="featured-icons" />
       </section>
 
+      {/* featured blogs */}
       <section className="featured-header">
         <p className="featured-subtitle">featured posts</p>
         {blogs.map(item => {
@@ -52,16 +55,16 @@ const BlogFeatured = ({ blogs }) => {
                   <small>{item.date}</small>
                 </Link>
               </div>)
-            : null;
+            : <p>No blogs are featured</p>;
           return newFeatured;
         })}
       </section>
 
+      {/* Notification section */}
       <section className="featured-header">
         <p className="featured-subtitle">latest events</p>
         {events}
       </section>
-
     </BlogFeaturedWrapper>
   )
 }
@@ -101,11 +104,11 @@ text-align:center;
   display:-ms-flexbox;
   display:flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack:center;
-      -ms-flex-pack:center;
-          justify-content:center;
+  -ms-flex-pack:center;
+  justify-content:center;
   background: var(--lighterGold);
 }
 
@@ -119,15 +122,15 @@ text-align:center;
 
 .fixed-img{
   -webkit-box-flex:2;
-      -ms-flex:2;
-          flex:2;
+  -ms-flex:2;
+  flex:2;
   border-radius:0.5rem;
 }
 
 .title-link{
   -webkit-box-flex:3;
-      -ms-flex:3;
-          flex:3;
+  -ms-flex:3;
+  flex:3;
   margin-left:8px;
   margin-left: 0.5rem;
   display:-webkit-box;
@@ -135,11 +138,11 @@ text-align:center;
   display:flex;
   -webkit-box-orient:vertical;
   -webkit-box-direction:normal;
-      -ms-flex-direction:column;
-          flex-direction:column;
+  -ms-flex-direction:column;
+  flex-direction:column;
   -webkit-box-pack:center;
-      -ms-flex-pack:center;
-          justify-content:center;
+  -ms-flex-pack:center;
+  justify-content:center;
   text-align:left;
 }
 
@@ -172,7 +175,6 @@ text-align:center;
   -ms-flex:7;
   flex:7;
 }
-
 
 a{
   color: black !important;
