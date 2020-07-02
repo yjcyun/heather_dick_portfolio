@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components';
 import Image from 'gatsby-image';
 
+// Props coming from CoachingList
 const CoachingItem = ({ image, desc, title }) => {
   return (
     <CoachingItemWrapper>
@@ -28,7 +29,6 @@ padding: 3rem 0 0;
     flex:2;
     margin-bottom: 32px;
     margin-bottom: 2rem;
-  
   }
 
   .coaching-text{

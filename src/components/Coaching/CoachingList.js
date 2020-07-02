@@ -35,7 +35,6 @@ const CoachingList = () => {
           )
         })}
       </div>
-
     </CoachingListWrapper>
   )
 }
@@ -43,7 +42,6 @@ const CoachingList = () => {
 const CoachingListWrapper = styled.section`
 .coaching-container{
 background-color: var(--beige);
-
 background-image: url(${verticalBcg});
 padding: 0 16px 32px;
 padding: 0 1rem 2rem;
