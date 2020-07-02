@@ -4,6 +4,7 @@ import { GiChainedHeart } from 'react-icons/gi';
 import Image from 'gatsby-image';
 import styled from 'styled-components';
 
+// Sidebar mini gallery
 const getImage = graphql`
   {
     allFile(filter: {extension: {regex: "/(jpg)/"}, relativeDirectory: {eq: "headshots"}}, sort: {fields: name, order: ASC}) {
@@ -26,6 +27,8 @@ const getImage = graphql`
 
 const BlogFeatured = ({ notification }) => {
   const data = useStaticQuery(getImage);
+
+  // Notification or events: props coming from ResumeList
   const events = notification.map((item, index) => {
     return (
       <ul key={index} className="featured-events">

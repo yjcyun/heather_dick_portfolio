@@ -43,12 +43,15 @@ const getCategories = items => {
 }
 
 const ResumeList = () => {
-  const { resumes: { nodes: resume }, notifications: { nodes: notification } } = useStaticQuery(query);
+  const {
+    resumes: { nodes: resume },
+    notifications: { nodes: notification }
+  } = useStaticQuery(query);
 
   // array of unique categories
   const [categories] = useState(getCategories(resume));
 
-  // sort resume item according to created time
+  // sort resume item according to created time & display each resume item
   const renderList = (categoryResume) => resume
     .sort((a, b) => b.created_at > a.created_at ? 1 : -1)
     .map(item => {
@@ -97,10 +100,12 @@ const ResumeList = () => {
                   </div>
                 )
               })}
+            {/* contact button */}
             <Link to="/contact" className="about-btn-container">
               <button className="btn about-btn">contact for full resume</button>
             </Link>
           </div>
+          {/* resume sidebar */}
           <div className="resume-featured">
             <ResumeFeatured notification={notification} />
           </div>
