@@ -5,6 +5,7 @@ import VideoDetail from './VideoDetail';
 import Subtitle from '../../Subtitle';
 
 class Reels extends Component {
+  // *** Replace Thumbnail and URL ***
   state = {
     videos: [
       {
@@ -29,9 +30,11 @@ class Reels extends Component {
     return (
       <ReelsWrapper>
         <div className="max-width">
-          <Subtitle subtitle="REELS" linkUrl="https://vimeo.com/siriustheatricalcompany" linkText="All reels"/>
+          <Subtitle subtitle="REELS" linkUrl="https://vimeo.com/siriustheatricalcompany" linkText="All reels" />
           <div className="videos">
+            {/* Display Video Player */}
             <VideoDetail video={this.state.selectedVideo} />
+            {/* Display Thumbnails */}
             <VideoList
               videos={this.state.videos}
               onVideoSelect={this.onVideoSelect} />
@@ -92,6 +95,7 @@ const ReelsWrapper = styled.section`
 
   @media(min-width: 1024px){
     padding: 7rem 2rem;
+
     .videos{
       margin-left: 8rem;
     }
@@ -99,4 +103,3 @@ const ReelsWrapper = styled.section`
 `;
 
 export default Reels
-

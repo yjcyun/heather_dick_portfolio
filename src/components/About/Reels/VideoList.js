@@ -13,8 +13,7 @@ const VideoList = ({ videos, onVideoSelect }) => {
         className="video-thumbnails"
       />
     )
-  }
-  );
+  });
 
   return (
     <VideoListWrapper>
