@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import Subtitle from '../../Subtitle';
 import AudioItem from './AudioItem';
 
+// Sound cloud track number ***REPLACE***
 const track = [267474434, 267474514, 267474514];
 
 const Audio = () => {
@@ -25,20 +26,16 @@ background:var(--darkPurple);
 padding:3rem 1rem;
 
 .max-width{
-   display:-webkit-box;
-   display:-ms-flexbox;
-   display:flex;
-   -webkit-box-orient:vertical;
-   -webkit-box-direction:normal;
-       -ms-flex-direction:column;
-           flex-direction:column;
+  display:-webkit-box;
+  display:-ms-flexbox;
+  display:flex;
+  -webkit-box-orient:vertical;
+  -webkit-box-direction:normal;
+  -ms-flex-direction:column;
+  flex-direction:column;
  }
 
 .audio-item-container {
-  /* display:-ms-grid;
-  display:grid;
-  -ms-grid-columns: 1fr;
-      grid-template-columns: 1fr; */
   display:-webkit-box;
   display:-ms-flexbox;
   display:flex;
@@ -55,11 +52,11 @@ padding:3rem 1rem;
   display:-ms-flexbox;
   display:flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align:center;
-      -ms-flex-align:center;
-          align-items:center;
+  -ms-flex-align:center;
+  align-items:center;
   margin-bottom:16px;
   margin-bottom:1rem;
 }
@@ -96,6 +93,6 @@ padding:3rem 1rem;
 @media(min-width: 1024px){
   padding: 7rem 2rem;
 }
-  `;
+`;
 
 export default Audio
