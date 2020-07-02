@@ -28,13 +28,15 @@ align-items:center;
   display:-ms-flexbox;
   display:flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   margin: auto 16px;
-  margin:auto 1rem;
+  margin: auto 1rem;
+  border-top: 1px solid var(--mainGold);
+  padding-top: 2rem;
 }
 
 .icon{
@@ -44,23 +46,40 @@ align-items:center;
 }
 
 .banner-hr {
-  width: 10rem;
-  height: 0.07rem;
-  background-color: var(--mainGold);
-  margin: 0 1rem;
   display:none;
 }
 
 @media (min-width: 768px) {
   .event-title{
     font-size: 4rem;
+    padding-top: 4rem;
   }
+
   .icon{
     width: 80px;
     margin-right: 2rem;
   }
+}
+
+@media (min-width:1024px){
   .banner-hr{
     display:flex;
+    width: 6rem;
+    height: 0.07rem;
+    background-color: var(--mainGold);
+    margin: 0 1rem;
+  }
+
+  .event-title{
+    font-size: 4rem;
+    border-top: 0;
+    padding-top:0;
+  }
+}
+
+@media (min-width:1366px){
+  .banner-hr{
+    width: 10rem;
   }
 }
 `;
