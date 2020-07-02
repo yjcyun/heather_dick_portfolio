@@ -4,7 +4,6 @@ import Image from 'gatsby-image';
 
 const ProductionsItem = ({ item }) => {
   const { img, show } = item;
-  console.log(img);
   return (
     <ProductionsItemWrapper>
       <div className="poster-img">
@@ -35,8 +34,8 @@ const ProductionsItemWrapper = styled.div`
 
 .poster-img:hover{
   box-shadow: 5px 7px 10px 0px rgba(0,0,0,0.43);
--webkit-box-shadow: 5px 7px 10px 0px rgba(0,0,0,0.43);
--moz-box-shadow: 5px 7px 10px 0px rgba(0,0,0,0.43);
+  -webkit-box-shadow: 5px 7px 10px 0px rgba(0,0,0,0.43);
+  -moz-box-shadow: 5px 7px 10px 0px rgba(0,0,0,0.43);
 }
 
 .poster-gatsby-img{
@@ -50,6 +49,7 @@ const ProductionsItemWrapper = styled.div`
   padding: 1rem 0.5rem;
   text-align:center;
 }
+
 .poster-footer p {
   font-size: 1rem;
 }

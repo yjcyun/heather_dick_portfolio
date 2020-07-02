@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
+// Props from ProductionsList
 const ProductionsFilter = ({ categories, handleFilter, selectedFilterIndex }) => {
   return (
     <FilterBtnWrapper>
@@ -11,7 +12,9 @@ const ProductionsFilter = ({ categories, handleFilter, selectedFilterIndex }) =>
             key={index}
             className={selectedFilterIndex === index ? 'btn filter-btn filter-btn-active' : 'btn filter-btn'}
             onClick={() => handleFilter(category, index)}
-          >{category}</button>
+          >
+            {category}
+          </button>
         )
       })}
     </FilterBtnWrapper>
@@ -23,8 +26,6 @@ text-align:center;
 display:flex;
 flex-direction:row;
 justify-content:center;
-
-
 `;
 
 export default ProductionsFilter

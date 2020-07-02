@@ -11,7 +11,7 @@ export class Gallery extends Component {
     showLightbox: false,
     selectedImage: null
   };
-
+  // Close modal
   closeModal = () => {
     this.setState({ showLightbox: false })
   }
@@ -22,20 +22,20 @@ export class Gallery extends Component {
 
     return (
       <>
+        {/* Display images in a grid layout */}
         <LightboxContainer>
-          {photos.map(image => {
-            return (
-              <PreviewButton
-                key={image.img.childImageSharp.fluid.src}
-                type="button"
-                onClick={() => this.setState({ showLightbox: true, selectedImage: image })}
-              >
-                <ProductionsItem item={image} />
-              </PreviewButton>
-            )
-          })}
+          {photos.map(image => (
+            <PreviewButton
+              key={image.img.childImageSharp.fluid.src}
+              type="button"
+              onClick={() => this.setState({ showLightbox: true, selectedImage: image })}
+            >
+              <ProductionsItem item={image} />
+            </PreviewButton>
+          ))}
         </LightboxContainer>
 
+        {/* Image Modal */}
         {showLightbox && (
           <DialogOverlay
             onDismiss={() => this.closeModal()}
@@ -43,7 +43,10 @@ export class Gallery extends Component {
 
             <DialogContent aria-labelledby={selectedImage.id}
               className="modal-content">
-              <Img fluid={selectedImage.img.childImageSharp.fluid} /><br />
+              <Img
+                fluid={selectedImage.img.childImageSharp.fluid}
+                alt="Production image"
+              /><br />
               <p>{selectedImage.show}</p>
               <p>{selectedImage.description}</p>
               <button type="button" onClick={() => this.closeModal()} className="close-btn">

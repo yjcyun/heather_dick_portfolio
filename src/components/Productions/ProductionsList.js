@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import ProductionsFilter from './ProductionsFilter';
 import Gallery from './Gallery';
 
-// get unique cateogories
+// get unique cateogories - acting and directing
 const getCategories = items => {
   let tempItems = items.map(item => {
     return item.category;
@@ -12,13 +12,14 @@ const getCategories = items => {
   categories = ['all', ...categories];
   return categories;
 }
-
+// Props from productions page
 const ProductionsList = ({ posters }) => {
   const [items] = useState(posters);
   const [posterItems, setPosterItems] = useState(posters);
   const [categories] = useState(getCategories(posters));
   const [selectedFilterIndex, setSelectedFilterIndex] = useState(0);
 
+  // Filter based on category
   const handleFilter = (category, index) => {
     let tempPosters = [...items];
     if (category === 'all') {
@@ -33,13 +34,15 @@ const ProductionsList = ({ posters }) => {
 
   return (
     <>
+      {/* Filter buttons */}
       <ProductionsFilter
         categories={categories}
         handleFilter={handleFilter}
         selectedFilterIndex={selectedFilterIndex}
       />
-      <Gallery photos={posterItems}/>
-     </>
+      {/* Images */}
+      <Gallery photos={posterItems} />
+    </>
   )
 }
 
