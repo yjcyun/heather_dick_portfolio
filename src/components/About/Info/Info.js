@@ -74,6 +74,7 @@ margin: 0 auto;
 
 .info-text p{
   line-height: 1.7;
+  padding-bottom: 1rem;
 }
 
 .info-contact{
@@ -97,6 +98,12 @@ margin: 0 auto;
   width:100%;
 }
 
+@media (min-width: 768px) {
+  .info-text{
+   padding: 2rem 1.5rem;
+  }
+}
+
 @media (min-width: 996px) {
   display:block;
   padding: 4rem 2rem;
@@ -104,13 +111,6 @@ margin: 0 auto;
   .info-text {
     text-align: left;
     padding: 0;
-  }
-
-  .info-text p {
-    padding-bottom: 1rem;
-  }
-  .info-text .extra-padding{
-    padding-top: 3rem;
   }
 
   .hero-image{
@@ -122,6 +122,12 @@ margin: 0 auto;
 
   .info-single{
     margin: 0 0 3rem 3rem; 
+  }
+}
+
+@media (min-width: 1130px){
+  .info-text .extra-padding{
+    padding-top: 3rem;
   }
 }
 `;
