@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import Image from 'gatsby-image';
 import subtle from '../../../images/subtle-dark-vertical.png';
 
+// Profile image on Bio page
 const getImage = graphql`
   query {
     defaultBcg:file(relativePath: {eq: "headshots/headshot1.jpg"}) {
@@ -16,10 +17,11 @@ const getImage = graphql`
   }
 `;
 
-const Info = ({ children, img }, contact) => {
+const Info = ({ children, img }) => {
   const data = useStaticQuery(getImage);
   return (
-    <InfoWrapper contact={contact}>
+    <InfoWrapper>
+      {/* Profile Image */}
       <div className="hero-image">
         <Image
           className="background-img"
@@ -28,6 +30,7 @@ const Info = ({ children, img }, contact) => {
         <p className="image-caption">Photo taken by John Doe</p>
       </div>
 
+      {/* Profile Text */}
       <div className="info-text">
         {children}
       </div>
@@ -55,6 +58,11 @@ margin: 0 auto;
   padding-top: 2rem;
 }
 
+.info-text p{
+  line-height: 1.7;
+  padding-bottom: 1rem;
+}
+
 .info-title{
   font-family: var(--titleFont);
   font-weight: 300;
@@ -70,11 +78,6 @@ margin: 0 auto;
 
 .info-single{
   margin: 2rem auto; 
-}
-
-.info-text p{
-  line-height: 1.7;
-  padding-bottom: 1rem;
 }
 
 .info-contact{
@@ -109,7 +112,6 @@ margin: 0 auto;
   padding: 4rem 2rem;
 
   .info-text {
-    text-align: left;
     padding: 0;
   }
 
