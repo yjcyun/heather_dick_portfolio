@@ -17,11 +17,9 @@ Variables
   --lighterPurple: #783fbe;
   --textPurple: #745c97;
   --lightestPurple: #e3e7f6;
-  --faintPurple: #f2f4fb;
   --mainGold: #a78425;
   --lightGold: #ccb764;
   --lighterGold: #dfd29e;
-  --lightGrey: #f8f7f5;
   --beige: #ece7df;
   --mainFont: "Poppins", sans-serif;
   --titleFont: "Oswald", sans-serif;
@@ -47,15 +45,14 @@ hr {
   margin: 16px 0;
   margin: 1rem 0;
 }
+
 .short-hr {
   width: 56px;
   width: 3.5rem;
 }
-.shortest-hr {
-  width: 36.8px;
-  width: 2.3rem;
-  margin: 8px 0;
-  margin: 0.5rem 0;
+
+.center-hr{
+  margin: 0.5rem auto;
 }
 
 body {
@@ -77,6 +74,7 @@ a {
   text-decoration: none;
   color: black;
 }
+
 a:hover {
   color: black;
 }
@@ -85,11 +83,13 @@ a:hover {
   max-width: 1170px;
   margin: 0 auto;
 }
+
 /* icon */
 .icon {
   color: var(--mainPurple);
   cursor: pointer;
 }
+
 .icon:hover {
   color: var(--lightPurple);
 }
@@ -98,13 +98,6 @@ a:hover {
   outline: none;
 }
 
-.page-margin {
-  margin-top: 56px;
-}
-
-.extra-margin {
-  margin: 20vh auto;
-}
 /*=============== 
 Button
 ===============*/
@@ -136,6 +129,7 @@ Button
   transition: var(--transition);
 }
 
+/* filter btn */
 .filter-btn {
   margin: 0 8px 48px;
   margin: 0 0.5rem 3rem;
@@ -162,7 +156,7 @@ Button
     padding: 1rem 3rem;
   }
 }
-
+/* Other link buttons */
 .production-btn {
   padding: 8px 16px;
   padding: 0.5rem 1rem;
@@ -189,7 +183,6 @@ Button
   left: 50%;
   background: var(--mainGold);
   opacity: 0;
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
   -webkit-transform: translateX(-50%) translateY(-50%);
   transform: translateX(-50%) translateY(-50%);
 }
@@ -208,7 +201,6 @@ Button
 .blog-btn:hover:after {
   width: 100%;
   opacity: 1;
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
 }
 
 .about-btn:active:after,
@@ -216,7 +208,6 @@ Button
 .blog-btn:active:after {
   width: 101%;
   opacity: 1;
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
 }
 
 @media (min-width: 768px) {
@@ -224,7 +215,7 @@ Button
     text-align: left;
   }
 }
-
+/* hero btn */
 .hero-btn {
   margin: 32px auto;
   margin: 2rem auto;
@@ -240,7 +231,6 @@ Button
   left: 50%;
   background: var(--mainPurple);
   opacity: 0;
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
   -webkit-transform: translateX(-50%) translateY(-50%) rotate(45deg);
   transform: translateX(-50%) translateY(-50%) rotate(45deg);
 }
@@ -253,13 +243,11 @@ Button
 .hero-btn:hover:after {
   height: 260%;
   opacity: 1;
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
 }
 
 .hero-btn:active:after {
   height: 400%;
   opacity: 1;
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
 }
 
 /*=============== 
