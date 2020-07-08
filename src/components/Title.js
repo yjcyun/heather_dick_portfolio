@@ -2,13 +2,14 @@ import React from 'react';
 import styled from 'styled-components';
 import leaf from '../images/leaf.svg';
 
-const Title = ({ children, title }) => {
+const Title = ({ children, title}) => {
   return (
     <TitleWrapper>
       <h1 className="title">{title}</h1>
       <img src={leaf} className="leaf" alt="leaf" />
       <h2 className="subtitle">
-        {children}
+        {children}<br />
+        
       </h2>
     </TitleWrapper>
   )
@@ -42,11 +43,17 @@ flex-direction:column;
   font-weight: 300;
 }
 
+.subtitle span{
+  text-align:right !important;
+  font-family: "Margetha";
+  font-size: 1.8rem;
+  margin-top: 2rem;
+}
+
 .leaf{
   width: 50%;
   margin: 0 auto;
 }
-
 
 @media (min-width: 996px) {
   margin:0 auto 5rem;
@@ -56,6 +63,9 @@ flex-direction:column;
   }  
   .leaf{
     width: 25%;
+  }
+  .subtitle span {
+    margin-left: 30rem;
   }
 }
 

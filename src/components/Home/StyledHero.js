@@ -30,7 +30,7 @@ const StyledHero = () => {
             <h3>& the Sirius Theatrical Company</h3>
           </div>
           <div className="hero-subtitle">
-            <h5>performer. voice artist. director.</h5>
+            <h5>performer. voice artist. director. writer. designated linklater voice teacher.</h5>
           </div>
 
           <Link to="/bio">
@@ -107,6 +107,8 @@ const HeroWrapper = styled.section`
 .hero-subtitle h5{
   font-size: 17.6px;
   font-size: 1.1rem;
+  max-width: 23rem;
+  margin: 0 auto;
   text-transform: capitalize;
 }
 

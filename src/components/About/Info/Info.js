@@ -27,7 +27,7 @@ const Info = ({ children, img }) => {
           className="background-img"
           fluid={img || data.defaultBcg.childImageSharp.fluid}
         />
-        <p className="image-caption">Photo taken by John Doe</p>
+        <p className="image-caption">- Helen Tansey, Sundari Photography Inc.</p>
       </div>
 
       {/* Profile Text */}
