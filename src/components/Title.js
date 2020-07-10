@@ -9,7 +9,6 @@ const Title = ({ children, title}) => {
       <img src={leaf} className="leaf" alt="leaf" />
       <h2 className="subtitle">
         {children}<br />
-        
       </h2>
     </TitleWrapper>
   )
