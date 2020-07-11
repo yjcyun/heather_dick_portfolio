@@ -5,11 +5,12 @@ import Slide from 'react-reveal/Slide';
 
 // Props from ReviewList
 const ReviewItem = ({ review }) => {
-  const { text, author } = review;
+  const { subtext, text, author } = review;
   return (
     <ReviewItemWrapper>
       <Slide bottom duration={1000}>
         <div className="bubble-text">
+          <p>{subtext}</p>
           <p><FaQuoteLeft className="quote-icon" />{text}</p>
           <span className="triangle"></span>
           <span className="author">-{author}</span>

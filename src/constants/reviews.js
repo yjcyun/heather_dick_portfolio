@@ -3,7 +3,8 @@ const data = [
     id: 3,
     category: `Production`,
     text: `Heather Dick has remarkable insight and instincts. Under her guidance I was able to flesh out the life of my character and create a rich background from which to work. She helped me to grow as an actor and I look forward to working with her again!`,
-    author: `AMY WILSON - Maria in FINAL DECISIONS (WAR)`
+    author: `AMY WILSON - Maria in FINAL DECISIONS (WAR)`,
+    subtext: `False Claims`
   },
   {
     id: 2,

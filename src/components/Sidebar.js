@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react';
-import { FaRegEnvelope } from 'react-icons/fa';
 import styled from 'styled-components';
 import NavLinks from '../constants/links';
 import SocialLinks from '../constants/socialLinks';

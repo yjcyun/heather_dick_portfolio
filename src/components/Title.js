@@ -1,15 +1,41 @@
 import React from 'react';
+import { graphql, useStaticQuery } from 'gatsby';
 import styled from 'styled-components';
 import leaf from '../images/leaf.svg';
 
-const Title = ({ children, title}) => {
+const query = graphql`
+  {
+     title:allStrapiTitles {
+      nodes {
+        id
+        name
+        pageName
+        pageSubtitle
+        pageTitle
+      }
+    }
+  }
+`
+
+const Title = ({ page }) => {
+  const data = useStaticQuery(query);
   return (
     <TitleWrapper>
-      <h1 className="title">{title}</h1>
-      <img src={leaf} className="leaf" alt="leaf" />
-      <h2 className="subtitle">
-        {children}<br />
-      </h2>
+      {data.title.nodes.map(({
+        pageTitle, pageSubtitle, name, id, pageName
+      }) => {
+        if(pageName === page){
+          return (
+            <div key={id}>
+              <h1 className="title">{pageTitle}</h1>
+              <img src={leaf} className="leaf" alt="leaf" />
+              <h2 className="subtitle">
+                {pageSubtitle}<br />{name}
+              </h2>
+            </div>
+          )
+        }
+      })}
     </TitleWrapper>
   )
 }

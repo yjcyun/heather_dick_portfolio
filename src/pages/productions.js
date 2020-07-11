@@ -35,7 +35,7 @@ const Productions = ({
     <Layout>
       <SEO title="Productions" description="Productions page" />
       <div className="page">
-        <Title title="Productions" subtitle="Any subtitle on this page? quote?" />
+        <Title page="productions" />
         <ProductionsList posters={posters} />
         <Contact icon={spotlight} title="Work With Heather!" btnText="send email">
           <h4 className="coaching-contact margin-bottom">Contact Heather if you'd like to work with her</h4>

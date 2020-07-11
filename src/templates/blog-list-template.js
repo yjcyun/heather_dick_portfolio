@@ -47,7 +47,7 @@ const BlogListTemplate = (props) => {
     <Layout>
       <SEO title="Blog" description="Professional written and audio blogs on topics of interest to actors, directors, storytellers and musicians. Some of the topics include: audition techniques, voice work and comedy." />
       <div className="page">
-        <Title title="blog" />
+        <Title page="blog" />
         <BlogListWrapper>
           <div className="blog-wrapper">
             {/* single card */}

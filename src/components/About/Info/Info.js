@@ -5,36 +5,46 @@ import Image from 'gatsby-image';
 import subtle from '../../../images/subtle-dark-vertical.png';
 
 // Profile image on Bio page
-const getImage = graphql`
-  query {
-    defaultBcg:file(relativePath: {eq: "headshots/headshot1.jpg"}) {
-      childImageSharp {
-        fluid {
-          ...GatsbyImageSharpFluid
+const query = graphql`
+  {
+    bio:allStrapiBios {
+      nodes {
+        id
+        description
+        profile {
+          childImageSharp {
+            fluid {
+              ...GatsbyImageSharpFluid
+            }
+          }
         }
       }
     }
   }
-`;
+`
 
-const Info = ({ children, img }) => {
-  const data = useStaticQuery(getImage);
+const Info = () => {
+  const data = useStaticQuery(query);
   return (
     <InfoWrapper>
-      {/* Profile Image */}
-      <div className="hero-image">
-        <Image
-          className="background-img"
-          fluid={img || data.defaultBcg.childImageSharp.fluid}
-        />
-        <p className="image-caption">Helen Tansey, Sundari Photography Inc.</p>
-      </div>
+      {data.bio.nodes.map(item => {
+        return (
+          <div key={item.id}>
+            {/* Profile Image */}
+            <div className="hero-image">
+              <Image
+                className="background-img"
+                fluid={item.profile.childImageSharp.fluid}
+              />
+              <p className="image-caption">Helen Tansey, Sundari Photography Inc.</p>
+            </div>
 
-      {/* Profile Text */}
-      <div className="info-text">
-        {children}
-      </div>
-    </InfoWrapper>
+            {/* Profile Text */}
+            <div className="info-text">{item.description}</div>
+          </div>
+        )
+      })}
+    </InfoWrapper >
   )
 }
 
