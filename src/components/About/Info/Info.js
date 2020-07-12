@@ -80,7 +80,7 @@ margin: 0 auto;
 .info-subtitle{
   margin-top:2rem;
   text-align:center;
-  font-size: 2.2rem;
+  font-size: 1.6rem;
 }
 
 .hero-image{
@@ -95,7 +95,7 @@ margin: 0 auto;
 
 @media (min-width: 768px) {
   .info-text{
-   padding: 2rem 1.5rem;
+    padding: 2rem 1.5rem;
   }
 }
 
@@ -115,9 +115,9 @@ margin: 0 auto;
   }
 
   .info-subtitle{
-  margin: 1rem 0;
-  text-align:center;
-  font-size: 2.2rem;
+    margin: 1rem 0;
+    text-align:center;
+    font-size: 2.2rem;
 }
 }
 

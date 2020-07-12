@@ -67,10 +67,14 @@ flex-direction:column;
   font-weight: 300;
 }
 
+.subtitle p{
+  padding-bottom: 1rem;
+}
+
+
 .quote-author{
   font-family: "Margetha";
   font-size: 1.8rem;
-  margin-top: 1.5rem;
 }
 
 .leaf{

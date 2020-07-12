@@ -371,3 +371,13 @@ Gallery Modal
   font-size: 1.5rem;
   cursor: pointer;
 }
+
+/*=============== 
+Title markdown
+===============*/
+
+
+
+.student-review-text {
+  display: inline-block;
+}
