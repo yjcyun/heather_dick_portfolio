@@ -30,7 +30,7 @@ const Event = () => {
               {nodes.map(item => (
                 item.coaching
                   ? <h4 key={item.id}>{item.notification}</h4>
-                  : <h4 key={item.id}>Default text here</h4>
+                  : <h4 key={item.id}>Private coaching for monologue and audition preparation is available year round.</h4>
               ))}
             </div>
           </div>

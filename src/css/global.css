@@ -280,6 +280,10 @@ Pages
   margin: 10rem auto 0;
 }
 
+.page.coaching-page{
+  margin: 7rem auto;
+}
+
 @media (max-width: 768px) {
   .contact-page {
     padding-bottom: 0;
