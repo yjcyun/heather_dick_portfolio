@@ -57,7 +57,10 @@ const BlogFeatured = ({ notification }) => {
         <p className="featured-subtitle">mini gallery</p>
         {data.allFile.edges.map(({ node }, index) => {
           return (
-            <Image fluid={node.childImageSharp.fluid} key={index} alt="Heather's headshot" className="mini-gallery" />
+            <div key={index} className="hero-image">
+              <Image fluid={node.childImageSharp.fluid} alt="Heather's headshot" className="mini-gallery" />
+              <p className="image-caption resume">Helen Tansey, Sundari Photography Inc.</p>
+            </div>
           )
         })}
         <p>Helen Tansey, Sundari Photography Inc.
@@ -142,6 +145,10 @@ padding: 0 0.5rem;
 .mini-gallery {
   margin:8px 0;
   margin: 0.5rem 0;
+}
+
+.hero-image {
+  position:relative;
 }
 `;
 

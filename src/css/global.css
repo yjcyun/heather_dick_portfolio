@@ -51,7 +51,7 @@ hr {
   width: 3.5rem;
 }
 
-.center-hr{
+.center-hr {
   margin: 0.5rem auto;
 }
 
@@ -164,6 +164,10 @@ Button
   border: none;
   margin: 16px;
   margin: 1rem;
+}
+
+.about-btn {
+  padding: 1rem 1.5rem;
 }
 
 .about-btn,
@@ -340,6 +344,10 @@ icons
   color: white;
   -webkit-transition: var(--transition);
   transition: var(--transition);
+}
+.image-caption.resume {
+   padding: 1rem 0.5rem;
+   font-size:80%;
 }
 
 .hero-image:hover .image-caption {

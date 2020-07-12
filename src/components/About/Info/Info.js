@@ -1,5 +1,6 @@
 import React from 'react'
 import { graphql, useStaticQuery } from 'gatsby';
+import ReactMarkdown from 'react-markdown';
 import styled from 'styled-components';
 import Image from 'gatsby-image';
 import subtle from '../../../images/subtle-dark-vertical.png';
@@ -11,6 +12,7 @@ const query = graphql`
       nodes {
         id
         description
+        heading
         profile {
           childImageSharp {
             fluid {
@@ -40,11 +42,13 @@ const Info = () => {
             </div>
 
             {/* Profile Text */}
-            <div className="info-text">{item.description}</div>
+            <div className="subtitle-container"><h3 className="info-subtitle">{item.heading}</h3></div>
+
+            <ReactMarkdown source={item.description} className="info-text" />
           </div>
         )
       })}
-    </InfoWrapper >
+    </InfoWrapper>
   )
 }
 
@@ -73,32 +77,10 @@ margin: 0 auto;
   padding-bottom: 1rem;
 }
 
-.info-title{
-  font-family: var(--titleFont);
-  font-weight: 300;
-  font-size: 32px;
-  font-size: 3rem;
-  margin-bottom: 2rem;
-  line-height: 1;
-}
-
 .info-subtitle{
-  margin: 1rem 0;
-}
-
-.info-single{
-  margin: 2rem auto; 
-}
-
-.info-contact{
-  margin: 32px 0 16px;
-  margin: 2rem 0 1rem;
-}
-
-.info-author{
-  font-size: 27.2px;
-  font-size: 1.7rem;
-  font-family: var(--titleFont);
+  margin-top:2rem;
+  text-align:center;
+  font-size: 2.2rem;
 }
 
 .hero-image{
@@ -132,9 +114,11 @@ margin: 0 auto;
     margin-bottom: 1rem;
   }
 
-  .info-single{
-    margin: 0 0 3rem 3rem; 
-  }
+  .info-subtitle{
+  margin: 1rem 0;
+  text-align:center;
+  font-size: 2.2rem;
+}
 }
 
 @media (min-width: 1130px){

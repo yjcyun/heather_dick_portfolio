@@ -1,5 +1,6 @@
 import React from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
+import ReactMarkdown from 'react-markdown';
 import styled from 'styled-components';
 import leaf from '../images/leaf.svg';
 
@@ -24,14 +25,13 @@ const Title = ({ page }) => {
       {data.title.nodes.map(({
         pageTitle, pageSubtitle, name, id, pageName
       }) => {
-        if(pageName === page){
+        if (pageName === page) {
           return (
             <div key={id}>
-              <h1 className="title">{pageTitle}</h1>
+              <h1 className="title">{pageTitle}</h1><br />
               <img src={leaf} className="leaf" alt="leaf" />
-              <h2 className="subtitle">
-                {pageSubtitle}<br />{name}
-              </h2>
+              <ReactMarkdown source={pageSubtitle} className="subtitle" />
+              <p className="quote-author">- {name}</p>
             </div>
           )
         }
@@ -63,21 +63,23 @@ flex-direction:column;
 .subtitle{
   font-size: 19.2px;
   font-size:1.2rem;
-  padding: 16px;
-  padding:1rem;
+  padding:1rem 0;
   font-weight: 300;
 }
 
-.subtitle span{
-  text-align:right !important;
+.quote-author{
   font-family: "Margetha";
   font-size: 1.8rem;
-  margin-top: 2rem;
+  margin-top: 1.5rem;
 }
 
 .leaf{
   width: 50%;
   margin: 0 auto;
+}
+
+.dash-icon{
+  vertical-align:middle;
 }
 
 @media (min-width: 996px) {
@@ -86,16 +88,22 @@ flex-direction:column;
   .title{
     font-size:3.7rem;
   }  
+
+  .subtitle{
+    padding:1rem;
+  }
+  
   .leaf{
     width: 25%;
   }
+
   .subtitle span {
     margin-left: 30rem;
   }
-}
 
-@media (max-width: 576px) {
-  margin: 0 1rem 0;
+  .quote-author{
+    margin-left: 30rem;
+  }
 }
 `;
 
