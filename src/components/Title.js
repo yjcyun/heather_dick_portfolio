@@ -70,6 +70,9 @@ flex-direction:column;
 .subtitle p{
   padding-bottom: 1rem;
 }
+.subtitle a {
+  color: blue;
+}
 
 
 .quote-author{

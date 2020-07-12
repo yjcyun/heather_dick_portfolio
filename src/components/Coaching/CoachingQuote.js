@@ -20,9 +20,16 @@ padding: 1rem 0.5rem;
 display:flex;
 
 .icon {
-  font-size: 5rem;
-  margin-right: 2rem;
+  font-size: 2rem;
+  margin-right: 1rem;
   color: var(--mainGold);
+}
+
+@media (min-width: 1024px){
+  .icon {
+    font-size: 5rem;
+    margin-right: 2rem;
+  }
 }
 `;
 
