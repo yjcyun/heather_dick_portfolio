@@ -9,7 +9,7 @@ export class Gallery extends Component {
     showLightbox: false,
     selectedImage: null
   };
-  
+
   // Close modal
   closeModal = () => {
     this.setState({ showLightbox: false })
@@ -40,6 +40,7 @@ export class Gallery extends Component {
             mainSrc={selectedImage.img.childImageSharp.fluid.src}
             imageTitle={selectedImage.show}
             imageCaption={selectedImage.description}
+            enableZoom={false}
             onCloseRequest={() => this.closeModal()}>
           </Lightbox>
         )}
@@ -64,6 +65,9 @@ const PreviewButton = styled.button`
   border: none;
   padding: 0;
   margin: 0;
+  &:focus{
+    outline: none
+  }
 `;
 
 export default Gallery

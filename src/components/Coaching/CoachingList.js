@@ -35,6 +35,7 @@ const CoachingList = () => {
             <CoachingItem key={item.id} image={item.image.childImageSharp.fluid} desc={item.description} title={item.title} />
           )
         })}
+       
       </div>
     </CoachingListWrapper>
   )

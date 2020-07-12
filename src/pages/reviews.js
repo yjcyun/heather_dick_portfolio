@@ -13,7 +13,7 @@ const Reviews = () => {
       <div className="page">
         <Title page="reviews" />
         <ReviewList />
-        <Contact icon={clap} btnText="Contact Heather" title="Send your reviews"></Contact>
+        <Contact icon={clap} btnText="Contact Heather" title="Work With Heather"></Contact>
       </div>
     </Layout>
   )

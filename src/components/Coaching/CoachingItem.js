@@ -24,13 +24,17 @@ display: flex;
 padding: 3rem 0 0;
 
   .coaching-img {
-    /* max-width: 30rem;
-    height: 30rem; */
     -webkit-box-flex:2;
     -ms-flex:2;
+    height: 25rem;
     flex:2;
     margin-bottom: 32px;
     margin-bottom: 2rem;
+  }
+
+  .coaching-img img {
+   object-fit: contain;
+   height: 100%;
   }
 
   .coaching-text{

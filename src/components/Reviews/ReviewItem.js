@@ -15,12 +15,12 @@ const ReviewItem = ({ review }) => {
           <h3 className="bubble-title">{role}</h3>
           <div className="testing">
             <FaQuoteLeft className="quote-icon" />
-            <ReactMarkdown source={content} className="markdown" />
+            <ReactMarkdown source={content} />
           </div>
           <span className="triangle"></span>
 
           <p className="author">
-            <span>-</span><ReactMarkdown source={author} className="markdown" />
+            <span>-</span><ReactMarkdown source={author} />
           </p>
         </div>
       </Slide>
@@ -61,7 +61,7 @@ margin-bottom: 4rem;
 }
 
 .quote-icon{
-   color: var(--mainPurple);
+  color: var(--mainPurple);
   font-size: 40px;
   font-size: 2.5rem;
   margin-right: 16px;

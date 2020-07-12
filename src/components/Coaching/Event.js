@@ -1,5 +1,6 @@
 import React from 'react'
 import { graphql, useStaticQuery } from 'gatsby';
+import { FaAsterisk } from 'react-icons/fa';
 import styled from 'styled-components';
 import horn from '../../images/horn.png';
 import Bounce from 'react-reveal/Bounce';
@@ -29,7 +30,7 @@ const Event = () => {
             <div className="event-notification">
               {nodes.map(item => (
                 item.coaching
-                  ? <h4 key={item.id}>{item.notification}</h4>
+                  ? <h4 key={item.id}><FaAsterisk /> {item.notification}</h4>
                   : <h4 key={item.id}>Private coaching for monologue and audition preparation is available year round.</h4>
               ))}
             </div>
@@ -65,11 +66,12 @@ text-align:center;
 
 .event-notification h4{
   color: white;
-  margin: 0 auto;
+  margin: 0 auto 0.5rem;
   font-size:24px;
   font-size:1.5rem;
   padding:0 16px;
   padding: 0 1rem;
+  font-weight: normal;
 }
 
 .contact-container{

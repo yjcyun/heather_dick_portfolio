@@ -31,7 +31,8 @@ const Title = ({ page }) => {
               <h1 className="title">{pageTitle}</h1><br />
               <img src={leaf} className="leaf" alt="leaf" />
               <ReactMarkdown source={pageSubtitle} className="subtitle" />
-              <p className="quote-author">- {name}</p>
+              {name ? <p className="quote-author">- {name}</p> : null}
+
             </div>
           )
         }
