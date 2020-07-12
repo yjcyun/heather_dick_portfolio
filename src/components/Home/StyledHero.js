@@ -1,5 +1,6 @@
 import React from 'react';
 import { graphql, useStaticQuery, Link } from 'gatsby';
+import { AiFillStar } from 'react-icons/ai';
 import styled from 'styled-components';
 import Image from 'gatsby-image';
 import bcg from '../../images/bcg.jpg';
@@ -30,7 +31,12 @@ const StyledHero = () => {
             <h3>& the Sirius Theatrical Company</h3>
           </div>
           <div className="hero-subtitle">
-            <h5>performer. voice artist. director. writer. designated linklater voice teacher.</h5>
+            <h5>
+            <AiFillStar className="star-icon" />performer 
+            <AiFillStar className="star-icon" />voice artist 
+            <AiFillStar className="star-icon" />director 
+            <AiFillStar className="star-icon" />writer 
+            <AiFillStar className="star-icon" />designated linklater voice teacher</h5>
           </div>
 
           <Link to="/bio">
