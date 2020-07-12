@@ -32,11 +32,12 @@ const StyledHero = () => {
           </div>
           <div className="hero-subtitle">
             <h5>
-            <AiFillStar className="star-icon" />performer 
-            <AiFillStar className="star-icon" />voice artist 
-            <AiFillStar className="star-icon" />director 
-            <AiFillStar className="star-icon" />writer 
-            <AiFillStar className="star-icon" />designated linklater voice teacher</h5>
+              <span><AiFillStar className="star-icon" /></span>Performer
+              <span><AiFillStar className="star-icon" /></span>Voice Artist
+              <span><AiFillStar className="star-icon" /></span>Director
+              <span><AiFillStar className="star-icon" /></span>Writer
+              <span><AiFillStar className="star-icon" /></span>Designated Linklater Voice Teacher
+            </h5>
           </div>
 
           <Link to="/bio">
@@ -113,9 +114,13 @@ const HeroWrapper = styled.section`
 .hero-subtitle h5{
   font-size: 17.6px;
   font-size: 1.1rem;
-  max-width: 23rem;
+  max-width: 28rem;
   margin: 0 auto;
   text-transform: capitalize;
+}
+
+.hero-subtitle h5 span{
+  vertical-align:middle;
 }
 
 .hero-image{
@@ -146,6 +151,10 @@ const HeroWrapper = styled.section`
   height: 100%;
 }
 
+.star-icon{
+  color: var(--mainGold);
+  margin-left: 0.5rem;
+}
 @media (min-width: 768px) {
   padding: 0 2rem 0 1rem;
   .hero-text{
