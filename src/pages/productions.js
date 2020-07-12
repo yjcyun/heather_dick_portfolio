@@ -19,7 +19,7 @@ export const query = graphql`
         img {
           childImageSharp {
             fluid {
-          ...GatsbyImageSharpFluid
+              ...GatsbyImageSharpFluid
             }
           }
         }

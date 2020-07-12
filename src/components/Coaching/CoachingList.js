@@ -29,9 +29,6 @@ const CoachingList = () => {
   const data = useStaticQuery(query);
   return (
     <CoachingListWrapper>
-      <div className="subtitle-container">
-        <Subtitle subtitle="A Heading?" credits />
-      </div>
       <div className="coaching-container">
         {data.coaching.nodes.map(item => {
           return (

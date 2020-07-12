@@ -385,3 +385,9 @@ Title markdown
 .student-review-text {
   display: inline-block;
 }
+
+.ril__image {
+  width: 50%;
+  padding: 1.5rem;
+  background: #fff;
+}

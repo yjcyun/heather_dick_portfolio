@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
-import { DialogOverlay, DialogContent } from '@reach/dialog';
-import { IoMdClose } from 'react-icons/io';
-import '@reach/dialog/styles.css';
-import Img from 'gatsby-image';
+import 'react-image-lightbox/style.css';
+import Lightbox from 'react-image-lightbox';
 import styled from 'styled-components';
 import ProductionsItem from './ProductionsItem';
 
@@ -11,6 +9,7 @@ export class Gallery extends Component {
     showLightbox: false,
     selectedImage: null
   };
+  
   // Close modal
   closeModal = () => {
     this.setState({ showLightbox: false })
@@ -26,7 +25,7 @@ export class Gallery extends Component {
         <LightboxContainer>
           {photos.map(image => (
             <PreviewButton
-              key={image.img.childImageSharp.fluid.src}
+              key={image.img.childImageSharp.fluid.base64}
               type="button"
               onClick={() => this.setState({ showLightbox: true, selectedImage: image })}
             >
@@ -37,23 +36,12 @@ export class Gallery extends Component {
 
         {/* Image Modal */}
         {showLightbox && (
-          <DialogOverlay
-            onDismiss={() => this.closeModal()}
-            className="modal-overlay">
-
-            <DialogContent aria-labelledby={selectedImage.id}
-              className="modal-content">
-              <Img
-                fluid={selectedImage.img.childImageSharp.fluid}
-                alt="Production image"
-              /><br />
-              <p>{selectedImage.show}</p>
-              <p>{selectedImage.description}</p>
-              <button type="button" onClick={() => this.closeModal()} className="close-btn">
-                <IoMdClose />
-              </button>
-            </DialogContent>
-          </DialogOverlay>
+          <Lightbox
+            mainSrc={selectedImage.img.childImageSharp.fluid.src}
+            imageTitle={selectedImage.show}
+            imageCaption={selectedImage.description}
+            onCloseRequest={() => this.closeModal()}>
+          </Lightbox>
         )}
       </>
     )
