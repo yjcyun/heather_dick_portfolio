@@ -35,6 +35,7 @@ const Title = ({ page }) => {
             </div>
           )
         }
+        return null;
       })}
     </TitleWrapper>
   )

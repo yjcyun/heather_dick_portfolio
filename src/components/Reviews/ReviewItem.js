@@ -1,19 +1,27 @@
 import React from 'react';
 import { FaQuoteLeft } from 'react-icons/fa';
+import ReactMarkdown from 'react-markdown';
 import styled from 'styled-components';
 import Slide from 'react-reveal/Slide';
 
 // Props from ReviewList
 const ReviewItem = ({ review }) => {
-  const { subtext, text, author } = review;
+  const { author, content, role } = review;
+
   return (
     <ReviewItemWrapper>
       <Slide bottom duration={1000}>
         <div className="bubble-text">
-          <p>{subtext}</p>
-          <p><FaQuoteLeft className="quote-icon" />{text}</p>
+          <h3 className="bubble-title">{role}</h3>
+          <div className="testing">
+            <FaQuoteLeft className="quote-icon" />
+            <ReactMarkdown source={content} className="markdown" />
+          </div>
           <span className="triangle"></span>
-          <span className="author">-{author}</span>
+
+          <p className="author">
+            <span>-</span><ReactMarkdown source={author} className="markdown" />
+          </p>
         </div>
       </Slide>
     </ReviewItemWrapper>
@@ -22,6 +30,7 @@ const ReviewItem = ({ review }) => {
 
 const ReviewItemWrapper = styled.div`
 margin-bottom: 4rem;
+
 .bubble-text {
  position: relative;
  background-color: var(--beige);
@@ -29,10 +38,12 @@ margin-bottom: 4rem;
  height: auto;
  border-radius: 2em;
  display: flex;
+ flex-direction:column;
  justify-content: center;
  align-items: center;
  border: 3px solid var(--darkPurple);
  padding: 2rem;
+ text-align:center;
 }
 
 .triangle { 
@@ -55,13 +66,23 @@ margin-bottom: 4rem;
   font-size: 2.5rem;
   margin-right: 16px;
   margin-right: 1rem;
+  float:left;
+}
+
+.bubble-title{
+  margin-bottom:1rem;
 }
 
 .author{
   position: absolute;
   bottom: -4rem;
-  left: 80px;
-  left: calc(50% - 1.5rem);
+  left: 30%;
+  display:flex;
+  text-align:left;
+}
+
+.author span {
+  margin-right:0.5rem;
 }
 
 @media (min-width: 768px){
@@ -76,7 +97,7 @@ margin-bottom: 4rem;
 @media (min-width: 996px){
   .author{
     bottom: -4rem;
-    left: calc(50% - 2rem);
+    left: calc(50% - 3rem);
   }
 }
 `;

@@ -85,7 +85,7 @@ a:hover {
 }
 
 /* icon */
-.icon {
+/* .icon {
   color: var(--mainPurple);
   cursor: pointer;
 }
@@ -96,7 +96,7 @@ a:hover {
 
 :focus {
   outline: none;
-}
+} */
 
 /*=============== 
 Button

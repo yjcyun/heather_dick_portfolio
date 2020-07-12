@@ -63,8 +63,6 @@ const BlogFeatured = ({ notification }) => {
             </div>
           )
         })}
-        <p>Helen Tansey, Sundari Photography Inc.
-</p>
       </section>
     </BlogFeaturedWrapper>
   )

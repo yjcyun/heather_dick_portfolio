@@ -1,15 +1,17 @@
 import React from 'react'
+import ReactMarkdown from 'react-markdown';
 import styled from 'styled-components';
-import Image from 'gatsby-image';
 
 // Props coming from CoachingList
 const CoachingItem = ({ image, desc, title }) => {
   return (
     <CoachingItemWrapper>
-      <Image fluid={image} className="coaching-img" />
+      <div className="coaching-img">
+        <img src={image.src} alt="coaching" />
+      </div>
       <div className="coaching-text">
-          <h1>{title}</h1>
-          <p className="coaching-desc">{desc}</p>
+        <h1>{title}</h1>
+        <ReactMarkdown source={desc} className="coaching-desc" />
       </div>
     </CoachingItemWrapper>
   )
@@ -22,8 +24,8 @@ display: flex;
 padding: 3rem 0 0;
 
   .coaching-img {
-    height: 240px;
-    height: 15rem;
+    /* max-width: 30rem;
+    height: 30rem; */
     -webkit-box-flex:2;
     -ms-flex:2;
     flex:2;
@@ -37,6 +39,10 @@ padding: 3rem 0 0;
     flex:3;
     padding: 0 32px;
     padding: 0 2rem;
+  }
+
+  .coaching-desc p {
+    margin-bottom:1rem;
   }
 
   h1{

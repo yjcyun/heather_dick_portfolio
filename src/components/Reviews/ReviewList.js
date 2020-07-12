@@ -1,14 +1,28 @@
 import React from 'react';
+import { graphql, useStaticQuery } from 'gatsby';
 import styled from 'styled-components';
-import reviewData from '../../constants/reviews';
 import ReviewItem from './ReviewItem';
 
+const query = graphql`
+  {
+    review:allStrapiReviews(sort: {fields: created_at, order: DESC}) {
+      nodes {
+        author
+        content
+        id
+        role
+      }
+    }
+  }
+`
 const ReviewList = () => {
+  const data = useStaticQuery(query);
+
   return (
     <ReviewListWrapper>
-      {reviewData.map(review => (
-        <div key={review.id}>
-          <ReviewItem review={review} />
+      {data.review.nodes.map(item => (
+        <div key={item.id}>
+          <ReviewItem review={item} />
         </div>
       ))}
     </ReviewListWrapper>

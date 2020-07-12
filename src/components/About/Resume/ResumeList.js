@@ -58,7 +58,7 @@ const ResumeList = () => {
       if (item.category === categoryResume) {
         return <ResumeItem key={item.id} item={item} />
       }
-      return;
+      return null;
     });
 
   // convert title 
