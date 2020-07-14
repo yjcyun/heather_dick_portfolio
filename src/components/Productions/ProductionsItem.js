@@ -7,7 +7,9 @@ const ProductionsItem = ({ item }) => {
   return (
     <ProductionsItemWrapper>
       <div className="poster-img">
-        <Image fluid={img.childImageSharp.fluid} alt="posters" className="poster-gatsby-img" />
+        <div style={{overflow:'hidden'}}>
+          <Image fluid={img.childImageSharp.fluid} alt="posters" className="poster-gatsby-img" />
+        </div>
         <div className="poster-footer">
           <p><strong>{show}</strong></p>
         </div>
@@ -25,18 +27,12 @@ const ProductionsItemWrapper = styled.div`
   display: -ms-grid;
   display: grid;
   position:relative;
-  box-shadow: 4px 4px 6px 0px rgba(0,0,0,0.1);
-  -webkit-box-shadow: 4px 4px 6px 0px rgba(0,0,0,0.1);
-  -moz-box-shadow: 4px 4px 6px 0px rgba(0,0,0,0.1);
-  overflow:hidden;
   transition: var(--transition);
 }
 
-.poster-img:hover{
-  box-shadow: 5px 7px 10px 0px rgba(0,0,0,0.43);
-  -webkit-box-shadow: 5px 7px 10px 0px rgba(0,0,0,0.43);
-  -moz-box-shadow: 5px 7px 10px 0px rgba(0,0,0,0.43);
-}
+.poster-img:hover .poster-gatsby-img{
+  transform:scale(1.05);
+} 
 
 .poster-gatsby-img{
   height: 25rem;

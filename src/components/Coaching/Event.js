@@ -69,8 +69,6 @@ text-align:center;
   margin: 0 auto 0.5rem;
   font-size:24px;
   font-size:1.5rem;
-  padding:0 16px;
-  padding: 0 1rem;
   font-weight: normal;
 }
 

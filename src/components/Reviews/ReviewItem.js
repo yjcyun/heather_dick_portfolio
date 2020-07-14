@@ -76,13 +76,20 @@ margin-bottom: 4rem;
 .author{
   position: absolute;
   bottom: -4rem;
-  left: 30%;
+  left: 35%;
   display:flex;
   text-align:left;
 }
 
 .author span {
   margin-right:0.5rem;
+}
+
+@media (max-width: 360px){
+  .author{
+    bottom: -4.8rem;
+    left: 35%;
+  }
 }
 
 @media (min-width: 768px){

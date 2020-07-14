@@ -55,7 +55,7 @@ const BlogFeatured = ({ blogs }) => {
                   <small>{item.date}</small>
                 </Link>
               </div>)
-            : <p>There are no featured articles</p>;
+            : <p>Featured articles are coming soon</p>;
           return newFeatured;
         })}
       </section>

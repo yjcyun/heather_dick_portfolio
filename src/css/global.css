@@ -387,7 +387,15 @@ Title markdown
 }
 
 .ril__image {
-  width: 50%;
   padding: 1.5rem;
   background: #fff;
+  width:50%;
+}
+
+@media (max-width:768px){
+  .ril__image{
+    transform:translate3d(0, 0px, 0px) scale3d(1.7,1.7,1)!important;
+    padding:0.7rem;
+
+  }
 }

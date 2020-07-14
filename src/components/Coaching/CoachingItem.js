@@ -45,8 +45,12 @@ padding: 3rem 0 0;
     padding: 0 2rem;
   }
 
+
   .coaching-desc p {
     margin-bottom:1rem;
+  }
+
+  .coaching-text h1{
   }
 
   h1{
@@ -56,7 +60,7 @@ padding: 3rem 0 0;
     font-weight: 400;
     margin-bottom: 8px;
     margin-bottom:0.5rem;
-    display: inline-block;
+    text-align:center;
   }
   
   @media (max-width: 768px){
@@ -74,8 +78,13 @@ padding: 3rem 0 0;
   @media (min-width: 996px){
     justify-content: center;
     align-items:center;
+
     .coaching-img{
       margin-bottom: 0;
+    }
+
+    h1{
+      text-align:left;
     }
   }
 `;
