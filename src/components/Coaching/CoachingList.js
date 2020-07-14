@@ -23,41 +23,17 @@ const query = graphql`
         description
       }
     }
-    coachingImg: allFile(filter: {extension: {regex: "/(jpg)/"}, relativeDirectory: {eq: "coaching"}}, sort: {fields: name, order: ASC}) {
-      edges {
-        node {
-          childImageSharp {
-            fluid {
-              base64
-              aspectRatio
-              sizes
-              src
-              srcSet
-            }
-          }
-        }
-      }
-    }
   }
 `
 
 const CoachingList = () => {
-  const { coaching, coachingImg } = useStaticQuery(query);
+  const { coaching } = useStaticQuery(query);
   return (
     <CoachingListWrapper>
       <div className="coaching-container">
         {coaching.nodes.map(item => {
           return (
             <CoachingItem key={item.id} image={item.image.childImageSharp.fluid} desc={item.description} title={item.title} />
-          )
-        })}
-      </div>
-      <div className="coaching-bottom">
-        {coachingImg.edges.map(({ node }, index) => {
-          return (
-            <div key={index} className="coaching-img-container">
-              <Image fluid={node.childImageSharp.fluid} alt="photos of Heather coaching" />
-            </div>
           )
         })}
       </div>
@@ -79,11 +55,7 @@ margin-bottom:5rem;
   padding: 0 1rem 2rem;
   margin: 2rem auto;
 }
-.coaching-bottom{
-  display:grid;
-  grid-template-columns: repeat(2,1fr);
-  grid-gap: 0.5rem;
-}
+
 
 .coaching-img-container .gatsby-image-wrapper {
   max-height:10rem;
