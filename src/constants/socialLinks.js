@@ -6,28 +6,28 @@ const data = [
     id: 1,
     footerIcon: <FaLinkedin className="footer-icon" />,
     icon: <FaLinkedinIn className="social-icon" />,
-    url: 'https://www.linkedin.com',
+    url: 'https://www.linkedin.com/in/heatherdick',
     text: "LinkedIn"
   },
   {
     id: 2,
     footerIcon: <FaTwitterSquare className="footer-icon" />,
     icon: <FaTwitter className="social-icon" />,
-    url: 'https://www.linkedin.com',
+    url: 'https://twitter.com/Sirius_Theatre',
     text: "Twitter"
   },
   {
     id: 3,
     footerIcon: <FaInstagramSquare className="footer-icon" />,
     icon: <FaInstagram className="social-icon" />,
-    url: 'https://www.linkedin.com',
+    url: 'https://www.instagram.com/siriustheatrical',
     text: "Instagram"
   },
   {
     id: 4,
     footerIcon: <FaFacebookSquare className="footer-icon" />,
     icon: <FaFacebook className="social-icon" />,
-    url: 'https://www.linkedin.com',
+    url: 'https://www.facebook.com/SiriusTheatrical',
     text: "Facebook"
   },
 ];
