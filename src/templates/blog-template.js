@@ -57,7 +57,7 @@ export const query = graphql`
 
 const BlogTemplate = ({ data }) => {
   const {
-    blog: { date,  blog, title, author, thumbnail, description },
+    blog: { date, blog, title, author, thumbnail, description },
     featured: { nodes: blogs }
   } = data;
 
@@ -147,14 +147,18 @@ blockquote {
   margin: 2rem 0;
 }
 
-a{
-  text-decoration: underline;
-  color: var(--lightPurple);
+.blog-markdown a{
+  color: red;
+  text-decoration:underline;
 }
 
-p{
+.blog-markdown p{
   line-height: 1.7;
+  margin-bottom: 1.5rem;
   font-size:1.1rem;
+}
+.blog-markdown em {
+  text-decoration: italic;
 }
 
 img{

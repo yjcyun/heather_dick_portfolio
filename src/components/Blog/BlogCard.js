@@ -15,11 +15,14 @@ const BlogCard = ({
         className="blog"
       >
         <article>
-          <Image
-            fluid={thumbnail.childImageSharp.fluid}
-            className="blog-img"
-            alt="blog thumbnail"
-          />
+          <div className="blog-img-container">
+            <img src={thumbnail.childImageSharp.fluid.src} />
+            {/* <Image
+              fluipd={thumbnail.childImageSharp.fluid}
+              className="blog-img"
+              alt="blog thumbnail"
+            /> */}
+          </div>
           <div className="blog-card">
             <div className="blog-header">
               <div className="blog-author">{author}</div>
@@ -49,7 +52,7 @@ margin-bottom:2rem;
   margin-bottom:'32px';
   margin-bottom: '2rem';
   text-align:center;
-  background: var(--beige);
+  /* background: var(--beige); */
   border-radius: 10px;
 }
 
@@ -74,12 +77,20 @@ margin-bottom:2rem;
   padding: 1.5rem 1rem;
 }
 
-.blog-img{
-  height:240px;
+.blog-img-container {
   height: 15rem;
+}
+
+.blog-img-container img {
+  height: 100%;
+  object-fit: contain;
+}
+
+/* .blog-img{
   border-top-left-radius:10px;
   border-top-right-radius:10px;
-}
+  object-fit: contain;
+} */
 
 .blog-header {
   display: -webkit-box;
