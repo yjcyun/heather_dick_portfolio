@@ -18,19 +18,17 @@ const ReviewItem = ({ review }) => {
             <ReactMarkdown source={content} />
           </div>
           <span className="triangle"></span>
-
-          <p className="author">
-            <span>-</span><ReactMarkdown source={author} />
-          </p>
         </div>
+
+        <p className="author">
+          <span>-</span><ReactMarkdown source={author} />
+        </p>
       </Slide>
     </ReviewItemWrapper>
   )
 }
 
 const ReviewItemWrapper = styled.div`
-margin-bottom: 4rem;
-
 .bubble-text {
  position: relative;
  background-color: var(--beige);
@@ -74,37 +72,24 @@ margin-bottom: 4rem;
 }
 
 .author{
-  position: absolute;
-  bottom: -4rem;
-  left: 35%;
-  display:flex;
-  text-align:left;
-}
-
-.author span {
-  margin-right:0.5rem;
-}
-
-@media (max-width: 360px){
-  .author{
-    bottom: -4.8rem;
-    left: 35%;
+    margin: 1rem 0 0 45%;
   }
+
+.author p{
+  display:inline;
 }
 
 @media (min-width: 768px){
-  margin-bottom: 5rem;
+  margin-bottom: 4rem;
+
   .author{
-    position: absolute;
-    bottom: -5rem;
-    left: 50%;
+    margin: 0.5rem 0 0 50%;
   }
 }
 
 @media (min-width: 996px){
   .author{
-    bottom: -4rem;
-    left: calc(50% - 3rem);
+    margin: 0.5rem 0 0 35%;
   }
 }
 `;
