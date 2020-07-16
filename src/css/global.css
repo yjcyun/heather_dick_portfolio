@@ -93,10 +93,10 @@ a:hover {
 .icon:hover {
   color: var(--lightPurple);
 }
-
+*/
 :focus {
   outline: none;
-} */
+} 
 
 /*=============== 
 Button

@@ -8,7 +8,7 @@ import Name from './Name';
 
 const getImage = graphql`
   query {
-    defaultBcg:file(relativePath: {eq: "headshots/headshot2.jpg"}) {
+    defaultBcg:file(relativePath: {eq: "headshots/headshot1.jpg"}) {
       childImageSharp {
         fluid {
           ...GatsbyImageSharpFluid

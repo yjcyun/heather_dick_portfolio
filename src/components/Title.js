@@ -72,10 +72,10 @@ flex-direction:column;
 .subtitle p{
   padding-bottom: 1rem;
 }
+
 .subtitle a {
   color: blue;
 }
-
 
 .quote-author{
   font-family: "Margetha";
@@ -103,7 +103,7 @@ flex-direction:column;
   }
   
   .leaf{
-    width: 25%;
+    width: 20%;
   }
 
   .subtitle span {

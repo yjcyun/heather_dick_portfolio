@@ -9,7 +9,7 @@ import spotlight from '../images/spotlight.png';
 
 export const query = graphql`
  {
-    posters:allStrapiProductions {
+    posters:allStrapiProductions(sort: {fields: created_at, order: DESC}) {
       nodes {
         id
         description
