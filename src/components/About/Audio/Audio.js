@@ -4,13 +4,13 @@ import Subtitle from '../../Subtitle';
 import AudioItem from './AudioItem';
 
 // Sound cloud track number ***REPLACE***
-const track = [267474434, 267474514, 267474514];
+const track = [869625256, 869623306, 869619502];
 
 const Audio = () => {
   return (
     <AudioWrapper>
       <div className="max-width">
-        <Subtitle subtitle="AUDIO" linkUrl="https://www.google.ca" linkText="all audio" white />
+        <Subtitle subtitle="AUDIO" linkUrl="https://soundcloud.com/heatherdick-voice" linkText="all audio" white />
         <div className="audio-item-container">
           {track.map((item, index) => {
             return <div key={index}><AudioItem track={item} /></div>

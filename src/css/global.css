@@ -96,7 +96,7 @@ a:hover {
 */
 :focus {
   outline: none;
-} 
+}
 
 /*=============== 
 Button
@@ -280,7 +280,7 @@ Pages
   margin: 10rem auto 0;
 }
 
-.page.coaching-page{
+.page.coaching-page {
   margin: 7rem auto;
 }
 
@@ -349,9 +349,10 @@ icons
   -webkit-transition: var(--transition);
   transition: var(--transition);
 }
+
 .image-caption.resume {
-   padding: 1rem 0.5rem;
-   font-size:80%;
+  padding: 1rem 0.5rem;
+  font-size: 80%;
 }
 
 .hero-image:hover .image-caption {
@@ -386,13 +387,21 @@ Title markdown
 .ril__image {
   padding: 1.5rem;
   background: #fff;
-  width:50%;
+  width: 50%;
 }
 
-@media (max-width:768px){
-  .ril__image{
-    transform:translate3d(0, 0px, 0px) scale3d(1.7,1.7,1)!important;
-    padding:0.7rem;
+@media (min-width: 1440px) {
+  .ril__image {
+    width: 37%;
+  }
+}
 
+@media (max-width: 768px) {
+  .ril__image {
+    transform: translate3d(0, 0px, 0px) scale3d(1.7, 1.7, 1) !important;
+    padding: 0.7rem;
+  }
+  .ril__outer {
+    background-color: rgba(0, 0, 0, 0.9);
   }
 }

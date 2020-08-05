@@ -157,12 +157,13 @@ blockquote {
   margin-bottom: 1.5rem;
   font-size:1.1rem;
 }
+
 .blog-markdown em {
   text-decoration: italic;
 }
 
 img{
-  width: 100%;
+  width: 60%;
   height: auto;
   margin: 3rem 0;
 }
