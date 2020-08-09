@@ -47,7 +47,7 @@ export const query = graphql`
         author
         siteDescription: description
         siteUrl
-        image
+        defaultImage
         siteTitle: title
         twitterHandle
       }
@@ -63,7 +63,7 @@ const BlogTemplate = ({ data }) => {
 
   return (
     <Layout>
-      <SEO title={title} description={description} />
+      <SEO title={title} description={description} image={thumbnail.childImageSharp.fluid}/>
       <BlogTemplateWrapper className="page">
         <div className="main-blog">
           <div className="header">

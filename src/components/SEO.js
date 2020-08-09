@@ -9,7 +9,7 @@ const query = graphql`
         author
         siteDescription: description
         siteUrl
-        image
+        defaultImage
         siteTitle: title
         twitterHandle
       }
@@ -17,16 +17,23 @@ const query = graphql`
   }
 `
 
-const SEO = ({ title, description }) => {
+const SEO = ({ title, description, image }) => {
   const { site } = useStaticQuery(query);
-  const { siteDescription, siteTitle, siteUrl, image, twitterHandle } = site.siteMetadata;
+
+  const {
+    siteDescription,
+    siteTitle,
+    siteUrl,
+    defaultImage,
+    twitterHandle
+  } = site.siteMetadata;
 
   return (
     <Helmet
       htmlAttributes={{ lang: 'en' }}
       title={title ? `${title} | ${siteTitle}` : `${siteTitle}`}>
       <meta name="description" content={description || siteDescription} />
-      <meta name="image" content={image} />
+      <meta name="image" content={image || defaultImage} />
       {/* twitter cards */}
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:creator" content={twitterHandle} />

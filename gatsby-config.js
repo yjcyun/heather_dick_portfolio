@@ -4,7 +4,8 @@ module.exports = {
     description: "A professional theatre, film, television and voice actor, director, writer and Designated Linklater Voice coach based in Toronto, Canada.  She is the Artistic Director of the Sirius Theatrical Company, a multi-disciplinary performance company.",
     author: "Christina Yun",
     twitterHandle: "@Sirius_Theatre",
-    image: "/twitter-card.png",
+    defaultImage: "/twitter-card.png",
+    // TODO: Change the url
     siteUrl: "https://heatherdick.netlify.app"
   },
   plugins: [
