@@ -88,13 +88,13 @@ const BlogTemplate = ({ data }) => {
             </EmailShareButton>
             <FacebookShareButton
               className="share-icon"
-              url={window.location.href}
+              url={`${siteUrl}/blog/${slug}`}
               quote={description}>
               <FacebookIcon size={32} round={true} />
             </FacebookShareButton>
             <TwitterShareButton
               className="share-icon"
-              url={window.location.href}
+              url={`${siteUrl}/blog/${slug}`}
               title={title}
             >
               <TwitterIcon size={32} round={true} />
