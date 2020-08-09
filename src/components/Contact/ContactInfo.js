@@ -13,7 +13,7 @@ const ContactInfo = ({ children, img }) => {
           className="background-img"
           fluid={img}
         />
-        <p className="image-caption">Photo taken by John Doe</p>
+        {/* <p className="image-caption">Photo taken by John Doe</p> */}
       </div>
       {/* Contact Text */}
       <div className="info-text">

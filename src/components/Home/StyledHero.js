@@ -53,7 +53,6 @@ const StyledHero = () => {
           fluid={data.defaultBcg.childImageSharp.fluid}
           alt="Profile image of Heather Dick"
         />
-        <p className="image-caption">Helen Tansey, Sundari Photography Inc.</p>
       </div>
     </HeroWrapper>
   )
