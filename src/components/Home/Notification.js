@@ -62,6 +62,7 @@ const ToastWrapper = styled.div`
   height: 7rem;
   width: 240px;
   width: 15rem;
+  font-family: var(--mainFont);
 }
 
 .close-icon{

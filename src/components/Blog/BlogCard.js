@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'gatsby';
 import { BsDot } from 'react-icons/bs';
-import Image from 'gatsby-image';
 import styled from 'styled-components';
 
 // Props coming from blog-list-template
@@ -16,7 +15,7 @@ const BlogCard = ({
       >
         <article>
           <div className="blog-img-container">
-            <img src={thumbnail.childImageSharp.fluid.src} />
+            <img src={thumbnail.childImageSharp.fluid.src} alt="blog" />
             {/* <Image
               fluipd={thumbnail.childImageSharp.fluid}
               className="blog-img"

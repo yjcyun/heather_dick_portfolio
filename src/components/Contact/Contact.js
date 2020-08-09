@@ -8,7 +8,7 @@ import ContactInfo from './ContactInfo';
 // Profile image
 const getImage = graphql`
   query {
-    contactImg: file(relativePath:{eq:"headshots/headshot4.jpg"}){
+    contactImg: file(relativePath:{eq:"contact.jpg"}){
       childImageSharp {
         fluid {
           ...GatsbyImageSharpFluid
@@ -30,7 +30,7 @@ const Contact = () => {
             <h2 className="info-subtitle">Heather Dick</h2>
             <div className="social">
               <div className="email">
-                <span>info<small>[@]</small>heatherdick<small>[.]</small>com</span>
+                <span>contact<small>[@]</small>heatherdick<small>[.]</small>ca</span>
               </div>
               <SocialLinks footer styleClass="contact-social" />
             </div>

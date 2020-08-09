@@ -1,6 +1,5 @@
 import React from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
-import Image from 'gatsby-image';
 import styled from 'styled-components';
 import CoachingItem from './CoachingItem';
 import verticalBcg from '../../images/subtle-dark-vertical.png';

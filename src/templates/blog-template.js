@@ -99,7 +99,7 @@ text-align:center;
 
 .thumbnail{
   width: 70%;
-  margin: auto;
+  margin: 3rem auto 0;
 }
 
 .blog-markdown{
@@ -162,10 +162,12 @@ blockquote {
   text-decoration: italic;
 }
 
-img{
-  width: 60%;
+p img{
+  display:block;
+  width: 100%;
+  max-width: 400px;
   height: auto;
-  margin: 3rem 0;
+  margin: 3rem auto;
 }
 /* end of markdown */
 
