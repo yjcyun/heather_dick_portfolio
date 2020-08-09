@@ -39,7 +39,7 @@ const SEO = ({ title, description, image }) => {
       <meta name="twitter:creator" content={twitterHandle} />
       <meta name="twitter:title" content={title || siteTitle} />
       <meta name="twitter:description" content={description || siteDescription} />
-      <meta name="twitter:image:src" content={image ||`${siteUrl}${image}`} />
+      <meta name="twitter:image:src" content={`${siteUrl}${image}` ||`${siteUrl}${defaultImage}`} />
       {/* facebook card */}
       <meta property="og:url" content={siteUrl} />
       <meta property="og:type" content="website" />

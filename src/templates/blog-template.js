@@ -60,7 +60,7 @@ const BlogTemplate = ({ data }) => {
     blog: { date, blog, title, author, thumbnail, description },
     featured: { nodes: blogs }
   } = data;
-  console.log(thumbnail);
+  console.log(thumbnail.childImageSharp.fluid.src);
 
   return (
     <Layout>
