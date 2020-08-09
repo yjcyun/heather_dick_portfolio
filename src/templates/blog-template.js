@@ -6,6 +6,16 @@ import styled from 'styled-components';
 import Layout from '../components/Layout';
 import BlogFeatured from '../components/Blog/BlogFeatured';
 import SEO from '../components/SEO';
+import {
+  EmailShareButton,
+  FacebookShareButton,
+  TwitterShareButton
+} from "react-share";
+import {
+  EmailIcon,
+  FacebookIcon,
+  TwitterIcon,
+} from "react-share";
 
 export const query = graphql`
   query GetSingleBlog($slug: String){
@@ -57,14 +67,15 @@ export const query = graphql`
 
 const BlogTemplate = ({ data }) => {
   const {
-    blog: { date, blog, title, author, thumbnail, description },
-    featured: { nodes: blogs }
+    blog: { date, blog, title, author, thumbnail, description, slug },
+    featured: { nodes: blogs },
+    website: { siteMetadata: { siteUrl } }
   } = data;
-  console.log(thumbnail.childImageSharp.fluid.src);
+  console.log(`${siteUrl}/blog/${slug}`)
 
   return (
     <Layout>
-      <SEO title={title} description={description} image={thumbnail.childImageSharp.fluid.src}/>
+      <SEO title={title} description={description} image={thumbnail.childImageSharp.fluid.src} />
       <BlogTemplateWrapper className="page">
         <div className="main-blog">
           <div className="header">
@@ -72,9 +83,26 @@ const BlogTemplate = ({ data }) => {
             <h1 className="blog-title">
               {title}</h1>
             <hr className="center-hr" />
+            <EmailShareButton className="share-icon">
+              <EmailIcon size={32} round={true} />
+            </EmailShareButton>
+            <FacebookShareButton
+              className="share-icon"
+              url={window.location.href}
+              quote={description}>
+              <FacebookIcon size={32} round={true} />
+            </FacebookShareButton>
+            <TwitterShareButton
+              className="share-icon"
+              url={window.location.href}
+              title={title}
+            >
+              <TwitterIcon size={32} round={true} />
+            </TwitterShareButton><br />
             <Image fluid={thumbnail.childImageSharp.fluid} className="thumbnail" />
           </div>
           <ReactMarkdown source={blog} className="blog-markdown" />
+
           <Link to="/blog" >
             <button className="blog-btn btn">see all blogs</button>
           </Link>
@@ -171,6 +199,10 @@ p img{
   margin: 3rem auto;
 }
 /* end of markdown */
+
+.share-icon{
+  margin:  1rem 0.5rem 0;
+}
 
 @media(min-width: 768px) {
   padding: 4rem 1rem;
