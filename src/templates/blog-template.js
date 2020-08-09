@@ -60,10 +60,11 @@ const BlogTemplate = ({ data }) => {
     blog: { date, blog, title, author, thumbnail, description },
     featured: { nodes: blogs }
   } = data;
+  console.log(thumbnail);
 
   return (
     <Layout>
-      <SEO title={title} description={description} image={thumbnail.childImageSharp.fluid}/>
+      <SEO title={title} description={description} image={thumbnail.childImageSharp.fluid.src}/>
       <BlogTemplateWrapper className="page">
         <div className="main-blog">
           <div className="header">
