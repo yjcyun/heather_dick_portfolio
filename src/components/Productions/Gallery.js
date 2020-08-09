@@ -7,7 +7,7 @@ import ProductionsItem from './ProductionsItem';
 export class Gallery extends Component {
   state = {
     showLightbox: false,
-    selectedImage: null
+    photoIndex: 0
   };
 
   // Close modal
@@ -17,31 +17,50 @@ export class Gallery extends Component {
 
   render() {
     const { photos } = this.props;
-    const { showLightbox, selectedImage } = this.state;
-
+    const { photoIndex, showLightbox } = this.state;
+    console.log(photoIndex);
     return (
       <>
         {/* Display images in a grid layout */}
         <LightboxContainer>
-          {photos.map(image => (
-            <PreviewButton
-              key={image.img.childImageSharp.fluid.base64}
-              type="button"
-              onClick={() => this.setState({ showLightbox: true, selectedImage: image })}
-            >
-              <ProductionsItem item={image} />
-            </PreviewButton>
-          ))}
+          {photos.map((image, index) => {
+            return (
+              <PreviewButton
+                key={image.img.childImageSharp.fluid.base64}
+                type="button"
+                onClick={() => this.setState({
+                  showLightbox: true,
+                  photoIndex: index
+                })}
+              >
+                <ProductionsItem item={image} />
+              </PreviewButton>
+            )
+          })}
         </LightboxContainer>
 
         {/* Image Modal */}
         {showLightbox && (
           <Lightbox
-            mainSrc={selectedImage.img.childImageSharp.fluid.src}
-            imageTitle={selectedImage.show}
-            imageCaption={selectedImage.description}
+            mainSrc={photos[photoIndex].img.childImageSharp.fluid.src}
+            //selectedImage.img.childImageSharp.fluid.src}
+            imageTitle={photos[photoIndex].show}
+            imageCaption={photos[photoIndex].description}
             enableZoom={false}
-            onCloseRequest={() => this.closeModal()}>
+            onCloseRequest={() => this.closeModal()}
+            nextSrc={photos[(photoIndex + 1) % photos.length].img.childImageSharp.fluid.src}
+            prevSrc={photos[(photoIndex + photos.length - 1) % photos.length].img.childImageSharp.fluid.src}
+            onMovePrevRequest={() =>
+              this.setState({
+                photoIndex: (photoIndex + photos.length - 1) % photos.length
+              })
+            }
+            onMoveNextRequest={() =>
+              this.setState({
+                photoIndex: (photoIndex + 1) % photos.length
+              })
+            }
+          >
           </Lightbox>
         )}
       </>

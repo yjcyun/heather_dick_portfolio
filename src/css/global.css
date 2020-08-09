@@ -398,9 +398,18 @@ Title markdown
 
 @media (max-width: 768px) {
   .ril__image {
-    transform: translate3d(0, 0px, 0px) scale3d(1.7, 1.7, 1) !important;
     padding: 0.7rem;
+    width: 90%;
   }
+
+  .ril-image-next.ril__image {
+    transform: translate3d(441px, 0, 0) !important;
+  }
+
+  .ril-image-current.ril__image {
+    transform: translate3d(0, 0, 0) !important;
+  }
+
   .ril__outer {
     background-color: rgba(0, 0, 0, 0.9);
   }
