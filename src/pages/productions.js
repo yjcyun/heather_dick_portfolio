@@ -38,7 +38,7 @@ const Productions = ({
         <Title page="productions" />
         <ProductionsList posters={posters} />
         <Contact icon={spotlight} title="Work With Heather!" btnText="send email">
-          <h4 className="coaching-contact margin-bottom">“Send an email if you’d like to work with me.”</h4>
+          <h4 className="coaching-contact margin-bottom">Send an email if you’d like to work with me.</h4>
         </Contact>
       </div>
     </Layout>

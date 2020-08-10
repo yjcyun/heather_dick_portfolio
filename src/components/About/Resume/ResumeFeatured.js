@@ -59,10 +59,10 @@ const BlogFeatured = ({ notification }) => {
           return (
             <div key={index} className="hero-image">
               <Image fluid={node.childImageSharp.fluid} alt="Heather's headshot" className="mini-gallery" />
-              <p className="image-caption resume">Helen Tansey, Sundari Photography Inc.</p>
             </div>
           )
         })}
+        <small>Helen Tansey, Sundari Photography Inc.</small>
       </section>
     </BlogFeaturedWrapper>
   )

@@ -26,7 +26,7 @@ const Footer = () => {
           <div className="footer-contact">
             <p>Contact</p>
             <div>
-              <small>email[@]email[.]com</small>
+              <small>contact[at]heatherdick[dot]ca</small>
               <small>Toronto, ON</small>
             </div>
           </div>

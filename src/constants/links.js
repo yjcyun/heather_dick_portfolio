@@ -19,8 +19,8 @@ const data = [
   },
   {
     id: 4,
-    text: 'reviews',
-    url: '/reviews'
+    text: 'testimonials',
+    url: '/testimonials'
   },
   {
     id: 5,

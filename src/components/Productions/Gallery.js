@@ -18,7 +18,6 @@ export class Gallery extends Component {
   render() {
     const { photos } = this.props;
     const { photoIndex, showLightbox } = this.state;
-    console.log(photoIndex);
     return (
       <>
         {/* Display images in a grid layout */}

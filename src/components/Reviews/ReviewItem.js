@@ -10,7 +10,7 @@ const ReviewItem = ({ review }) => {
 
   return (
     <ReviewItemWrapper>
-      <Slide bottom duration={1000}>
+      <Slide bottom duration={500}>
         <div className="bubble-text">
           <h3 className="bubble-title">{role}</h3>
           <div className="testing">

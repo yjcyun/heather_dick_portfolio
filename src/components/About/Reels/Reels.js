@@ -11,12 +11,12 @@ class Reels extends Component {
       {
         id: 0,
         url: "140710198",
-        thumbnail: 'https://i.vimeocdn.com/video/537416426_640.jpg'
+        thumbnail: 'https://i.vimeocdn.com/video/937784147.jpg'
       },
       {
         id: 1,
-        url: "137428733",
-        thumbnail: "https://i.vimeocdn.com/video/532338250_640.jpg",
+        url: "117696952",
+        thumbnail: "https://i.vimeocdn.com/video/937785066_780x439.jpg",
       }
     ],
     selectedVideo: "140710198"
