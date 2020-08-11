@@ -43,7 +43,7 @@ const Title = ({ page }) => {
 }
 
 const TitleWrapper = styled.section`
-margin: 0 1rem 5rem;
+margin: 0 1rem 2rem;
 text-align:center;
 display:-webkit-box;
 display:-ms-flexbox;

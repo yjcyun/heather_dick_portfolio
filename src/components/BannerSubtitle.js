@@ -21,7 +21,6 @@ align-items:center;
 .event-title{
   text-transform: capitalize;
   font-family: 'Margetha';
-  font-size: 56px;
   font-size: 2rem;
   line-height: 1.3;
   display:-webkit-box;
@@ -40,7 +39,7 @@ align-items:center;
 }
 
 .icon{
-  width: 60px;
+  width: 50px;
   margin-right: 0px;
   margin-right: 0rem;
 }

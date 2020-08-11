@@ -30,7 +30,7 @@ const Contact = () => {
             <h2 className="info-subtitle">Heather Dick</h2>
             <div className="social">
               <div className="email">
-                <span>contact<small>[@]</small>heatherdick<small>[.]</small>ca</span>
+                <span>contact<small>[at]</small>heatherdick<small>[dot]</small>ca</span>
               </div>
               <SocialLinks footer styleClass="contact-social" />
             </div>
@@ -68,12 +68,17 @@ padding-bottom: 10rem;
   margin-bottom:1rem;
 }
 
+.email span{
+  font-size: 1rem;
+}
+
 .email .contact-social{
   color: white;
 }
-
-.social span{
+@media(min-width:768px){
+  .email span{
   font-size: 1.5rem;
+}
 }
 `;
 

@@ -282,6 +282,7 @@ Pages
 
 .page.coaching-page {
   margin: 7rem auto;
+  margin-top: 1rem;
 }
 
 @media (max-width: 768px) {

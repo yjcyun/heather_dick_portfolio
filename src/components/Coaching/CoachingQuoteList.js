@@ -28,7 +28,6 @@ const QuoteList = styled.div`
   background-image: url(${horizontalBcg});
   background-color: var(--lightestPurple);
   padding: 3rem 0.5rem;
-  margin-bottom: 3rem;
 
   .quote-list-container{
     max-width: 1170px;
