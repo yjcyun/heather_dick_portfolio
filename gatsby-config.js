@@ -5,8 +5,7 @@ module.exports = {
     author: "Christina Yun",
     twitterHandle: "@Sirius_Theatre",
     defaultImage: "/twitter-card.png",
-    // TODO: Change the url
-    siteUrl: "https://heatherdick.netlify.app"
+    siteUrl: "https://heatherdick.ca"
   },
   plugins: [
     `gatsby-plugin-styled-components`,
@@ -51,14 +50,14 @@ module.exports = {
     {
       resolve: `gatsby-plugin-canonical-urls`,
       options: {
-        siteUrl: `https://heatherdick.netlify.app`,
+        siteUrl: `https://heatherdick.ca`,
       },
     },
     {
       resolve: 'gatsby-plugin-robots-txt',
       options: {
-        host: 'https://heatherdick.netlify.app',
-        sitemap: 'https://heatherdick.netlify.app/sitemap.xml',
+        host: 'https://heatherdick.ca',
+        sitemap: 'https://heatherdick.ca/sitemap.xml',
         policy: [{ userAgent: '*', allow: '/' }]
       }
     }
