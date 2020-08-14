@@ -79,7 +79,7 @@ const BlogTemplate = ({ data }) => {
       <BlogTemplateWrapper className="page">
         <div className="main-blog">
           <div className="header">
-            <h5 className="blog-author">Written by {author} | {date}</h5>
+            <h5 className="blog-author">Written by {author}</h5>
             <h1 className="blog-title">
               {title}</h1>
             <hr className="center-hr" />

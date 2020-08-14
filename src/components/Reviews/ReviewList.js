@@ -2,6 +2,7 @@ import React from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
 import styled from 'styled-components';
 import ReviewItem from './ReviewItem';
+import Slide from 'react-reveal/Slide';
 
 const query = graphql`
   {
@@ -20,11 +21,13 @@ const ReviewList = () => {
 
   return (
     <ReviewListWrapper>
-      {data.review.nodes.map(item => (
-        <div key={item.id}>
-          <ReviewItem review={item} />
-        </div>
-      ))}
+      <Slide bottom duration={700}>
+        {data.review.nodes.map(item => (
+          <div key={item.id}>
+            <ReviewItem review={item} />
+          </div>
+        ))}
+      </Slide>
     </ReviewListWrapper>
   )
 }

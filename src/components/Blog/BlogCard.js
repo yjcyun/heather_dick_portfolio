@@ -5,7 +5,7 @@ import styled from 'styled-components';
 
 // Props coming from blog-list-template
 const BlogCard = ({
-  id, title, thumbnail, date, slug, author, description, hide, featured
+  id, title, thumbnail, slug, author, description, hide, featured
 }) => {
   return (
     <BlogCardWrapper hide={hide} featured={featured}>
@@ -25,8 +25,8 @@ const BlogCard = ({
           <div className="blog-card">
             <div className="blog-header">
               <div className="blog-author">{author}</div>
-              <BsDot className="dot-icon" />
-              <p>{date}</p>
+              {/* <BsDot className="dot-icon" />
+              <p>{date}</p> */}
             </div>
             <div className="blog-text">
               <h3>{title}</h3>

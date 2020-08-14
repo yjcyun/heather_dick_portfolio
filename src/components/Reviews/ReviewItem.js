@@ -2,7 +2,7 @@ import React from 'react';
 import { FaQuoteLeft } from 'react-icons/fa';
 import ReactMarkdown from 'react-markdown';
 import styled from 'styled-components';
-import Slide from 'react-reveal/Slide';
+
 
 // Props from ReviewList
 const ReviewItem = ({ review }) => {
@@ -10,20 +10,19 @@ const ReviewItem = ({ review }) => {
 
   return (
     <ReviewItemWrapper>
-      <Slide bottom duration={500}>
-        <div className="bubble-text">
-          <h3 className="bubble-title">{role}</h3>
-          <div className="testing">
-            <FaQuoteLeft className="quote-icon" />
-            <ReactMarkdown source={content} />
-          </div>
-          <span className="triangle"></span>
-        </div>
 
-        <p className="author">
-          <span>-</span><ReactMarkdown source={author} />
-        </p>
-      </Slide>
+      <div className="bubble-text">
+        <h3 className="bubble-title">{role}</h3>
+        <div className="testing">
+          <FaQuoteLeft className="quote-icon" />
+          <ReactMarkdown source={content} />
+        </div>
+        <span className="triangle"></span>
+      </div>
+
+      <p className="author">
+        <span>-</span><ReactMarkdown source={author} />
+      </p>
     </ReviewItemWrapper>
   )
 }

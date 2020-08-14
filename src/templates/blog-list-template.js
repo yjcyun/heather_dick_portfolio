@@ -10,7 +10,7 @@ import SEO from '../components/SEO';
 
 export const query = graphql`
   query getPosts($skip:Int!, $limit:Int!){
-    posts: allStrapiBlogs(sort: {fields: date, order: DESC}, limit: $limit, skip: $skip) {
+    posts: allStrapiBlogs(sort: {fields: created_at, order: DESC}, limit: $limit, skip: $skip) {
       nodes {
         id
         slug
@@ -18,7 +18,6 @@ export const query = graphql`
         title
         featured
         author
-        date(formatString: "MMM Do, YYYY")
         thumbnail {
           childImageSharp {
             fluid {
@@ -69,7 +68,7 @@ const BlogListTemplate = (props) => {
           <div className="flex-container">
             <div className="pagination">
             {/* If not on the first page, display a left arrow */}
-              {!isFirst && (
+              {/* {!isFirst && (
                 <Link to={prevPage} className="page-direction">
                   Previous
                   <FiArrowLeft className="icons" />
@@ -86,12 +85,12 @@ const BlogListTemplate = (props) => {
                     {i + 1}
                   </Link>
                 )
-              })}
+              })} */}
 
               {/* If not on the last page, display a right arrow */}
-              {!isLast && (
+              {/* {!isLast && (
                 <Link to={nextPage} className="page-direction"><FiArrowRight className="icons" />Next</Link>
-              )}
+              )} */}
             </div>
             <div className="empty-flex" />
           </div>
