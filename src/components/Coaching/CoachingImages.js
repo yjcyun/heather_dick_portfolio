@@ -37,7 +37,7 @@ const CoachingImages = () => {
   )
 }
 const CoachingImgWrapper = styled.div`
-margin-bottom:3rem;
+margin: 0 1rem 3rem;
 
 .coaching-bottom{
   display:grid;
@@ -63,6 +63,10 @@ margin-bottom:3rem;
   .coaching-img-container .gatsby-image-wrapper {
    height:18rem;
   }
+}
+
+@media (min-width: 1200px){
+    margin: 0 0 3rem;
 }
 `;
 export default CoachingImages

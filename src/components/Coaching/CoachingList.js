@@ -41,7 +41,7 @@ const CoachingList = () => {
 }
 
 const CoachingListWrapper = styled.section`
-margin-bottom:5rem;
+margin: 0 1rem 5rem;
 
 .subtitle-container{
   padding: 0 2rem;
@@ -90,6 +90,10 @@ margin-bottom:5rem;
   .coaching-img-container .gatsby-image-wrapper {
      max-height:18rem;
   }
+}
+
+@media (min-width: 1200px){
+    margin: 0 0 5rem;
 }
 `;
 

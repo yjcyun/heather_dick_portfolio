@@ -32,14 +32,26 @@ const data = [
     text: 'contact',
     url: '/contact'
   },
+  {
+    id: 7,
+    text: 'credits',
+    url: '/credits',
+    footer: true
+  },
 ];
 
 const tempNavLinks = data.map(link => (
+  <li key={link.id} style={{display:`${link.footer ?'none':''}`}}>
+    <Link to={link.url}>{link.text}</Link>
+  </li>
+));
+
+const footerNavLinks = data.map(link => (
   <li key={link.id}>
     <Link to={link.url}>{link.text}</Link>
   </li>
 ));
 
-export default ({ styleClass }) => (
-  <ul className={`${styleClass}`}>{tempNavLinks}</ul>
+export default ({ styleClass, footer }) => (
+  <ul className={`${styleClass}`}>{footer? footerNavLinks : tempNavLinks}</ul>
 )

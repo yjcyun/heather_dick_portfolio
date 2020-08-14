@@ -264,25 +264,8 @@ Pages
   max-width: 1170px;
 }
 
-.about-page {
-  margin: 160px auto 0;
-  margin: 10rem auto 0;
-  max-width: 1170px;
-}
-
-.about-page-reels {
-  margin: 0 auto;
-  max-width: 1170px;
-}
-
 .contact-page {
-  margin: 160px auto 0;
   margin: 10rem auto 0;
-}
-
-.page.coaching-page {
-  margin: 7rem auto;
-  margin-top: 1rem;
 }
 
 @media (max-width: 768px) {

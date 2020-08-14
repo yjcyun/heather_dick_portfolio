@@ -13,12 +13,10 @@ const coaching = () => {
   return (
     <Layout>
       <SEO title="Coaching" description="Heather Dick is a well-respected acting coach and voice coach for film, television, theatre & commercials. The Sirius Theatrical Company offers acting classes and voice classes for professional actors, corporate groups & beginners in Toronto and the Greater Toronto Area." />
-      <div className="about-page">
+      <div className="page">
         <Title page="coaching" />
         <CoachingImages />
-      </div>
-      <CoachingQuoteList />
-      <div className="page coaching-page">
+        <CoachingQuoteList />
         <CoachingList />
         <Event />
         <Contact btnText="send your questions" icon={question} title="Have any questions?">

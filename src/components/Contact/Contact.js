@@ -47,8 +47,8 @@ const Contact = () => {
 }
 
 const ContactWrapper = styled.div`
-margin-top: 3rem;
 padding-bottom: 10rem;
+margin: 3rem 1rem 0;
 
 .contact-social, .footer-icon{
   color: var(--lighterPurple);

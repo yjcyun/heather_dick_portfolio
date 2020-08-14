@@ -65,7 +65,7 @@ justify-content:center;
 align-items: start;
 background-color: var(--lightestPurple);
 background-image: url(${subtle});
-margin: 0 auto;
+margin: 0 1rem;
 
 .info-text {
   text-align: left;
@@ -125,6 +125,9 @@ margin: 0 auto;
   .info-text .extra-padding{
     padding-top: 3rem;
   }
+}
+@media (min-width: 1200px){
+  margin: 0;
 }
 `;
 

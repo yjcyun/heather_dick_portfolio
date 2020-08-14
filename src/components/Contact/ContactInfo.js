@@ -72,8 +72,7 @@ margin: 0 auto;
 }
 
 .hero-image{
-  position: relative;
-  width: 90vw;
+  width: 100%;
   margin: 0 auto;
 }
 

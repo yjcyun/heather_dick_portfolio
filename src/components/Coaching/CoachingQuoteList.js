@@ -28,6 +28,7 @@ const QuoteList = styled.div`
   background-image: url(${horizontalBcg});
   background-color: var(--lightestPurple);
   padding: 3rem 0.5rem;
+  margin: auto 1rem;
 
   .quote-list-container{
     max-width: 1170px;
@@ -61,6 +62,10 @@ const QuoteList = styled.div`
     h3 {
       font-size: 1.8rem;
     }
+  }
+
+  @media (min-width: 1200px){
+    margin: auto 0;
   }
 `;
 

@@ -8,7 +8,7 @@ const contact = () => {
   return (
     <Layout>
       <SEO title="Contact" description="Contact Heather Dick and the Sirius Theatrical Company for more information on acting and voice classes, a full resume & booking." />
-      <div className="about-page">
+      <div className="page contact-page">
         <Title page="contact"/>
         <Contact />
       </div>

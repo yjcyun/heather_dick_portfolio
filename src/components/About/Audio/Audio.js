@@ -23,7 +23,8 @@ const Audio = () => {
 
 const AudioWrapper = styled.section`
 background:var(--darkPurple);
-padding:3rem 1rem;
+padding:2rem 1rem;
+margin: auto 1rem;
 
 .max-width{
   display:-webkit-box;
@@ -63,7 +64,6 @@ padding:3rem 1rem;
 
 @media (min-width:996px){
   padding:7rem;
-
   .max-width{
     -webkit-box-orient:horizontal;
     -webkit-box-direction:normal;
@@ -91,7 +91,11 @@ padding:3rem 1rem;
 }
 
 @media(min-width: 1024px){
-  padding: 7rem 2rem;
+  padding: 5rem 2rem;
+}
+
+@media (min-width: 1200px){
+    margin: 0;
 }
 `;
 

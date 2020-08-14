@@ -15,7 +15,7 @@ const Footer = () => {
           {/* Page Nav */}
           <div className="footer-nav">
             <p>explore</p>
-            <NavLinks styleClass="nav-links" />
+            <NavLinks styleClass="nav-links" footer/>
           </div>
           {/* Social medial icons */}
           <div className="footer-social">

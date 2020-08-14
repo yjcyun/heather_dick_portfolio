@@ -25,13 +25,13 @@ const bio = ({ data }) => {
   return (
     <Layout>
       <SEO title="Biography" description="Heather Dick is an internationally recognized Canadian voice and performance artist. She is an actor, director, writer, comedian, coach, Designated Linklater Voice Teacher & audio book narrator. She has worked in theatre, film, television, commercials & has done voice work. She is the founding Artistic Director of the Sirius Theatrical Company. " />
-      <div className="about-page">
+      <div className="page">
         <Title page="bio" />
         <Info />
+        <Reels />
+        <Audio />
+        <ResumeList />
       </div>
-      <Reels />
-      <Audio />
-      <ResumeList />
     </Layout>
   )
 }
