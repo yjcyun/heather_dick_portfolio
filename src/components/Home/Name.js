@@ -47,7 +47,7 @@ const NameWrapper = styled.div`
 #logo path{
  stroke-dasharray: 1500;
  opacity: 100;
- animation: animate 3s cubic-bezier(0,0.23,1,.1);
+ animation: animate 2s cubic-bezier(0,0.23,1,.1);
  fill:#612972;
 }
 
@@ -55,7 +55,7 @@ const NameWrapper = styled.div`
   0%{
     opacity: 0;
     fill: none;
-    stroke-dashoffset:1500;
+    stroke-dashoffset:1700;
   }
 
   100%{

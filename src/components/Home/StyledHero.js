@@ -154,6 +154,7 @@ const HeroWrapper = styled.section`
   color: var(--mainGold);
   margin-left: 0.5rem;
 }
+
 @media (min-width: 768px) {
   padding: 0 2rem 0 1rem;
   .hero-text{
