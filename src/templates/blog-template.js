@@ -71,7 +71,6 @@ const BlogTemplate = ({ data }) => {
     featured: { nodes: blogs },
     website: { siteMetadata: { siteUrl } }
   } = data;
-  console.log(`${siteUrl}/blog/${slug}`)
 
   return (
     <Layout>

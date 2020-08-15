@@ -18,7 +18,6 @@ const ProductionsList = ({ posters }) => {
   const [posterItems, setPosterItems] = useState(posters);
   const [categories] = useState(getCategories(posters));
   const [selectedFilterIndex, setSelectedFilterIndex] = useState(0);
-console.log(posterItems);
   // Filter based on category
   const handleFilter = (category, index) => {
     let tempPosters = [...items];
