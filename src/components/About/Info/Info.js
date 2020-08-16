@@ -61,7 +61,6 @@ padding:1.5rem 1rem;
 -webkit-box-pack:center;
 -ms-flex-pack:center;
 justify-content:center;
--ms-grid-row-align: start;
 align-items: start;
 background-color: var(--lightestPurple);
 background-image: url(${subtle});
@@ -85,7 +84,7 @@ margin: 0 1rem;
 
 .hero-image{
   position: relative;
-  width: 90vw;
+  width: 80vw;
   margin: 0 auto;
 }
 
@@ -118,7 +117,7 @@ margin: 0 1rem;
     margin: 1rem 0;
     text-align:center;
     font-size: 2.2rem;
-}
+  }
 }
 
 @media (min-width: 1130px){
@@ -126,6 +125,7 @@ margin: 0 1rem;
     padding-top: 3rem;
   }
 }
+
 @media (min-width: 1200px){
   margin: 0;
 }

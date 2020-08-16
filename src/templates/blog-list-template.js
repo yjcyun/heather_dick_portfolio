@@ -36,11 +36,11 @@ export const query = graphql`
 const BlogListTemplate = (props) => {
   const { data: { posts: { nodes } } } = props;
   // pagination setup
-  const { currentPage, numOfPages } = props.pageContext;
-  const isFirst = currentPage === 1;
-  const isLast = currentPage === numOfPages;
-  const prevPage = currentPage - 1 === 1 ? `/blog` : `/blog/${currentPage - 1}`;
-  const nextPage = `/blog/${currentPage + 1}`;
+  // const { currentPage, numOfPages } = props.pageContext;
+  // const isFirst = currentPage === 1;
+  // const isLast = currentPage === numOfPages;
+  // const prevPage = currentPage - 1 === 1 ? `/blog` : `/blog/${currentPage - 1}`;
+  // const nextPage = `/blog/${currentPage + 1}`;
 
   return (
     <Layout>
