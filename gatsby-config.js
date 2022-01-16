@@ -1,11 +1,13 @@
 module.exports = {
   siteMetadata: {
-    title: 'Heather Dick | Sirius Theatrical Company | Actor. Director. Writer. Linklater Voice Teacher. | Toronto',
-    description: "A professional theatre, film, television and voice actor, director, writer and Designated Linklater Voice coach based in Toronto, Canada.  She is the Artistic Director of the Sirius Theatrical Company, a multi-disciplinary performance company.",
+    title:
+      "Heather Dick | Sirius Theatrical Company | Actor. Director. Writer. Linklater Voice Teacher. | Toronto",
+    description:
+      "A professional theatre, film, television and voice actor, director, writer and Designated Linklater Voice coach based in Toronto, Canada.  She is the Artistic Director of the Sirius Theatrical Company, a multi-disciplinary performance company.",
     author: "Christina Yun",
     twitterHandle: "@Sirius_Theatre",
     defaultImage: "/twitter-card.png",
-    siteUrl: "https://heatherdick.ca"
+    siteUrl: "https://heatherdick.ca",
   },
   plugins: [
     `gatsby-plugin-styled-components`,
@@ -33,7 +35,16 @@ module.exports = {
         apiURL: `https://heatherdick.herokuapp.com`,
         //apiURL: `http://localhost:1337`,
         queryLimit: 1000, // Default to 100
-        contentTypes: [`resumes`, `blogs`, `productions`, `notifications`, `coachings`, `bios`, `titles`,`reviews`]
+        contentTypes: [
+          `resumes`,
+          `blogs`,
+          `productions`,
+          `notifications`,
+          `coachings`,
+          `bios`,
+          `titles`,
+          `reviews`,
+        ],
       },
     },
     {
@@ -42,8 +53,8 @@ module.exports = {
         fonts: [
           {
             family: `Poppins`,
-            variants: [`300`, `400`]
-          }
+            variants: [`300`, `400`],
+          },
         ],
       },
     },
@@ -54,12 +65,12 @@ module.exports = {
       },
     },
     {
-      resolve: 'gatsby-plugin-robots-txt',
+      resolve: "gatsby-plugin-robots-txt",
       options: {
-        host: 'https://heatherdick.ca',
-        sitemap: 'https://heatherdick.ca/sitemap.xml',
-        policy: [{ userAgent: '*', allow: '/' }]
-      }
-    }
-  ]
+        host: "https://heatherdick.ca",
+        sitemap: "https://heatherdick.ca/sitemap.xml",
+        policy: [{ userAgent: "*", allow: "/" }],
+      },
+    },
+  ],
 }
