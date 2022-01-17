@@ -12,7 +12,7 @@ class Reels extends Component {
         id: 0,
         url: "140710198",
         thumbnail:
-          "https:i.vimeocdn.com/video/937784147-873d19aa38804c99ac568c3c15da910a03571614f0b66419e59509b1e4b75089-d_380x214",
+          "https://i.vimeocdn.com/video/937784147-873d19aa38804c99ac568c3c15da910a03571614f0b66419e59509b1e4b75089-d_380x214",
       },
       {
         id: 1,
